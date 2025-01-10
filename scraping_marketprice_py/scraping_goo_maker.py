@@ -6,9 +6,9 @@ import re
 
 # DB接続設定
 DB_CONFIG = {
-    'host': 'localhost',  # Xサーバーのホスト名
-    'user': 'your_username',
-    'password': 'your_password',
+    'host': 'sv8035.xserver.jp',  # Xサーバーのホスト名
+    'user': 'chasercb750_mark',
+    'password': '78195090Cb',
     'database': 'chasercb750_marketprice'
 }
 
@@ -41,6 +41,8 @@ def extract_data(soup, selectors):
     return data
 
 def save_to_db(data):
+    conn = None
+    cursor = None
     try:
         conn = mysql.connector.connect(**DB_CONFIG)
         cursor = conn.cursor()
@@ -53,8 +55,10 @@ def save_to_db(data):
     except mysql.connector.Error as err:
         print(f"Error: {err}")
     finally:
-        cursor.close()
-        conn.close()
+        if cursor:
+            cursor.close()
+        if conn:
+            conn.close()
 
 def main():
     scraped_data = []
