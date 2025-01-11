@@ -3,14 +3,12 @@ from bs4 import BeautifulSoup
 import mysql.connector
 import time
 import re
+from dotenv import load_dotenv
+import os
 
-# DB接続設定
-DB_CONFIG = {
-    'host': 'localhost',  # Xサーバーのホスト名
-    'user': 'your_username',
-    'password': 'your_password',
-    'database': 'chasercb750_marketprice'
-}
+# Laravel環境とDB設定をロード
+from setting_script.setFunc import load_environment_and_get_config
+DB_CONFIG = load_environment_and_get_config()
 
 # 定義されたURLとセレクター
 website_url = "https://www.goo-net.com/"
@@ -41,20 +39,35 @@ def extract_data(soup, selectors):
     return data
 
 def save_to_db(data):
+    conn = None
+    cursor = None
     try:
         conn = mysql.connector.connect(**DB_CONFIG)
         cursor = conn.cursor()
-        cursor.execute("CREATE TABLE IF NOT EXISTS scraped_data (id INT AUTO_INCREMENT PRIMARY KEY, data TEXT)")
-
+        # テーブル作成
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS sc_goo_maker (
+                id INT AUTO_INCREMENT PRIMARY KEY,
+                maker_name VARCHAR(255) UNIQUE
+            )
+        """)
+        # データ挿入処理
         for item in data:
-            cursor.execute("INSERT INTO scraped_data (data) VALUES (%s)", (item,))
+            cursor.execute("SELECT COUNT(*) FROM sc_goo_maker WHERE maker_name = %s", (item,))
+            exists = cursor.fetchone()[0]
+            if exists == 0:
+                cursor.execute("INSERT INTO sc_goo_maker (maker_name) VALUES (%s)", (item,))
+            else:
+                print(f"データは既に存在します: {item}")
 
         conn.commit()
     except mysql.connector.Error as err:
         print(f"Error: {err}")
     finally:
-        cursor.close()
-        conn.close()
+        if cursor:
+            cursor.close()
+        if conn:
+            conn.close()
 
 def main():
     scraped_data = []
