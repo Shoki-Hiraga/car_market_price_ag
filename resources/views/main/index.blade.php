@@ -8,7 +8,7 @@
 <body>
     <h1>メーカー一覧</h1>
     <ul>
-        @foreach ($makers as $maker)
+        @foreach ($sc_goo_maker as $maker)
             <li>{{ $maker->maker_name }}</li>
         @endforeach
     </ul>
