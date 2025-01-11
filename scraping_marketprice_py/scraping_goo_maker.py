@@ -3,14 +3,20 @@ from bs4 import BeautifulSoup
 import mysql.connector
 import time
 import re
+from dotenv import load_dotenv
+import os
 
-# DB接続設定
+# Laravelのルートディレクトリにある.envファイルのパスを指定
+load_dotenv(dotenv_path='C:/xampp/htdocs/car_market_price_ag/.env')
+
 DB_CONFIG = {
-    'host': 'sv8035.xserver.jp',  # Xサーバーのホスト名
-    'user': 'chasercb750_mark',
-    'password': '78195090Cb',
-    'database': 'chasercb750_marketprice'
+    'host': os.getenv('DB_HOST'),
+    'user': os.getenv('DB_USERNAME'),
+    # LaravelではDB_USERではなくDB_USERNAMEです
+    'password': os.getenv('DB_PASSWORD'),
+    'database': os.getenv('DB_DATABASE')
 }
+
 
 # 定義されたURLとセレクター
 website_url = "https://www.goo-net.com/"
@@ -46,10 +52,14 @@ def save_to_db(data):
     try:
         conn = mysql.connector.connect(**DB_CONFIG)
         cursor = conn.cursor()
-        cursor.execute("CREATE TABLE IF NOT EXISTS scraped_data (id INT AUTO_INCREMENT PRIMARY KEY, data TEXT)")
-
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS sc_goo_maker (
+                id INT AUTO_INCREMENT PRIMARY KEY,
+                maker_name VARCHAR(255)
+            )
+        """)
         for item in data:
-            cursor.execute("INSERT INTO scraped_data (data) VALUES (%s)", (item,))
+            cursor.execute("INSERT INTO sc_goo_maker (maker_name) VALUES (%s)", (item,))
 
         conn.commit()
     except mysql.connector.Error as err:
