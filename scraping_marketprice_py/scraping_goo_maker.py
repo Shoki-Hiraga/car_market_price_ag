@@ -6,15 +6,21 @@ import re
 from dotenv import load_dotenv
 import os
 
-# Laravel環境とDB設定をロード
-from setting_script.setFunc import load_environment_and_get_config
-DB_CONFIG = load_environment_and_get_config()
+# .envファイルのロード
+load_dotenv()
+
+# DB接続設定を環境変数から取得
+DB_CONFIG = {
+    'host': os.getenv('DB_HOST'),
+    'user': os.getenv('DB_USERNAME'),
+    'password': os.getenv('DB_PASSWORD'),
+    'database': os.getenv('DB_DATABASE')
+}
 
 # 定義されたURLとセレクター
 website_url = "https://www.goo-net.com/"
 start_url = "https://www.goo-net.com/kaitori/maker_catalog/"
 
-pagenation_selectors = ['']
 dataget_selectors = ['.maker_box_japan div.maker_text']
 
 def get_full_url(relative_url):
