@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
