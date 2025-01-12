@@ -8,14 +8,11 @@ import os
 
 # .envファイルのロード
 load_dotenv()
-
-# DB接続設定を環境変数から取得
-DB_CONFIG = {
-    'host': os.getenv('DB_HOST'),
-    'user': os.getenv('DB_USERNAME'),
-    'password': os.getenv('DB_PASSWORD'),
-    'database': os.getenv('DB_DATABASE')
-}
+# APP_URLのチェック
+app_url = os.getenv('APP_URL')
+from setting_script.setFunc import get_db_config
+# DB_CONFIGの取得
+DB_CONFIG = get_db_config()
 
 # 定義されたURLとセレクター
 website_url = "https://www.goo-net.com/"
@@ -50,14 +47,13 @@ def save_to_db(data):
     try:
         conn = mysql.connector.connect(**DB_CONFIG)
         cursor = conn.cursor()
-        # テーブル作成
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS sc_goo_maker (
                 id INT AUTO_INCREMENT PRIMARY KEY,
                 maker_name VARCHAR(255) UNIQUE
             )
         """)
-        # データ挿入処理
+
         for item in data:
             cursor.execute("SELECT COUNT(*) FROM sc_goo_maker WHERE maker_name = %s", (item,))
             exists = cursor.fetchone()[0]
