@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 
 def load_environment_and_get_config():
     # Laravelのルートディレクトリにある.envファイルのパスを指定
-    LARAVEL_ENV_PATH = "/.env"  # 修正してください
+    LARAVEL_ENV_PATH = ".env" 
     # .envファイルをロード
     load_dotenv(LARAVEL_ENV_PATH)
 
