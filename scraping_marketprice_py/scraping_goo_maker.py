@@ -16,18 +16,23 @@ DB_CONFIG = get_db_config()
 
 # 定義されたURLとセレクター
 website_url = "https://www.goo-net.com/"
-start_url = "https://www.goo-net.com/kaitori/maker_catalog/"
+start_url = "https://www.goo-net.com/catalog/"
 
-dataget_selectors = ['.maker_box_japan div.maker_text']
+dataget_selectors = ['.first ul:nth-of-type(1) li']
 
 def get_full_url(relative_url):
     return website_url.rstrip('/') + '/' + relative_url.lstrip('/')
 
 def scrape_page(url):
     response = requests.get(url)
+    if "charset" in response.headers.get("Content-Type", ""):
+        response.encoding = response.headers["Content-Type"].split("charset=")[-1]
+    else:
+        response.encoding = response.apparent_encoding  # 自動検出
     time.sleep(2)
     response.raise_for_status()
     return BeautifulSoup(response.text, 'html.parser')
+
 
 def clean_data(data):
     return re.sub(r'の買取・査定相場一覧|買取相場・査定価格', '', data)

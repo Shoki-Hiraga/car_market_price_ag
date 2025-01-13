@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import mysql.connector
 import time
 import os
+import re
 from dotenv import load_dotenv
 from datetime import datetime
 
@@ -14,20 +15,17 @@ DB_CONFIG = get_db_config()
 
 # 定義されたURLとセレクター
 website_url = "https://www.goo-net.com/"
-start_url = "https://www.goo-net.com/catalog/"
-pagenation_selectors = ['.first ul:nth-of-type(1) a']
-dataget_selectors = ['p.maker', 'p.model']
+start_url = "https://www.goo-net.com/kaitori/maker_catalog/"
+pagenation_selectors = ['.maker_box_japan a', '.textm a']
+dataget_selectors = ['.topicPat li:nth-of-type(4)', '.topicPat li:nth-of-type(5)']
 
 def get_full_url(relative_url):
     return website_url.rstrip('/') + '/' + relative_url.lstrip('/')
 
 def scrape_page(url):
+    print(f"Accessing {url}")
     response = requests.get(url)
-    if "charset" in response.headers.get("Content-Type", ""):
-        response.encoding = response.headers["Content-Type"].split("charset=")[-1]
-    else:
-        response.encoding = response.apparent_encoding  # 自動検出
-    time.sleep(2)
+    time.sleep(3.5)  # サーバー負荷軽減のため遅延
     response.raise_for_status()
     return BeautifulSoup(response.text, 'html.parser')
 
@@ -43,21 +41,19 @@ def extract_links(soup, selector):
 
 def clean_data(data):
     original_data = data
+    data = re.sub(r'の買取・査定相場一覧|買取相場・査定価格', '', data)
     if original_data != data:
         print(f"Rawデータ取得: {original_data}")
     return data
 
-def extract_data_pairs(soup, maker_selector, model_selector):
-    """
-    maker_selector と model_selector のデータを取得してペアにして返す
-    """
-    makers = [element.get_text(strip=True) for element in soup.select(maker_selector)]
-    models = [element.get_text(strip=True) for element in soup.select(model_selector)]
-
-    # データペアを作成 (maker と model の長さが一致していることが前提)
-    data_pairs = list(zip(makers, models))
-    print(f"Extracted pairs: {data_pairs}")  # デバッグ用
-    return data_pairs
+def extract_data(soup, selectors):
+    data = []
+    for sel in selectors:
+        elements = soup.select(sel)
+        for element in elements:
+            cleaned_data = clean_data(element.get_text(strip=True))
+            data.append(cleaned_data)
+    return data
 
 def save_to_db(maker_name, model_name):
     conn = None
@@ -119,13 +115,16 @@ def main():
     level_1_links = extract_links(soup, [pagenation_selectors[0]])
     for link in level_1_links:
         soup = scrape_page(link)
-
-        # データペアを取得
-        data_pairs = extract_data_pairs(soup, 'p.maker', 'p.model')
-        for maker_name, model_name in data_pairs:
-            print(f"Maker: {maker_name}, Model: {model_name}")  # デバッグ用
-            save_to_db(maker_name, model_name)
-
+        level_2_links = extract_links(soup, [pagenation_selectors[1]])
+        
+        for link in level_2_links:
+            soup = scrape_page(link)
+            data = extract_data(soup, dataget_selectors)
+            if len(data) >= 2:  # maker_nameとmodel_nameがある前提
+                maker_name = data[0]
+                model_name = data[1]
+                # 取得するたびにリアルタイム保存
+                save_to_db(maker_name, model_name)
 
 if __name__ == "__main__":
     main()
