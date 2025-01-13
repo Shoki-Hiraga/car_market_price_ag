@@ -5,6 +5,7 @@ import time
 import os
 import re
 from dotenv import load_dotenv
+from datetime import datetime
 
 # .envファイルのロード
 load_dotenv()
@@ -24,7 +25,7 @@ def get_full_url(relative_url):
 def scrape_page(url):
     print(f"Accessing {url}")
     response = requests.get(url)
-    time.sleep(2)  # サーバー負荷軽減のため遅延
+    time.sleep(3.5)  # サーバー負荷軽減のため遅延
     response.raise_for_status()
     return BeautifulSoup(response.text, 'html.parser')
 
@@ -70,23 +71,34 @@ def save_to_db(maker_name, model_name):
             print(f"エラー: Maker '{maker_name}' が sc_goo_maker に存在しません。")
             return
 
+        # 現在時刻を取得
+        current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
         # model_nameの保存確認
         cursor.execute("""
-            SELECT COUNT(*) FROM sc_goo_model 
+            SELECT id FROM sc_goo_model 
             WHERE maker_name_id = %s AND model_name = %s
         """, (maker_id, model_name))
-        exists = cursor.fetchone()[0]
+        result = cursor.fetchone()
 
-        if exists == 0:
+        if result is None:
             # データが存在しない場合は保存
             cursor.execute("""
-                INSERT INTO sc_goo_model (maker_name_id, model_name) 
-                VALUES (%s, %s)
-            """, (maker_id, model_name))
+                INSERT INTO sc_goo_model (maker_name_id, model_name, created_at, updated_at) 
+                VALUES (%s, %s, %s, %s)
+            """, (maker_id, model_name, current_time, current_time))
             conn.commit()
             print(f"保存: Maker: {maker_name}, Model: {model_name}")
         else:
-            print(f"データは既に存在します: Maker: {maker_name}, Model: {model_name}")
+            # データが存在する場合は updated_at を更新
+            model_id = result[0]
+            cursor.execute("""
+                UPDATE sc_goo_model 
+                SET updated_at = %s 
+                WHERE id = %s
+            """, (current_time, model_id))
+            conn.commit()
+            print(f"更新: Maker: {maker_name}, Model: {model_name}")
 
     except mysql.connector.Error as err:
         print(f"Error: {err}")
