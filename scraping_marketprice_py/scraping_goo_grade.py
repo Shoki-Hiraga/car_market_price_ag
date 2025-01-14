@@ -44,9 +44,11 @@ def clean_data(data):
 
 def save_to_db(maker_name, model_name, grade_name, model_number):
     conn = mysql.connector.connect(**DB_CONFIG)
-    cursor = conn.cursor()
+    cursor = conn.cursor(buffered=True)
     current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
     try:
+        # maker_name の取得
         cursor.execute("SELECT id FROM sc_goo_maker WHERE maker_name = %s", (maker_name,))
         maker_result = cursor.fetchone()
         if not maker_result:
@@ -54,6 +56,7 @@ def save_to_db(maker_name, model_name, grade_name, model_number):
             return
         maker_id = maker_result[0]
 
+        # model_name の取得
         cursor.execute("SELECT id FROM sc_goo_model WHERE model_name = %s", (model_name,))
         model_result = cursor.fetchone()
         if not model_result:
@@ -61,6 +64,7 @@ def save_to_db(maker_name, model_name, grade_name, model_number):
             return
         model_id = model_result[0]
 
+        # grade の存在確認と保存/更新
         cursor.execute(
             "SELECT id FROM sc_goo_grade WHERE maker_name_id = %s AND model_name_id = %s AND grade_name = %s AND model_number = %s",
             (maker_id, model_id, grade_name, model_number))
@@ -78,8 +82,10 @@ def save_to_db(maker_name, model_name, grade_name, model_number):
                 (current_time, grade_result[0]))
             conn.commit()
             print("既存データのため更新")
+
     except mysql.connector.Error as err:
         print(f"Error: {err}")
+
     finally:
         cursor.close()
         conn.close()
