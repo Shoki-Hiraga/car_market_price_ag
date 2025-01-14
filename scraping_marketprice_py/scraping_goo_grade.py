@@ -24,10 +24,14 @@ def get_full_url(relative_url):
 
 def scrape_page(url):
     response = requests.get(url)
-    response.encoding = response.apparent_encoding
+    if "charset" in response.headers.get("Content-Type", ""):
+        response.encoding = response.headers["Content-Type"].split("charset=")[-1]
+    else:
+        response.encoding = response.apparent_encoding  # 自動検出
     time.sleep(2)
     response.raise_for_status()
     return BeautifulSoup(response.text, 'html.parser')
+
 
 def extract_links(soup, selectors):
     links = []
