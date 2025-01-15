@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('engine_model'); // Engine_model
             $table->integer('year')->nullable(); // 年式データを格納するカラム (nullableで年式データがない場合にも対応)
             $table->integer('month')->nullable(); 
+            $table->string('sc_url')->nullable(); 
             $table->timestamps(); // created_at and updated_at
 
             // Foreign key constraints
