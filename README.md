@@ -1,3 +1,10 @@
+# ソースコードの意味
+このソースコードは以下のnotionに基づいて作成されました。
+【旧車王_SEO改善PSI向上_画像一括差替え】
+https://www.notion.so/current-motor/_SEO-PSI-_-446168a8578541129b7049cb9847585b
+
+元画像を指定した割合で画像を圧縮するコードです。
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
