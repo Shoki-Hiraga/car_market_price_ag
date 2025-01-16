@@ -53,7 +53,7 @@ def scrape_page(url):
         response.encoding = response.headers["Content-Type"].split("charset=")[-1]
     else:
         response.encoding = response.apparent_encoding
-    time.sleep(0.01)
+    time.sleep(4)
     response.raise_for_status()
     return BeautifulSoup(response.text, 'html.parser')
 
