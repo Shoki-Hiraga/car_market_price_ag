@@ -18,12 +18,12 @@ return new class extends Migration
             $table->id(); // Primary Key
             $table->unsignedBigInteger('maker_name_id'); // Foreign Key to sc_goo_maker
             $table->unsignedBigInteger('model_name_id'); // Foreign Key to sc_goo_model
-            $table->string('grade_name'); // Grade Name
-            $table->string('model_number'); // Model Number
-            $table->string('engine_model'); // Engine_model
+            $table->string('grade_name', 100); // Grade Name
+            $table->string('model_number', 30); // Model Number
+            $table->string('engine_model', 30); // Engine_model
             $table->integer('year'); // 年式データを格納するカラム
             $table->integer('month'); 
-            $table->string('sc_url'); 
+            $table->string('sc_url', 100); 
             $table->timestamps(); // created_at and updated_at
 
             // Foreign key constraints
