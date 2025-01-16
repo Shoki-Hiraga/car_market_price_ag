@@ -24,6 +24,23 @@ dataget_selectors = [
     'ul.topicpath:nth-of-type(2) li:nth-of-type(5) span'
 ]
 
+def should_skip_url(url):
+    """
+    sc_goo_gradeテーブルのsc_urlと照会し、一致する場合はTrueを返す
+    """
+    conn = mysql.connector.connect(**DB_CONFIG)
+    cursor = conn.cursor(buffered=True)
+    try:
+        cursor.execute("SELECT COUNT(*) FROM sc_goo_grade WHERE sc_url = %s", (url,))
+        count = cursor.fetchone()[0]
+        return count > 0
+    except mysql.connector.Error as err:
+        print(f"MySQL Error: {err}")
+        return False
+    finally:
+        cursor.close()
+        conn.close()
+
 def get_full_url(relative_url):
     return website_url.rstrip('/') + '/' + relative_url.lstrip('/')
 
@@ -36,7 +53,7 @@ def scrape_page(url):
         response.encoding = response.headers["Content-Type"].split("charset=")[-1]
     else:
         response.encoding = response.apparent_encoding
-    time.sleep(2)
+    time.sleep(4)
     response.raise_for_status()
     return BeautifulSoup(response.text, 'html.parser')
 
@@ -110,7 +127,7 @@ def save_to_db(maker_name, model_name, grade_name, model_number, engine_model, y
                 WHERE id = %s
             """, (current_time, row[0]))
             conn.commit()
-            print(f"保存をスキップしましたが、updated_atを更新しました: {maker_name}, {model_name}, {grade_name}")
+            print(f"skip : updated_atを更新: {maker_name}, {model_name}, {grade_name}")
     
     except mysql.connector.Error as err:
         print(f"MySQL Error: {err}")
@@ -136,6 +153,9 @@ def main():
             level_3_links = extract_links(soup, [pagenation_selectors[2]])
             
             for detail_link in level_3_links:
+                if should_skip_url(detail_link):
+                    print(f"skip : sc_urlに重複データあり{detail_link}")
+                    continue
                 detail_soup = scrape_page(detail_link)
                 
                 try:
