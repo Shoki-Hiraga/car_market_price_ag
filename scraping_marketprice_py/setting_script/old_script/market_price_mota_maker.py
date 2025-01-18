@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import time
-import market_price_mota  # 同じディレクトリにあるスクリプトをインポート
+import scraping_marketprice_py.setting_script.old_script.market_price_mota as market_price_mota  # 同じディレクトリにあるスクリプトをインポート
 
 # 最終URLで止まるかどうか確認用
 testmode = True
