@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import time
 from urllib.parse import urljoin
-from funciton_app.dataget_selectors_edit import process_data
+from funciton_app.ucarpac_dataget_selectors_edit import process_data
 
 # Define parameters
 website_url = "https://ucarpac.com/sell/"
@@ -22,23 +22,7 @@ dataget_selectors = [
     ".primary span:nth-of-type(2)"
 ]
 
-# Define processing rules
-processing_rules = {
-    "h1": lambda raw_data: extract_year(raw_data),  # Extract year
-    "#mile .purchase-data__table--body div.col:nth-of-type(1)": lambda raw_data: extract_numeric(raw_data),  # Convert mileage to integer
-}
-
 delay = 4
-
-def extract_year(raw_data):
-    import re
-    match = re.search(r"\d{4}", raw_data)
-    return match.group(0) if match else raw_data
-
-def extract_numeric(raw_data):
-    import re
-    processed = re.sub(r"\D", "", raw_data)
-    return int(processed) if processed else raw_data
 
 def scrape_website(website_url, start_url, pagenation_selectors, dataget_selectors, delay):
     def get_absolute_url(base, link):
@@ -87,7 +71,7 @@ def scrape_website(website_url, start_url, pagenation_selectors, dataget_selecto
                                 data_elements = final_page.select(data_selector)
                                 for element in data_elements:
                                     raw_data = element.get_text(strip=True)
-                                    processed_data = process_data(data_selector, raw_data, processing_rules)
+                                    processed_data = process_data(data_selector, raw_data)
                                     print(f"{data_selector}: {processed_data}")
                         time.sleep(delay)  # Delay to avoid overloading the server
                 else:
