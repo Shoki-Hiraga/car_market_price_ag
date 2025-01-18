@@ -6,16 +6,21 @@ from urllib.parse import urljoin
 # Define parameters
 website_url = "https://www.goo-net.com/"
 start_url = "https://www.goo-net.com/kaitori/maker_catalog/"
-pagenation_selectors = [".maker_box_japan a", ".textm a", ".car-table__text a"]
+pagenation_selectors = [".maker_box_japan a", ".textm a"]
 dataget_selectors = ["h1", "h2"]
 
-def scrape_website(website_url, start_url, pagenation_selectors, dataget_selectors, delay=1):
+delay = 4
+
+def scrape_website(website_url, start_url, pagenation_selectors, dataget_selectors, delay):
     def get_absolute_url(base, link):
         return urljoin(base, link) if not link.startswith("http") else link
 
     def fetch_page(url):
         try:
             response = requests.get(url)
+            if response.status_code == 404:
+                print(f"404 Error at {url}")
+                return None
             response.raise_for_status()
             return BeautifulSoup(response.text, 'html.parser')
         except requests.exceptions.RequestException as e:
@@ -61,4 +66,4 @@ def scrape_website(website_url, start_url, pagenation_selectors, dataget_selecto
         current_urls = next_urls
 
 # Start the scraping process
-scrape_website(website_url, start_url, pagenation_selectors, dataget_selectors, delay=3)
+scrape_website(website_url, start_url, pagenation_selectors, dataget_selectors, delay)
