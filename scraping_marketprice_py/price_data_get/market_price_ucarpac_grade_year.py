@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import time
 from urllib.parse import urljoin
+from funciton_app.ucarpac_dataget_selectors_edit import process_data
 
 # Define parameters
 website_url = "https://ucarpac.com/sell/"
@@ -9,18 +10,20 @@ start_url = "https://ucarpac.com/sell/"
 pagenation_selectors = [
     "[data-show='10'] a",
     "#default a",
-    ".grade a"
+    "#year a"
 ]
 dataget_selectors = [
     ".pc li:nth-of-type(4) span",
     ".pc li:nth-of-type(5) span",
-    "#sell > div > div.breadcrumb.pc > div > ol > li:nth-child(6) > span",
     "#year .purchase-data__table--body div.col:nth-of-type(1)",
-    "#year .primary span:nth-of-type(1)",
-    "#year .primary span:nth-of-type(2)"
-    ]
+    "h1",
+    "#mile .purchase-data__table--body div.col:nth-of-type(1)",
+    ".primary span:nth-of-type(1)",
+    ".primary span:nth-of-type(2)"
+]
 
-delay = 0.00004
+
+delay = 4
 
 def scrape_website(website_url, start_url, pagenation_selectors, dataget_selectors, delay):
     def get_absolute_url(base, link):
@@ -68,7 +71,9 @@ def scrape_website(website_url, start_url, pagenation_selectors, dataget_selecto
                             for data_selector in dataget_selectors:
                                 data_elements = final_page.select(data_selector)
                                 for element in data_elements:
-                                    print(f"{data_selector}: {element.get_text(strip=True)}")
+                                    raw_data = element.get_text(strip=True)
+                                    processed_data = process_data(data_selector, raw_data)
+                                    print(f"{data_selector}: {processed_data}")
                         time.sleep(delay)  # Delay to avoid overloading the server
                 else:
                     next_urls.extend(links)

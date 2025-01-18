@@ -2,12 +2,20 @@ import requests
 from bs4 import BeautifulSoup
 import time
 from urllib.parse import urljoin
+from funciton_app.gulliver_dataget_selectors_edit import process_data
 
 # Define parameters
 website_url = "https://221616.com/satei/souba/"
 start_url = "https://221616.com/satei/souba/"
 pagenation_selectors = [".mb20 a", ".second a"]
-dataget_selectors = ["h1", "h2"]
+dataget_selectors = [
+    "h1",
+    ".l-main-heading em",
+    "div.resut-carinfo--item:nth-of-type(n+2) div.carinfo-name",
+    "div.resut-carinfo--item:nth-of-type(n+2) div.carinfo-datepub",
+    "div.resut-carinfo--item:nth-of-type(n+2) div.carinfo-distance",
+    "em.big"
+    ]
 pagenations_min = 1
 pagenations_max = 100000
 
@@ -64,7 +72,9 @@ def scrape_website(website_url, start_url, pagenation_selectors, dataget_selecto
                             for data_selector in dataget_selectors:
                                 data_elements = final_page.select(data_selector)
                                 for element in data_elements:
-                                    print(f"{data_selector}: {element.get_text(strip=True)}")
+                                    raw_data = element.get_text(strip=True)
+                                    processed_data = process_data(data_selector, raw_data)
+                                    print(f"{data_selector}: {processed_data}")
 
                             time.sleep(delay)
                 else:

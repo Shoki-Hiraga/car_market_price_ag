@@ -2,8 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 import time
 from urllib.parse import urljoin
+from funciton_app.carsensor_dataget_selectors_edit import process_data
 
-# Define parameters
 # Define parameters
 website_url = "https://kaitori.carsensor.net/"
 start_url = "https://kaitori.carsensor.net/"
@@ -16,7 +16,7 @@ dataget_selectors = [
     "p:nth-of-type(2) span",
     "span.assessmentItem__priceNum:nth-of-type(1)",
     "span:nth-of-type(3)"
-    ]
+]
 
 pagenations_min = 1
 pagenations_max = 100000
@@ -63,8 +63,8 @@ def scrape_website(website_url, start_url, pagenation_selectors, dataget_selecto
                     for link in links:
                         print(f"Accessing {link}")
                         for page_num in range(pagenations_min, pagenations_max + 1):
-                            # ここでページネーションのページを付与
-                            paginated_url = f"{link}?page{page_num}"
+                            # ページネーションのページを付与
+                            paginated_url = f"{link}?page={page_num}"
                             print(f"Fetching {paginated_url}")
                             final_page = fetch_page(paginated_url)
 
@@ -74,7 +74,9 @@ def scrape_website(website_url, start_url, pagenation_selectors, dataget_selecto
                             for data_selector in dataget_selectors:
                                 data_elements = final_page.select(data_selector)
                                 for element in data_elements:
-                                    print(f"{data_selector}: {element.get_text(strip=True)}")
+                                    raw_data = element.get_text(strip=True)
+                                    processed_data = process_data(data_selector, raw_data)
+                                    print(f"{data_selector}: {processed_data}")
 
                             time.sleep(delay)
                 else:
