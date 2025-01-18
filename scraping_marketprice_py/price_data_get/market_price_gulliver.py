@@ -4,18 +4,25 @@ import time
 from urllib.parse import urljoin
 
 # Define parameters
-website_url = "https://ucarpac.com/sell/"
-start_url = "https://ucarpac.com/sell/"
-pagenation_selectors = ["[data-show='10'] a", "#default a", ".grade a"]
+website_url = "https://221616.com/satei/souba/"
+start_url = "https://221616.com/satei/souba/"
+pagenation_selectors = [".mb20 a", ".second a"]
 dataget_selectors = ["h1", "h2"]
+pagenations_min = 1
+pagenations_max = 100000
 
-def scrape_website(website_url, start_url, pagenation_selectors, dataget_selectors, delay=3):
+delay = 4
+
+def scrape_website(website_url, start_url, pagenation_selectors, dataget_selectors, pagenations_min, pagenations_max, delay):
     def get_absolute_url(base, link):
         return urljoin(base, link) if not link.startswith("http") else link
 
     def fetch_page(url):
         try:
             response = requests.get(url)
+            if response.status_code == 404:
+                print(f"404 Error at {url}")
+                return None
             response.raise_for_status()
             return BeautifulSoup(response.text, 'html.parser')
         except requests.exceptions.RequestException as e:
@@ -29,7 +36,6 @@ def scrape_website(website_url, start_url, pagenation_selectors, dataget_selecto
             links.extend([get_absolute_url(website_url, elem.get('href')) for elem in elements if elem.get('href')])
         return links
 
-    # Start scraping
     print(f"Starting scrape from: {start_url}\n")
     current_urls = [start_url]
 
@@ -43,22 +49,29 @@ def scrape_website(website_url, start_url, pagenation_selectors, dataget_selecto
                 links = extract_links(soup, [selector])
                 print(f"Found {len(links)} links at {url}")
 
-                # If it's the last selector, process data immediately
                 if idx == len(pagenation_selectors) - 1:
                     for link in links:
                         print(f"Accessing {link}")
-                        final_page = fetch_page(link)
-                        if final_page:
+                        for page_num in range(pagenations_min, pagenations_max + 1):
+                            # ここでページネーションのページを付与
+                            paginated_url = f"{link}page{page_num}/"
+                            print(f"Fetching {paginated_url}")
+                            final_page = fetch_page(paginated_url)
+
+                            if not final_page:
+                                break
+
                             for data_selector in dataget_selectors:
                                 data_elements = final_page.select(data_selector)
                                 for element in data_elements:
                                     print(f"{data_selector}: {element.get_text(strip=True)}")
-                        time.sleep(delay)  # Delay to avoid overloading the server
+
+                            time.sleep(delay)
                 else:
                     next_urls.extend(links)
-            time.sleep(delay)  # Delay to avoid overloading the server
+            time.sleep(delay)
 
         current_urls = next_urls
 
 # Start the scraping process
-scrape_website(website_url, start_url, pagenation_selectors, dataget_selectors, delay=3)
+scrape_website(website_url, start_url, pagenation_selectors, dataget_selectors, pagenations_min, pagenations_max, delay)

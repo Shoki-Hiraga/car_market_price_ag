@@ -4,14 +4,26 @@ import time
 from urllib.parse import urljoin
 
 # Define parameters
-website_url = "https://221616.com/satei/souba/"
-start_url = "https://221616.com/satei/souba/"
-pagenation_selectors = [".mb20 a", ".second a"]
-dataget_selectors = ["h1", "h2"]
+# Define parameters
+website_url = "https://kaitori.carsensor.net/"
+start_url = "https://kaitori.carsensor.net/"
+pagenation_selectors = ["ul.maker__list:nth-of-type(1) a", "a.carListItem", ".assessmentPrice__linkItem a.iconLink"]
+dataget_selectors = [
+    "h1",
+    "span.assessmentItem__carName",
+    "a.assessmentItem__grade",
+    "p.assessmentItem__carInfoItem:nth-of-type(1) span",
+    "p:nth-of-type(2) span",
+    "span.assessmentItem__priceNum:nth-of-type(1)",
+    "span:nth-of-type(3)"
+    ]
+
 pagenations_min = 1
 pagenations_max = 100000
 
-def scrape_website(website_url, start_url, pagenation_selectors, dataget_selectors, pagenations_min, pagenations_max, delay=3):
+delay = 4
+
+def scrape_website(website_url, start_url, pagenation_selectors, dataget_selectors, pagenations_min, pagenations_max, delay):
     def get_absolute_url(base, link):
         return urljoin(base, link) if not link.startswith("http") else link
 
@@ -51,7 +63,8 @@ def scrape_website(website_url, start_url, pagenation_selectors, dataget_selecto
                     for link in links:
                         print(f"Accessing {link}")
                         for page_num in range(pagenations_min, pagenations_max + 1):
-                            paginated_url = f"{link}page{page_num}/"
+                            # ここでページネーションのページを付与
+                            paginated_url = f"{link}?page{page_num}"
                             print(f"Fetching {paginated_url}")
                             final_page = fetch_page(paginated_url)
 
@@ -71,4 +84,4 @@ def scrape_website(website_url, start_url, pagenation_selectors, dataget_selecto
         current_urls = next_urls
 
 # Start the scraping process
-scrape_website(website_url, start_url, pagenation_selectors, dataget_selectors, pagenations_min, pagenations_max, delay=3)
+scrape_website(website_url, start_url, pagenation_selectors, dataget_selectors, pagenations_min, pagenations_max, delay)

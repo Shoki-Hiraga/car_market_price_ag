@@ -4,18 +4,34 @@ import time
 from urllib.parse import urljoin
 
 # Define parameters
-website_url = "https://kaitori.carsensor.net/"
-start_url = "https://kaitori.carsensor.net/"
-pagenation_selectors = ["ul.maker__list:nth-of-type(1) a", "a.carListItem", "a.searchOtherGrade__link"]
-dataget_selectors = ["h1", "h2"]
+website_url = "https://ucarpac.com/sell/"
+start_url = "https://ucarpac.com/sell/"
+pagenation_selectors = [
+    "[data-show='10'] a",
+    "#default a",
+    ".grade a"
+]
+dataget_selectors = [
+    ".pc li:nth-of-type(4) span",
+    ".pc li:nth-of-type(5) span",
+    "#sell > div > div.breadcrumb.pc > div > ol > li:nth-child(6) > span",
+    "#year .purchase-data__table--body div.col:nth-of-type(1)",
+    "#year .primary span:nth-of-type(1)",
+    "#year .primary span:nth-of-type(2)"
+    ]
 
-def scrape_website(website_url, start_url, pagenation_selectors, dataget_selectors, delay=3):
+delay = 0.00004
+
+def scrape_website(website_url, start_url, pagenation_selectors, dataget_selectors, delay):
     def get_absolute_url(base, link):
         return urljoin(base, link) if not link.startswith("http") else link
 
     def fetch_page(url):
         try:
             response = requests.get(url)
+            if response.status_code == 404:
+                print(f"404 Error at {url}")
+                return None
             response.raise_for_status()
             return BeautifulSoup(response.text, 'html.parser')
         except requests.exceptions.RequestException as e:
@@ -61,4 +77,4 @@ def scrape_website(website_url, start_url, pagenation_selectors, dataget_selecto
         current_urls = next_urls
 
 # Start the scraping process
-scrape_website(website_url, start_url, pagenation_selectors, dataget_selectors, delay=3)
+scrape_website(website_url, start_url, pagenation_selectors, dataget_selectors, delay)
