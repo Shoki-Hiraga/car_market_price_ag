@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import subprocess
 import time
 import os
-
+ 
 def get_links(url, selectors):
     """
     指定したURLから、指定したCSSセレクタに一致するリンクを取得します。

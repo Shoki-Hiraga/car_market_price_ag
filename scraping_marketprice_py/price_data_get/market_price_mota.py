@@ -4,7 +4,7 @@ import time
 from urllib.parse import urljoin
 from funciton_app.mota_dataget_selectors_edit import process_data
 import sys
-
+  
 # Define parameters
 website_url = "https://autoc-one.jp/"
 pagenation_selectors = ["a.p-top-result-card__model-link"]
