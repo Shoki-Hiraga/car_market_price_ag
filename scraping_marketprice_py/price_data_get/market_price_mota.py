@@ -3,16 +3,16 @@ from bs4 import BeautifulSoup
 import time
 from urllib.parse import urljoin
 from funciton_app.mota_dataget_selectors_edit import process_data
+import sys
 
 # Define parameters
 website_url = "https://autoc-one.jp/"
-start_url = "https://autoc-one.jp/ullo/biddedCarList/ma34/"
 pagenation_selectors = ["a.p-top-result-card__model-link"]
 dataget_selectors = [
     "h1",
     "title"
-    ]
-pagenations_min = 1
+]
+pagenations_min = 99999
 pagenations_max = 100000
 delay = 4
 
@@ -67,5 +67,12 @@ def scrape_website(website_url, start_url, pagenation_selectors, dataget_selecto
 
         time.sleep(delay)
 
-# Start the scraping process
-scrape_website(website_url, start_url, pagenation_selectors, dataget_selectors, pagenations_min, pagenations_max, delay)
+# メイン処理
+if __name__ == "__main__":
+    # コマンドライン引数からリンクを取得
+    if len(sys.argv) < 2:
+        print("Usage: python market_price_mota.py <start_url>")
+        sys.exit(1)
+
+    start_url = sys.argv[1]
+    scrape_website(website_url, start_url, pagenation_selectors, dataget_selectors, pagenations_min, pagenations_max, delay)
