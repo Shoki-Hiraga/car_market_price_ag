@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import subprocess
 import time
 import os
-
+ 
 def get_links(url, selectors):
     """
     指定したURLから、指定したCSSセレクタに一致するリンクを取得します。
@@ -38,7 +38,7 @@ def main():
     target_url = "https://autoc-one.jp/ullo/"
 
     # CSSセレクタのリスト
-    dataget_selectors = ["dt:contains('国産車') + dd li a"]
+    dataget_selectors = ["dt:-soup-contains('国産車') + dd li a"]
 
     # market_price_mota.py のフルパスを指定
     market_price_mota_path = os.path.join(
