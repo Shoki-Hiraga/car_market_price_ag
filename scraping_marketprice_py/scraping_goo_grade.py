@@ -14,6 +14,13 @@ load_dotenv()
 from setting_script.setFunc import get_db_config
 DB_CONFIG = get_db_config()
 
+USER_AGENTS = [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
+]
+
+
 website_url = "https://www.goo-net.com/"
 start_url = "https://www.goo-net.com/catalog/"
 pagenation_selectors = ['.first ul:nth-of-type(1) a', '.detail_box > a', '.grade a']
@@ -39,6 +46,9 @@ def get_full_url(relative_url):
 def scrape_page(url):
     """指定されたURLのページを取得してBeautifulSoupオブジェクトを返す"""
     print(f"アクセス中のURL: {url}")
+    headers = {
+        "User-Agent": random.choice(USER_AGENTS)  # ランダムにUser-Agentを選択
+    }
     response = requests.get(url, headers={
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
     }, timeout=10)
