@@ -15,7 +15,8 @@ dataget_selectors = [
     "div:nth-of-type(13) h2",
     "h1",
     "p:nth-of-type(1) b.u-font-3xl",
-    "p:nth-of-type(3) b.u-font-3xl"    
+    "p:nth-of-type(3) b.u-font-3xl",
+    "url"
 ]
 pagenations_min = 1
 pagenations_max = 100000
@@ -63,11 +64,16 @@ def scrape_website(website_url, start_url, pagenation_selectors, dataget_selecto
                 detail_page = fetch_page(link)
                 if detail_page:
                     for data_selector in dataget_selectors:
-                        data_elements = detail_page.select(data_selector)
-                        for element in data_elements:
-                            raw_data = element.get_text(strip=True)
-                            processed_data = process_data(data_selector, raw_data)
+                        if data_selector == "url":
+                            processed_data = process_data(data_selector, link)
                             print(f"{data_selector}: {processed_data}")
+                        else:
+
+                            data_elements = detail_page.select(data_selector)
+                            for element in data_elements:
+                                raw_data = element.get_text(strip=True)
+                                processed_data = process_data(data_selector, raw_data)
+                                print(f"{data_selector}: {processed_data}")
                 time.sleep(delay)
 
         time.sleep(delay)

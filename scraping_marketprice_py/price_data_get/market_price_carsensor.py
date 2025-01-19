@@ -15,7 +15,8 @@ dataget_selectors = [
     "p.assessmentItem__carInfoItem:nth-of-type(1) span",
     "p:nth-of-type(2) span",
     "span.assessmentItem__priceNum:nth-of-type(1)",
-    "span:nth-of-type(3)"
+    "span:nth-of-type(3)",
+    "url"
 ]
 
 pagenations_min = 1
@@ -72,11 +73,17 @@ def scrape_website(website_url, start_url, pagenation_selectors, dataget_selecto
                                 break
 
                             for data_selector in dataget_selectors:
-                                data_elements = final_page.select(data_selector)
-                                for element in data_elements:
-                                    raw_data = element.get_text(strip=True)
-                                    processed_data = process_data(data_selector, raw_data)
+                                # URL取得判定を追加（dataget_selectors のURLに対応）
+                                if data_selector == "url":
+                                    processed_data = process_data(data_selector, paginated_url)
                                     print(f"{data_selector}: {processed_data}")
+                                else:
+                                # ここまで
+                                    data_elements = final_page.select(data_selector)
+                                    for element in data_elements:
+                                        raw_data = element.get_text(strip=True)
+                                        processed_data = process_data(data_selector, raw_data)
+                                        print(f"{data_selector}: {processed_data}")
 
                             time.sleep(delay)
                 else:

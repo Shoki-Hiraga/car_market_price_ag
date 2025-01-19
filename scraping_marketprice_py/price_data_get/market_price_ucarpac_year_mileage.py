@@ -19,7 +19,8 @@ dataget_selectors = [
     "h1",
     "#mile .purchase-data__table--body div.col:nth-of-type(1)",
     ".primary span:nth-of-type(1)",
-    ".primary span:nth-of-type(2)"
+    ".primary span:nth-of-type(2)",
+    "url"
 ]
 
 delay = 4
@@ -68,11 +69,16 @@ def scrape_website(website_url, start_url, pagenation_selectors, dataget_selecto
                         final_page = fetch_page(link)
                         if final_page:
                             for data_selector in dataget_selectors:
-                                data_elements = final_page.select(data_selector)
-                                for element in data_elements:
-                                    raw_data = element.get_text(strip=True)
-                                    processed_data = process_data(data_selector, raw_data)
+                                if data_selector == "url":
+                                    processed_data = process_data(data_selector, link)
                                     print(f"{data_selector}: {processed_data}")
+                                else:
+                                    for data_selector in dataget_selectors:
+                                        data_elements = final_page.select(data_selector)
+                                        for element in data_elements:
+                                            raw_data = element.get_text(strip=True)
+                                            processed_data = process_data(data_selector, raw_data)
+                                            print(f"{data_selector}: {processed_data}")
                         time.sleep(delay)  # Delay to avoid overloading the server
                 else:
                     next_urls.extend(links)
