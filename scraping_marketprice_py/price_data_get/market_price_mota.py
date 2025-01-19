@@ -12,7 +12,7 @@ dataget_selectors = [
     "h1",
     "title"
 ]
-pagenations_min = 99999
+pagenations_min = 1
 pagenations_max = 100000
 delay = 4
 
