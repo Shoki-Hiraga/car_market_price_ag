@@ -9,8 +9,13 @@ import sys
 website_url = "https://autoc-one.jp/"
 pagenation_selectors = ["a.p-top-result-card__model-link"]
 dataget_selectors = [
+    "ul:nth-of-type(1) li:nth-of-type(1) div.p-biddedcar-detail-list__item-value",
+    "li:nth-of-type(3) div.p-biddedcar-detail-list__item-value",
+    "li:nth-of-type(5) div.p-biddedcar-detail-list__item-value",
+    "div:nth-of-type(13) h2",
     "h1",
-    "title"
+    "p:nth-of-type(1) b.u-font-3xl",
+    "p:nth-of-type(3) b.u-font-3xl"    
 ]
 pagenations_min = 1
 pagenations_max = 100000
