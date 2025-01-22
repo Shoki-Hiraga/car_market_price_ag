@@ -6,6 +6,25 @@ import os
 from dotenv import load_dotenv
 from datetime import datetime
 import re
+import random
+
+USER_AGENTS = [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
+]
+
+def fetch_url(url):
+    headers = {
+        "User-Agent": random.choice(USER_AGENTS)
+    }
+    try:
+        response = requests.get(url, headers=headers, timeout=10)
+        response.raise_for_status()  # HTTPエラーが発生した場合は例外をスロー
+        return response.text
+    except requests.exceptions.RequestException as e:
+        print(f"Error: {e}")
+        return None
 
 # .envファイルのロード
 load_dotenv()
@@ -53,7 +72,7 @@ def scrape_page(url):
         response.encoding = response.headers["Content-Type"].split("charset=")[-1]
     else:
         response.encoding = response.apparent_encoding
-    time.sleep(4)
+    time.sleep(random.uniform(5, 12))
     response.raise_for_status()
     return BeautifulSoup(response.text, 'html.parser')
 
