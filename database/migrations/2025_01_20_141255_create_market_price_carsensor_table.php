@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('market_price_goo', function (Blueprint $table) {
+        Schema::create('market_price_carsensor', function (Blueprint $table) {
             $table->id(); // 主キー
             $table->unsignedBigInteger('maker_name_id');
             $table->unsignedBigInteger('model_name_id');
@@ -40,7 +40,7 @@ return new class extends Migration
         Schema::disableForeignKeyConstraints();
     
         // テーブルを削除
-        Schema::dropIfExists('market_price_goo');
+        Schema::dropIfExists('market_price_carsensor');
     
         // 外部キー制約を再度有効化
         Schema::enableForeignKeyConstraints();

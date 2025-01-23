@@ -30,7 +30,7 @@ dataget_selectors = [
 ]
 
 pagenations_min = 1
-pagenations_max = 100000
+pagenations_max = 10
 delay = 4
 similarity_threshold = 0.7  # 類似性の閾値
 
@@ -74,7 +74,7 @@ def is_recent_url(sc_url, connection):
     """Check if the sc_url has been updated within the last 10 days."""
     cursor = connection.cursor(dictionary=True)
     try:
-        query = "SELECT updated_at FROM market_price_goo WHERE sc_url = %s"
+        query = "SELECT updated_at FROM market_price_carsensor WHERE sc_url = %s"
         cursor.execute(query, (sc_url,))
         result = cursor.fetchone()
         if result and result['updated_at']:
@@ -112,9 +112,9 @@ def save_to_db(data, connection):
         print(f"DEBUG: model_name_id: {model_name_id}")
         print(f"DEBUG: grade_name_id: {grade_name_id}")
 
-        # Insert into market_price_goo
+        # Insert into market_price_carsensor
         insert_query = """
-        INSERT INTO market_price_goo (maker_name_id, model_name_id, grade_name_id, year, mileage, min_price, max_price, sc_url, created_at, updated_at)
+        INSERT INTO market_price_carsensor (maker_name_id, model_name_id, grade_name_id, year, mileage, min_price, max_price, sc_url, created_at, updated_at)
         VALUES (%s, %s, %s, %s, %s, %s, %s, %s, NOW(), NOW())
         ON DUPLICATE KEY UPDATE
             min_price = VALUES(min_price),
