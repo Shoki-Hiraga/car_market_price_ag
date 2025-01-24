@@ -17,10 +17,11 @@ return new class extends Migration
             $table->unsignedBigInteger('model_name_id');
             $table->unsignedBigInteger('grade_name_id');
             $table->year('year')->nullable(); // 車の年式
-            $table->string('mileage')->nullable(); // 走行距離
+            $table->unsignedInteger('mileage')->nullable(); // 走行距離
             $table->unsignedInteger('min_price')->nullable(); // 最低価格
             $table->unsignedInteger('max_price')->nullable(); // 最高価格
             $table->string('sc_url')->unique(); // スクレイピングURL
+            $table->date('date')->nullable(); // スクレイピングURL
             $table->timestamps(); // created_at, updated_at
 
             // 外部キー制約

@@ -114,8 +114,8 @@ def save_to_db(data, connection):
 
         # Insert into market_price_carsensor
         insert_query = """
-        INSERT INTO market_price_carsensor (maker_name_id, model_name_id, grade_name_id, year, mileage, min_price, max_price, sc_url, created_at, updated_at)
-        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, NOW(), NOW())
+        INSERT INTO market_price_carsensor (maker_name_id, model_name_id, grade_name_id, year, mileage, min_price, max_price, sc_url, date, created_at, updated_at)
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, current_date(), NOW(), NOW())
         ON DUPLICATE KEY UPDATE
             min_price = VALUES(min_price),
             max_price = VALUES(max_price),
