@@ -1,86 +1,82 @@
 import requests
 from bs4 import BeautifulSoup
-import time
 from urllib.parse import urljoin
+import time
 from funciton_app.gulliver_dataget_selectors_edit import process_data
+from db_handler import save_to_db, is_recent_url
 
-# Define parameters
+# 定義: テーブル名
+TABLE_NAME = "market_price_gulliver"
+
+# スクレイピング設定
 website_url = "https://221616.com/satei/souba/"
 start_url = "https://221616.com/satei/souba/"
 pagenation_selectors = [".mb20 a", ".second a"]
-dataget_selectors = [
-    "h1",
-    ".l-main-heading em",
-    "div.resut-carinfo--item:nth-of-type(n+2) div.carinfo-name",
-    "div.resut-carinfo--item:nth-of-type(n+2) div.carinfo-datepub",
-    "div.resut-carinfo--item:nth-of-type(n+2) div.carinfo-distance",
-    "em.big",
-    "url"
-    ]
-pagenations_min = 1
-pagenations_max = 100000
+dataget_selectors = {
+    "maker_name": "h1",
+    "model_name": ".l-main-heading em",
+    "grade_name": "div.resut-carinfo--item:nth-of-type(n+2) div.carinfo-name",
+    "year": "div.resut-carinfo--item:nth-of-type(n+2) div.carinfo-datepub",
+    "mileage": "div.resut-carinfo--item:nth-of-type(n+2) div.carinfo-distance",
+    "min_price": "em.big",
+    "max_price": "em.big",
+    "sc_url": "url"
+}
 
+pagenations_min = 1
+pagenations_max = 10
 delay = 4
 
-def scrape_website(website_url, start_url, pagenation_selectors, dataget_selectors, pagenations_min, pagenations_max, delay):
-    def get_absolute_url(base, link):
-        return urljoin(base, link) if not link.startswith("http") else link
+def fetch_page(url):
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        return BeautifulSoup(response.text, 'html.parser')
+    except requests.exceptions.RequestException as e:
+        print(f"Error fetching {url}: {e}")
+        return None
 
-    def fetch_page(url):
-        try:
-            response = requests.get(url)
-            if response.status_code == 404:
-                print(f"404 Error at {url}")
-                return None
-            response.raise_for_status()
-            return BeautifulSoup(response.text, 'html.parser')
-        except requests.exceptions.RequestException as e:
-            print(f"Error fetching {url}: {e}")
-            return None
+def extract_data(soup, selectors):
+    data = {}
+    for key, selector in selectors.items():
+        if selector == "url":
+            continue
+        elements = soup.select(selector)
+        data[key] = process_data(selector, elements[0].get_text(strip=True)) if elements else None
+    return data
 
-    def extract_links(soup, selector):
-        links = []
-        for sel in selector:
-            elements = soup.select(sel)
-            links.extend([get_absolute_url(website_url, elem.get('href')) for elem in elements if elem.get('href')])
-        return links
-
+def scrape_urls():
     print(f"Starting scrape from: {start_url}\n")
     current_urls = [start_url]
 
     for idx, selector in enumerate(pagenation_selectors):
         next_urls = []
-        print(f"Scraping level {idx + 1} with selector: {selector}")
 
         for url in current_urls:
             soup = fetch_page(url)
             if soup:
-                links = extract_links(soup, [selector])
-                print(f"Found {len(links)} links at {url}")
-
+                links = [urljoin(website_url, a['href']) for a in soup.select(selector) if a.get('href')]
                 if idx == len(pagenation_selectors) - 1:
                     for link in links:
-                        print(f"Accessing {link}")
                         for page_num in range(pagenations_min, pagenations_max + 1):
-                            # ここでページネーションのページを付与
-                            paginated_url = f"{link}page{page_num}/"
-                            print(f"Fetching {paginated_url}")
+                            paginated_url = f"{link}?page={page_num}"
+
+                            if is_recent_url(paginated_url, TABLE_NAME):
+                                print(f"Skipping: recent URL: {paginated_url}")
+                                continue
+
                             final_page = fetch_page(paginated_url)
-
                             if not final_page:
-                                break
+                                continue
 
-                            for data_selector in dataget_selectors:
-                                if data_selector == "url":
-                                    processed_data = process_data(data_selector, paginated_url)
-                                    print(f"{data_selector}: {processed_data}")
-                                else:
-                                    data_elements = final_page.select(data_selector)
-                                    for element in data_elements:
-                                        raw_data = element.get_text(strip=True)
-                                        processed_data = process_data(data_selector, raw_data)
-                                        print(f"{data_selector}: {processed_data}")
+                            data = extract_data(final_page, dataget_selectors)
+                            data["sc_url"] = paginated_url
 
+                            if any(value is None for value in data.values()):
+                                print(f"Skipping: incomplete data: {data}")
+                                continue
+
+                            save_to_db(data, TABLE_NAME)
                             time.sleep(delay)
                 else:
                     next_urls.extend(links)
@@ -88,5 +84,5 @@ def scrape_website(website_url, start_url, pagenation_selectors, dataget_selecto
 
         current_urls = next_urls
 
-# Start the scraping process
-scrape_website(website_url, start_url, pagenation_selectors, dataget_selectors, pagenations_min, pagenations_max, delay)
+# スクレイピング実行
+scrape_urls()
