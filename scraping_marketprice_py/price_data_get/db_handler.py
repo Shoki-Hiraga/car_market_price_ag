@@ -5,7 +5,7 @@ from datetime import datetime
 from setting_script.setFunc import get_db_config
 
 DB_CONFIG = get_db_config()
-similarity_threshold = 0.5  # 類似性の閾値
+similarity_threshold = 0.65  # 類似性の閾値
 
 def normalize_text(text):
     return unicodedata.normalize('NFKC', text)

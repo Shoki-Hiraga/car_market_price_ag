@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import time
+import random
 from funciton_app.gulliver_dataget_selectors_edit import process_data
 from db_handler import save_to_db, is_recent_url
 
@@ -28,8 +29,15 @@ pagenations_max = 10
 delay = 4
 
 def fetch_page(url):
+    user_agents = [  # ランダムに選択するUser-Agentのリスト
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
+    ]
+    headers = {"User-Agent": random.choice(user_agents)}  # ヘッダーにランダムなUser-Agentを設定
+
     try:
-        response = requests.get(url)
+        response = requests.get(url, headers=headers)  # ヘッダーを含めてリクエスト
         response.raise_for_status()
         return BeautifulSoup(response.text, 'html.parser')
     except requests.exceptions.RequestException as e:
@@ -59,7 +67,7 @@ def scrape_urls():
                 if idx == len(pagenation_selectors) - 1:
                     for link in links:
                         for page_num in range(pagenations_min, pagenations_max + 1):
-                            paginated_url = f"{link}?page={page_num}"
+                            paginated_url = f"{link}page{page_num}"
 
                             if is_recent_url(paginated_url, TABLE_NAME):
                                 print(f"Skipping: recent URL: {paginated_url}")
