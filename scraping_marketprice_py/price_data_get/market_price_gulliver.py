@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import time
 import random
-from funciton_app.carsensor_dataget_selectors_edit import process_data
+from funciton_app.gulliver_dataget_selectors_edit import process_data
 from db_handler import save_to_db, is_recent_url
 
 # 定義: テーブル名
