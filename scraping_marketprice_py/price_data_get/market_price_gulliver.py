@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import time
 import random
-from funciton_app.gulliver_dataget_selectors_edit import process_data
+from funciton_app.carsensor_dataget_selectors_edit import process_data
 from db_handler import save_to_db, is_recent_url
 
 # 定義: テーブル名
@@ -23,10 +23,17 @@ dataget_selectors = {
     "max_price": "em.big",
     "sc_url": "url"
 }
-
 pagenations_min = 1
 pagenations_max = 10000
 delay = 4
+
+# スキップ条件
+sc_skip_conditions = [
+    {"selector": "title", "text": "申し訳ございません"},
+    {"selector": "p.nodata--txt", "text": "申し訳ございません"}
+]
+# # スキップ条件の不要の設定
+# sc_skip_conditions = []
 
 def fetch_page(url):
     user_agents = [
@@ -37,10 +44,18 @@ def fetch_page(url):
     headers = {"User-Agent": random.choice(user_agents)}
 
     try:
-        print(f"Fetching URL: {url}")  # デバッグ用
         response = requests.get(url, headers=headers)
         response.raise_for_status()
-        return BeautifulSoup(response.text, 'html.parser')
+        soup = BeautifulSoup(response.text, 'html.parser')
+
+        # 複数のスキップ条件をチェック
+        for condition in sc_skip_conditions:
+            skip_element = soup.select_one(condition["selector"])
+            if skip_element and condition["text"] in skip_element.get_text():
+                print(f"Skipping: {url} due to skip condition match ({condition['selector']} contains '{condition['text']}')")
+                return None
+
+        return soup
     except requests.exceptions.HTTPError as e:
         if response.status_code == 404:
             print(f"404 Error for URL: {url}")
@@ -50,6 +65,14 @@ def fetch_page(url):
     except requests.exceptions.RequestException as e:
         return None
 
+    except requests.exceptions.HTTPError as e:
+        if response.status_code == 404:
+            print(f"404 Error for URL: {url}")
+        else:
+            print(f"HTTP Error for {url}: {e}")
+        return None
+    except requests.exceptions.RequestException as e:
+        return None
 
 def extract_data(soup, selectors):
     data = {}
@@ -84,14 +107,15 @@ def scrape_urls():
 
                             final_page = fetch_page(paginated_url)
                             if not final_page:
-                                print(f"Skipping due to error: {paginated_url}")
-                                break  # 404が出たら次のページネーションへ
+                                print(f"Skipping due to error or skip condition: {paginated_url}")
+                                break  # スキップ条件や404が出たら次のページネーションへ
 
                             data = extract_data(final_page, dataget_selectors)
                             data["sc_url"] = paginated_url
 
                             if any(value is None for value in data.values()):
                                 print(f"Skipping: incomplete data: {data}")
+                                time.sleep(delay)
                                 continue
 
                             print(f"Saving data: {data}")  # デバッグ用
@@ -104,7 +128,6 @@ def scrape_urls():
             time.sleep(delay)
 
         current_urls = next_urls
-        print(f"Next URLs: {current_urls}")  # デバッグ用
 
 # 実行
 scrape_urls()
