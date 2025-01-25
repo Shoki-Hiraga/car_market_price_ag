@@ -36,6 +36,27 @@ delay = 4
 # スキップ条件の不要の設定
 sc_skip_conditions = []
 
+# # 元のコード
+# def fetch_page(url):
+#     user_agents = [
+#         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+#         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+#         "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
+#     ]
+#     headers = {"User-Agent": random.choice(user_agents)}
+
+#     try:
+#         response = requests.get(url, headers=headers)
+#         response.raise_for_status()
+#         soup = BeautifulSoup(response.text, 'html.parser')
+
+#         # 複数のスキップ条件をチェック
+#         for condition in sc_skip_conditions:
+#             skip_element = soup.select_one(condition["selector"])
+#             if skip_element and condition["text"] in skip_element.get_text():
+#                 print(f"Skipping: {url} due to skip condition match ({condition['selector']} contains '{condition['text']}')")
+#                 return None
+
 def fetch_page(url):
     user_agents = [
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
@@ -49,12 +70,20 @@ def fetch_page(url):
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
 
-        # 複数のスキップ条件をチェック
-        for condition in sc_skip_conditions:
-            skip_element = soup.select_one(condition["selector"])
-            if skip_element and condition["text"] in skip_element.get_text():
-                print(f"Skipping: {url} due to skip condition match ({condition['selector']} contains '{condition['text']}')")
-                return None
+        # 各セレクタごとにデータを取得して出力
+        print(f"Debugging {url}")
+        for key, selector in dataget_selectors.items():
+            if selector == "url":
+                continue
+            elements = soup.select(selector)
+            print(f"Selector: {selector} (Key: {key})")
+            for i, element in enumerate(elements):
+                print(f"  [{i+1}] {element.get_text(strip=True)}")  # 各要素のテキストを出力
+
+        return soup
+    except requests.exceptions.RequestException as e:
+        print(f"Error fetching page: {url}\n{e}")
+        return None
 
         return soup
     except requests.exceptions.HTTPError as e:
