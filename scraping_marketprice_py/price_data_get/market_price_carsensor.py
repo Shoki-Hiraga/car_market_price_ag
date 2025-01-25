@@ -36,7 +36,6 @@ def fetch_page(url):
     headers = {"User-Agent": random.choice(user_agents)}
 
     try:
-        print(f"Fetching URL: {url}")  # デバッグ用
         response = requests.get(url, headers=headers)
         response.raise_for_status()
         return BeautifulSoup(response.text, 'html.parser')
@@ -103,7 +102,6 @@ def scrape_urls():
             time.sleep(delay)
 
         current_urls = next_urls
-        print(f"Next URLs: {current_urls}")  # デバッグ用
 
 # 実行
 scrape_urls()
