@@ -25,15 +25,16 @@ dataget_selectors = {
 }
 pagenations_min = 1
 pagenations_max = 10
-delay = 4
+delay = random.uniform(5, 12)  # 遅延時間を決定
 
 
-# スキップ条件
+# スキップ条件（404エラーが出ないページ）
 # sc_skip_conditions = [
 #     {"selector": "title", "text": "申し訳ございません"},
 #     {"selector": "p.nodata--txt", "text": "申し訳ございません"}
 # ]
-# スキップ条件の不要の設定
+
+# スキップ条件の不要の設定（404エラーがあるページ）
 sc_skip_conditions = []
 
 # # 元のコード
@@ -81,6 +82,7 @@ def fetch_page(url):
                 print(f"  [{i+1}] {element.get_text(strip=True)}")  # 各要素のテキストを出力
 
         return soup
+
     except requests.exceptions.RequestException as e:
         print(f"Error fetching page: {url}\n{e}")
         return None
@@ -128,7 +130,7 @@ def scrape_urls():
                 if idx == len(pagenation_selectors) - 1:
                     for link in links:
                         for page_num in range(pagenations_min, pagenations_max + 1):
-                            paginated_url = f"{link}?page={page_num}"
+                            paginated_url = f"{link}?PAGE={page_num}"
                             print(f"Processing paginated URL: {paginated_url}")  # デバッグ用
 
                             if is_recent_url(paginated_url, TABLE_NAME):

@@ -25,7 +25,7 @@ dataget_selectors = {
 }
 pagenations_min = 1
 pagenations_max = 10000
-delay = 4
+delay = random.uniform(5, 12) 
 
 # スキップ条件
 sc_skip_conditions = [
