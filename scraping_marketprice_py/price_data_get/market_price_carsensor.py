@@ -25,7 +25,7 @@ dataget_selectors = {
 }
 pagenations_min = 1
 pagenations_max = 10
-delay = random.uniform(5, 12)  # 遅延時間を決定
+delay = random.uniform(5, 12) 
 
 
 # スキップ条件（404エラーが出ないページ）
