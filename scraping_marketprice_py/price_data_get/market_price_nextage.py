@@ -3,23 +3,19 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import time
 import random
-from funciton_app.ucarpac_dataget_selectors_edit import process_data
+from funciton_app.carsensor_dataget_selectors_edit import process_data
 from db_handler import save_to_db, is_recent_url
 
 # 定義: テーブル名
 TABLE_NAME = "market_price_nextage"
 
-# pagenation_selectors のどこでページネーションさせるか指定
-select_pagenation_selectors = 2
-
 # スクレイピング設定
-website_url = "https://www.nextage.jp/kaitori/souba/"
-start_url = "https://www.nextage.jp/kaitori/souba/"
-
+website_url = "https://www.nextage.jp/kaitori/souba/toyota/"
+start_url = "https://www.nextage.jp/kaitori/souba/toyota/"
 pagenation_selectors = [
     # ".brand ul:nth-of-type(1) a",
-    ".brand ul:nth-of-type(1) li:nth-of-type(5) a",
-    "section:nth-of-type(4) .list a",
+    "section:nth-of-type(4) ul.list:nth-of-type(1) li:nth-of-type(1) a",
+    # "section:nth-of-type(4) .list a",
     "section:nth-of-type(5) td a"
                         ]
 dataget_selectors = {
@@ -33,8 +29,8 @@ dataget_selectors = {
     "sc_url": "url"
 }
 pagenations_min = 1
-pagenations_max = 10000
-delay = random.uniform(0.5, 0.72) 
+pagenations_max = 3
+delay = random.uniform(1.5, 2.72) 
 
 # スキップ条件
 sc_skip_conditions = [
@@ -58,12 +54,21 @@ def fetch_page(url):
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
 
-        # 複数のスキップ条件をチェック
-        for condition in sc_skip_conditions:
-            skip_element = soup.select_one(condition["selector"])
-            if skip_element and condition["text"] in skip_element.get_text():
-                print(f"Skipping: {url} due to skip condition match ({condition['selector']} contains '{condition['text']}')")
-                return None
+        # 各セレクタごとにデータを取得して出力
+        print(f"Debugging {url}")
+        for key, selector in dataget_selectors.items():
+            if selector == "url":
+                continue
+            elements = soup.select(selector)
+            print(f"Selector: {selector} (Key: {key})")
+            for i, element in enumerate(elements):
+                print(f"  [{i+1}] {element.get_text(strip=True)}")  # 各要素のテキストを出力
+
+        return soup
+
+    except requests.exceptions.RequestException as e:
+        print(f"Error fetching page: {url}\n{e}")
+        return None
 
         return soup
     except requests.exceptions.HTTPError as e:
@@ -104,46 +109,32 @@ def scrape_urls():
         for url in current_urls:
             soup = fetch_page(url)
             if soup:
-                links = [urljoin(url, a['href']) for a in soup.select(selector) if a.get('href')]
-
-                
-
-                # 指定されたページネーションセレクタで範囲を結合
-                if idx == select_pagenation_selectors:
+                links = [urljoin(website_url, a['href']) for a in soup.select(selector) if a.get('href')]
+                if idx == len(pagenation_selectors) - 1:
                     for link in links:
                         for page_num in range(pagenations_min, pagenations_max + 1):
                             paginated_url = f"{link.rstrip('index.html')}index{page_num}.html"
-                            # ↑ネクステージ専用コード ↓汎用コード
-                            # paginated_url = f"{link}index{page_num}.html"
                             print(f"Processing paginated URL: {paginated_url}")  # デバッグ用
 
                             if is_recent_url(paginated_url, TABLE_NAME):
                                 print(f"Skipping: recent URL: {paginated_url}")
                                 continue
 
-                            # ページを取得して、その中のリンクをさらに取得
-                            paginated_soup = fetch_page(paginated_url)
-                            if not paginated_soup:
+                            final_page = fetch_page(paginated_url)
+                            if not final_page:
                                 print(f"Skipping due to error or skip condition: {paginated_url}")
                                 break  # スキップ条件や404が出たら次のページネーションへ
 
-                            # 最後のセレクタに基づいてデータ取得用のリンクを探す
-                            dataget_links = [urljoin(website_url, a['href']) for a in paginated_soup.select(pagenation_selectors[-1]) if a.get('href')]
+                            data = extract_data(final_page, dataget_selectors)
+                            data["sc_url"] = paginated_url
 
-                            for dataget_link in dataget_links:
-                                print(f"Fetching data from: {dataget_link}")  # デバッグ用
-                                final_page = fetch_page(dataget_link)
-                                if final_page:
-                                    data = extract_data(final_page, dataget_selectors)
-                                    data["sc_url"] = dataget_link
+                            if any(value is None for value in data.values()):
+                                print(f"Skipping: incomplete data: {data}")
+                                time.sleep(delay)
+                                continue
 
-                                    if any(value is None for value in data.values()):
-                                        print(f"Skipping: incomplete data: {data}")
-                                        continue
-
-                                    print(f"Saving data: {data}")  # デバッグ用
-                                    save_to_db(data, TABLE_NAME)
-                                    time.sleep(delay)
+                            print(f"Saving data: {data}")  # デバッグ用
+                            save_to_db(data, TABLE_NAME)
                             time.sleep(delay)
                 else:
                     next_urls.extend(links)
