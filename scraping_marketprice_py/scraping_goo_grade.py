@@ -6,25 +6,6 @@ import os
 from dotenv import load_dotenv
 from datetime import datetime
 import re
-import random
-
-USER_AGENTS = [
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
-    "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
-]
-
-def fetch_url(url):
-    headers = {
-        "User-Agent": random.choice(USER_AGENTS)
-    }
-    try:
-        response = requests.get(url, headers=headers, timeout=10)
-        response.raise_for_status()  # HTTPエラーが発生した場合は例外をスロー
-        return response.text
-    except requests.exceptions.RequestException as e:
-        print(f"Error: {e}")
-        return None
 
 # .envファイルのロード
 load_dotenv()
@@ -33,7 +14,12 @@ DB_CONFIG = get_db_config()
 
 website_url = "https://www.goo-net.com/"
 start_url = "https://www.goo-net.com/catalog/"
-pagenation_selectors = ['.first ul:nth-of-type(1) a', '.detail_box > a', '.grade a']
+
+pagenation_selectors = [
+    # '.first ul:nth-of-type(1) a', # 全車種
+    ".first ul:nth-of-type(1) li:nth-of-type(3) a", # 日産
+    '.detail_box > a', '.grade a'
+    ]
 dataget_selectors = [
     'ul.topicpath:nth-of-type(2) li:nth-of-type(3) span',
     'ul.topicpath:nth-of-type(2) li:nth-of-type(4) span',
@@ -72,7 +58,7 @@ def scrape_page(url):
         response.encoding = response.headers["Content-Type"].split("charset=")[-1]
     else:
         response.encoding = response.apparent_encoding
-    time.sleep(random.uniform(5, 12))
+    time.sleep(4)
     response.raise_for_status()
     return BeautifulSoup(response.text, 'html.parser')
 
@@ -173,7 +159,7 @@ def main():
             
             for detail_link in level_3_links:
                 if should_skip_url(detail_link):
-                    print(f"skip : sc_urlに重複データあり{detail_link}")
+                    # print(f"skip : sc_urlに重複データあり{detail_link}")
                     continue
                 detail_soup = scrape_page(detail_link)
                 

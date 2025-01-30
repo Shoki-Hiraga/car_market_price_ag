@@ -3,29 +3,35 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import time
 import random
-from funciton_app.gulliver_dataget_selectors_edit import process_data
+from funciton_app.ucarpac_dataget_selectors_edit import process_data
 from db_handler import save_to_db, is_recent_url
 
 # 定義: テーブル名
-TABLE_NAME = "market_price_ucarpac"
+TABLE_NAME = "market_price_mota"
 
-# スクレイピング設定
-website_url = "https://ucarpac.com/sell/"
+# pagenation_selectors のどこでページネーションさせるか指定
+select_pagenation_selectors = 0
+
+# Define parameters
+website_url = "https://ucarpac.com/"
 start_url = "https://ucarpac.com/sell/"
-pagenation_selectors = [".content-menu__list li:nth-of-type(2) a", ".second a"]
+pagenation_selectors = [
+    ".content-menu__list li:nth-of-type(2) a",
+    ".item a",
+                        ]
 dataget_selectors = {
-    "maker_name": "h1",
-    "model_name": ".l-main-heading em",
-    "grade_name": "div.resut-carinfo--item:nth-of-type(n+2) div.carinfo-name",
-    "year": "div.resut-carinfo--item:nth-of-type(n+2) div.carinfo-datepub",
-    "mileage": "div.resut-carinfo--item:nth-of-type(n+2) div.carinfo-distance",
-    "min_price": "em.big",
-    "max_price": "em.big",
+    "maker_name": ".pc li:nth-of-type(4) span",
+    "model_name": ".pc li:nth-of-type(5) span",
+    "grade_name": ".pc li:nth-of-type(6) span",
+    "year": "dt:-soup-contains('年式') + dd",
+    "mileage": "dt:-soup-contains('走行距離') + dd",
+    "min_price": "tr:-soup-contains('市場の買取価格相場') span",
+    "max_price": ".ucar span",
     "sc_url": "url"
 }
 pagenations_min = 1
 pagenations_max = 10000
-delay = random.uniform(0.05, 0.12) 
+delay = random.uniform(5, 12) 
 
 # スキップ条件
 sc_skip_conditions = [
@@ -95,31 +101,41 @@ def scrape_urls():
             soup = fetch_page(url)
             if soup:
                 links = [urljoin(website_url, a['href']) for a in soup.select(selector) if a.get('href')]
-                if idx == len(pagenation_selectors) - 1:
+
+                # 指定されたページネーションセレクタで範囲を結合
+                if idx == select_pagenation_selectors:
                     for link in links:
                         for page_num in range(pagenations_min, pagenations_max + 1):
-                            paginated_url = f"{link}page_{page_num}?o=td"
+                            paginated_url = f"{link}/page_{page_num}?o=td"
                             print(f"Processing paginated URL: {paginated_url}")  # デバッグ用
 
                             if is_recent_url(paginated_url, TABLE_NAME):
                                 print(f"Skipping: recent URL: {paginated_url}")
                                 continue
 
-                            final_page = fetch_page(paginated_url)
-                            if not final_page:
+                            # ページを取得して、その中のリンクをさらに取得
+                            paginated_soup = fetch_page(paginated_url)
+                            if not paginated_soup:
                                 print(f"Skipping due to error or skip condition: {paginated_url}")
                                 break  # スキップ条件や404が出たら次のページネーションへ
 
-                            data = extract_data(final_page, dataget_selectors)
-                            data["sc_url"] = paginated_url
+                            # 最後のセレクタに基づいてデータ取得用のリンクを探す
+                            dataget_links = [urljoin(website_url, a['href']) for a in paginated_soup.select(pagenation_selectors[-1]) if a.get('href')]
 
-                            if any(value is None for value in data.values()):
-                                print(f"Skipping: incomplete data: {data}")
-                                time.sleep(delay)
-                                continue
+                            for dataget_link in dataget_links:
+                                print(f"Fetching data from: {dataget_link}")  # デバッグ用
+                                final_page = fetch_page(dataget_link)
+                                if final_page:
+                                    data = extract_data(final_page, dataget_selectors)
+                                    data["sc_url"] = dataget_link
 
-                            print(f"Saving data: {data}")  # デバッグ用
-                            save_to_db(data, TABLE_NAME)
+                                    if any(value is None for value in data.values()):
+                                        print(f"Skipping: incomplete data: {data}")
+                                        continue
+
+                                    print(f"Saving data: {data}")  # デバッグ用
+                                    save_to_db(data, TABLE_NAME)
+                                    time.sleep(delay)
                             time.sleep(delay)
                 else:
                     next_urls.extend(links)
