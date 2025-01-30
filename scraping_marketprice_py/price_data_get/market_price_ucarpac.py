@@ -7,7 +7,7 @@ from funciton_app.ucarpac_dataget_selectors_edit import process_data
 from db_handler import save_to_db, is_recent_url
 
 # 定義: テーブル名
-TABLE_NAME = "market_price_mota"
+TABLE_NAME = "market_price_ucarpac"
 
 # pagenation_selectors のどこでページネーションさせるか指定
 select_pagenation_selectors = 0
