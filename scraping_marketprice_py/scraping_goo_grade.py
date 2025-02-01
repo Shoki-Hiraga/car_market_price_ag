@@ -17,7 +17,8 @@ start_url = "https://www.goo-net.com/catalog/"
 
 pagenation_selectors = [
     # '.first ul:nth-of-type(1) a', # 全車種
-    ".first ul:nth-of-type(1) li:nth-of-type(3) a", # 日産
+    # ".first ul:nth-of-type(1) li:nth-of-type(3) a", # 日産
+    ".first ul:nth-of-type(1) li:nth-of-type(4) a", # ホンダ
     '.detail_box > a', '.grade a'
     ]
 dataget_selectors = [
