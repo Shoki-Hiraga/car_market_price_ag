@@ -11,17 +11,17 @@
         // メーカー名ごとにグループ化（メーカー名がキー）
         $groupedModels = $sc_goo_model->groupBy(function($model) {
             return optional($model->maker)->maker_name;
-        });
+        }); 
     @endphp
 
     <!-- ナビゲーション：各メーカーに対して番号付きアンカーリンク -->
     <nav>
         <ul>
-            @foreach($groupedModels as $makerName => $models)
+            @foreach($groupedModels as $makerName => $models) 
                 <li>
                     <!-- $loop->iteration で1,2,3…の番号を生成 -->
                     <a href="#{{ $loop->iteration }}">
-                        {{ $makerName }}
+                        {{ $makerName }} の買取相場
                     </a>
                 </li>
             @endforeach
@@ -33,14 +33,17 @@
         <section>
             <!-- アンカー先となる見出し。ナビゲーションと同じ番号を id に設定 -->
             <h2 id="{{ $loop->iteration }}">
-                {{ $makerName }}
+                {{ $makerName }} の買取相場
             </h2>
             <ul>
-                @foreach($models as $model)
-                    <li class="modellist">
-                        {{ $makerName }} - {{ $model->model_name }}
-                    </li>
-                @endforeach
+            @foreach($models as $model)
+                <li class="modellist">
+                    <a href="{{ route('model.show', $model->id) }}">
+                        {{ $model->model_name }}
+                    </a>
+                </li>
+            @endforeach
+
             </ul>
         </section>
     @endforeach

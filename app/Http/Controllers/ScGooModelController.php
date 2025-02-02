@@ -14,4 +14,11 @@ class ScGooModelController extends Controller
         $sc_goo_model = ScGooModel::with('maker')->get();
         return view('main.model', compact('sc_goo_model'));
     }
+    public function show($id)
+    {
+        // 指定されたIDのモデルを取得（見つからない場合は404）
+        $model = ScGooModel::findOrFail($id);
+        // 新たに作成するビュー 'model.show' に渡す
+        return view('main.model_detail', compact('model'));
+    }
 }
