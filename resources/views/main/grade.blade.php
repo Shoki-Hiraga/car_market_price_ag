@@ -15,7 +15,9 @@
         @foreach ($sc_goo_grade as $grade)
         <li class="gradelist">
             <!-- モデル名とメーカー名を表示 -->
-            {{ optional($grade->maker)->maker_name }} - {{ optional($grade->model)->model_name }} - {{ $grade->grade_name }}
+            {{ optional($grade->maker)->maker_name }} - {{ optional($grade->model)->model_name }}
+            <br>
+            {{ $grade->grade_name }}
         </li>
 
         @endforeach
