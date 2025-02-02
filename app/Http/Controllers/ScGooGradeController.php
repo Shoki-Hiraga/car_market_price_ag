@@ -10,7 +10,7 @@ class ScGooGradeController extends Controller
 {
     public function index()
     {
-        $sc_goo_grade = ScGooGrade::select('grade_name')->get();
+        $sc_goo_grade = ScGooGrade::with('maker')->get();
         return view('main.grade', compact('sc_goo_grade'));
     }
 }
