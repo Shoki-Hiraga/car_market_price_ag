@@ -19,6 +19,9 @@ use App\Http\Controllers\ScGooGradeController;
 Route::get('/', function () {
     return view('main.index');
 });
-Route::get('/', [ScGooMakerController::class, 'index'])->name('index');
-Route::get('/model', [ScGooModelController::class, 'index'])->name('index');
-Route::get('/grade', [ScGooGradeController::class, 'index'])->name('index');
+// メーカー一覧を表示するルート
+Route::get('/', [ScGooMakerController::class, 'index'])->name('maker.index');
+// モデル一覧を表示するルート
+Route::get('/model', [ScGooModelController::class, 'index'])->name('model.index');
+// グレード一覧を表示するルート
+Route::get('/grade', [ScGooGradeController::class, 'index'])->name('grade.index');

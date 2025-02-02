@@ -1,11 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
 h1 {
-    text-align: center;
+    font-size: 2.5em;
+    margin: 20px 0;
 }
 
-h2 {
-    text-align: center;
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 600px;
 }
 
-.makerlist, .modellist {
-    text-align: center;
+li.makerlist, li.modellist, li.gradelist {
+    font-size: 1.2em;
+    font-weight: bold;
 }
