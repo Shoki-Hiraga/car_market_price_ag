@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PyGooMakerController;
+use App\Http\Controllers\ScGooMakerController;
 use App\Http\Controllers\InComeController;
 
 /*
@@ -18,4 +18,4 @@ use App\Http\Controllers\InComeController;
 Route::get('/', function () {
     return view('main.index');
 });
-Route::get('/', [PyGooMakerController::class, 'index'])->name('index');
+Route::get('/', [ScGooMakerController::class, 'index'])->name('index');
