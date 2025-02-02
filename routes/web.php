@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ScGooMakerController;
-use App\Http\Controllers\InComeController;
+use App\Http\Controllers\ScGooModelController;
+use App\Http\Controllers\ScGooGradeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,5 @@ Route::get('/', function () {
     return view('main.index');
 });
 Route::get('/', [ScGooMakerController::class, 'index'])->name('index');
+Route::get('/model', [ScGooModelController::class, 'index'])->name('index');
+Route::get('/grade', [ScGooGradeController::class, 'index'])->name('index');
