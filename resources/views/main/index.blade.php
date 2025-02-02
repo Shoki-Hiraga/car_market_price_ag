@@ -10,6 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <a href="{{ route('model.index') }}">車種覧へ</a>
+    <a href="{{ route('grade.index') }}">グレード一覧へ</a>
+
     <h1>メーカー一覧</h1>
     <ul>
         @foreach ($sc_goo_maker as $maker)
