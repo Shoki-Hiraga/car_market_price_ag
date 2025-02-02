@@ -10,7 +10,8 @@ class ScGooModelController extends Controller
 {
     public function index()
     {
-        $sc_goo_model = ScGooModel::select('model_name')->get();
+        // リレーションしているmakerを含む全てのデータを取得
+        $sc_goo_model = ScGooModel::with('maker')->get();
         return view('main.model', compact('sc_goo_model'));
     }
 }

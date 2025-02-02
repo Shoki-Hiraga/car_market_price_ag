@@ -13,7 +13,10 @@
     <h1>車種一覧</h1>
     <ul>
         @foreach ($sc_goo_model as $model)
-            <li class = modellist>{{ $model->model_name }}</li>
+        <li class="modellist">
+            <!-- モデル名とメーカー名を表示 -->
+            {{ optional($model->maker)->maker_name }} - {{ $model->model_name }}
+        </li>
         @endforeach
     </ul>
 </body>
