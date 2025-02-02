@@ -22,6 +22,6 @@ ul {
 }
 
 li.makerlist, li.modellist, li.gradelist {
-    font-size: 1.0em;
+    font-size: 1.0  em;
     font-weight: bold;
 }
