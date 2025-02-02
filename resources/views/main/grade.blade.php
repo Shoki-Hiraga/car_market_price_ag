@@ -13,7 +13,11 @@
     <h1>グレード一覧</h1>
     <ul>
         @foreach ($sc_goo_grade as $grade)
-            <li class = gradelist>{{ $grade->grade_name }}</li>
+        <li class="gradelist">
+            <!-- モデル名とメーカー名を表示 -->
+            {{ optional($grade->maker)->maker_name }} - {{ optional($grade->model)->model_name }} - {{ $grade->grade_name }}
+        </li>
+
         @endforeach
     </ul>
 </body>
