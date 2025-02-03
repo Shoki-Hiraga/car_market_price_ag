@@ -22,8 +22,11 @@ class CreateMarketPriceMasterTable extends Migration
             $table->integer('max_price');
             $table->string('sc_url');
             $table->timestamps();
-            // 重複を防ぐためのユニーク制約（必要に応じて調整してください）
-            $table->unique(['maker_name_id', 'model_name_id', 'grade_name_id', 'year', 'mileage', 'sc_url']);
+            // ユニーク制約に短縮したインデックス名を指定
+            $table->unique(
+                ['maker_name_id', 'model_name_id', 'grade_name_id', 'year', 'mileage', 'sc_url'], 
+                'mpm_unique_idx' // インデックス名を短縮
+            );
         });
     }
 
