@@ -6,6 +6,5 @@
 </head>
 <body>
     <h2>{{ $model->maker->maker_name }} {{ $model->model_name }} 買取相場・中古車の査定実績</h2>
-    <!-- 今後、詳細情報などを追加していく予定 -->
 </body>
 </html>
