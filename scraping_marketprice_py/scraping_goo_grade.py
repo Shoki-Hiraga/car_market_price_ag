@@ -20,8 +20,12 @@ pagenation_selectors = [
     # ".first ul:nth-of-type(1) li:nth-of-type(3) a", # 日産
     # ".first ul:nth-of-type(1) li:nth-of-type(4) a", # ホンダ
     # ".first ul:nth-of-type(1) li:nth-of-type(5) a", # マツダ
-    ".first ul:nth-of-type(1) li:nth-of-type(6) a", # ユーノス
-    '.detail_box > a', '.grade a'
+    # ".first ul:nth-of-type(1) li:nth-of-type(6) a", # ユーノス
+    # ".first li:nth-of-type(7) a", # 日本フォード
+    # ".first li:nth-of-type(8) a", # 三菱
+    ".first li:nth-of-type(9) a", # 三菱ふそう
+    '.detail_box > a',
+    '.grade a'
     ]
 dataget_selectors = [
     'ul.topicpath:nth-of-type(2) li:nth-of-type(3) span',
