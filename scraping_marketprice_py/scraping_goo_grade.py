@@ -19,7 +19,8 @@ pagenation_selectors = [
     # '.first ul:nth-of-type(1) a', # 全車種
     # ".first ul:nth-of-type(1) li:nth-of-type(3) a", # 日産
     # ".first ul:nth-of-type(1) li:nth-of-type(4) a", # ホンダ
-    ".first ul:nth-of-type(1) li:nth-of-type(5) a", # マツダ
+    # ".first ul:nth-of-type(1) li:nth-of-type(5) a", # マツダ
+    ".first ul:nth-of-type(1) li:nth-of-type(6) a", # ユーノス
     '.detail_box > a', '.grade a'
     ]
 dataget_selectors = [
