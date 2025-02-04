@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ScGooMakerController;
 use App\Http\Controllers\ScGooModelController;
 use App\Http\Controllers\ScGooGradeController;
+use App\Http\Controllers\MarketPriceMasterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +25,8 @@ Route::get('/', [ScGooMakerController::class, 'index'])->name('maker.index');
 // モデル一覧を表示するルート
 Route::get('/model', [ScGooModelController::class, 'index'])->name('model.index');
 // モデル詳細を表示するルート
-Route::get('/model/{id}', [ScGooModelController::class, 'show'])->name('model.model_detail');
+// Route::get('/model/{id}', [ScGooModelController::class, 'show'])->name('model.model_detail');
+Route::get('/model/{id}', [MarketPriceMasterController::class, 'show'])->name('model.marketprice');
 
 // グレード一覧を表示するルート
 Route::get('/grade', [ScGooGradeController::class, 'index'])->name('grade.index');
