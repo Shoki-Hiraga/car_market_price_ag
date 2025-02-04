@@ -1,5 +1,6 @@
 import mysql.connector
 import os
+from decimal import Decimal
 from dotenv import load_dotenv
 from setting_script.setFunc import get_db_config
 
@@ -24,14 +25,25 @@ def fetch_data_from_db(db_name):
     """
     conn = mysql.connector.connect(**DB_CONFIG)
     cursor = conn.cursor(dictionary=True)
-    query = f"""
-        SELECT * FROM {db_name}
-    """
+    query = f"SELECT * FROM {db_name}"
     cursor.execute(query)
     data = cursor.fetchall()
     cursor.close()
     conn.close()
     return data
+
+def adjust_prices(row):
+    """
+    min_price と max_price が同じ場合、min_price を 25% 割引し、max_price を 20% 割増する
+    """
+    min_price = Decimal(row['min_price'])
+    max_price = Decimal(row['max_price'])
+
+    if min_price == max_price:
+        min_price = min_price * Decimal('0.75')  # 25% 割引
+        max_price = max_price * Decimal('1.20')  # 20% 割増
+
+    return min_price, max_price
 
 def insert_into_master(data):
     """
@@ -43,7 +55,7 @@ def insert_into_master(data):
     conn = mysql.connector.connect(**DB_CONFIG)
     cursor = conn.cursor()
     insert_query = """
-        INSERT IGNORE INTO market_price_master (
+        INSERT INTO market_price_master (
             maker_name_id, model_name_id, grade_name_id, year, mileage,
             min_price, max_price, sc_url, created_at, updated_at
         ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, NOW(), NOW())
@@ -55,9 +67,12 @@ def insert_into_master(data):
     """
     
     for row in data:
+        # min_price と max_price の調整
+        min_price, max_price = adjust_prices(row)
+
         cursor.execute(insert_query, (
             row['maker_name_id'], row['model_name_id'], row['grade_name_id'],
-            row['year'], row['mileage'], row['min_price'], row['max_price'], row['sc_url']
+            row['year'], row['mileage'], min_price, max_price, row['sc_url']
         ))
     
     conn.commit()
