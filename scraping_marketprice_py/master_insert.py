@@ -43,7 +43,7 @@ def insert_into_master(data):
     conn = mysql.connector.connect(**DB_CONFIG)
     cursor = conn.cursor()
     insert_query = """
-        INSERT INTO market_price_master (
+        INSERT IGNORE INTO market_price_master (
             maker_name_id, model_name_id, grade_name_id, year, mileage,
             min_price, max_price, sc_url, created_at, updated_at
         ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, NOW(), NOW())
