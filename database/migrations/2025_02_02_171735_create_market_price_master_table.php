@@ -17,7 +17,7 @@ class CreateMarketPriceMasterTable extends Migration
             $table->integer('model_name_id');
             $table->integer('grade_name_id');
             $table->integer('year');
-            $table->integer('mileage');
+            $table->decimal('mileage', 5, 1)->nullable(); // 走行距離（小数点対応）
             $table->integer('min_price');
             $table->integer('max_price');
             $table->string('sc_url');

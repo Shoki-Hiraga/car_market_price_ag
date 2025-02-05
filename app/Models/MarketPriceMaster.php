@@ -15,7 +15,9 @@ class MarketPriceMaster extends Model
         'maker_name_id', 'model_name_id', 'grade_name_id',
         'year', 'mileage', 'min_price', 'max_price', 'sc_url'
     ];
-
+    protected $casts = [
+        'mileage' => 'float',
+    ];
     public function maker()
     {
         return $this->belongsTo(ScGooMaker::class, 'maker_name_id');
