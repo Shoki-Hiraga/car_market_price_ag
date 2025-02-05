@@ -46,25 +46,27 @@ def process_data(selector, raw_data):
         return match.group(0) if match else data
 
     elif selector == "tr:nth-of-type(1) td:nth-of-type(3)":
-    # 例:
-    # "130,000Km" -> "13"
-    # "13,000Km" -> "1"
-    # "1,300Km" -> "0.1"
-    # "130Km" -> "0.1"
-    
-        result = re.sub(r"[^\d]", "", data)  # 数字のみ抽出
-    if result:
-        num = int(result)  # 整数に変換
-        if num >= 100_000:
-            result = str(num // 10_000)  # 10万以上は万単位
-        elif num >= 10_000:
-            result = str(num // 10_000)  # 1万以上は万単位
-        elif num >= 1_000:
-            result = "0.1"  # 1000以上は "0.1"
-        else:
-            result = "0.1"  # 100未満も "0.1"
+        # 例:
+        # "130,000Km" -> "13"
+        # "13,000Km" -> "1"
+        # "1,300Km" -> "0.1"
+        # "130Km" -> "0.1"
+        
+        match = re.search(r"\d{1,3}(?:,\d{3})*|\d+", data)  # 数字部分を抽出
+        if match:
+            num = int(re.sub(r"[^\d]", "", match.group(0)))  # 数字以外を除去して整数化
 
-        return result
+            # 仕様に基づいて変換
+            if num >= 100_000:
+                result = str(num // 10_000)  # 10万以上は万単位
+            elif num >= 10_000:
+                result = str(num // 10_000)  # 1万以上は万単位
+            elif num >= 1_000:
+                result = "0.1"  # 1000以上は "0.1"
+            else:
+                result = "0.1"  # 100未満も "0.1"
+
+            return result
 
     elif selector == "tr:nth-of-type(1) td.price":
         # 例: "598.9万円" -> "598.9"
