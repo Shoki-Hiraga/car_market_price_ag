@@ -25,8 +25,7 @@ Route::get('/', [ScGooMakerController::class, 'index'])->name('maker.index');
 // モデル一覧を表示するルート
 Route::get('/model', [ScGooModelController::class, 'index'])->name('model.index');
 // モデル詳細を表示するルート
-// Route::get('/model/{id}', [ScGooModelController::class, 'show'])->name('model.model_detail');
-Route::get('/model/{id}', [MarketPriceMasterController::class, 'show'])->name('model.marketprice');
+Route::get('/model/{id}', [ScGooModelController::class, 'show'])->name('model.model_detail');
 
 // グレード一覧を表示するルート
-Route::get('/grade', [ScGooGradeController::class, 'index'])->name('grade.index');
+Route::get('/grade/{id}', [ScGooGradeController::class, 'show'])->name('grade.show');

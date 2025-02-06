@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\ScGooModel;
+use App\Models\MarketPriceMaster;
 
 class ScGooModelController extends Controller
 {
@@ -16,10 +17,15 @@ class ScGooModelController extends Controller
     }
     public function show($id)
     {
-        // 指定されたIDのモデルを取得（見つからない場合は404）
-        $model = ScGooModel::findOrFail($id);
+        // 指定されたモデルを取得
         $model = ScGooModel::with('maker')->findOrFail($id);
-        // 新たに作成するビュー 'model_detail' に渡す
-        return view('main.model_detail', compact('model'));
+    
+        // model_name_id に関連するグレード情報を取得
+        $marketPrices = MarketPriceMaster::where('model_name_id', $id)
+            ->with('grade')
+            ->orderBy('year', 'desc') // 年式の降順
+            ->get();
+    
+        return view('main.model_detail', compact('model', 'marketPrices'));
     }
 }
