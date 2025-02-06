@@ -20,35 +20,34 @@ class ScGooGradeController extends Controller
         $grade = ScGooGrade::findOrFail($id);
     
         // そのグレードの買取価格データを取得
-        $marketPricesMasterGrade = MarketPriceMaster::where('grade_name_id', $id)
+        $filteredMarketPricesGrade = MarketPriceMaster::with('grade')
+            ->where('grade_name_id', $id)
             ->orderBy('year', 'desc')
             ->get();
     
-        // グレードごとに min_price の最小値、max_price の最大値を取得し、min_price が 0 の場合に修正
-        $filteredMarketPrices = $marketPricesMasterGrade
-            ->groupBy(function ($item) {
-                return $item->grade_name_id . '_' . $item->year; // グレードと年式でグループ化
-            })
-            ->map(function ($group) {
-                $minPrice = $group->min('min_price');
-                $maxPrice = $group->max('max_price');
+        // min_price が 0 の場合に max_price の 65% に修正
+        foreach ($filteredMarketPricesGrade as $price) {
+            if ($price->min_price == 0 && $price->max_price > 0) {
+                $price->min_price = $price->max_price * 0.65;
+            }
+        }
     
-                // min_price が 0 の場合は max_price の 50% を設定
-                if ($minPrice == 0 && $maxPrice > 0) {
-                    $minPrice = $maxPrice * 0.65;
-                }
+        // データを加工して必要な情報を追加
+        $filteredMarketPricesGrade = $filteredMarketPricesGrade->map(function ($item) {
+            return (object) [
+                'grade_name_id' => $item->grade_name_id,
+                'year' => $item->year,
+                'mileage' => $item->mileage,
+                'model_number' => optional($item->grade)->model_number, // ScGooGrade から取得
+                'engine_model' => optional($item->grade)->engine_model, // ScGooGrade から取得
+                'min_price' => $item->min_price, 
+                'max_price' => $item->max_price,
+                'sc_url' => $item->sc_url
+            ];
+        });
     
-                return (object) [
-                    'grade_name_id' => $group->first()->grade_name_id,
-                    'year' => $group->first()->year,
-                    'mileage' => $group->first()->mileage, // 走行距離は最初のデータを使う
-                    'min_price' => $minPrice, // 0 の場合は max_price の 50% に変更
-                    'max_price' => $maxPrice, // 最大値
-                    'sc_url' => $group->first()->sc_url // 詳細URLは最初のデータを使用
-                ];
-            })->values(); // 配列のキーをリセット
-    
-        return view('main.marketprice', compact('grade', 'filteredMarketPrices'));
+        return view('main.marketprice', compact('grade', 'filteredMarketPricesGrade'));
     }
+    
     
 }
