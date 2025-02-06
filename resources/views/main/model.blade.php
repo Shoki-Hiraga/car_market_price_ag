@@ -38,7 +38,7 @@
             <ul>
             @foreach($models as $model)
                 <li class="modellist">
-                    <a href="{{ route('model.model_detail', $model->id) }}">
+                    <a href="{{ route('model.marketprice', $model->id) }}">
                         {{ $model->model_name }}
                     </a>
                 </li>
