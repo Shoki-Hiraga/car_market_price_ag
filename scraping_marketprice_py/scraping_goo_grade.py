@@ -23,7 +23,8 @@ pagenation_selectors = [
     # ".first ul:nth-of-type(1) li:nth-of-type(6) a", # ユーノス
     # ".first li:nth-of-type(7) a", # 日本フォード
     # ".first li:nth-of-type(8) a", # 三菱
-    ".first li:nth-of-type(9) a", # 三菱ふそう
+    # ".first li:nth-of-type(9) a", # 三菱ふそう
+    ".first li:nth-of-type(10) a", # スバル
     '.detail_box > a',
     '.grade a'
     ]
