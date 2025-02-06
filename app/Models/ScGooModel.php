@@ -11,7 +11,7 @@ class ScGooModel extends Model
     use HasFactory;
 
     protected $table = 'sc_goo_model';
-    protected $fillable = ['model_name', 'maker_name_id'];
+    protected $fillable = ['maker_name_id', 'model_name'];
 
     // Maker モデルとのリレーションを定義
     public function maker()

@@ -20,7 +20,7 @@
         <tbody>
             @foreach($marketPricesMaster as $marketprice)
             <tr>
-                <td>{{ $marketprice->year }}</td>
+                <td>{{ $marketprice->year }} 年式</td>
                 <td>{{ number_format($marketprice->mileage) }} 万㎞</td>
                 <td>{{ number_format($marketprice->min_price) }} 万円</td>
                 <td>{{ number_format($marketprice->max_price) }} 万円</td>

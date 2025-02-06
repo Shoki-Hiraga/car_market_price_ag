@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\ScGooModel;
+use App\Models\ScGooGrade;
 use App\Models\MarketPriceMaster;
 
 class ScGooModelController extends Controller
@@ -19,7 +20,15 @@ class ScGooModelController extends Controller
     {
         // 指定されたモデルを取得
         $model = ScGooModel::with('maker')->findOrFail($id);
-    
+        // ScGooGrade から model_number と engine_model を取得
+
+        $grade = ScGooGrade::where('model_name_id', $id)->first();
+        // もし grade のデータが存在すれば、それを追加
+        if ($grade) {
+            $model->model_number = $grade->model_number;
+            $model->engine_model = $grade->engine_model;
+        }
+ 
         // model_name_id に関連するグレード情報を取得
         $marketPricesMaster = MarketPriceMaster::where('model_name_id', $id)
             ->with('grade')
