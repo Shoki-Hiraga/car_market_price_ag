@@ -20,10 +20,10 @@ class ScGooGradeController extends Controller
         $grade = ScGooGrade::findOrFail($id);
 
         // そのグレードの買取価格データを取得
-        $marketPricesMaster = MarketPriceMaster::where('grade_name_id', $id)
+        $marketPricesMasterGrade = MarketPriceMaster::where('grade_name_id', $id)
             ->orderBy('year', 'desc')
             ->get();
 
-        return view('main.marketprice', compact('grade', 'marketPricesMaster'));
+        return view('main.marketprice', compact('grade', 'marketPricesMasterGrade'));
     }
 }
