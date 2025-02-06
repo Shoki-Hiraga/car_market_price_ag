@@ -20,7 +20,7 @@
     <tbody>
         @foreach($filteredMarketPricesGrade as $marketprice)
         <tr>
-            <td>{{ $marketprice->year }} 年式</td>
+            <td>{{ $marketprice->year }}年</td>
             <td>{{ number_format($marketprice->mileage) }} 万㎞</td>
             <td>{{ $marketprice->model_number }}</td>
             <td>{{ $marketprice->engine_model }}</td>

@@ -22,11 +22,12 @@
             @foreach($filteredMarketPricesModel as $marketprice)
             <tr>
                 <td>
-                    <a href="{{ route('grade.show', ['id' => $marketprice->grade_name_id]) }}">
-                        {{ $marketprice->grade->grade_name ?? '不明' }}
+                <a href="{{ route('grade.detail', ['model_id' => $marketprice->model_id, 'grade_id' => $marketprice->grade_name_id]) }}">
+
+                {{ $marketprice->grade->grade_name ?? '不明' }}
                     </a>
                 </td>
-                <td>{{ $marketprice->year }} 年式</td>
+                <td>{{ $marketprice->year }}年</td>
                 <td>{{ $model->model_number ?? '不明' }}</td>
                 <td>{{ $model->engine_model ?? '不明' }}</td>
                 <td>{{ number_format($marketprice->min_price) }} 万円</td>
