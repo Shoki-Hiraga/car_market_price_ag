@@ -8,26 +8,28 @@
     <h2>{{ $grade->grade_name }} の買取価格情報</h2>
 
     <table border="1">
-        <thead>
-            <tr>
-                <th>年式</th>
-                <th>走行距離(km)</th>
-                <th>最低買取価格(万円)</th>
-                <th>最高買取価格(万円)</th>
-                <!-- <th>詳細情報</th> -->
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($filteredMarketPrices as $marketprice)
-            <tr>
-                <td>{{ $marketprice->year }} 年式</td>
-                <td>{{ number_format($marketprice->mileage) }} 万㎞</td>
-                <td>{{ number_format($marketprice->min_price) }} 万円</td>
-                <td>{{ number_format($marketprice->max_price) }} 万円</td>
-                <!-- <td><a href="{{ $marketprice->sc_url }}" target="_blank">詳細</a></td> -->
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
+    <thead>
+        <tr>
+            <th>年式</th>
+            <th>走行距離(km)</th>
+            <th>モデル番号</th>
+            <th>エンジン型式</th>
+            <th>最低買取価格(万円)</th>
+            <th>最高買取価格(万円)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach($filteredMarketPricesGrade as $marketprice)
+        <tr>
+            <td>{{ $marketprice->year }} 年式</td>
+            <td>{{ number_format($marketprice->mileage) }} 万㎞</td>
+            <td>{{ $marketprice->model_number }}</td>
+            <td>{{ $marketprice->engine_model }}</td>
+            <td>{{ number_format($marketprice->min_price) }} 万円</td>
+            <td>{{ number_format($marketprice->max_price) }} 万円</td>
+        </tr>
+        @endforeach
+    </tbody>
+</table>
 </body>
 </html>
