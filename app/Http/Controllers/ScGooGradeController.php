@@ -46,7 +46,7 @@ class ScGooGradeController extends Controller
             ];
         });
     
-        return view('main.marketprice', compact('grade', 'filteredMarketPricesGrade'));
+        return view('main.grade_detail', compact('grade', 'filteredMarketPricesGrade'));
     }
     
     
