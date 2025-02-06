@@ -6,34 +6,38 @@
 </head>
 <body>
     <h1>{{ $model->maker->maker_name }} {{ $model->model_name }} 買取相場・中古車の査定実績</h1>
-
+    @if($filteredMarketPricesModel->isNotEmpty())
     <table border="1">
-<thead>
-    <tr>
-        <th>グレード名</th>
-        <th>年式</th>
-        <th>型式</th> <!-- model_number -->
-        <th>エンジン型式</th> <!-- engine_model -->
-        <th>最低買取価格(万円)</th>
-        <th>最高買取価格(万円)</th>
-    </tr>
-</thead>
-<tbody>
-    @foreach($filteredMarketPricesModel as $marketprice)
-    <tr>
-        <td>
-            <a href="{{ route('grade.show', ['id' => $marketprice->grade_name_id]) }}">
-                {{ $marketprice->grade->grade_name ?? '不明' }}
-            </a>
-        </td>
-        <td>{{ $marketprice->year }} 年式</td>
-        <td>{{ $model->model_number ?? '不明' }}</td> <!-- 追加 -->
-        <td>{{ $model->engine_model ?? '不明' }}</td> <!-- 追加 -->
-        <td>{{ number_format($marketprice->min_price) }} 万円</td>
-        <td>{{ number_format($marketprice->max_price) }} 万円</td>
-    </tr>
-    @endforeach
-</tbody>
-</table>
+        <thead>
+            <tr>
+                <th>グレード名</th>
+                <th>年式</th>
+                <th>型式</th> <!-- model_number -->
+                <th>エンジン型式</th> <!-- engine_model -->
+                <th>最低買取価格(万円)</th>
+                <th>最高買取価格(万円)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($filteredMarketPricesModel as $marketprice)
+            <tr>
+                <td>
+                    <a href="{{ route('grade.show', ['id' => $marketprice->grade_name_id]) }}">
+                        {{ $marketprice->grade->grade_name ?? '不明' }}
+                    </a>
+                </td>
+                <td>{{ $marketprice->year }} 年式</td>
+                <td>{{ $model->model_number ?? '不明' }}</td>
+                <td>{{ $model->engine_model ?? '不明' }}</td>
+                <td>{{ number_format($marketprice->min_price) }} 万円</td>
+                <td>{{ number_format($marketprice->max_price) }} 万円</td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+@else
+    <h2 style="text-align:center;">買取実績データがありません</h2>
+@endif
+
 </body>
 </html>
