@@ -12,8 +12,8 @@
             <tr>
                 <th>グレード名</th>
                 <th>年式</th>
-                <th>型式</th> <!-- model_number -->
-                <th>エンジン型式</th> <!-- engine_model -->
+                <th>型式</th>
+                <th>エンジン型式</th>
                 <th>最低買取価格(万円)</th>
                 <th>最高買取価格(万円)</th>
             </tr>
