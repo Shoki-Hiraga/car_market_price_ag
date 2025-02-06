@@ -2,11 +2,10 @@
 <html lang="ja">
 <head>
     @include('components.header')
-    <title>{{ $grade->grade_name }} の買取価格情報</title>
+    <title>{{$grade->model->maker->maker_name}} {{ $grade->model->model_name }} {{ $grade->grade_name }} の買取価格情報</title>
 </head>
 <body>
-    <h2>{{ $grade->grade_name }} の買取価格情報</h2>
-
+    <h1>{{$grade->model->maker->maker_name}} {{ $grade->model->model_name }} {{ $grade->grade_name }} の買取価格情報</h1>
     <table border="1">
     <thead>
         <tr>
