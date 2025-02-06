@@ -14,12 +14,12 @@ class MarketPriceMasterController extends Controller
         $model = ScGooModel::with('maker')->findOrFail($id);
 
         // market_price_master テーブルから該当するデータを取得
-        $marketPrices = MarketPriceMaster::where('model_name_id', $id)
+        $marketPricesMaster = MarketPriceMaster::where('model_name_id', $id)
             ->with(['maker', 'model', 'grade'])
             ->orderBy('year', 'desc')
             ->get();
 
         // ビューにデータを渡す
-        return view('main.marketprice', compact('model', 'marketPrices'));
+        return view('main.marketprice', compact('model', 'marketPricesMaster'));
     }
 }
