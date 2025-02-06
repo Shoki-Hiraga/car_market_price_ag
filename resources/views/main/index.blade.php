@@ -5,8 +5,6 @@
 <title>メーカー一覧</title>
 </head>
 <body>
-    <a href="{{ route('model.index') }}">車種覧へ</a>
-
     <h1>メーカー一覧</h1>
     <ul>
         @foreach ($sc_goo_maker as $maker)
