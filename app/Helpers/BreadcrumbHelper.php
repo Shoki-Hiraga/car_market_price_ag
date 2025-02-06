@@ -11,6 +11,11 @@ class BreadcrumbHelper
         $url = '';
 
         foreach ($segments as $segment) {
+            // "grade" という文字列を含む場合はスキップ
+            if (strtolower($segment) === 'grade') {
+                continue;
+            }
+
             $url .= '/' . $segment;
             $breadcrumb[] = [
                 'name' => ucfirst(str_replace('-', ' ', $segment)), // URLのスラグを整形

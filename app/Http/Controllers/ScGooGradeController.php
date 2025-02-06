@@ -14,14 +14,14 @@ class ScGooGradeController extends Controller
         $sc_goo_grade = ScGooGrade::with('maker')->get();
         return view('main.grade', compact('sc_goo_grade'));
     }
-    public function show($id)
+    public function show($model_id, $grade_id)
     {
-        // 指定されたグレードを取得
-        $grade = ScGooGrade::findOrFail($id);
+        // `$grade_id` を使ってグレード情報を取得し、モデル情報も一緒に取得
+        $grade = ScGooGrade::with('model.maker')->findOrFail($grade_id);
     
         // そのグレードの買取価格データを取得
         $filteredMarketPricesGrade = MarketPriceMaster::with('grade')
-            ->where('grade_name_id', $id)
+            ->where('grade_name_id', $grade_id)
             ->orderBy('year', 'desc')
             ->get();
     
@@ -40,7 +40,7 @@ class ScGooGradeController extends Controller
                 'mileage' => $item->mileage,
                 'model_number' => optional($item->grade)->model_number, // ScGooGrade から取得
                 'engine_model' => optional($item->grade)->engine_model, // ScGooGrade から取得
-                'min_price' => $item->min_price, 
+                'min_price' => $item->min_price,
                 'max_price' => $item->max_price,
                 'sc_url' => $item->sc_url
             ];
@@ -48,6 +48,7 @@ class ScGooGradeController extends Controller
     
         return view('main.grade_detail', compact('grade', 'filteredMarketPricesGrade'));
     }
+    
     
     
 }

@@ -20,11 +20,14 @@ use App\Http\Controllers\MarketPriceMasterController;
 Route::get('/', function () {
     return view('main.index');
 });
-// メーカー一覧を表示するルート
+// ホーム
 Route::get('/', [ScGooMakerController::class, 'index'])->name('maker.index');
-// モデル一覧を表示するルート
+
+// モデル一覧
 Route::get('/model', [ScGooModelController::class, 'index'])->name('model.index');
-// モデル詳細を表示するルート
-Route::get('/model/{id}', [ScGooModelController::class, 'show'])->name('model.model_detail');
-// グレード一覧を表示するルート
-Route::get('/grade/{id}', [ScGooGradeController::class, 'show'])->name('grade.show');
+
+// モデル詳細
+Route::get('/model/{id}', [ScGooModelController::class, 'show'])->name('model.detail');
+
+// グレード詳細（モデルの下の階層にする）
+Route::get('/model/{model_id}/grade/{grade_id}', [ScGooGradeController::class, 'show'])->name('grade.detail');
