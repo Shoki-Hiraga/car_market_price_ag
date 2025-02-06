@@ -1,0 +1,29 @@
+/* テーブル全体の中央配置 */
+table {
+    width: 80%; /* 必要に応じて変更 */
+    margin: 50px auto; /* 上下50pxのマージン、左右autoで中央配置 */
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/* セルのスタイル */
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* ヘッダーのスタイル */
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+/* テーブルのレスポンシブ対応 */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+    th, td {
+        padding: 5px;
+    }
+}
