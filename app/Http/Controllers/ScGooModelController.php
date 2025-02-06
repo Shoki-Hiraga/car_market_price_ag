@@ -25,7 +25,24 @@ class ScGooModelController extends Controller
             ->with('grade')
             ->orderBy('year', 'desc') // 年式の降順
             ->get();
-    
-        return view('main.model_detail', compact('model', 'marketPricesMaster'));
+
+        // グレード名と年式でグループ化し、min_priceの最小値、max_priceの最大値を取得
+        $filteredMarketPrices = $marketPricesMaster
+        ->groupBy(function ($item) {
+            return $item->grade_name_id . '_' . $item->year; // グレードと年式でグループ化
+        })
+        ->map(function ($group) {
+            return (object) [ // オブジェクトに変換して Blade で扱いやすくする
+                'grade_name_id' => $group->first()->grade_name_id,
+                'grade' => $group->first()->grade, // 最初のデータを採用
+                'year' => $group->first()->year,
+                'mileage' => $group->first()->mileage, // 走行距離は最初のデータを使う
+                'min_price' => $group->min('min_price'), // 最小値
+                'max_price' => $group->max('max_price'), // 最大値
+                'sc_url' => $group->first()->sc_url // 詳細URLは最初のデータを使用
+            ];
+        })->values(); // 配列のキーをリセット
+
+        return view('main.model_detail', compact('model', 'filteredMarketPrices'));
     }
 }
