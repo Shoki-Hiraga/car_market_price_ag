@@ -49,7 +49,7 @@ class ScGooModelController extends Controller
             }
     
             return (object) [
-                'model_id' => $id, // ← これでエラーが解消
+                'model_id' => $id, 
                 'grade_name_id' => $group->first()->grade_name_id,
                 'grade' => $group->first()->grade,
                 'year' => $group->first()->year,
