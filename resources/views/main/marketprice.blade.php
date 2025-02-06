@@ -18,7 +18,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($marketPricesMaster as $marketprice)
+            @foreach($marketPricesMasterGrade as $marketprice)
             <tr>
                 <td>{{ $marketprice->year }} 年式</td>
                 <td>{{ number_format($marketprice->mileage) }} 万㎞</td>

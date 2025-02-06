@@ -36,22 +36,31 @@ class ScGooModelController extends Controller
             ->get();
 
         // グレード名と年式でグループ化し、min_priceの最小値、max_priceの最大値を取得
-        $filteredMarketPrices = $marketPricesMaster
+        $filteredMarketPricesModel = $marketPricesMaster
         ->groupBy(function ($item) {
             return $item->grade_name_id . '_' . $item->year; // グレードと年式でグループ化
         })
         ->map(function ($group) {
+            $minPrice = $group->min('min_price');
+            $maxPrice = $group->max('max_price');
+    
+            // min_price が 0 の場合は max_price の 50% を設定
+            if ($minPrice == 0 && $maxPrice > 0) {
+                $minPrice = $maxPrice * 0.65;
+            }
+        
             return (object) [ // オブジェクトに変換して Blade で扱いやすくする
                 'grade_name_id' => $group->first()->grade_name_id,
                 'grade' => $group->first()->grade, // 最初のデータを採用
                 'year' => $group->first()->year,
                 'mileage' => $group->first()->mileage, // 走行距離は最初のデータを使う
-                'min_price' => $group->min('min_price'), // 最小値
+                'min_price' => $minPrice, // 0 の場合は 10 に変更
                 'max_price' => $group->max('max_price'), // 最大値
                 'sc_url' => $group->first()->sc_url // 詳細URLは最初のデータを使用
             ];
         })->values(); // 配列のキーをリセット
+    
 
-        return view('main.model_detail', compact('model', 'filteredMarketPrices'));
+        return view('main.model_detail', compact('model', 'filteredMarketPricesModel'));
     }
 }

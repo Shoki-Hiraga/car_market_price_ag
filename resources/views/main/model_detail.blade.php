@@ -19,7 +19,7 @@
     </tr>
 </thead>
 <tbody>
-    @foreach($filteredMarketPrices as $marketprice)
+    @foreach($filteredMarketPricesModel as $marketprice)
     <tr>
         <td>
             <a href="{{ route('grade.show', ['id' => $marketprice->grade_name_id]) }}">
