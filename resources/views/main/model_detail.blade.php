@@ -19,18 +19,18 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($marketPrices as $price)
+            @foreach($marketPricesMaster as $marketprice)
             <tr>
                 <td>
-                    <a href="{{ route('grade.show', ['id' => $price->grade_name_id]) }}">
-                    {{ $price->grade->grade_name ?? '不明' }}
+                    <a href="{{ route('grade.show', ['id' => $marketprice->grade_name_id]) }}">
+                    {{ $marketprice->grade->grade_name ?? '不明' }}
                     </a>
                 </td>
-                <td>{{ $price->year }}</td>
-                <td>{{ number_format($price->mileage) }}</td>
-                <td>{{ number_format($price->min_price) }}</td>
-                <td>{{ number_format($price->max_price) }}</td>
-                <td><a href="{{ $price->sc_url }}" target="_blank">詳細</a></td>
+                <td>{{ $marketprice->year }}</td>
+                <td>{{ number_format($marketprice->mileage) }}</td>
+                <td>{{ number_format($marketprice->min_price) }}</td>
+                <td>{{ number_format($marketprice->max_price) }}</td>
+                <td><a href="{{ $marketprice->sc_url }}" target="_blank">詳細</a></td>
             </tr>
             @endforeach
         </tbody>

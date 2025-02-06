@@ -21,11 +21,11 @@ class ScGooModelController extends Controller
         $model = ScGooModel::with('maker')->findOrFail($id);
     
         // model_name_id に関連するグレード情報を取得
-        $marketPrices = MarketPriceMaster::where('model_name_id', $id)
+        $marketPricesMaster = MarketPriceMaster::where('model_name_id', $id)
             ->with('grade')
             ->orderBy('year', 'desc') // 年式の降順
             ->get();
     
-        return view('main.model_detail', compact('model', 'marketPrices'));
+        return view('main.model_detail', compact('model', 'marketPricesMaster'));
     }
 }
