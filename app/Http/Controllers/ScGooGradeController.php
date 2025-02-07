@@ -38,8 +38,6 @@ class ScGooGradeController extends Controller
                 'grade_name_id' => $item->grade_name_id,
                 'year' => $item->year,
                 'mileage' => $item->mileage,
-                'model_number' => optional($item->grade)->model_number, // ScGooGrade から取得
-                'engine_model' => optional($item->grade)->engine_model, // ScGooGrade から取得
                 'min_price' => $item->min_price,
                 'max_price' => $item->max_price,
                 'sc_url' => $item->sc_url

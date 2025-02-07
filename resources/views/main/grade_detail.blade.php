@@ -11,8 +11,6 @@
         <tr>
             <th>年式</th>
             <th>走行距離(km)</th>
-            <th>モデル番号</th>
-            <th>エンジン型式</th>
             <th>最低買取価格(万円)</th>
             <th>最高買取価格(万円)</th>
         </tr>
@@ -22,8 +20,6 @@
         <tr>
             <td>{{ $marketprice->year }}年</td>
             <td>{{ number_format($marketprice->mileage) }} 万㎞</td>
-            <td>{{ $marketprice->model_number }}</td>
-            <td>{{ $marketprice->engine_model }}</td>
             <td>{{ number_format($marketprice->min_price) }} 万円</td>
             <td>{{ number_format($marketprice->max_price) }} 万円</td>
         </tr>
