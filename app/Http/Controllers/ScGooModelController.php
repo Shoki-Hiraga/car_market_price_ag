@@ -24,7 +24,8 @@ class ScGooModelController extends Controller
         // model_name_id に関連するグレード情報を取得
         $marketPricesMaster = MarketPriceMaster::where('model_name_id', $id)
             ->with('grade')
-            ->orderBy('year', 'desc') // 年式の降順
+            ->orderBy('grade_name_id', 'desc') // grade_name_id で降順
+            ->orderBy('year', 'desc') // year で降順
             ->get();
 
         // グレード名と年式でグループ化し、min_priceの最小値、max_priceの最大値を取得
@@ -45,7 +46,6 @@ class ScGooModelController extends Controller
                 'grade_name_id' => $group->first()->grade_name_id,
                 'grade' => $group->first()->grade,
                 'year' => $group->first()->year,
-                'mileage' => $group->first()->mileage,
                 'min_price' => $minPrice,
                 'max_price' => $maxPrice,
                 'sc_url' => $group->first()->sc_url
