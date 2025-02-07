@@ -12,8 +12,6 @@
             <tr>
                 <th>グレード名</th>
                 <th>年式</th>
-                <th>型式</th>
-                <th>エンジン型式</th>
                 <th>最低買取価格(万円)</th>
                 <th>最高買取価格(万円)</th>
             </tr>
@@ -28,8 +26,6 @@
                     </a>
                 </td>
                 <td>{{ $marketprice->year }}年</td>
-                <td>{{ $model->model_number ?? '不明' }}</td>
-                <td>{{ $model->engine_model ?? '不明' }}</td>
                 <td>{{ number_format($marketprice->min_price) }} 万円</td>
                 <td>{{ number_format($marketprice->max_price) }} 万円</td>
             </tr>
