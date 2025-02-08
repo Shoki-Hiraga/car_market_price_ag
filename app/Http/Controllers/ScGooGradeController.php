@@ -31,6 +31,7 @@ class ScGooGradeController extends Controller
         // そのグレードの買取価格データを取得（model_id も条件に追加）
         $filteredMarketPricesGrade = MarketPriceMaster::where('model_name_id', $model_id)
             ->where('grade_name_id', $grade_id)
+            ->where('maker_name_id', $grade->model->maker->id) // maker_name_id を条件に追加
             ->orderBy('year', 'desc')
             ->get();
     
