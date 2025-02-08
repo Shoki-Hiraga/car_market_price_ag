@@ -24,6 +24,14 @@ class ScGooModelController extends Controller
             ->whereHas('grade', function ($query) use ($id) {
                 $query->where('model_name_id', $id);
             }) // ここで grade の model_id が一致するかチェック
+            ->whereHas('maker', function ($query) use ($id) {
+                $query->whereIn('id', function ($subQuery) use ($id) {
+                    // MarketPriceMaster の maker_name_id が一致するものを取得
+                    $subQuery->select('maker_name_id')
+                        ->from('market_price_master') // 正しいテーブル名を指定
+                        ->where('model_name_id', $id);
+                });
+            })
             ->with(['grade', 'maker', 'model'])
             ->orderBy('grade_name_id', 'desc')
             ->orderBy('year', 'desc')
