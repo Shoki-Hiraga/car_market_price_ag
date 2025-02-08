@@ -6,6 +6,7 @@
 </head>
 <body>
     <h1>{{ $model->maker->maker_name }} {{ $model->model_name }} 買取相場・中古車の査定実績</h1>
+
     @if($filteredMarketPricesModel->isNotEmpty())
     <table border="1">
         <thead>
@@ -20,9 +21,8 @@
             @foreach($filteredMarketPricesModel as $marketprice)
             <tr>
                 <td>
-                <a href="{{ route('grade.detail', ['model_id' => $marketprice->model_id, 'grade_id' => $marketprice->grade_name_id]) }}">
-
-                {{ $marketprice->grade->grade_name ?? '不明' }}
+                    <a href="{{ route('grade.detail', ['model_id' => $marketprice->model_name_id, 'grade_id' => $marketprice->grade_name_id]) }}">
+                        {{ $marketprice->grade->grade_name ?? '不明' }}
                     </a>
                 </td>
                 <td>{{ $marketprice->year }}年</td>
@@ -32,9 +32,9 @@
             @endforeach
         </tbody>
     </table>
-@else
-    <h2 style="text-align:center;">買取実績データがありません</h2>
-@endif
+    @else
+        <h2 style="text-align:center;">買取実績データがありません</h2>
+    @endif
 
 </body>
 </html>

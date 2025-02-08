@@ -16,42 +16,55 @@ class ScGooModelController extends Controller
         $sc_goo_model = ScGooModel::with('maker')->get();
         return view('main.model', compact('sc_goo_model'));
     }
+
     public function show($id)
     {
-        // 指定されたモデルを取得
-        $model = ScGooModel::with('maker')->findOrFail($id);
- 
-        // model_name_id に関連するグレード情報を取得
+        // MarketPriceMaster からデータ取得
         $marketPricesMaster = MarketPriceMaster::where('model_name_id', $id)
-            ->with('grade')
-            ->orderBy('grade_name_id', 'desc') // grade_name_id で降順
-            ->orderBy('year', 'desc') // year で降順
+            ->whereHas('grade', function ($query) use ($id) {
+                $query->where('model_name_id', $id);
+            }) // ここで grade の model_id が一致するかチェック
+            ->with(['grade', 'maker', 'model'])
+            ->orderBy('grade_name_id', 'desc')
+            ->orderBy('year', 'desc')
             ->get();
-
-        // グレード名と年式でグループ化し、min_priceの最小値、max_priceの最大値を取得
+    
+        // データがない場合は 404
+        if ($marketPricesMaster->isEmpty()) {
+            abort(404);
+        }
+    
+        // 1つ目のデータからモデル情報を取得
+        $model = $marketPricesMaster->first()->model;
+    
+        // グレード名と年式でグループ化し、最小価格と最大価格を取得
         $filteredMarketPricesModel = $marketPricesMaster
-        ->groupBy(function ($item) {
-            return $item->grade_name_id . '_' . $item->year;
-        })
-        ->map(function ($group) use ($id) { // ← use ($id) を追加
-            $minPrice = $group->min('min_price');
-            $maxPrice = $group->max('max_price');
+            ->groupBy(function ($item) {
+                return $item->grade_name_id . '_' . $item->year;
+            })
+            ->map(function ($group) {
+                $minPrice = $group->min('min_price');
+                $maxPrice = $group->max('max_price');
     
-            if ($minPrice == 0 && $maxPrice > 0) {
-                $minPrice = $maxPrice * 0.65;
-            }
+                if ($minPrice == 0 && $maxPrice > 0) {
+                    $minPrice = $maxPrice * 0.65;
+                }
     
-            return (object) [
-                'model_id' => $id, 
-                'grade_name_id' => $group->first()->grade_name_id,
-                'grade' => $group->first()->grade,
-                'year' => $group->first()->year,
-                'min_price' => $minPrice,
-                'max_price' => $maxPrice,
-                'sc_url' => $group->first()->sc_url
-            ];
-        })->values();
-        
+                return (object) [
+                    'id' => $group->first()->id,
+                    'model_name_id' => $group->first()->model_name_id,
+                    'grade_name_id' => $group->first()->grade_name_id,
+                    'maker' => $group->first()->maker,
+                    'model' => $group->first()->model,
+                    'grade' => $group->first()->grade,
+                    'year' => $group->first()->year,
+                    'min_price' => $minPrice,
+                    'max_price' => $maxPrice,
+                ];
+            })->values();
+    
         return view('main.model_detail', compact('model', 'filteredMarketPricesModel'));
     }
+    
+    
 }
