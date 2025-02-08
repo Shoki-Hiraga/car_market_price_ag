@@ -36,13 +36,16 @@
                 {{ $makerName }} の買取相場
             </h2>
             <ul>
-            @foreach($models as $model)
-                <li class="modellist">
-                    <a href="{{ route('model.detail', ['id' => $model->id]) }}">
-                        {{ $model->model_name }}
-                    </a>
-                </li>
-            @endforeach
+                @foreach($models as $model)
+                    @if ($existingMarketPriceModels->contains($model->id))
+                        <li class="modellist">
+                            <a href="{{ route('model.detail', ['id' => $model->id]) }}">
+                                {{ $model->model_name }}
+                            </a>
+                        </li>
+                    @endif
+                @endforeach
+            </ul>
 
             </ul>
         </section>
