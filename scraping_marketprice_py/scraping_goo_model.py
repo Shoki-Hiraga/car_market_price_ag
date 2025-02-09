@@ -27,7 +27,7 @@ def scrape_page(url):
         response.encoding = response.headers["Content-Type"].split("charset=")[-1]
     else:
         response.encoding = response.apparent_encoding  # 自動検出
-    time.sleep(2)
+    time.sleep(1.5)
     response.raise_for_status()
     return BeautifulSoup(response.text, 'html.parser')
 
@@ -66,6 +66,10 @@ def save_to_db(maker_name, model_name):
         conn = mysql.connector.connect(**DB_CONFIG)
         cursor = conn.cursor()
 
+        # 余分なスペースを削除
+        maker_name = maker_name.strip()
+        model_name = model_name.strip()
+
         # maker_nameのIDを取得
         cursor.execute("SELECT id FROM sc_goo_maker WHERE maker_name = %s", (maker_name,))
         result = cursor.fetchone()
@@ -78,31 +82,15 @@ def save_to_db(maker_name, model_name):
         # 現在時刻を取得
         current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-        # model_nameの保存確認
+        # `INSERT ... ON DUPLICATE KEY UPDATE` で更新
         cursor.execute("""
-            SELECT id FROM sc_goo_model 
-            WHERE maker_name_id = %s AND model_name = %s
-        """, (maker_id, model_name))
-        result = cursor.fetchone()
+            INSERT INTO sc_goo_model (maker_name_id, model_name, created_at, updated_at) 
+            VALUES (%s, %s, %s, %s)
+            ON DUPLICATE KEY UPDATE updated_at = VALUES(updated_at)
+        """, (maker_id, model_name, current_time, current_time))
 
-        if result is None:
-            # データが存在しない場合は保存
-            cursor.execute("""
-                INSERT INTO sc_goo_model (maker_name_id, model_name, created_at, updated_at) 
-                VALUES (%s, %s, %s, %s)
-            """, (maker_id, model_name, current_time, current_time))
-            conn.commit()
-            print(f"保存: Maker: {maker_name}, Model: {model_name}")
-        else:
-            # データが存在する場合は updated_at を更新
-            model_id = result[0]
-            cursor.execute("""
-                UPDATE sc_goo_model 
-                SET updated_at = %s 
-                WHERE id = %s
-            """, (current_time, model_id))
-            conn.commit()
-            print(f"更新: Maker: {maker_name}, Model: {model_name}")
+        conn.commit()
+        print(f"保存 or 更新: Maker: {maker_name}, Model: {model_name}")
 
     except mysql.connector.Error as err:
         print(f"Error: {err}")
