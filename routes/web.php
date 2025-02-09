@@ -35,7 +35,6 @@ Route::get('/model/{model_id}/grade/{grade_id}', [ScGooGradeController::class, '
 
 // sitemap.xmlの動的生成
 Route::get('/sitemap.xml', function () {
-    // XMLの開始
     $xml = '<?xml version="1.0" encoding="UTF-8"?>';
     $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 
@@ -64,20 +63,17 @@ Route::get('/sitemap.xml', function () {
         $xml .= '</url>';
     }
 
-    // グレード詳細ページ（model_id が null でない場合のみ）
-    $grades = ScGooGrade::latest()->get();
+    // グレード詳細ページ（model_name_id を使用）
+    $grades = ScGooGrade::whereNotNull('model_name_id')->latest()->get();
     foreach ($grades as $grade) {
-        if (!is_null($grade->model_id)) { // model_id が null でないかチェック
-            $xml .= '<url>';
-            $xml .= '<loc>' . url(route('grade.detail', ['model_id' => $grade->model_id, 'grade_id' => $grade->id])) . '</loc>';
-            $xml .= '<lastmod>' . $grade->updated_at->toW3cString() . '</lastmod>';
-            $xml .= '<changefreq>monthly</changefreq>';
-            $xml .= '<priority>0.6</priority>';
-            $xml .= '</url>';
-        }
+        $xml .= '<url>';
+        $xml .= '<loc>' . url(route('grade.detail', ['model_id' => $grade->model_name_id, 'grade_id' => $grade->id])) . '</loc>';
+        $xml .= '<lastmod>' . $grade->updated_at->toW3cString() . '</lastmod>';
+        $xml .= '<changefreq>monthly</changefreq>';
+        $xml .= '<priority>0.6</priority>';
+        $xml .= '</url>';
     }
 
-    // XMLの閉じタグ
     $xml .= '</urlset>';
 
     return response($xml, 200)->header('Content-Type', 'application/xml');
