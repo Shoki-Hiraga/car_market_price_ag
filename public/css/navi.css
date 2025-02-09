@@ -18,11 +18,14 @@
 }
 
 /* パンくずリストが画面幅を超えた場合に左揃え */
-.breadcrumb:has(li:nth-child(4)) { /* パンくずが4個以上なら適用 */
-    left: 0;
-    transform: none;
-    justify-content: flex-start;
+@media screen and (max-width: 767px) { /* 画面幅が767px以下（SP表示）なら適用 */
+    .breadcrumb:has(li:nth-child(4)) { /* パンくずが4個以上なら適用 */
+        left: 0;
+        transform: none;
+        justify-content: flex-start;
+    }
 }
+
 
 /* スクロールバーのデザイン（必要に応じて追加） */
 .breadcrumb::-webkit-scrollbar {
