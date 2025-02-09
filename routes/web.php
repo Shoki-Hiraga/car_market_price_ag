@@ -36,24 +36,22 @@ Route::get('/model/{model_id}/grade/{grade_id}', [ScGooGradeController::class, '
 // sitemap.xmlの動的生成
 Route::get('/sitemap.xml', function () {
     $xml = '<?xml version="1.0" encoding="UTF-8"?>';
+    $xml .= '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+
+    $xml .= '<sitemap><loc>' . url('/sitemap-models.xml') . '</loc></sitemap>';
+    $xml .= '<sitemap><loc>' . url('/sitemap-grades.xml') . '</loc></sitemap>';
+
+    $xml .= '</sitemapindex>';
+
+    return response($xml, 200)->header('Content-Type', 'application/xml');
+});
+
+// モデル専用サイトマップ
+Route::get('/sitemap-model.xml', function () {
+    $xml = '<?xml version="1.0" encoding="UTF-8"?>';
     $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 
-    // ホームページ
-    $xml .= '<url>';
-    $xml .= '<loc>' . url(route('maker.index')) . '</loc>';
-    $xml .= '<changefreq>daily</changefreq>';
-    $xml .= '<priority>1.0</priority>';
-    $xml .= '</url>';
-
-    // モデル一覧ページ
-    $xml .= '<url>';
-    $xml .= '<loc>' . url(route('model.index')) . '</loc>';
-    $xml .= '<changefreq>weekly</changefreq>';
-    $xml .= '<priority>0.8</priority>';
-    $xml .= '</url>';
-
-    // モデル詳細ページ
-    $models = ScGooModel::latest()->get();
+    $models = ScGooModel::latest()->limit(10000)->get(); // 5000件まで取得
     foreach ($models as $model) {
         $xml .= '<url>';
         $xml .= '<loc>' . url(route('model.detail', ['id' => $model->id])) . '</loc>';
@@ -63,8 +61,17 @@ Route::get('/sitemap.xml', function () {
         $xml .= '</url>';
     }
 
-    // グレード詳細ページ（model_name_id を使用）
-    $grades = ScGooGrade::whereNotNull('model_name_id')->latest()->get();
+    $xml .= '</urlset>';
+
+    return response($xml, 200)->header('Content-Type', 'application/xml');
+});
+
+// グレード専用サイトマップ
+Route::get('/sitemap-grade.xml', function () {
+    $xml = '<?xml version="1.0" encoding="UTF-8"?>';
+    $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+
+    $grades = ScGooGrade::whereNotNull('model_name_id')->latest()->limit(50000)->get();
     foreach ($grades as $grade) {
         $xml .= '<url>';
         $xml .= '<loc>' . url(route('grade.detail', ['model_id' => $grade->model_name_id, 'grade_id' => $grade->id])) . '</loc>';
