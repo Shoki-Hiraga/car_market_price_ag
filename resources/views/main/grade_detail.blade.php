@@ -5,7 +5,9 @@
     <title>{{ $grade->model->maker->maker_name }} {{ $grade->model->model_name }} {{ $grade->grade_name }} の買取価格情報</title>
 </head>
 <body>
-    <h1>{{ $grade->model->maker->maker_name }} {{ $grade->model->model_name }} {{ $grade->grade_name }} の買取価格情報</h1>
+    <h1>{{ $grade->model->maker->maker_name }} {{ $grade->model->model_name }} <br>
+    {{ $grade->grade_name }}
+    <br> の買取価格情報</h1>
 
     @if($filteredMarketPricesGrade->isNotEmpty())
     <table border="1">

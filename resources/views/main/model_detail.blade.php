@@ -5,7 +5,9 @@
     <title>{{ $model->maker->maker_name }} {{ $model->model_name }} 買取相場・中古車の査定実績</title>
 </head>
 <body>
-    <h1>{{ $model->maker->maker_name }} {{ $model->model_name }} 買取相場・中古車の査定実績</h1>
+    <h1>{{ $model->maker->maker_name }} {{ $model->model_name }}
+        <br>
+        の買取相場・中古車の査定実績</h1>
 
     @if($filteredMarketPricesModel->isNotEmpty())
     <table border="1">

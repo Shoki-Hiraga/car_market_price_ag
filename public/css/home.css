@@ -12,6 +12,12 @@ h1 {
     margin: 20px 10% 20px 10%;
 }
 
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.6em;
+    }
+}    
+
 ul {
     list-style-type: none;
     padding: 0;
