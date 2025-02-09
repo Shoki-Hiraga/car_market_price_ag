@@ -1,6 +1,6 @@
 /* テーブル全体の中央配置 */
 table {
-    width: 80%; /* 必要に応じて変更 */
+    width: 90%; /* 必要に応じて変更 */
     margin: 50px auto; /* 上下50pxのマージン、左右autoで中央配置 */
     border-collapse: collapse;
     text-align: center;

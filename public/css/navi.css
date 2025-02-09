@@ -1,12 +1,39 @@
 /* パンくずリストのカスタマイズ */
 .breadcrumb {
+    background-color: #dae9ff;
+    position: fixed;
+    top: 10px; /* 任意の位置 */
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     list-style: none;
-    padding: 0;
-    margin: 0 auto; /* 中央揃え */
+    padding: 0 10px;
+    margin: 0;
     font-size: 16px;
     font-weight: bold;
-    justify-content: center; /* 中央揃え */
+    white-space: nowrap; /* 折り返しを防ぐ */
+    overflow-x: auto; /* 横スクロールを許可 */
+    max-width: 100vw; /* 画面幅を超えないように */
+    justify-content: center; /* 初期状態は中央揃え */
+}
+
+/* パンくずリストが画面幅を超えた場合に左揃え */
+.breadcrumb:has(li:nth-child(4)) { /* パンくずが4個以上なら適用 */
+    left: 0;
+    transform: none;
+    justify-content: flex-start;
+}
+
+/* スクロールバーのデザイン（必要に応じて追加） */
+.breadcrumb::-webkit-scrollbar {
+    height: 4px;
+}
+.breadcrumb::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 2px;
+}
+.breadcrumb::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 /* パンくずリストのアイテム */
