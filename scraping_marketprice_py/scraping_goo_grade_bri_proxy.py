@@ -62,18 +62,43 @@ def should_skip_url(url):
 def get_full_url(relative_url):
     return website_url.rstrip('/') + '/' + relative_url.lstrip('/')
 
-def scrape_page(url):
-    """指定されたURLのページを取得してBeautifulSoupオブジェクトを返す"""
-    print(f"アクセス中のURL: {url}")  # URLをログに出力
-    response = requests.get(url)
-    response.raise_for_status()
-    if "charset" in response.headers.get("Content-Type", ""):
-        response.encoding = response.headers["Content-Type"].split("charset=")[-1]
-    else:
-        response.encoding = response.apparent_encoding
-    time.sleep(random.uniform(3, 7))
-    response.raise_for_status()
-    return BeautifulSoup(response.text, 'html.parser')
+
+# ＝＝＝＝＝brightdata IPランダム proxy実装ここから＝＝＝＝＝
+from setting_script.proxy import BriDataProxy 
+def scrape_page(url, max_retries=5):
+    """Bright Data のプロキシを使用してページをスクレイピングする"""
+    retries = 0
+    while retries < max_retries:
+        proxy = BriDataProxy.get_proxy()  # Bright Data のプロキシを取得
+        print(f"アクセス中のURL: {url}")  # URLをログに出力
+        print(f"プロキシ: {proxy})")
+        print("===================")
+
+        try:
+            response = requests.get(url, proxies=proxy, timeout=10)
+            response.raise_for_status()
+
+            # エンコーディング設定
+            if "charset" in response.headers.get("Content-Type", ""):
+                response.encoding = response.headers["Content-Type"].split("charset=")[-1]
+            else:
+                response.encoding = response.apparent_encoding
+            
+            # スクレイピング対策回避のため、ランダムスリープ
+            time.sleep(random.uniform(1, 2.5))
+            
+            return BeautifulSoup(response.text, 'html.parser')
+
+        except requests.exceptions.RequestException as e:
+            print(f"プロキシエラー: {proxy} -> {e}")
+            retries += 1
+            time.sleep(2)  # エラー時に待機してリトライ
+
+    print(f"最大リトライ回数を超えました: {url}")
+    return None  # 失敗した場合は None を返す
+
+# ＝＝＝＝＝brightdata IPランダム proxy実装ここまで＝＝＝＝＝
+
 
 def extract_links(soup, selectors):
     links = []
