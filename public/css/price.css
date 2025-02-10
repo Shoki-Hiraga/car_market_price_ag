@@ -12,6 +12,7 @@ table {
     border-collapse: collapse;
     text-align: center;
     white-space: nowrap; /* 文字折り返しを防ぐ */
+    margin: 5px 20px 5px 20px;
 }
 
 /* セルのスタイル */
