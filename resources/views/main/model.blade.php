@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+<title>メーカー / 車種一覧 | @include('components.sitename')</title>
 @include('components.header')
-<title>メーカー / 車種一覧</title>
 </head>
 <body>
     <h1>メーカー / 車種一覧</h1>
