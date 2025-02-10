@@ -1,9 +1,17 @@
-/* テーブル全体の中央配置 */
+/* テーブルのラッパーを作成して横スクロール対応 */
+.table-container {
+    width: 90%;
+    margin: 50px auto;
+    overflow-x: auto; /* 横スクロールを可能に */
+    -webkit-overflow-scrolling: touch; /* スムーズスクロール対応 */
+}
+
+/* テーブルの基本スタイル */
 table {
-    width: 90%; /* 必要に応じて変更 */
-    margin: 50px auto; /* 上下50pxのマージン、左右autoで中央配置 */
+    width: 100%;
     border-collapse: collapse;
     text-align: center;
+    white-space: nowrap; /* 文字折り返しを防ぐ */
 }
 
 /* セルのスタイル */
@@ -18,12 +26,20 @@ th {
     font-weight: bold;
 }
 
-/* テーブルのレスポンシブ対応 */
+/* スマホ対応 */
 @media (max-width: 768px) {
-    table {
+    .table-container {
         width: 100%;
+        overflow-x: auto; /* ここで横スクロールを明示 */
     }
+
+    table {
+        max-width: none; /* 画面幅に制限されないようにする */
+    }
+
     th, td {
         padding: 5px;
+        font-size: 14px;
     }
+
 }
