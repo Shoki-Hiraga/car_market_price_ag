@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
 <title>メーカー / 車種一覧 | @include('components.sitename')</title>
+<meta name="description" content="メーカー / 車種一覧。様々な中古車買取店の買取実績、査定実績を抽出し、その価格情報の平均を出しています。あなたの愛車の買取価格の参考にしてみてください。 | @include('components.sitename')">
 @include('components.header')
 </head>
 <body>
