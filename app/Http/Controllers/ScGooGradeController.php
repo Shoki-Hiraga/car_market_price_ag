@@ -19,7 +19,7 @@ class ScGooGradeController extends Controller
     {
         // `$model_id` と `$grade_id` の組み合わせが正しいかチェック
         $grade = ScGooGrade::where('id', $grade_id)
-            ->where('model_name_id', $model_id) // ここで model_id もチェック
+            ->where('model_name_id', $model_id)
             ->with('model.maker')
             ->first();
     
@@ -30,8 +30,8 @@ class ScGooGradeController extends Controller
     
         // そのグレードの買取価格データを取得（model_id も条件に追加）
         $filteredMarketPricesGrade = MarketPriceMaster::where('model_name_id', $model_id)
-            ->where('grade_name_id', $grade_id)
-            ->where('maker_name_id', $grade->model->maker->id) // maker_name_id を条件に追加
+            ->where('grade_name_id', $grade_id) // `grade_id` が正しいかチェック
+            ->where('maker_name_id', $grade->model->maker->id) // `maker_name_id` も条件に追加
             ->orderBy('year', 'desc')
             ->get();
     
@@ -42,21 +42,33 @@ class ScGooGradeController extends Controller
             }
         }
     
-        // データを加工して必要な情報を追加
+        // MarketPriceMaster のデータを基に `ScGooGrade` の `model_number` と `engine_model` を取得
         $filteredMarketPricesGrade = $filteredMarketPricesGrade->map(function ($item) {
+            // `ScGooGrade` から該当するデータを取得
+            $GradeModnumEngmod = ScGooGrade::where('model_name_id', $item->model_name_id)
+                ->where('maker_name_id', $item->maker_name_id)
+                ->where('grade_name', function ($query) use ($item) {
+                    $query->select('grade_name')
+                          ->from('sc_goo_grade')
+                          ->where('id', $item->grade_name_id);
+                })
+                ->where('year', '<=', $item->year) // `year` の範囲検索
+                ->orderBy('year', 'desc') // 最新の `year` を優先
+                ->first();
+    
             return (object) [
                 'grade_name_id' => $item->grade_name_id,
                 'year' => $item->year,
                 'mileage' => $item->mileage,
                 'min_price' => $item->min_price,
                 'max_price' => $item->max_price,
-                'sc_url' => $item->sc_url
+                'sc_url' => $item->sc_url,
+                'model_number' => $GradeModnumEngmod ? $GradeModnumEngmod->model_number : '確認中', 
+                'engine_model' => $GradeModnumEngmod ? $GradeModnumEngmod->engine_model : '確認中',
             ];
         });
     
         return view('main.grade_detail', compact('grade', 'filteredMarketPricesGrade'));
     }
-        
-    
     
 }

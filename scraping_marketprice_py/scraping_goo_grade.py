@@ -26,7 +26,8 @@ pagenation_selectors = [
     # ".first li:nth-of-type(9) a", # 三菱ふそう
     # ".first li:nth-of-type(10) a", # スバル
     # ".first li:nth-of-type(11) a", # ダイハツ
-    ".first li:nth-of-type(12) a", # スズキ
+    # ".first li:nth-of-type(12) a", # スズキ
+    ".first li:nth-of-type(13) a", # いすゞ
     '.detail_box > a',
     '.grade a'
     ]

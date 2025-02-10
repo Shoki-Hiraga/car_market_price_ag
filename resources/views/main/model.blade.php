@@ -2,10 +2,10 @@
 <html lang="ja">
 <head>
 @include('components.header')
-<title>車種一覧</title>
+<title>メーカー / 車種一覧</title>
 </head>
 <body>
-    <h1>車種一覧</h1>
+    <h1>メーカー / 車種一覧</h1>
 
     @php
         // メーカー名ごとにグループ化（メーカー名がキー）

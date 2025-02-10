@@ -15,7 +15,7 @@ class BreadcrumbHelper
 
         // スラグ名と表示名のマッピング
         $customNames = [
-            'model' => '車種一覧', // "model" を "車種一覧" に変更
+            'model' => 'メーカー / 車種一覧', // "model" を "車種一覧" に変更
         ];
 
         $modelName = null;
