@@ -54,7 +54,7 @@ def fetch_page(url):
     proxy = BriDataProxy.get_proxy()
 
     try:
-        response = requests.get(url, headers=headers, proxies=proxy, timeout=10)
+        response = requests.get(url, headers=headers, proxies=proxy, timeout=10, verify=False)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
 
