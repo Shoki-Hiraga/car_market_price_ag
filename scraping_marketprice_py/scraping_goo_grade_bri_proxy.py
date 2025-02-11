@@ -29,7 +29,8 @@ pagenation_selectors = [
     # ".first li:nth-of-type(11) a", # ダイハツ
     # ".first li:nth-of-type(12) a", # スズキ
     # ".first li:nth-of-type(13) a", # いすゞ
-    ".first li:nth-of-type(14) a", # 日野
+    # ".first li:nth-of-type(14) a", # 日野
+    ".first li:nth-of-type(15) a", # ミツオカ
     '.detail_box > a',
     '.grade a'
     ]
