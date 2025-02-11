@@ -19,7 +19,7 @@ start_url = "https://www.goo-net.com/catalog/"
 pagenation_selectors = [
     # '.first ul:nth-of-type(1) a', # 全車種
     # ".first ul:nth-of-type(1) li:nth-of-type(3) a", # 日産
-    # ".first ul:nth-of-type(1) li:nth-of-type(4) a", # ホンダ
+    ".first ul:nth-of-type(1) li:nth-of-type(4) a", # ホンダ
     # ".first ul:nth-of-type(1) li:nth-of-type(5) a", # マツダ
     # ".first ul:nth-of-type(1) li:nth-of-type(6) a", # ユーノス
     # ".first li:nth-of-type(7) a", # 日本フォード
@@ -31,7 +31,7 @@ pagenation_selectors = [
     # ".first li:nth-of-type(13) a", # いすゞ
     # ".first li:nth-of-type(14) a", # 日野
     # ".first li:nth-of-type(15) a", # ミツオカ
-    ".line li:nth-of-type(16) a", # 日産ディーゼル
+    # ".line li:nth-of-type(16) a", # 日産ディーゼル
     '.detail_box > a',
     '.grade a'
     ]
@@ -77,7 +77,7 @@ def scrape_page(url, max_retries=5):
         print("===================")
 
         try:
-            response = requests.get(url, proxies=proxy, timeout=10)
+            response = requests.get(url, proxies=proxy, timeout=10, verify=False)
             response.raise_for_status()
 
             # エンコーディング設定
