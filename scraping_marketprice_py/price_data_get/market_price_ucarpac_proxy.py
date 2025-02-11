@@ -31,7 +31,7 @@ dataget_selectors = {
 }
 pagenations_min = 1
 pagenations_max = 10000
-delay = random.uniform(5, 12) 
+delay = random.uniform(1, 2.5) 
 
 # スキップ条件
 sc_skip_conditions = [
@@ -41,6 +41,7 @@ sc_skip_conditions = [
 # # スキップ条件の不要の設定
 # sc_skip_conditions = []
 
+from setting_script.proxy import BriDataProxy 
 def fetch_page(url):
     user_agents = [
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
@@ -48,20 +49,25 @@ def fetch_page(url):
         "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
     ]
     headers = {"User-Agent": random.choice(user_agents)}
+    proxy = BriDataProxy.get_proxy()
 
     try:
-        response = requests.get(url, headers=headers)
+        response = requests.get(url, headers=headers, proxies=proxy, timeout=10)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
 
-        # 複数のスキップ条件をチェック
-        for condition in sc_skip_conditions:
-            skip_element = soup.select_one(condition["selector"])
-            if skip_element and condition["text"] in skip_element.get_text():
-                print(f"Skipping: {url} due to skip condition match ({condition['selector']} contains '{condition['text']}')")
-                return None
+        # 各セレクタごとにデータを取得して出力
+        print(f"Debugging {url}")
+        for key, selector in dataget_selectors.items():
+            if selector == "url":
+                continue
+            elements = soup.select(selector)
+            print(f"Selector: {selector} (Key: {key})")
+            for i, element in enumerate(elements):
+                print(f"  [{i+1}] {element.get_text(strip=True)}")  # 各要素のテキストを出力
 
         return soup
+    
     except requests.exceptions.HTTPError as e:
         if response.status_code == 404:
             print(f"404 Error for URL: {url}")
@@ -69,15 +75,7 @@ def fetch_page(url):
             print(f"HTTP Error for {url}: {e}")
         return None
     except requests.exceptions.RequestException as e:
-        return None
-
-    except requests.exceptions.HTTPError as e:
-        if response.status_code == 404:
-            print(f"404 Error for URL: {url}")
-        else:
-            print(f"HTTP Error for {url}: {e}")
-        return None
-    except requests.exceptions.RequestException as e:
+        print(f"Error fetching page: {url}\n{e}")
         return None
 
 def extract_data(soup, selectors):

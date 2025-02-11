@@ -132,7 +132,7 @@ def scrape_urls():
                                         print(f"Skipping: incomplete data: {data}")
                                         continue
 
-                                    print(f"Saving data: {data}")  # デバッグ用
+                                    print(f"データ保存: {data}")  # デバッグ用
                                     save_to_db(data, TABLE_NAME)
                                     time.sleep(delay)
                             time.sleep(delay)

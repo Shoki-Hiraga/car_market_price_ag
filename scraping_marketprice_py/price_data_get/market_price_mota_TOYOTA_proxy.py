@@ -3,44 +3,44 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import time
 import random
-from funciton_app.ucarpac_dataget_selectors_edit import process_data
+from funciton_app.mota_dataget_selectors_edit import process_data
 from db_handler import save_to_db, is_recent_url
 
 # 定義: テーブル名
-TABLE_NAME = "market_price_ucarpac"
+TABLE_NAME = "market_price_mota"
 
 # pagenation_selectors のどこでページネーションさせるか指定
 select_pagenation_selectors = 0
 
 # Define parameters
-website_url = "https://ucarpac.com/"
-start_url = "https://ucarpac.com/sell/"
-pagenation_selectors = [
-    ".content-menu__list li:nth-of-type(2) a",
-    ".item a",
+website_url = "https://autoc-one.jp/"
+start_url = "https://autoc-one.jp/ullo/biddedCarList/ma34/"
+pagenation_selectors = ["dt:-soup-contains('国産車') + dd li a",
+                        "a.p-top-result-card__model-link"
                         ]
 dataget_selectors = {
-    "maker_name": ".pc li:nth-of-type(4) span",
-    "model_name": ".pc li:nth-of-type(5) span",
-    "grade_name": ".pc li:nth-of-type(6) span",
-    "year": "dt:-soup-contains('年式') + dd",
-    "mileage": "dt:-soup-contains('走行距離') + dd",
-    "min_price": "tr:-soup-contains('市場の買取価格相場') span",
-    "max_price": ".ucar span",
+    "maker_name": "ul:nth-of-type(1) li:nth-of-type(1) div.p-biddedcar-detail-list__item-value",
+    "model_name": "li:nth-of-type(3) div.p-biddedcar-detail-list__item-value",
+    "grade_name": "li:nth-of-type(5) div.p-biddedcar-detail-list__item-value",
+    "year": "div:nth-of-type(13) h2",
+    "mileage": "h1",
+    "min_price": "p:nth-of-type(1) b.u-font-3xl",
+    "max_price": "p:nth-of-type(3) b.u-font-3xl",
     "sc_url": "url"
 }
 pagenations_min = 1
 pagenations_max = 10000
-delay = random.uniform(5, 12) 
+delay = random.uniform(1, 2.5) 
 
 # スキップ条件
 sc_skip_conditions = [
-    {"selector": "div.latest__list--zero", "text": "条件に合致する実績がありませんでした。条件を変更して再度検索してください。"},
-    # {"selector": "p.nodata--txt", "text": "申し訳ございません"}
+    {"selector": "title", "text": "申し訳ございません"},
+    {"selector": "p.nodata--txt", "text": "申し訳ございません"}
 ]
 # # スキップ条件の不要の設定
 # sc_skip_conditions = []
 
+from setting_script.proxy import BriDataProxy 
 def fetch_page(url):
     user_agents = [
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
@@ -48,20 +48,25 @@ def fetch_page(url):
         "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
     ]
     headers = {"User-Agent": random.choice(user_agents)}
+    proxy = BriDataProxy.get_proxy()
 
     try:
-        response = requests.get(url, headers=headers)
+        response = requests.get(url, headers=headers, proxies=proxy, timeout=10)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
 
-        # 複数のスキップ条件をチェック
-        for condition in sc_skip_conditions:
-            skip_element = soup.select_one(condition["selector"])
-            if skip_element and condition["text"] in skip_element.get_text():
-                print(f"Skipping: {url} due to skip condition match ({condition['selector']} contains '{condition['text']}')")
-                return None
+        # 各セレクタごとにデータを取得して出力
+        print(f"Debugging {url}")
+        for key, selector in dataget_selectors.items():
+            if selector == "url":
+                continue
+            elements = soup.select(selector)
+            print(f"Selector: {selector} (Key: {key})")
+            for i, element in enumerate(elements):
+                print(f"  [{i+1}] {element.get_text(strip=True)}")  # 各要素のテキストを出力
 
         return soup
+    
     except requests.exceptions.HTTPError as e:
         if response.status_code == 404:
             print(f"404 Error for URL: {url}")
@@ -69,15 +74,7 @@ def fetch_page(url):
             print(f"HTTP Error for {url}: {e}")
         return None
     except requests.exceptions.RequestException as e:
-        return None
-
-    except requests.exceptions.HTTPError as e:
-        if response.status_code == 404:
-            print(f"404 Error for URL: {url}")
-        else:
-            print(f"HTTP Error for {url}: {e}")
-        return None
-    except requests.exceptions.RequestException as e:
+        print(f"Error fetching page: {url}\n{e}")
         return None
 
 def extract_data(soup, selectors):
@@ -106,7 +103,7 @@ def scrape_urls():
                 if idx == select_pagenation_selectors:
                     for link in links:
                         for page_num in range(pagenations_min, pagenations_max + 1):
-                            paginated_url = f"{link}/page_{page_num}?o=td"
+                            paginated_url = f"{link}pa{page_num}"
                             print(f"Processing paginated URL: {paginated_url}")  # デバッグ用
 
                             if is_recent_url(paginated_url, TABLE_NAME):
