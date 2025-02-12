@@ -12,23 +12,22 @@ class ScGooModelController extends Controller
 {
     public function index()
     {
-        // MarketPriceMaster に登録されているメーカーとモデルを取得
+        $sc_goo_model = ScGooModel::with('maker')->get();
+    
+        // `show()` のロジックと一致させる
         $existingMarketPriceModels = MarketPriceMaster::whereHas('grade', function ($query) {
                 $query->whereColumn('model_name_id', 'market_price_master.model_name_id');
             })
             ->whereHas('maker', function ($query) {
                 $query->whereColumn('id', 'market_price_master.maker_name_id');
             })
-            ->with(['maker', 'model']) // 関連するデータを取得
-            ->get()
-            ->unique('model_name_id'); // model_name_id ごとに一意にする
+            ->pluck('model_name_id')
+            ->unique();
     
-        // メーカーごとにグループ化
-        $groupedMarketPriceModels = $existingMarketPriceModels->groupBy(fn($item) => optional($item->maker)->maker_name);
-    
-        return view('main.model', compact('groupedMarketPriceModels'));
+        return view('main.model', compact('sc_goo_model', 'existingMarketPriceModels'));
     }
     
+
     public function show($id)
     {
         // MarketPriceMaster からデータ取得
