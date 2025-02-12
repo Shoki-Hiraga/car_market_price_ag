@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<title>TOP メーカー一覧 | @include('components.sitename')</title>
+<title>メーカー一覧 | @include('components.sitename')</title>
 @include('components.header')
 </head>
 <body>
