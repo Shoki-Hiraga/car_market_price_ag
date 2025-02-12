@@ -1,0 +1,26 @@
+2025-02-12 19:46:06 [INFO] 関数 scrape_urls() を開始
+2025-02-12 19:46:06 [INFO] Starting scrape from: https://ucarpac.com/sell/
+
+2025-02-12 19:46:06 [INFO] Initial URLs: ['https://ucarpac.com/sell/']
+2025-02-12 19:46:06 [INFO] 関数 fetch_page() を開始
+2025-02-12 19:46:09 [INFO] 関数 fetch_page() が正常に完了
+2025-02-12 19:46:09 [INFO] Processing paginated URL: https://ucarpac.com/sell/archive/page_1?o=td
+2025-02-12 19:46:09 [INFO] 関数 fetch_page() を開始
+2025-02-12 19:46:13 [INFO] 関数 fetch_page() が正常に完了
+2025-02-12 19:46:13 [INFO] Fetching data from: https://ucarpac.com/sell/m001/n084/g14731/101164
+2025-02-12 19:46:13 [INFO] 関数 fetch_page() を開始
+2025-02-12 19:46:14 [INFO] 関数 fetch_page() が正常に完了
+2025-02-12 19:46:14 [INFO] データ保存: {'maker_name': 'トヨタ', 'model_name': 'プリウス', 'grade_name': 'Ｇ', 'year': '2009', 'mileage': '15', 'min_price': '-', 'max_price': '17.2', 'sc_url': 'https://ucarpac.com/sell/m001/n084/g14731/101164'}
+2025-02-12 19:46:19 [INFO] Fetching data from: https://ucarpac.com/sell/m009/n021/g48627/101258
+2025-02-12 19:46:19 [INFO] 関数 fetch_page() を開始
+2025-02-12 19:46:23 [INFO] 関数 fetch_page() が正常に完了
+2025-02-12 19:46:23 [INFO] データ保存: {'maker_name': 'ダイハツ', 'model_name': 'ムーヴ', 'grade_name': 'Ｌ\u3000ＳＡ', 'year': '2015', 'mileage': '8', 'min_price': '-', 'max_price': '9.0', 'sc_url': 'https://ucarpac.com/sell/m009/n021/g48627/101258'}
+2025-02-12 19:46:29 [INFO] Fetching data from: https://ucarpac.com/sell/m009/n009/g41245/101284
+2025-02-12 19:46:29 [INFO] 関数 fetch_page() を開始
+2025-02-12 19:46:30 [INFO] 関数 fetch_page() が正常に完了
+2025-02-12 19:46:30 [INFO] データ保存: {'maker_name': 'ダイハツ', 'model_name': 'コペン', 'grade_name': 'アルティメットＥｄ\u3000２', 'year': '2008', 'mileage': '8', 'min_price': '22.5', 'max_price': '39.4', 'sc_url': 'https://ucarpac.com/sell/m009/n009/g41245/101284'}
+2025-02-12 19:46:35 [INFO] Fetching data from: https://ucarpac.com/sell/m008/n034/g53606/101069
+2025-02-12 19:46:35 [INFO] 関数 fetch_page() を開始
+2025-02-12 19:46:38 [INFO] 関数 fetch_page() が正常に完了
+2025-02-12 19:46:38 [INFO] データ保存: {'maker_name': 'スズキ', 'model_name': 'エブリイ', 'grade_name': '４ＷＤ\u3000ジョイン\u3000ターボ\u3000ＨＲ', 'year': '2020', 'mileage': '5', 'min_price': '-', 'max_price': '80.1', 'sc_url': 'https://ucarpac.com/sell/m008/n034/g53606/101069'}
+2025-02-12 19:46:39 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
