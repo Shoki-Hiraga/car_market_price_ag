@@ -45,7 +45,7 @@ def is_recent_url(sc_url, table_name):
         result = cursor.fetchone()
         if result and result['updated_at']:
             last_updated = result['updated_at']
-            return (datetime.now() - last_updated).days <= 10
+            return (datetime.now() - last_updated).days <= 30
         return False
     except mysql.connector.Error as e:
         print(f"Error in is_recent_url: {e}")
