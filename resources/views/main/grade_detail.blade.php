@@ -42,4 +42,5 @@
     @endif
 
 </body>
+@include('components.footer')
 </html>

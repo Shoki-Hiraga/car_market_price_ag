@@ -1,0 +1,22 @@
+footer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 50px;
+    background-color: #fff;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* 要素間の間隔を調整 */
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 10px 10px;
+}

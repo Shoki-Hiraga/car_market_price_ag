@@ -40,4 +40,5 @@
     @endforeach
 
 </body>
+@include('components.footer')
 </html>
