@@ -28,9 +28,23 @@ ul {
     padding: 20px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* デフォルトは3カラム */
     gap: 20px;
     max-width: 600px;
+}
+
+/* スマホ（画面幅 600px 以下）では2カラムに変更 */
+@media screen and (max-width: 600px) {
+    ul {
+        grid-template-columns: repeat(2, 1fr); /* 2カラムに変更 */
+    }
+}
+
+/* さらに狭い画面（380px以下）では1カラム */
+@media screen and (max-width: 400px) {
+    ul {
+        grid-template-columns: repeat(1, 1fr); /* 1カラムに変更 */
+    }
 }
 
 
