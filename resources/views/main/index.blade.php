@@ -19,4 +19,5 @@
         @endforeach
     </ul>
 </body>
+@include('components.footer')
 </html>
