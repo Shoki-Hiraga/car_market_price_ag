@@ -1,8 +1,9 @@
 /* パンくずリストのカスタマイズ */
 .breadcrumb {
     background-color: #dae9ff;
+    height: 35px;
     position: fixed;
-    top: 10px; /* 任意の位置 */
+    top: 0%; /* 任意の位置 */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -13,6 +14,7 @@
     font-weight: bold;
     white-space: nowrap; /* 折り返しを防ぐ */
     overflow-x: auto; /* 横スクロールを許可 */
+    width: 100%;
     max-width: 100vw; /* 画面幅を超えないように */
     justify-content: center; /* 初期状態は中央揃え */
 }
