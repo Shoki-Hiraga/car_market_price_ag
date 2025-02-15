@@ -15,8 +15,8 @@ select_pagenation_selectors = 0
 
 # Define parameters
 website_url = "https://autoc-one.jp/"
-start_url = "https://autoc-one.jp/ullo/biddedCarList/ma34/"
-pagenation_selectors = ["dt:-soup-contains('国産車') + dd li:nth-of-type(1) a",
+start_url = "https://autoc-one.jp/ullo/biddedCarList/ma38/"
+pagenation_selectors = ["dt:-soup-contains('国産車') + dd li:nth-of-type(6) a",
                         "a.p-top-result-card__model-link"
                         ]
 dataget_selectors = {
