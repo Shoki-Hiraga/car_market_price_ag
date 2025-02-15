@@ -17,21 +17,34 @@ class ScGooGradeController extends Controller
 
     public function show($model_id, $grade_id)
     {
-        // `$model_id` と `$grade_id` の組み合わせが正しいかチェック
-        $grade = ScGooGrade::where('id', $grade_id)
-            ->where('model_name_id', $model_id)
-            ->with('model.maker')
+        // MarketPriceMaster から該当の grade_name_id を取得
+        $marketPrice = MarketPriceMaster::where('model_name_id', $model_id)
+            ->where('grade_name_id', $grade_id)
             ->first();
-    
-        // 存在しない組み合わせなら 404 エラー
-        if (!$grade) {
+        
+        // 存在しない場合は 404 を返す
+        if (!$marketPrice) {
             abort(404);
         }
     
-        // そのグレードの買取価格データを取得（model_id も条件に追加）
+        // MarketPriceMaster の grade_name_id に一致する ScGooGrade の grade_name を取得
+        $grade = ScGooGrade::where('id', function ($query) use ($grade_id) {
+                $query->select('id')
+                    ->from('sc_goo_grade')
+                    ->where('id', $grade_id);
+            })
+            ->with('model.maker')
+            ->first();
+        
+        // 存在しない場合は 404 を返す
+        if (!$grade) {
+            abort(404);
+        }
+        
+        // そのグレードの買取価格データを取得
         $filteredMarketPricesGrade = MarketPriceMaster::where('model_name_id', $model_id)
-            ->where('grade_name_id', $grade_id) // `grade_id` が正しいかチェック
-            ->where('maker_name_id', $grade->model->maker->id) // `maker_name_id` も条件に追加
+            ->where('grade_name_id', $grade_id)
+            ->where('maker_name_id', $grade->model->maker->id)
             ->orderBy('year', 'desc')
             ->get();
     
@@ -42,9 +55,8 @@ class ScGooGradeController extends Controller
             }
         }
     
-        // MarketPriceMaster のデータを基に `ScGooGrade` の `model_number` と `engine_model` を取得
+        // MarketPriceMaster のデータを基に ScGooGrade の model_number と engine_model を取得
         $filteredMarketPricesGrade = $filteredMarketPricesGrade->map(function ($item) {
-            // `ScGooGrade` から該当するデータを取得
             $GradeModnumEngmod = ScGooGrade::where('model_name_id', $item->model_name_id)
                 ->where('maker_name_id', $item->maker_name_id)
                 ->where('grade_name', function ($query) use ($item) {
@@ -52,8 +64,8 @@ class ScGooGradeController extends Controller
                           ->from('sc_goo_grade')
                           ->where('id', $item->grade_name_id);
                 })
-                ->where('year', '<=', $item->year) // `year` の範囲検索
-                ->orderBy('year', 'desc') // 最新の `year` を優先
+                ->where('year', '<=', $item->year)
+                ->orderBy('year', 'desc')
                 ->first();
     
             return (object) [
@@ -63,12 +75,13 @@ class ScGooGradeController extends Controller
                 'min_price' => $item->min_price,
                 'max_price' => $item->max_price,
                 'sc_url' => $item->sc_url,
-                'model_number' => $GradeModnumEngmod ? $GradeModnumEngmod->model_number : '確認中', 
+                'model_number' => $GradeModnumEngmod ? $GradeModnumEngmod->model_number : '確認中',
                 'engine_model' => $GradeModnumEngmod ? $GradeModnumEngmod->engine_model : '確認中',
             ];
         });
     
         return view('main.grade_detail', compact('grade', 'filteredMarketPricesGrade'));
     }
+    
     
 }
