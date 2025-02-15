@@ -38,6 +38,8 @@
                             @else
                                 {{ $grade_name }}
                             @endif
+                        <br>
+                        走行距離、年式別相場
                         </a>
                     </td>
                     <td>{{ $marketprice->year }}年</td>

@@ -1,9 +1,10 @@
 /* テーブルのラッパーを作成して横スクロール対応 */
 .table-container {
-    width: 90%;
+    width: 100%;
     margin: 50px auto;
     overflow-x: auto; /* 横スクロールを可能に */
     -webkit-overflow-scrolling: touch; /* スムーズスクロール対応 */
+    max-width: 1000px;
 }
 
 /* テーブルの基本スタイル */
