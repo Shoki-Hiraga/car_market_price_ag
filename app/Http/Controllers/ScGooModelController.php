@@ -26,7 +26,10 @@ class ScGooModelController extends Controller
         // メーカーごとにグループ化
         $groupedMarketPriceModels = $existingMarketPriceModels->groupBy(fn($item) => optional($item->maker)->maker_name);
     
-        return view('main.model', compact('groupedMarketPriceModels'));
+        // MarketPriceMaster に存在するデータ数を表示
+        $marketPriceCount = MarketPriceMaster::count();
+
+        return view('main.model', compact('groupedMarketPriceModels', 'marketPriceCount'));
     }
     
     public function show($id)
@@ -82,8 +85,11 @@ class ScGooModelController extends Controller
                     'max_price' => $maxPrice,
                 ];
             })->values();
-    
-        return view('main.model_detail', compact('model', 'filteredMarketPricesModel'));
+
+        // MarketPriceMaster に存在するデータ数を表示
+        $marketPriceCount = MarketPriceMaster::count();
+
+        return view('main.model_detail', compact('model', 'filteredMarketPricesModel', 'marketPriceCount'));
     }
     
     

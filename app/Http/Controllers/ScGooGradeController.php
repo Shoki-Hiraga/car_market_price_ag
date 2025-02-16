@@ -77,8 +77,11 @@ class ScGooGradeController extends Controller
                 'engine_model' => $GradeModnumEngmod ? $GradeModnumEngmod->engine_model : '確認中',
             ];
         });
-    
-        return view('main.grade_detail', compact('grade', 'filteredMarketPricesGrade'));
+
+        // MarketPriceMaster に存在するデータ数を表示
+        $marketPriceCount = MarketPriceMaster::count();
+
+        return view('main.grade_detail', compact('grade', 'filteredMarketPricesGrade', 'marketPriceCount'));
     }
         
     

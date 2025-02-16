@@ -6,6 +6,7 @@
 </head>
 <body>
     <h1>@include('components.sitename')</h1>
+    @include('components.marketprice')
     @include('components.lead_contents')
     <h2>メーカー一覧</h2>
     <ul>
