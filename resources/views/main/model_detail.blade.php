@@ -4,6 +4,7 @@
 @if($filteredMarketPricesModel->count() < 4)
 @include('components.noindex')
 @endif
+
 <head>
 @if($filteredMarketPricesModel->isNotEmpty())
 @else
