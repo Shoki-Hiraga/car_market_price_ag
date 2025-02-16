@@ -20,6 +20,7 @@
     <h1>{{ $model->maker->maker_name }} {{ $model->model_name }}
         <br>
         買取相場・中古車の査定実績</h1>
+        @include('components.marketprice')
         @include('components.lead_contents')
 
 

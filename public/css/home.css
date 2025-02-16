@@ -17,11 +17,24 @@ p {
     margin: 20px 5% 20px 5%;
 }
 
+span.date_count {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ff8800;
+    display: inline;
+    background: linear-gradient(transparent 0%, #dae9ff 0%);
+}
+
+
 @media screen and (max-width: 768px) {
     h1 {
         font-size: 20px;
+        
     }
-}    
+    span.date_count {
+        font-size: 25px;
+    }
+}
 
 ul {
     list-style-type: none;

@@ -16,6 +16,9 @@ class ScGooMakerController extends Controller
             ->unique('maker_name_id') // maker_name_id ごとに一意にする
             ->pluck('maker'); // maker情報のみを取得
 
-        return view('main.index', compact('sc_goo_maker'));
+        // MarketPriceMaster に存在するデータ数を表示
+        $marketPriceCount = MarketPriceMaster::count();
+
+        return view('main.index', compact('sc_goo_maker', 'marketPriceCount'));
     }
 }

@@ -21,6 +21,7 @@
     <h1>{{ $grade->model->maker->maker_name }} {{ $grade->model->model_name }} <br>
     {{ $grade->grade_name }}
     <br> 買取価格情報</h1>
+    @include('components.marketprice')
     @include('components.lead_contents')
     <div class="table-container">
         <table border="1">

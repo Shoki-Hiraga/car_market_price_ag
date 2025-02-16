@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>メーカー / 車種一覧</h1>
+    @include('components.marketprice')
 
     <!-- ナビゲーション：各メーカーに対して番号付きアンカーリンク -->
     <nav>
