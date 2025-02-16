@@ -11,10 +11,10 @@
 <H1 style="text-align:center;">買取実績データがありません</h2>
 @include('components.noindex')
 @endif
-
 <title>{{ $model->maker->maker_name }} {{ $model->model_name }} 買取相場・中古車の査定実績 | @include('components.sitename')</title>
 <meta name="description" content="{{ $model->maker->maker_name }} {{ $model->model_name }} 買取相場・中古車の査定実績です。様々な中古車買取店の買取実績、査定実績を抽出し、その価格情報の平均を出しています。あなたの愛車の買取価格の参考にしてみてください。 | @include('components.sitename')">
 @include('components.header')
+
 </head>
 <body>
     <h1>{{ $model->maker->maker_name }} {{ $model->model_name }}
