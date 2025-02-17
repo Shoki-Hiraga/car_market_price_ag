@@ -80,8 +80,11 @@ class ScGooGradeController extends Controller
 
         // MarketPriceMaster に存在するデータ数を表示
         $marketPriceCount = MarketPriceMaster::count();
-
-        return view('main.grade_detail', compact('grade', 'filteredMarketPricesGrade', 'marketPriceCount'));
+ 
+        // 正規URLを生成
+        $canonicalUrl = route('grade.detail', ['model_id' => $model_id, 'grade_id' => $grade_id]);
+ 
+    return view('main.grade_detail', compact('grade', 'filteredMarketPricesGrade', 'marketPriceCount', "canonicalUrl"));
     }
         
     

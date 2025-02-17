@@ -3,6 +3,8 @@
 <head>
 <title>TOP メーカー一覧 | @include('components.sitename')</title>
 @include('components.header')
+<link rel="canonical" href="{{ $canonicalUrl }}">
+
 </head>
 <body>
     <h1>@include('components.sitename')</h1>

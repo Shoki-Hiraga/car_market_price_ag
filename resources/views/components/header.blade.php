@@ -5,9 +5,6 @@
 <link rel="shortcut icon" href="{{ asset('/332favicon.jpg') }}">
 @include('components.breadcrumb')
 
-<!-- Canonical URL -->
-<link rel="canonical" href="{{ url()->current() }}/">
-
 <!-- Search Console -->
 <meta name="google-site-verification" content="pSA3_uPF-V6nE_7kX2b5hVJou1Z_rB1MUPaE8Tt2wOQ" />
 

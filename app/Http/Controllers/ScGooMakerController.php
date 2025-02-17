@@ -19,6 +19,9 @@ class ScGooMakerController extends Controller
         // MarketPriceMaster に存在するデータ数を表示
         $marketPriceCount = MarketPriceMaster::count();
 
-        return view('main.index', compact('sc_goo_maker', 'marketPriceCount'));
+        // 正規URLを生成
+        $canonicalUrl = route('maker.index');
+
+        return view('main.index', compact('sc_goo_maker', 'marketPriceCount', 'canonicalUrl'));
     }
 }
