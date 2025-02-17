@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
-<!-- if(filteredMarketPricesGrade less < 4) -->
 @if($filteredMarketPricesGrade->count() < 4)
+<!-- if(filteredMarketPricesGrade less < 4) -->
 @include('components.noindex')
 @endif
 
@@ -14,9 +14,8 @@
 
 <title>{{ $grade->model->maker->maker_name }} {{ $grade->model->model_name }} {{ $grade->grade_name }} の買取価格情報 | @include('components.sitename')</title>
 <meta name="description" content="{{ $grade->model->maker->maker_name }} {{ $grade->model->model_name }} {{ $grade->grade_name }} 買取相場・中古車の査定実績です。様々な中古車買取店の買取実績、査定実績を抽出し、その価格情報の平均を出しています。あなたの愛車の買取価格の参考にしてみてください。 | @include('components.sitename')">
-<link rel="canonical" href="{{ $canonicalUrl }}">
-
 @include('components.header')
+<link rel="canonical" href="{{ $canonicalUrl }}">
 
 </head>
 <body>
