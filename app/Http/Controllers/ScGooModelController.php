@@ -29,7 +29,10 @@ class ScGooModelController extends Controller
         // MarketPriceMaster に存在するデータ数を表示
         $marketPriceCount = MarketPriceMaster::count();
 
-        return view('main.model', compact('groupedMarketPriceModels', 'marketPriceCount'));
+        // 正規URLを生成
+        $canonicalUrl = route('model.index');
+
+        return view('main.model', compact('groupedMarketPriceModels', 'marketPriceCount', 'canonicalUrl'));
     }
     
     public function show($id)
@@ -89,7 +92,10 @@ class ScGooModelController extends Controller
         // MarketPriceMaster に存在するデータ数を表示
         $marketPriceCount = MarketPriceMaster::count();
 
-        return view('main.model_detail', compact('model', 'filteredMarketPricesModel', 'marketPriceCount'));
+        // 正規URLを生成
+        $canonicalUrl = route('model.detail', ['id' => $id]);
+
+        return view('main.model_detail', compact('model', 'filteredMarketPricesModel', 'marketPriceCount', "canonicalUrl"));
     }
     
     
