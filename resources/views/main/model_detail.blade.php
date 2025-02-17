@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
-<!-- if($filteredMarketPricesModel less < 4)) -->
 @if($filteredMarketPricesModel->count() < 4)
+<!-- if($filteredMarketPricesModel less < 4)) -->
 @include('components.noindex')
 @endif
 
