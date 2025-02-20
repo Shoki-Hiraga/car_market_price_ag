@@ -4,12 +4,16 @@ body {
     margin: 0;
     margin-top: 60px;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
 }
 
 h1 {
     font-size: 30px;
     margin: 20px 10% 20px 10%;
+}
+
+h3 {
+    font-size: 18px;
 }
 
 p {
@@ -92,3 +96,19 @@ li.makerlist, li.modellist, li.gradelist {
     font-weight: bold;
 }
 
+.main_model_detail {
+    background-color: #ffffff;
+}
+
+.model_contents {
+    background-color: #f4f8ff;
+    margin: 0 auto; /* 中央寄せ */
+    padding: 20px 5% 20px 5%; /* 余白を追加 */
+
+}
+
+@media screen and (max-width: 600px) {
+    .model_contents {
+        background-color: #f4f8ff;
+    }    
+}
