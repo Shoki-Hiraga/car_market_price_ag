@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\ScGooModel;
 use App\Models\ScGooGrade;
 use App\Models\MarketPriceMaster;
+use App\Models\ModelContents;
 
 class ScGooModelController extends Controller
 {
@@ -95,7 +96,10 @@ class ScGooModelController extends Controller
         // 正規URLを生成
         $canonicalUrl = route('model.detail', ['id' => $id]);
 
-        return view('main.model_detail', compact('model', 'filteredMarketPricesModel', 'marketPriceCount', "canonicalUrl"));
+        // **ModelContents からデータを取得**
+        $modelContent = ModelContents::where('model_name_id', $id)->first();
+
+        return view('main.model_detail', compact('model', 'filteredMarketPricesModel', 'marketPriceCount', "canonicalUrl", "modelContent"));
     }
     
     
