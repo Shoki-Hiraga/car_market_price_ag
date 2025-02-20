@@ -51,7 +51,10 @@ Route::get('/sitemap-model.xml', function () {
     $xml = '<?xml version="1.0" encoding="UTF-8"?>';
     $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 
-    $models = ScGooModel::latest()->limit(10000)->get(); // 5000件まで取得
+    $models = ScGooModel::whereIn('id', function ($query) {
+        $query->select('model_name_id')->from('market_price_master')->distinct();
+    })->latest()->limit(10000)->get();
+
     foreach ($models as $model) {
         $xml .= '<url>';
         $xml .= '<loc>' . url(route('model.detail', ['id' => $model->id])) . '</loc>';
@@ -66,12 +69,16 @@ Route::get('/sitemap-model.xml', function () {
     return response($xml, 200)->header('Content-Type', 'application/xml');
 });
 
+
 // グレード専用サイトマップ
 Route::get('/sitemap-grade.xml', function () {
     $xml = '<?xml version="1.0" encoding="UTF-8"?>';
     $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 
-    $grades = ScGooGrade::whereNotNull('model_name_id')->latest()->limit(50000)->get();
+    $grades = ScGooGrade::whereIn('id', function ($query) {
+        $query->select('grade_name_id')->from('market_price_master')->whereNotNull('grade_name_id')->distinct();
+    })->latest()->limit(50000)->get();
+
     foreach ($grades as $grade) {
         $xml .= '<url>';
         $xml .= '<loc>' . url(route('grade.detail', ['model_id' => $grade->model_name_id, 'grade_id' => $grade->id])) . '</loc>';
