@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\ScGooGrade;
 use App\Models\MarketPriceMaster;
+use App\Models\ModelContents;
 
 class ScGooGradeController extends Controller
 {
@@ -84,7 +85,10 @@ class ScGooGradeController extends Controller
         // 正規URLを生成
         $canonicalUrl = route('grade.detail', ['model_id' => $model_id, 'grade_id' => $grade_id]);
  
-    return view('main.grade_detail', compact('grade', 'filteredMarketPricesGrade', 'marketPriceCount', "canonicalUrl"));
+        // **ModelContents からデータを取得**
+        $modelContent = ModelContents::where('model_name_id', $model_id)->first();
+
+    return view('main.grade_detail', compact('grade', 'filteredMarketPricesGrade', 'marketPriceCount', "canonicalUrl", "modelContent"));
     }
         
     
