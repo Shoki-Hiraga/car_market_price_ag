@@ -1,10 +1,12 @@
 import anthropic
 from ai_setting.claude_apikey import claude_api_key
 import time
+from logs.logger import log_decorator, log_info, log_error 
 
 # Claude API クライアントの作成
-client = anthropic.Anthropic(api_key=claude_api_key)
 
+client = anthropic.Anthropic(api_key=claude_api_key)
+@log_decorator
 def get_claude_response(maker_name, model_name, prompt="500文字~2000文字で収まるように歴代モデルをHTMLで解説してください。その際、適宜 h3見出しを使用し、 class名は model_contents としてください。", model_version="claude-3-5-sonnet-latest"):
     """
     Claude API にリクエストを送信し、応答を取得する。
@@ -17,11 +19,11 @@ def get_claude_response(maker_name, model_name, prompt="500文字~2000文字で�
     """
     # システムメッセージとプロンプトを統合
     system_message = f"{maker_name} {model_name} の歴代モデルについて、{prompt}"
-    print(f"Request text: {system_message}")
+    log_info(f"Request text: {system_message}")
 
     # 遅延処理を追加
     time.sleep(10)
-    print("遅延処理中")
+    log_info("遅延処理中")
 
     try:
         response_text = ""
@@ -56,5 +58,5 @@ def get_claude_response(maker_name, model_name, prompt="500文字~2000文字で�
         return response_text
 
     except Exception as e:
-        print("Claude API エラー:", e)
+        log_info("Claude API エラー:", e)
         return None
