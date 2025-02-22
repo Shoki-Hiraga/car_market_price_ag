@@ -3,43 +3,44 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import time
 import random
-from funciton_app.mota_dataget_selectors_edit import process_data
+from funciton_app.rakuten_dataget_selectors_edit import process_data
 from db_handler import save_to_db, is_recent_url
 from logs.logger import log_decorator, log_info, log_error 
 
 # 定義: テーブル名
-TABLE_NAME = "market_price_mota"
+TABLE_NAME = "market_price_rakuten"
 
 # pagenation_selectors のどこでページネーションさせるか指定
 select_pagenation_selectors = 0
 
 # Define parameters
-website_url = "https://autoc-one.jp/"
-start_url = "https://autoc-one.jp/ullo/biddedCarList/ma36/"
-pagenation_selectors = ["dt:-soup-contains('国産車') + dd li:nth-of-type(4) a",
-                        "a.p-top-result-card__model-link"
+website_url = "https://sell.car.rakuten.co.jp/"
+start_url = "https://sell.car.rakuten.co.jp/auction-result/"
+pagenation_selectors = [
+                        ".rc-header__wrapper li:nth-of-type(5) a",
+                        "a.cp-car-item"
                         ]
 dataget_selectors = {
-    "maker_name": "ul:nth-of-type(1) li:nth-of-type(1) div.p-biddedcar-detail-list__item-value",
-    "model_name": "li:nth-of-type(3) div.p-biddedcar-detail-list__item-value",
-    "grade_name": "li:nth-of-type(5) div.p-biddedcar-detail-list__item-value",
-    "year": "div:nth-of-type(13) h2",
-    "mileage": "h1",
-    "min_price": "p:nth-of-type(1) b.u-font-3xl",
-    "max_price": "p:nth-of-type(3) b.u-font-3xl",
+    "maker_name": "dt:-soup-contains('車両（メーカー）') + dd",
+    "model_name": "dt:-soup-contains('モデル・車種名') + dd",
+    "grade_name": "dt:-soup-contains('グレード・パッケージ') + dd",
+    "year": "dt:-soup-contains('年式') + dd.cp-detail-infolist__description",
+    "mileage": "dt:-soup-contains('走行距離') + dd.cp-detail-infolist__description",
+    "min_price": "span.cp-detail-main__price-large",
+    "max_price": "span.cp-detail-main__price-large",
     "sc_url": "url"
 }
 pagenations_min = 1
-pagenations_max = 10000
+pagenations_max = 2000
 delay = random.uniform(5, 12) 
 
-# スキップ条件
-sc_skip_conditions = [
-    {"selector": "title", "text": "申し訳ございません"},
-    {"selector": "p.nodata--txt", "text": "申し訳ございません"}
-]
-# # スキップ条件の不要の設定
-# sc_skip_conditions = []
+# # スキップ条件
+# sc_skip_conditions = [
+#     {"selector": "title", "text": "申し訳ございません"},
+#     {"selector": "p.nodata--txt", "text": "申し訳ございません"}
+# ]
+# スキップ条件の不要の設定
+sc_skip_conditions = []
 
 @log_decorator
 def fetch_page(url):
@@ -102,13 +103,17 @@ def scrape_urls():
         for url in current_urls:
             soup = fetch_page(url)
             if soup:
-                links = [urljoin(website_url, a['href']) for a in soup.select(selector) if a.get('href')]
+                # 全体の共通URL処理
+                # links = [urljoin(website_url, a['href']) for a in soup.select(selector) if a.get('href')]
+
+                # 楽天専用処理：URLからクエリパラメータを削除する処理を追加
+                links = [urljoin(website_url, a['href']).split('?')[0] for a in soup.select(selector) if a.get('href')]
 
                 # 指定されたページネーションセレクタで範囲を結合
                 if idx == select_pagenation_selectors:
                     for link in links:
                         for page_num in range(pagenations_min, pagenations_max + 1):
-                            paginated_url = f"{link}pa{page_num}"
+                            paginated_url = f"{link}?page={page_num}"
                             log_info(f"Processing paginated URL: {paginated_url}")  # デバッグ用
 
                             if is_recent_url(paginated_url, TABLE_NAME):
