@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 from setting_script.setFunc import get_db_config
 from model_claude_api import get_claude_response
 from datetime import datetime, timedelta
+from logs.logger import log_decorator, log_info, log_error 
 
 
 # .envファイルの読み込み
@@ -12,6 +13,7 @@ load_dotenv()
 DB_CONFIG = get_db_config()
 
 # データベースから maker_name, model_name, updated_at を取得
+@log_decorator
 def get_model_info():
     try:
         conn = mysql.connector.connect(**DB_CONFIG)
@@ -28,7 +30,7 @@ def get_model_info():
         
         return result
     except mysql.connector.Error as err:
-        print("データベースエラー:", err)
+        log_info("データベースエラー:", err)
         return []
     finally:
         if cursor:
@@ -48,7 +50,7 @@ for model in models:
     
     # updated_at が 180日以内ならリクエストしない
     if updated_at and updated_at > threshold_date:
-        print(f"スキップ: {model['maker_name']} {model['model_name']} (更新日: {updated_at})")
+        log_info(f"スキップ: {model['maker_name']} {model['model_name']} (更新日: {updated_at})")
         continue
 
     response_text = get_claude_response(model['maker_name'], model['model_name'])
@@ -67,10 +69,10 @@ for model in models:
             cursor.execute(insert_query, (response_text, model['maker_name_id'], model['model_name_id']))
             
             conn.commit()
-            print("データを保存しました:", response_text)
+            log_info("データを保存しました:", response_text)
         
         except mysql.connector.Error as err:
-            print("エラー:", err)
+            log_info("エラー:", err)
         
         finally:
             if cursor:
