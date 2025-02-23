@@ -16,7 +16,9 @@ db_sources = [
     "market_price_gulliver",
     "market_price_mota",
     "market_price_ucarpac",
-    "market_price_nextage"
+    "market_price_nextage",
+    "market_price_rakuten",
+    "market_price_carview"
 ]
 
 def fetch_data_from_db(db_name):
