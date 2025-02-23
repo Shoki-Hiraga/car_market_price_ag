@@ -1,53 +1,44 @@
-# shauruはAPIでデータ取得
-# https://shauru.jp/market_price_api/?maker_name=%E3%83%88%E3%83%A8%E3%82%BF&car_type_name=86&model_year=&distance=&grade=GT&color=
-
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import time
 import random
-from funciton_app.shauru_dataget_selectors_edit import process_data
+from funciton_app.carview_dataget_selectors_edit import process_data
 from db_handler import save_to_db, is_recent_url
 from logs.logger import log_decorator, log_info, log_error 
 
 # 定義: テーブル名
-TABLE_NAME = "market_price_shauru"
+TABLE_NAME = "market_price_carview"
 
 # スクレイピング設定
-website_url = "https://shauru.jp/"
-start_url = "https://shauru.jp/maker/"
-
-# shauru専用 `#tabX a` のセレクタをリストとして定義
-# tab_pagenation_selectors = [f"#tab{i} a" for i in range(1, 12)]
-
-# shauru専用 ページネーションセレクタを統合
-pagenation_selectors = [
-    "#tab7 a",
-    "td:nth-of-type(6) a",
-    ]
-
+website_url = "https://kaitori.carview.co.jp/"
+start_url = "https://kaitori.carview.co.jp/souba/"
+pagenation_selectors = [".l-content-node__inner > div.p-maker-logo-list a",
+                        "ul a.p-thumb-small-list-item--link",
+                        "a.sale_user_review--read_more--btn"
+                        ]
 dataget_selectors = {
-    "maker_name": "dt:-soup-contains('メーカー：') + dd",
-    "model_name": "div.p-maker-main__name",
-    "grade_name": "tr:nth-of-type(1) td:nth-of-type(6) a",
-    "year": "td:nth-of-type(2)",
-    "mileage": "td:nth-of-type(7)",
-    "min_price": "td:nth-of-type(8)",
-    "max_price": "td:nth-of-type(8)",
+    "maker_name": "span.c-page_ttl--inner",
+    "model_name": "#souba-review span.c-section__ttl__inner",
+    "grade_name": "div.p-review-list__inner:nth-of-type(1) dt:-soup-contains('グレード') + dd",
+    "year": "div.p-review-list__inner:nth-of-type(1) dt:-soup-contains('年式') + dd",
+    "mileage": "div.p-review-list__inner:nth-of-type(1) dt:-soup-contains('走行距離') + dd",
+    "min_price": "div.p-review-list__inner:nth-of-type(1) b.size-xxlarge",
+    "max_price": "div.p-review-list__inner:nth-of-type(1) b.size-xxlarge",
     "sc_url": "url"
 }
-
 pagenations_min = 1
-pagenations_max = 15
-delay = random.uniform(2.5, 3.12) 
+pagenations_max = 10000
+delay = random.uniform(5, 12) 
 
-# # スキップ条件
-# sc_skip_conditions = [
-#     {"selector": "title", "text": "申し訳ございません"},
-#     {"selector": "p.nodata--txt", "text": "申し訳ございません"}
-# ]
-# スキップ条件の不要の設定
-sc_skip_conditions = []
+
+# スキップ条件
+sc_skip_conditions = [
+    {"selector": "div.ercomme", "text": "指定されたページが見つかりませんでした。"},
+    {"selector": "p.nodata--txt", "text": "すでに削除されているか、まだ提供を開始していません。"}
+]
+# # スキップ条件の不要の設定
+# sc_skip_conditions = []
 
 @log_decorator
 def fetch_page(url):
@@ -62,16 +53,23 @@ def fetch_page(url):
         response = requests.get(url, headers=headers)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
-        log_info(f"Debugging {url}")
 
-        # 複数のスキップ条件をチェック
-        for condition in sc_skip_conditions:
-            skip_element = soup.select_one(condition["selector"])
-            if skip_element and condition["text"] in skip_element.get_text():
-                log_info(f"Skipping: {url} due to skip condition match ({condition['selector']} contains '{condition['text']}')")
-                return None
+        # 各セレクタごとにデータを取得して出力
+        log_info(f"Debugging {url}")
+        for key, selector in dataget_selectors.items():
+            if selector == "url":
+                continue
+            elements = soup.select(selector)
+            log_info(f"Selector: {selector} (Key: {key})")
+            for i, element in enumerate(elements):
+                log_info(f"  [{i+1}] {element.get_text(strip=True)}")  # 各要素のテキストを出力
 
         return soup
+
+    except requests.exceptions.RequestException as e:
+        log_error(f"Error fetching page: {url}\n{e}")
+        return None
+
     except requests.exceptions.HTTPError as e:
         if response.status_code == 404:
             log_error(f"404 Error for URL: {url}")
@@ -111,12 +109,11 @@ def scrape_urls():
         for url in current_urls:
             soup = fetch_page(url)
             if soup:
-                # Shauru, 楽天専用処理：URLからクエリパラメータを削除する処理を追加
-                links = [urljoin(website_url, a['href']).split('?')[0] for a in soup.select(selector) if a.get('href')]
+                links = [urljoin(website_url, a['href']) for a in soup.select(selector) if a.get('href')]
                 if idx == len(pagenation_selectors) - 1:
                     for link in links:
                         for page_num in range(pagenations_min, pagenations_max + 1):
-                            paginated_url = f"{link}?mauction_page={page_num}"
+                            paginated_url = f"{link}?page={page_num}"
                             log_info(f"Processing paginated URL: {paginated_url}")  # デバッグ用
 
                             if is_recent_url(paginated_url, TABLE_NAME):
