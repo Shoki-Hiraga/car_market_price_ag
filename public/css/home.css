@@ -112,3 +112,8 @@ li.makerlist, li.modellist, li.gradelist {
         background-color: #f4f8ff;
     }    
 }
+
+.top-banner-image {
+    width: 350px; /* 任意の幅 */
+    height: auto; /* アスペクト比を維持 */
+}
