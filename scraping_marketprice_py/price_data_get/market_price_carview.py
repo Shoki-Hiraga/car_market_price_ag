@@ -3,40 +3,39 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import time
 import random
-from funciton_app.mota_dataget_selectors_edit import process_data
+from funciton_app.carview_dataget_selectors_edit import process_data
 from db_handler import save_to_db, is_recent_url
 from logs.logger import log_decorator, log_info, log_error 
 
 # 定義: テーブル名
-TABLE_NAME = "market_price_mota"
+TABLE_NAME = "market_price_carview"
 
-# pagenation_selectors のどこでページネーションさせるか指定
-select_pagenation_selectors = 0
-
-# Define parameters
-website_url = "https://autoc-one.jp/"
-start_url = "https://autoc-one.jp/ullo/biddedCarList/ma36/"
-pagenation_selectors = ["dt:-soup-contains('国産車') + dd li:nth-of-type(4) a",
-                        "a.p-top-result-card__model-link"
+# スクレイピング設定
+website_url = "https://kaitori.carview.co.jp/"
+start_url = "https://kaitori.carview.co.jp/souba/"
+pagenation_selectors = [".l-content-node__inner > div.p-maker-logo-list a",
+                        "ul a.p-thumb-small-list-item--link",
+                        "a.sale_user_review--read_more--btn"
                         ]
 dataget_selectors = {
-    "maker_name": "ul:nth-of-type(1) li:nth-of-type(1) div.p-biddedcar-detail-list__item-value",
-    "model_name": "li:nth-of-type(3) div.p-biddedcar-detail-list__item-value",
-    "grade_name": "li:nth-of-type(5) div.p-biddedcar-detail-list__item-value",
-    "year": "div:nth-of-type(13) h2",
-    "mileage": "h1",
-    "min_price": "p:nth-of-type(1) b.u-font-3xl",
-    "max_price": "p:nth-of-type(3) b.u-font-3xl",
+    "maker_name": "span.c-page_ttl--inner",
+    "model_name": "#souba-review span.c-section__ttl__inner",
+    "grade_name": "div.p-review-list__inner:nth-of-type(1) dt:-soup-contains('グレード') + dd",
+    "year": "div.p-review-list__inner:nth-of-type(1) dt:-soup-contains('年式') + dd",
+    "mileage": "div.p-review-list__inner:nth-of-type(1) dt:-soup-contains('走行距離') + dd",
+    "min_price": "div.p-review-list__inner:nth-of-type(1) b.size-xxlarge",
+    "max_price": "div.p-review-list__inner:nth-of-type(1) b.size-xxlarge",
     "sc_url": "url"
 }
 pagenations_min = 1
 pagenations_max = 10000
 delay = random.uniform(5, 12) 
 
+
 # スキップ条件
 sc_skip_conditions = [
-    {"selector": "title", "text": "申し訳ございません"},
-    {"selector": "p.nodata--txt", "text": "申し訳ございません"}
+    {"selector": "div.ercomme", "text": "指定されたページが見つかりませんでした。"},
+    {"selector": "p.nodata--txt", "text": "すでに削除されているか、まだ提供を開始していません。"}
 ]
 # # スキップ条件の不要の設定
 # sc_skip_conditions = []
@@ -55,14 +54,22 @@ def fetch_page(url):
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
 
-        # 複数のスキップ条件をチェック
-        for condition in sc_skip_conditions:
-            skip_element = soup.select_one(condition["selector"])
-            if skip_element and condition["text"] in skip_element.get_text():
-                log_info(f"Skipping: {url} due to skip condition match ({condition['selector']} contains '{condition['text']}')")
-                return None
+        # 各セレクタごとにデータを取得して出力
+        log_info(f"Debugging {url}")
+        for key, selector in dataget_selectors.items():
+            if selector == "url":
+                continue
+            elements = soup.select(selector)
+            log_info(f"Selector: {selector} (Key: {key})")
+            for i, element in enumerate(elements):
+                log_info(f"  [{i+1}] {element.get_text(strip=True)}")  # 各要素のテキストを出力
 
         return soup
+
+    except requests.exceptions.RequestException as e:
+        log_error(f"Error fetching page: {url}\n{e}")
+        return None
+
     except requests.exceptions.HTTPError as e:
         if response.status_code == 404:
             log_error(f"404 Error for URL: {url}")
@@ -103,41 +110,31 @@ def scrape_urls():
             soup = fetch_page(url)
             if soup:
                 links = [urljoin(website_url, a['href']) for a in soup.select(selector) if a.get('href')]
-
-                # 指定されたページネーションセレクタで範囲を結合
-                if idx == select_pagenation_selectors:
+                if idx == len(pagenation_selectors) - 1:
                     for link in links:
                         for page_num in range(pagenations_min, pagenations_max + 1):
-                            paginated_url = f"{link}pa{page_num}"
+                            paginated_url = f"{link}?page={page_num}"
                             log_info(f"Processing paginated URL: {paginated_url}")  # デバッグ用
 
                             if is_recent_url(paginated_url, TABLE_NAME):
                                 log_info(f"Skipping: recent URL: {paginated_url}")
                                 continue
 
-                            # ページを取得して、その中のリンクをさらに取得
-                            paginated_soup = fetch_page(paginated_url)
-                            if not paginated_soup:
+                            final_page = fetch_page(paginated_url)
+                            if not final_page:
                                 log_info(f"Skipping due to error or skip condition: {paginated_url}")
                                 break  # スキップ条件や404が出たら次のページネーションへ
 
-                            # 最後のセレクタに基づいてデータ取得用のリンクを探す
-                            dataget_links = [urljoin(website_url, a['href']) for a in paginated_soup.select(pagenation_selectors[-1]) if a.get('href')]
+                            data = extract_data(final_page, dataget_selectors)
+                            data["sc_url"] = paginated_url
 
-                            for dataget_link in dataget_links:
-                                log_info(f"Fetching data from: {dataget_link}")  # デバッグ用
-                                final_page = fetch_page(dataget_link)
-                                if final_page:
-                                    data = extract_data(final_page, dataget_selectors)
-                                    data["sc_url"] = dataget_link
+                            if any(value is None for value in data.values()):
+                                log_info(f"Skipping: incomplete data: {data}")
+                                time.sleep(delay)
+                                continue
 
-                                    if any(value is None for value in data.values()):
-                                        log_info(f"Skipping: incomplete data: {data}")
-                                        continue
-
-                                    log_info(f"データ保存: {data}")  # デバッグ用
-                                    save_to_db(data, TABLE_NAME)
-                                    time.sleep(delay)
+                            log_info(f"データ保存: {data}")  # デバッグ用
+                            save_to_db(data, TABLE_NAME)
                             time.sleep(delay)
                 else:
                     next_urls.extend(links)

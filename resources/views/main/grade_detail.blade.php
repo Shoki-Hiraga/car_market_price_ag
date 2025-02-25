@@ -50,6 +50,7 @@
             </tbody>
         </table>
     </div>
+    @include('components.model_contents')
 
 </body>
 @include('components.footer')

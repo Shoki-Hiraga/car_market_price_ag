@@ -1,45 +1,53 @@
+# shauruはAPIでデータ取得
+# https://shauru.jp/market_price_api/?maker_name=%E3%83%88%E3%83%A8%E3%82%BF&car_type_name=86&model_year=&distance=&grade=GT&color=
+
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import time
 import random
-from funciton_app.mota_dataget_selectors_edit import process_data
+from funciton_app.shauru_dataget_selectors_edit import process_data
 from db_handler import save_to_db, is_recent_url
 from logs.logger import log_decorator, log_info, log_error 
 
 # 定義: テーブル名
-TABLE_NAME = "market_price_mota"
+TABLE_NAME = "market_price_shauru"
 
-# pagenation_selectors のどこでページネーションさせるか指定
-select_pagenation_selectors = 0
+# スクレイピング設定
+website_url = "https://shauru.jp/"
+start_url = "https://shauru.jp/maker/"
 
-# Define parameters
-website_url = "https://autoc-one.jp/"
-start_url = "https://autoc-one.jp/ullo/biddedCarList/ma36/"
-pagenation_selectors = ["dt:-soup-contains('国産車') + dd li:nth-of-type(4) a",
-                        "a.p-top-result-card__model-link"
-                        ]
+# shauru専用 `#tabX a` のセレクタをリストとして定義
+# tab_pagenation_selectors = [f"#tab{i} a" for i in range(1, 12)]
+
+# shauru専用 ページネーションセレクタを統合
+pagenation_selectors = [
+    "#tab7 a",
+    "td:nth-of-type(6) a",
+    ]
+
 dataget_selectors = {
-    "maker_name": "ul:nth-of-type(1) li:nth-of-type(1) div.p-biddedcar-detail-list__item-value",
-    "model_name": "li:nth-of-type(3) div.p-biddedcar-detail-list__item-value",
-    "grade_name": "li:nth-of-type(5) div.p-biddedcar-detail-list__item-value",
-    "year": "div:nth-of-type(13) h2",
-    "mileage": "h1",
-    "min_price": "p:nth-of-type(1) b.u-font-3xl",
-    "max_price": "p:nth-of-type(3) b.u-font-3xl",
+    "maker_name": "dt:-soup-contains('メーカー：') + dd",
+    "model_name": "div.p-maker-main__name",
+    "grade_name": "tr:nth-of-type(1) td:nth-of-type(6) a",
+    "year": "td:nth-of-type(2)",
+    "mileage": "td:nth-of-type(7)",
+    "min_price": "td:nth-of-type(8)",
+    "max_price": "td:nth-of-type(8)",
     "sc_url": "url"
 }
-pagenations_min = 1
-pagenations_max = 10000
-delay = random.uniform(5, 12) 
 
-# スキップ条件
-sc_skip_conditions = [
-    {"selector": "title", "text": "申し訳ございません"},
-    {"selector": "p.nodata--txt", "text": "申し訳ございません"}
-]
-# # スキップ条件の不要の設定
-# sc_skip_conditions = []
+pagenations_min = 1
+pagenations_max = 15
+delay = random.uniform(2.5, 3.12) 
+
+# # スキップ条件
+# sc_skip_conditions = [
+#     {"selector": "title", "text": "申し訳ございません"},
+#     {"selector": "p.nodata--txt", "text": "申し訳ございません"}
+# ]
+# スキップ条件の不要の設定
+sc_skip_conditions = []
 
 @log_decorator
 def fetch_page(url):
@@ -54,6 +62,7 @@ def fetch_page(url):
         response = requests.get(url, headers=headers)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
+        log_info(f"Debugging {url}")
 
         # 複数のスキップ条件をチェック
         for condition in sc_skip_conditions:
@@ -102,42 +111,33 @@ def scrape_urls():
         for url in current_urls:
             soup = fetch_page(url)
             if soup:
-                links = [urljoin(website_url, a['href']) for a in soup.select(selector) if a.get('href')]
-
-                # 指定されたページネーションセレクタで範囲を結合
-                if idx == select_pagenation_selectors:
+                # Shauru, 楽天専用処理：URLからクエリパラメータを削除する処理を追加
+                links = [urljoin(website_url, a['href']).split('?')[0] for a in soup.select(selector) if a.get('href')]
+                if idx == len(pagenation_selectors) - 1:
                     for link in links:
                         for page_num in range(pagenations_min, pagenations_max + 1):
-                            paginated_url = f"{link}pa{page_num}"
+                            paginated_url = f"{link}?mauction_page={page_num}"
                             log_info(f"Processing paginated URL: {paginated_url}")  # デバッグ用
 
                             if is_recent_url(paginated_url, TABLE_NAME):
                                 log_info(f"Skipping: recent URL: {paginated_url}")
                                 continue
 
-                            # ページを取得して、その中のリンクをさらに取得
-                            paginated_soup = fetch_page(paginated_url)
-                            if not paginated_soup:
+                            final_page = fetch_page(paginated_url)
+                            if not final_page:
                                 log_info(f"Skipping due to error or skip condition: {paginated_url}")
                                 break  # スキップ条件や404が出たら次のページネーションへ
 
-                            # 最後のセレクタに基づいてデータ取得用のリンクを探す
-                            dataget_links = [urljoin(website_url, a['href']) for a in paginated_soup.select(pagenation_selectors[-1]) if a.get('href')]
+                            data = extract_data(final_page, dataget_selectors)
+                            data["sc_url"] = paginated_url
 
-                            for dataget_link in dataget_links:
-                                log_info(f"Fetching data from: {dataget_link}")  # デバッグ用
-                                final_page = fetch_page(dataget_link)
-                                if final_page:
-                                    data = extract_data(final_page, dataget_selectors)
-                                    data["sc_url"] = dataget_link
+                            if any(value is None for value in data.values()):
+                                log_info(f"Skipping: incomplete data: {data}")
+                                time.sleep(delay)
+                                continue
 
-                                    if any(value is None for value in data.values()):
-                                        log_info(f"Skipping: incomplete data: {data}")
-                                        continue
-
-                                    log_info(f"データ保存: {data}")  # デバッグ用
-                                    save_to_db(data, TABLE_NAME)
-                                    time.sleep(delay)
+                            log_info(f"データ保存: {data}")  # デバッグ用
+                            save_to_db(data, TABLE_NAME)
                             time.sleep(delay)
                 else:
                     next_urls.extend(links)
