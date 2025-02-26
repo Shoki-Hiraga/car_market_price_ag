@@ -1,46 +1,47 @@
+# kurumaerabi 専用機能のページネーション無し
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import time
 import random
-from funciton_app.sellcar_dataget_selectors_edit import process_data
+from funciton_app.kurumaerabi_dataget_selectors_edit import process_data
 from db_handler import save_to_db, is_recent_url
 from logs.logger import log_decorator, log_info, log_error 
-import re
 
 # 定義: テーブル名
-TABLE_NAME = "market_price_sellcar"
+TABLE_NAME = "market_price_kurumaerabi"
 
 # pagenation_selectors のどこでページネーションさせるか指定
-select_pagenation_selectors = 2
+select_pagenation_selectors = 0
 
 # Define parameters
-website_url = "https://www.sellca-sellcar.com/"
-start_url = "https://www.sellca-sellcar.com/"
+website_url = "https://www.kurumaerabi.com/kaitori/marketprice/"
+start_url = "https://www.kurumaerabi.com/kaitori/marketprice/"
 pagenation_selectors = [
-    "a.flex-col.items-center",
-    "a.mx-auto.flex",
-    ".h-12 a",
-    ".my-7 a"
-                        ]
+    # "section.popular_maker__box:nth-of-type(1) a",
+    "section.popular_maker__box:nth-of-type(1) li:nth-of-type(2) a",
+    "#abc a",
+]
+
 dataget_selectors = {
-    "maker_name": "li:nth-of-type(3) a.text-xs",
-    "model_name": "li:nth-of-type(4) a.text-xs",
-    "grade_name": "div.h-17",
-    "year": "tr:-soup-contains('年式') p",
-    "mileage": "tr:nth-of-type(3) p",
-    "min_price": ".mb-4.flex div.text-2xl",
-    "max_price": ".mb-4.flex div.text-2xl",
+    "maker_name": ".clearfix li:nth-of-type(3) a span",
+    "model_name": "ol li > span",
+    "grade_name": "#result_history_list dt",
+    "year": "dd.marketprice_result__item__info",
+    "mileage": "dd.marketprice_result__item__info",
+    "min_price": "#result_history_list span",
+    "max_price": "#result_history_list span",
     "sc_url": "url"
 }
-pagenations_min = 1
-pagenations_max = 10000
-delay = random.uniform(5, 12) 
+# ページネーションのmin, maxをスキップ
+pagenations_min = ""
+pagenations_max = ""
+delay = random.uniform(0.5, 0.012) 
 
 # スキップ条件
 sc_skip_conditions = [
-    {"selector": "h2", "text": "ご指定のページが見つかりません。"},
-    {"selector": "p.mb-8", "text": "申し訳ございません"}
+    {"selector": "title", "text": "申し訳ございません"},
+    {"selector": "p.nodata--txt", "text": "申し訳ございません"}
 ]
 # # スキップ条件の不要の設定
 # sc_skip_conditions = []
@@ -107,15 +108,13 @@ def scrape_urls():
             soup = fetch_page(url)
             if soup:
                 links = [urljoin(website_url, a['href']) for a in soup.select(selector) if a.get('href')]
-                # sellcar専用処理
-                cleaned_links = [re.sub(r'page/1/', '', link) for link in links]
 
                 # 指定されたページネーションセレクタで範囲を結合
                 if idx == select_pagenation_selectors:
-                    # for link in links:
-                    for link in cleaned_links: # sellcar専用処理
-                        for page_num in range(pagenations_min, pagenations_max + 1):
-                            paginated_url = f"{link}page/{page_num}/"
+                    for link in links:
+                        # kurumaerabi 専用
+                        for page_num in [pagenations_min]:  # そのままリストにすることで、不要な数値を追加しない
+                            paginated_url = f"{link}{page_num}"  # page_num が空文字ならそのままのURLになる
                             log_info(f"Processing paginated URL: {paginated_url}")  # デバッグ用
 
                             if is_recent_url(paginated_url, TABLE_NAME):
@@ -146,9 +145,9 @@ def scrape_urls():
                                     save_to_db(data, TABLE_NAME)
                                     time.sleep(delay)
                             time.sleep(delay)
+
                 else:
-                    # next_urls.extend(links)
-                    next_urls.extend(cleaned_links) # sellcar専用処理
+                    next_urls.extend(links)
             else:
                 log_info(f"Failed to fetch: {url}")  # デバッグ用
             time.sleep(delay)
