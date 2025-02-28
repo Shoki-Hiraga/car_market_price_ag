@@ -19,7 +19,13 @@ db_sources = [
     "market_price_nextage",
     "market_price_rakuten",
     "market_price_carview",
-    "market_price_sellcar"
+    "market_price_sellcar",
+    "market_price_sateio"
+]
+
+# mileage の値を調整するデータベースリスト
+data_processing_mileage = [
+    "market_price_rakuten",
 ]
 
 def fetch_data_from_db(db_name):
@@ -48,7 +54,15 @@ def adjust_prices(row):
 
     return min_price, max_price
 
-def insert_into_master(data):
+def adjust_mileage(db_name, mileage):
+    """
+    特定のデータベースの場合、mileage を小数点を1つ左にずらす（÷10）
+    """
+    if db_name in data_processing_mileage:
+        return mileage / 10
+    return mileage
+
+def insert_into_master(data, db_name):
     """
     market_price_masterへデータを挿入
     """
@@ -72,10 +86,13 @@ def insert_into_master(data):
     for row in data:
         # min_price と max_price の調整
         min_price, max_price = adjust_prices(row)
+        
+        # mileage の調整
+        mileage = adjust_mileage(db_name, row['mileage'])
 
         cursor.execute(insert_query, (
             row['maker_name_id'], row['model_name_id'], row['grade_name_id'],
-            row['year'], row['mileage'], min_price, max_price, row['sc_url']
+            row['year'], mileage, min_price, max_price, row['sc_url']
         ))
     
     conn.commit()
@@ -91,7 +108,7 @@ def main():
         data = fetch_data_from_db(db_name)
         if data:
             print(f"{len(data)} 件のデータを取得しました。")
-            insert_into_master(data)
+            insert_into_master(data, db_name)
             print(f"{db_name} のデータを market_price_master に統合完了。")
         else:
             print(f"{db_name} にはデータがありません。")
