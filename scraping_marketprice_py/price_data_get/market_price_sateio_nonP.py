@@ -14,7 +14,7 @@ TABLE_NAME = "market_price_sateio"
 website_url = "https://www.sateio.com/"
 start_url = "https://www.sateio.com/"
 pagenation_selectors = [
-    "section:nth-of-type(3) li:nth-of-type(2) a",
+    "section:nth-of-type(3) li a",
     ".cartype_list a",
     ".abc_link_list a",
 ]
