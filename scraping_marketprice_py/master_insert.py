@@ -20,7 +20,8 @@ db_sources = [
     "market_price_rakuten",
     "market_price_carview",
     "market_price_sellcar",
-    "market_price_sateio"
+    "market_price_sateio",
+    "market_price_carnext"
 ]
 
 # mileage の値を調整するデータベースリスト
