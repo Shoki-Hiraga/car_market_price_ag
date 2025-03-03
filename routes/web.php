@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ScGooMakerController;
 use App\Http\Controllers\ScGooModelController;
 use App\Http\Controllers\ScGooGradeController;
+use App\Http\Controllers\MpmMakerModelController;
 
 // sitemap用
 use Illuminate\Http\Response;
@@ -21,7 +22,7 @@ use App\Models\ScGooGrade;
 */
 
 // ホーム
-Route::get('/', [ScGooMakerController::class, 'index'])->name('maker.index');
+Route::get('/', [MpmMakerModelController::class, 'index'])->name('maker.index');
 
 // モデル一覧
 Route::get('/model', [ScGooModelController::class, 'index'])->name('model.index');

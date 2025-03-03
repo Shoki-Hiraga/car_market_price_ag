@@ -16,7 +16,7 @@
             <li class="makerlist">
                 <!-- ループの番号をアンカーリンクとして利用 -->
                 <a href="{{ route('model.index') }}#{{ $loop->iteration }}">
-                    {{ $maker->maker_name }}
+                    {{ $maker }}
                 </a>
             </li>
         @endforeach
