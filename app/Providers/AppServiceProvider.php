@@ -6,6 +6,8 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use App\Models\MarketPriceMaster;
 use App\Models\ModelContents;
+use App\Models\MpmMakerModel;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,10 +26,7 @@ class AppServiceProvider extends ServiceProvider
     {
         // components.footer が呼び出されたときのみデータを取得する
         View::composer('components.footer', function ($view) {
-            $sc_goo_maker = MarketPriceMaster::with('maker')
-                ->get()
-                ->unique('maker_name_id')
-                ->pluck('maker');
+            $sc_goo_maker = MpmMakerModel::orderBy('maker_name_id')->pluck('mpm_maker_name')->unique();
 
             $view->with('sc_goo_maker', $sc_goo_maker);
         });

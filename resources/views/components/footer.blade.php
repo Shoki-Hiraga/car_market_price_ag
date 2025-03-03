@@ -5,7 +5,7 @@
         @foreach ($sc_goo_maker as $maker)
             <li class="footer">
                 <a href="{{ route('model.index') }}#{{ $loop->iteration }}">
-                    {{ $maker->maker_name }}
+                    {{ $maker }}
                 </a>
             </li>
         @endforeach
