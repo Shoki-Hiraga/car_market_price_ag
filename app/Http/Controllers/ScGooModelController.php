@@ -21,12 +21,15 @@ class ScGooModelController extends Controller
                 $query->whereColumn('id', 'market_price_master.maker_name_id');
             })
             ->with(['maker', 'model']) // 関連するデータを取得
+            ->orderBy('id', 'asc')
             ->get()
             ->unique('model_name_id'); // model_name_id ごとに一意にする
-    
-        // メーカーごとにグループ化
-        $groupedMarketPriceModels = $existingMarketPriceModels->groupBy(fn($item) => optional($item->maker)->maker_name);
-    
+
+        // メーカーごとにグループ化し、各グループ内のモデル名をソート
+        $groupedMarketPriceModels = $existingMarketPriceModels
+            ->groupBy(fn($item) => optional($item->maker)->maker_name)
+            ->map(fn($models) => $models->sortBy(fn($item) => optional($item->model)->model_name, SORT_NATURAL));
+
         // MarketPriceMaster に存在するデータ数を表示
         $marketPriceCount = MarketPriceMaster::count();
 
