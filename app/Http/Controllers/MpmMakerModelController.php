@@ -12,7 +12,7 @@ class MpmMakerModelController extends Controller
     public function index()
     {
         // MarketPriceMaster に存在するメーカー名を取得（重複を排除）
-        $sc_goo_maker = MpmMakerModel::pluck('mpm_maker_name')->unique();
+        $sc_goo_maker = MpmMakerModel::orderBy('maker_name_id')->pluck('mpm_maker_name')->unique();
 
         // MarketPriceMaster に存在するデータ数を表示
         $marketPriceCount = MarketPriceMaster::count();
