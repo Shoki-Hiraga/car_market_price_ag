@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<title>TOP メーカー一覧 | @include('components.sitename')</title>
-@include('components.header')
-<link rel="canonical" href="{{ $canonicalUrl }}">
-
+    <title>TOP メーカー一覧 | @include('components.sitename')</title>
+    @include('components.header')
+    <link rel="canonical" href="{{ $canonicalUrl }}">
 </head>
 <body>
     <h1>@include('components.sitename')</h1>
     @include('components.marketprice')
     @include('components.lead_contents')
+
     <h2>メーカー一覧</h2>
     <ul>
-        @foreach ($sc_goo_maker as $maker)
+        @foreach ($sc_goo_makers as $maker)
             <li class="makerlist">
-                <!-- ループの番号をアンカーリンクとして利用 -->
-                <a href="{{ route('model.index') }}#{{ $loop->iteration }}">
-                    {{ $maker }}
+                <!-- メーカーの maker_name_id をアンカーリンクとして使用 -->
+                <a href="{{ route('model.index') }}#{{ $maker->maker_name_id }}">
+                    {{ $maker->mpm_maker_name }}
                 </a>
             </li>
         @endforeach

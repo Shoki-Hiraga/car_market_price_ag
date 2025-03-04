@@ -11,12 +11,12 @@
     <h1>メーカー / 車種一覧</h1>
     @include('components.marketprice')
 
-    <!-- ナビゲーション：各メーカーに対して番号付きアンカーリンク -->
+    <!-- ナビゲーション：各メーカーに対してメーカーIDを使用 -->
     <nav>
         <ul>
             @foreach($groupedMarketPriceModels as $makerName => $models) 
                 <li>
-                    <a href="#{{ $loop->iteration }}">
+                    <a href="#{{ $models->first()->maker->id }}">
                         {{ $makerName }} の買取相場
                     </a>
                 </li>
@@ -26,8 +26,8 @@
 
     <!-- 各メーカーごとの車種一覧セクション -->
     @foreach($groupedMarketPriceModels as $makerName => $models)
-        <section>
-            <h2 id="{{ $loop->iteration }}">
+        <section id="{{ $models->first()->maker->id }}">
+            <h2>
                 {{ $makerName }} の買取相場
             </h2>
             <ul>
