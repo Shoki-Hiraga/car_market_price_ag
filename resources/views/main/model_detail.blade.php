@@ -30,7 +30,7 @@
             <table border="1">
                 <thead>
                     <tr>
-                        <th>グレード名</th>
+                        <th>{{ $model->model_name }} のグレード一覧</th>
                         <th>年式</th>
                         <th>最低買取価格(万円)</th>
                         <th>最高買取価格(万円)</th>
@@ -51,8 +51,6 @@
                                 @else
                                     {{ $grade_name }}
                                 @endif
-                            <br>
-                            距離 / 年式 別相場表
                             </a>
                         </td>
                         <td>{{ $marketprice->year }}年</td>
