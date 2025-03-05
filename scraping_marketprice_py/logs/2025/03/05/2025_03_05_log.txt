@@ -1,0 +1,918 @@
+2025-03-05 20:27:06 [INFO] 関数 scrape_urls() を開始
+2025-03-05 20:27:06 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-05 20:27:06 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-05 20:27:06 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:06 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:07 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:07 [INFO] Processing paginated URL: https://ikkatsu-satei.com/117_c.html1
+2025-03-05 20:27:07 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:07 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/117_c.html1
+2025-03-05 20:27:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:07 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/117_c.html1
+2025-03-05 20:27:07 [INFO] Processing paginated URL: https://ikkatsu-satei.com/pa_nero.html1
+2025-03-05 20:27:07 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:07 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/pa_nero.html1
+2025-03-05 20:27:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:07 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/pa_nero.html1
+2025-03-05 20:27:07 [INFO] Processing paginated URL: https://ikkatsu-satei.com/pa_nero_hatch.html1
+2025-03-05 20:27:07 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:07 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/pa_nero_hatch.html1
+2025-03-05 20:27:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:07 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/pa_nero_hatch.html1
+2025-03-05 20:27:07 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska.html1
+2025-03-05 20:27:07 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:08 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/aska.html1
+2025-03-05 20:27:08 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:08 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/aska.html1
+2025-03-05 20:27:08 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska_cx.html1
+2025-03-05 20:27:08 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:08 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/aska_cx.html1
+2025-03-05 20:27:08 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:08 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/aska_cx.html1
+2025-03-05 20:27:08 [INFO] Processing paginated URL: https://ikkatsu-satei.com/wizard.html1
+2025-03-05 20:27:08 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:08 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/wizard.html1
+2025-03-05 20:27:08 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:08 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/wizard.html1
+2025-03-05 20:27:08 [INFO] Processing paginated URL: https://ikkatsu-satei.com/erga.html1
+2025-03-05 20:27:08 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:08 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/erga.html1
+2025-03-05 20:27:08 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:08 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/erga.html1
+2025-03-05 20:27:08 [INFO] Processing paginated URL: https://ikkatsu-satei.com/erga_mio.html1
+2025-03-05 20:27:08 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:08 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/erga_mio.html1
+2025-03-05 20:27:08 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:08 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/erga_mio.html1
+2025-03-05 20:27:08 [INFO] Processing paginated URL: https://ikkatsu-satei.com/isuzu_elf.html1
+2025-03-05 20:27:08 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:09 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/isuzu_elf.html1
+2025-03-05 20:27:09 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:09 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/isuzu_elf.html1
+2025-03-05 20:27:09 [INFO] Processing paginated URL: https://ikkatsu-satei.com/elf_ut.html1
+2025-03-05 20:27:09 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:09 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/elf_ut.html1
+2025-03-05 20:27:09 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:09 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/elf_ut.html1
+2025-03-05 20:27:09 [INFO] Processing paginated URL: https://ikkatsu-satei.com/elf_v.html1
+2025-03-05 20:27:09 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:09 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/elf_v.html1
+2025-03-05 20:27:09 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:09 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/elf_v.html1
+2025-03-05 20:27:09 [INFO] Processing paginated URL: https://ikkatsu-satei.com/gala.html1
+2025-03-05 20:27:09 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:09 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/gala.html1
+2025-03-05 20:27:09 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:09 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/gala.html1
+2025-03-05 20:27:09 [INFO] Processing paginated URL: https://ikkatsu-satei.com/gala_mio.html1
+2025-03-05 20:27:09 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:09 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/gala_mio.html1
+2025-03-05 20:27:09 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:09 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/gala_mio.html1
+2025-03-05 20:27:09 [INFO] Processing paginated URL: https://ikkatsu-satei.com/giga.html1
+2025-03-05 20:27:09 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:09 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/giga.html1
+2025-03-05 20:27:09 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:09 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/giga.html1
+2025-03-05 20:27:09 [INFO] Processing paginated URL: https://ikkatsu-satei.com/como.html1
+2025-03-05 20:27:09 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:10 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/como.html1
+2025-03-05 20:27:10 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:10 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/como.html1
+2025-03-05 20:27:10 [INFO] Processing paginated URL: https://ikkatsu-satei.com/gemini.html1
+2025-03-05 20:27:10 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:10 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/gemini.html1
+2025-03-05 20:27:10 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:10 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/gemini.html1
+2025-03-05 20:27:10 [INFO] Processing paginated URL: https://ikkatsu-satei.com/gemini_c.html1
+2025-03-05 20:27:10 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:10 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/gemini_c.html1
+2025-03-05 20:27:10 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:10 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/gemini_c.html1
+2025-03-05 20:27:10 [INFO] Processing paginated URL: https://ikkatsu-satei.com/gemini_hatch.html1
+2025-03-05 20:27:10 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:10 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/gemini_hatch.html1
+2025-03-05 20:27:10 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:10 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/gemini_hatch.html1
+2025-03-05 20:27:10 [INFO] Processing paginated URL: https://ikkatsu-satei.com/geminett_ii.html1
+2025-03-05 20:27:10 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:10 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/geminett_ii.html1
+2025-03-05 20:27:10 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:10 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/geminett_ii.html1
+2025-03-05 20:27:10 [INFO] Processing paginated URL: https://ikkatsu-satei.com/journey_bus.html1
+2025-03-05 20:27:10 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:11 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/journey_bus.html1
+2025-03-05 20:27:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:11 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/journey_bus.html1
+2025-03-05 20:27:11 [INFO] Processing paginated URL: https://ikkatsu-satei.com/piazza.html1
+2025-03-05 20:27:11 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:11 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/piazza.html1
+2025-03-05 20:27:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:11 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/piazza.html1
+2025-03-05 20:27:11 [INFO] Processing paginated URL: https://ikkatsu-satei.com/piazza_nero.html1
+2025-03-05 20:27:11 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:11 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/piazza_nero.html1
+2025-03-05 20:27:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:11 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/piazza_nero.html1
+2025-03-05 20:27:11 [INFO] Processing paginated URL: https://ikkatsu-satei.com/vehicross.html1
+2025-03-05 20:27:11 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:11 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/vehicross.html1
+2025-03-05 20:27:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:11 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/vehicross.html1
+2025-03-05 20:27:11 [INFO] Processing paginated URL: https://ikkatsu-satei.com/begin.html1
+2025-03-05 20:27:11 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:11 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/begin.html1
+2025-03-05 20:27:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:11 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/begin.html1
+2025-03-05 20:27:11 [INFO] Processing paginated URL: https://ikkatsu-satei.com/bighorn.html1
+2025-03-05 20:27:11 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:11 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/bighorn.html1
+2025-03-05 20:27:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:11 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/bighorn.html1
+2025-03-05 20:27:11 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hillman_minx.html1
+2025-03-05 20:27:11 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:12 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/hillman_minx.html1
+2025-03-05 20:27:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:12 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/hillman_minx.html1
+2025-03-05 20:27:12 [INFO] Processing paginated URL: https://ikkatsu-satei.com/fargo.html1
+2025-03-05 20:27:12 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:12 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/fargo.html1
+2025-03-05 20:27:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:12 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/fargo.html1
+2025-03-05 20:27:12 [INFO] Processing paginated URL: https://ikkatsu-satei.com/fargo_v.html1
+2025-03-05 20:27:12 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:12 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/fargo_v.html1
+2025-03-05 20:27:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:12 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/fargo_v.html1
+2025-03-05 20:27:12 [INFO] Processing paginated URL: https://ikkatsu-satei.com/fargo_filly.html1
+2025-03-05 20:27:12 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:12 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/fargo_filly.html1
+2025-03-05 20:27:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:12 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/fargo_filly.html1
+2025-03-05 20:27:12 [INFO] Processing paginated URL: https://ikkatsu-satei.com/faster.html1
+2025-03-05 20:27:12 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:12 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/faster.html1
+2025-03-05 20:27:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:12 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/faster.html1
+2025-03-05 20:27:12 [INFO] Processing paginated URL: https://ikkatsu-satei.com/filly.html1
+2025-03-05 20:27:12 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:12 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/filly.html1
+2025-03-05 20:27:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:12 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/filly.html1
+2025-03-05 20:27:12 [INFO] Processing paginated URL: https://ikkatsu-satei.com/forward.html1
+2025-03-05 20:27:12 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:13 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/forward.html1
+2025-03-05 20:27:13 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:13 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/forward.html1
+2025-03-05 20:27:13 [INFO] Processing paginated URL: https://ikkatsu-satei.com/forward_juston.html1
+2025-03-05 20:27:13 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:13 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/forward_juston.html1
+2025-03-05 20:27:13 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:13 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/forward_juston.html1
+2025-03-05 20:27:13 [INFO] Processing paginated URL: https://ikkatsu-satei.com/florian.html1
+2025-03-05 20:27:13 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:13 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/florian.html1
+2025-03-05 20:27:13 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:13 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/florian.html1
+2025-03-05 20:27:13 [INFO] Processing paginated URL: https://ikkatsu-satei.com/bellett.html1
+2025-03-05 20:27:13 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:13 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/bellett.html1
+2025-03-05 20:27:13 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:13 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/bellett.html1
+2025-03-05 20:27:13 [INFO] Processing paginated URL: https://ikkatsu-satei.com/bellett_c.html1
+2025-03-05 20:27:13 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:13 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/bellett_c.html1
+2025-03-05 20:27:13 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:13 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/bellett_c.html1
+2025-03-05 20:27:13 [INFO] Processing paginated URL: https://ikkatsu-satei.com/mu.html1
+2025-03-05 20:27:13 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:14 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/mu.html1
+2025-03-05 20:27:14 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:14 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/mu.html1
+2025-03-05 20:27:14 [INFO] Processing paginated URL: https://ikkatsu-satei.com/mu_wizard.html1
+2025-03-05 20:27:14 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:14 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/mu_wizard.html1
+2025-03-05 20:27:14 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:14 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/mu_wizard.html1
+2025-03-05 20:27:14 [INFO] Processing paginated URL: https://ikkatsu-satei.com/rodeo.html1
+2025-03-05 20:27:14 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:27:14 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/rodeo.html1
+2025-03-05 20:27:14 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:27:14 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/rodeo.html1
+2025-03-05 20:27:14 [INFO] 関数 scrape_urls() が正常に完了
+2025-03-05 20:37:15 [INFO] 関数 scrape_urls() を開始
+2025-03-05 20:37:15 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-05 20:37:15 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-05 20:37:15 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:37:15 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:37:16 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:37:16 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:37:16 [INFO] Processing paginated URL: https://ikkatsu-satei.com/117_c.html1.html
+2025-03-05 20:37:16 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:37:16 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/117_c.html1.html
+2025-03-05 20:37:16 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:37:16 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/117_c.html1.html
+2025-03-05 20:37:16 [INFO] Processing paginated URL: https://ikkatsu-satei.com/pa_nero.html1.html
+2025-03-05 20:37:16 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:37:16 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/pa_nero.html1.html
+2025-03-05 20:37:16 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:37:16 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/pa_nero.html1.html
+2025-03-05 20:37:16 [INFO] Processing paginated URL: https://ikkatsu-satei.com/pa_nero_hatch.html1.html
+2025-03-05 20:37:16 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:37:16 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/pa_nero_hatch.html1.html
+2025-03-05 20:37:16 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:37:16 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/pa_nero_hatch.html1.html
+2025-03-05 20:37:16 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska.html1.html
+2025-03-05 20:37:16 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:37:17 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/aska.html1.html
+2025-03-05 20:37:17 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:37:17 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/aska.html1.html
+2025-03-05 20:37:17 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska_cx.html1.html
+2025-03-05 20:37:17 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:37:17 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/aska_cx.html1.html
+2025-03-05 20:37:17 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:37:17 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/aska_cx.html1.html
+2025-03-05 20:37:17 [INFO] Processing paginated URL: https://ikkatsu-satei.com/wizard.html1.html
+2025-03-05 20:37:17 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:37:17 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/wizard.html1.html
+2025-03-05 20:37:17 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:37:17 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/wizard.html1.html
+2025-03-05 20:37:17 [INFO] Processing paginated URL: https://ikkatsu-satei.com/erga.html1.html
+2025-03-05 20:37:17 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:37:17 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/erga.html1.html
+2025-03-05 20:37:17 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:37:17 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/erga.html1.html
+2025-03-05 20:37:17 [INFO] Processing paginated URL: https://ikkatsu-satei.com/erga_mio.html1.html
+2025-03-05 20:37:17 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:37:17 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/erga_mio.html1.html
+2025-03-05 20:37:17 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:37:17 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/erga_mio.html1.html
+2025-03-05 20:37:17 [INFO] Processing paginated URL: https://ikkatsu-satei.com/isuzu_elf.html1.html
+2025-03-05 20:37:17 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:37:18 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/isuzu_elf.html1.html
+2025-03-05 20:37:18 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:37:18 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/isuzu_elf.html1.html
+2025-03-05 20:37:18 [INFO] Processing paginated URL: https://ikkatsu-satei.com/elf_ut.html1.html
+2025-03-05 20:37:18 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:37:18 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/elf_ut.html1.html
+2025-03-05 20:37:18 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:37:18 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/elf_ut.html1.html
+2025-03-05 20:37:18 [INFO] Processing paginated URL: https://ikkatsu-satei.com/elf_v.html1.html
+2025-03-05 20:37:18 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:37:18 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/elf_v.html1.html
+2025-03-05 20:37:18 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:37:18 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/elf_v.html1.html
+2025-03-05 20:37:18 [INFO] Processing paginated URL: https://ikkatsu-satei.com/gala.html1.html
+2025-03-05 20:37:18 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:37:18 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/gala.html1.html
+2025-03-05 20:37:18 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:37:18 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/gala.html1.html
+2025-03-05 20:37:18 [INFO] Processing paginated URL: https://ikkatsu-satei.com/gala_mio.html1.html
+2025-03-05 20:37:18 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:37:18 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
+2025-03-05 20:37:35 [INFO] 関数 scrape_urls() を開始
+2025-03-05 20:37:35 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-05 20:37:35 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-05 20:37:35 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:37:35 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:37:35 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:37:36 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:37:36 [INFO] Processing paginated URL: https://ikkatsu-satei.com/117_c.html1
+2025-03-05 20:37:36 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:37:36 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/117_c.html1
+2025-03-05 20:37:36 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:37:36 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/117_c.html1
+2025-03-05 20:37:36 [INFO] Processing paginated URL: https://ikkatsu-satei.com/pa_nero.html1
+2025-03-05 20:37:36 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:37:36 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/pa_nero.html1
+2025-03-05 20:37:36 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:37:36 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/pa_nero.html1
+2025-03-05 20:37:36 [INFO] Processing paginated URL: https://ikkatsu-satei.com/pa_nero_hatch.html1
+2025-03-05 20:37:36 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:37:36 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/pa_nero_hatch.html1
+2025-03-05 20:37:36 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:37:36 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/pa_nero_hatch.html1
+2025-03-05 20:37:36 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska.html1
+2025-03-05 20:37:36 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:37:36 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/aska.html1
+2025-03-05 20:37:36 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:37:36 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/aska.html1
+2025-03-05 20:37:36 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska_cx.html1
+2025-03-05 20:37:36 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:37:36 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/aska_cx.html1
+2025-03-05 20:37:36 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:37:36 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/aska_cx.html1
+2025-03-05 20:37:36 [INFO] Processing paginated URL: https://ikkatsu-satei.com/wizard.html1
+2025-03-05 20:37:36 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:37:36 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/wizard.html1
+2025-03-05 20:37:36 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:37:36 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/wizard.html1
+2025-03-05 20:37:36 [INFO] Processing paginated URL: https://ikkatsu-satei.com/erga.html1
+2025-03-05 20:37:36 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:37:37 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
+2025-03-05 20:39:47 [INFO] 関数 scrape_urls() を開始
+2025-03-05 20:39:47 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-05 20:39:47 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-05 20:39:47 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:39:47 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:39:48 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:39:48 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:39:48 [INFO] Failed to fetch: /isuzu
+2025-03-05 20:39:48 [INFO] 関数 scrape_urls() が正常に完了
+2025-03-05 20:39:53 [INFO] 関数 scrape_urls() を開始
+2025-03-05 20:39:53 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-05 20:39:53 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-05 20:39:53 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:39:53 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:39:53 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:39:54 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/isuzu
+2025-03-05 20:39:54 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:39:54 [INFO] Failed to fetch: https://ikkatsu-satei.com/isuzu
+2025-03-05 20:39:54 [INFO] 関数 scrape_urls() が正常に完了
+2025-03-05 20:40:04 [INFO] 関数 scrape_urls() を開始
+2025-03-05 20:40:04 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-05 20:40:04 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-05 20:40:04 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:40:05 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:40:05 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:40:05 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/isuzu
+2025-03-05 20:40:05 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:40:05 [INFO] Failed to fetch: https://ikkatsu-satei.com/isuzu
+2025-03-05 20:40:05 [INFO] 関数 scrape_urls() が正常に完了
+2025-03-05 20:40:18 [INFO] 関数 scrape_urls() を開始
+2025-03-05 20:40:18 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-05 20:40:18 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-05 20:40:18 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:40:19 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:40:19 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:40:19 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:40:19 [INFO] Processing paginated URL: https://ikkatsu-satei.com/117_c.html1
+2025-03-05 20:40:19 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:40:19 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/117_c.html1
+2025-03-05 20:40:19 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:40:19 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/117_c.html1
+2025-03-05 20:40:19 [INFO] Processing paginated URL: https://ikkatsu-satei.com/pa_nero.html1
+2025-03-05 20:40:19 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:40:19 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/pa_nero.html1
+2025-03-05 20:40:19 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:40:19 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/pa_nero.html1
+2025-03-05 20:40:19 [INFO] Processing paginated URL: https://ikkatsu-satei.com/pa_nero_hatch.html1
+2025-03-05 20:40:19 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:40:19 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/pa_nero_hatch.html1
+2025-03-05 20:40:19 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:40:19 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/pa_nero_hatch.html1
+2025-03-05 20:40:19 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska.html1
+2025-03-05 20:40:19 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:40:20 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/aska.html1
+2025-03-05 20:40:20 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:40:20 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/aska.html1
+2025-03-05 20:40:20 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska_cx.html1
+2025-03-05 20:40:20 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:40:20 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/aska_cx.html1
+2025-03-05 20:40:20 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:40:20 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/aska_cx.html1
+2025-03-05 20:40:20 [INFO] Processing paginated URL: https://ikkatsu-satei.com/wizard.html1
+2025-03-05 20:40:20 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:40:20 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/wizard.html1
+2025-03-05 20:40:20 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:40:20 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/wizard.html1
+2025-03-05 20:40:20 [INFO] Processing paginated URL: https://ikkatsu-satei.com/erga.html1
+2025-03-05 20:40:20 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:40:20 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/erga.html1
+2025-03-05 20:40:20 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:40:20 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/erga.html1
+2025-03-05 20:40:20 [INFO] Processing paginated URL: https://ikkatsu-satei.com/erga_mio.html1
+2025-03-05 20:40:20 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:40:20 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
+2025-03-05 20:45:06 [INFO] 関数 scrape_urls() を開始
+2025-03-05 20:45:06 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-05 20:45:06 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-05 20:45:06 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:45:06 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:45:06 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:45:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:45:07 [INFO] Processing paginated URL: https://ikkatsu-satei.com/117_c.html1
+2025-03-05 20:45:07 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:45:07 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/117_c.html1
+2025-03-05 20:45:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:45:07 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/117_c.html1
+2025-03-05 20:45:07 [INFO] Processing paginated URL: https://ikkatsu-satei.com/pa_nero.html1
+2025-03-05 20:45:07 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:45:07 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/pa_nero.html1
+2025-03-05 20:45:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:45:07 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/pa_nero.html1
+2025-03-05 20:45:07 [INFO] Processing paginated URL: https://ikkatsu-satei.com/pa_nero_hatch.html1
+2025-03-05 20:45:07 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:45:07 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
+2025-03-05 20:51:22 [INFO] 関数 scrape_urls() を開始
+2025-03-05 20:51:22 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-05 20:51:22 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-05 20:51:22 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:51:22 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:51:22 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:51:22 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:51:22 [INFO] Processing paginated URL: https://ikkatsu-satei.com/117_c.html1
+2025-03-05 20:51:22 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:51:23 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/117_c.html1
+2025-03-05 20:51:23 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:51:23 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/117_c.html1
+2025-03-05 20:51:23 [INFO] Processing paginated URL: https://ikkatsu-satei.com/pa_nero.html1
+2025-03-05 20:51:23 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:51:23 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/pa_nero.html1
+2025-03-05 20:51:23 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:51:23 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/pa_nero.html1
+2025-03-05 20:51:23 [INFO] Processing paginated URL: https://ikkatsu-satei.com/pa_nero_hatch.html1
+2025-03-05 20:51:23 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:51:23 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/pa_nero_hatch.html1
+2025-03-05 20:51:23 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:51:23 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/pa_nero_hatch.html1
+2025-03-05 20:51:23 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska.html1
+2025-03-05 20:51:23 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:51:23 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/aska.html1
+2025-03-05 20:51:23 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:51:23 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/aska.html1
+2025-03-05 20:51:23 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska_cx.html1
+2025-03-05 20:51:23 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:51:23 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
+2025-03-05 20:52:04 [INFO] 関数 scrape_urls() を開始
+2025-03-05 20:52:04 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-05 20:52:04 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-05 20:52:04 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:52:04 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:52:05 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:52:05 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:52:05 [INFO] Processing paginated URL: https://ikkatsu-satei.com/117_c.html1
+2025-03-05 20:52:05 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:52:05 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/117_c.html1
+2025-03-05 20:52:05 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:52:05 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/117_c.html1
+2025-03-05 20:52:05 [INFO] Processing paginated URL: https://ikkatsu-satei.com/pa_nero.html1
+2025-03-05 20:52:05 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:52:05 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/pa_nero.html1
+2025-03-05 20:52:05 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:52:05 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/pa_nero.html1
+2025-03-05 20:52:05 [INFO] Processing paginated URL: https://ikkatsu-satei.com/pa_nero_hatch.html1
+2025-03-05 20:52:05 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:52:05 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/pa_nero_hatch.html1
+2025-03-05 20:52:05 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:52:05 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/pa_nero_hatch.html1
+2025-03-05 20:52:05 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska.html1
+2025-03-05 20:52:05 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:52:06 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/aska.html1
+2025-03-05 20:52:06 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:52:06 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/aska.html1
+2025-03-05 20:52:06 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska_cx.html1
+2025-03-05 20:52:06 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:52:06 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
+2025-03-05 20:52:56 [INFO] 関数 scrape_urls() を開始
+2025-03-05 20:52:56 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-05 20:52:56 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-05 20:52:56 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:52:57 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:52:57 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:52:57 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:52:57 [INFO] 関数 scrape_urls() が正常に完了
+2025-03-05 20:53:08 [INFO] 関数 scrape_urls() を開始
+2025-03-05 20:53:08 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-05 20:53:08 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-05 20:53:08 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:53:08 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:53:08 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:53:08 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:53:09 [INFO] 関数 scrape_urls() が正常に完了
+2025-03-05 20:53:17 [INFO] 関数 scrape_urls() を開始
+2025-03-05 20:53:17 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-05 20:53:17 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-05 20:53:17 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:53:18 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:53:18 [INFO] Processing paginated URL: https://ikkatsu-satei.com/isuzu.html1
+2025-03-05 20:53:18 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:53:18 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/isuzu.html1
+2025-03-05 20:53:18 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:53:18 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/isuzu.html1
+2025-03-05 20:53:18 [INFO] 関数 scrape_urls() が正常に完了
+2025-03-05 20:55:10 [INFO] 関数 scrape_urls() を開始
+2025-03-05 20:55:10 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-05 20:55:10 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-05 20:55:10 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:55:10 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:55:11 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:55:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:55:11 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku.html1
+2025-03-05 20:55:11 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:55:11 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/hachiroku.html1
+2025-03-05 20:55:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:55:11 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/hachiroku.html1
+2025-03-05 20:55:11 [INFO] Processing paginated URL: https://ikkatsu-satei.com/bB.html1
+2025-03-05 20:55:11 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:55:11 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/bB.html1
+2025-03-05 20:55:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:55:11 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/bB.html1
+2025-03-05 20:55:11 [INFO] Processing paginated URL: https://ikkatsu-satei.com/bz4x.html1
+2025-03-05 20:55:11 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:55:11 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
+2025-03-05 20:56:43 [INFO] 関数 scrape_urls() を開始
+2025-03-05 20:56:43 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-05 20:56:43 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-05 20:56:43 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:56:43 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:56:43 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:56:44 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/toyota
+2025-03-05 20:56:44 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:56:44 [INFO] Failed to fetch: https://ikkatsu-satei.com/toyota
+2025-03-05 20:56:44 [INFO] 関数 scrape_urls() が正常に完了
+2025-03-05 20:56:59 [INFO] 関数 scrape_urls() を開始
+2025-03-05 20:56:59 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-05 20:56:59 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-05 20:56:59 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:56:59 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:56:59 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:56:59 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:56:59 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku.html1
+2025-03-05 20:57:00 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:57:00 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/hachiroku.html1
+2025-03-05 20:57:00 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:57:00 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/hachiroku.html1
+2025-03-05 20:57:00 [INFO] Processing paginated URL: https://ikkatsu-satei.com/bB.html1
+2025-03-05 20:57:00 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:57:00 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/bB.html1
+2025-03-05 20:57:00 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:57:00 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/bB.html1
+2025-03-05 20:57:00 [INFO] Processing paginated URL: https://ikkatsu-satei.com/bz4x.html1
+2025-03-05 20:57:00 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:57:00 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/bz4x.html1
+2025-03-05 20:57:00 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:57:00 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/bz4x.html1
+2025-03-05 20:57:00 [INFO] Processing paginated URL: https://ikkatsu-satei.com/c-hr.html1
+2025-03-05 20:57:00 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:57:00 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/c-hr.html1
+2025-03-05 20:57:00 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 20:57:00 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/c-hr.html1
+2025-03-05 20:57:00 [INFO] Processing paginated URL: https://ikkatsu-satei.com/c-hrhybrid.html1
+2025-03-05 20:57:00 [INFO] 関数 fetch_page() を開始
+2025-03-05 20:57:00 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
+2025-03-05 21:05:32 [INFO] 関数 scrape_urls() を開始
+2025-03-05 21:05:32 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-05 21:05:32 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-05 21:05:32 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:05:32 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:05:33 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:05:33 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:05:33 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/1
+2025-03-05 21:05:33 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:05:33 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/hachiroku/1
+2025-03-05 21:05:33 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:05:33 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/hachiroku/1
+2025-03-05 21:05:33 [INFO] Processing paginated URL: https://ikkatsu-satei.com/bB/1
+2025-03-05 21:05:33 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:05:33 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/bB/1
+2025-03-05 21:05:33 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:05:33 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/bB/1
+2025-03-05 21:05:33 [INFO] Processing paginated URL: https://ikkatsu-satei.com/bz4x/1
+2025-03-05 21:05:33 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:05:33 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/bz4x/1
+2025-03-05 21:05:33 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:05:33 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/bz4x/1
+2025-03-05 21:05:33 [INFO] Processing paginated URL: https://ikkatsu-satei.com/c-hr/1
+2025-03-05 21:05:33 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:05:34 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/c-hr/1
+2025-03-05 21:05:34 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:05:34 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/c-hr/1
+2025-03-05 21:05:34 [INFO] Processing paginated URL: https://ikkatsu-satei.com/c-hrhybrid/1
+2025-03-05 21:05:34 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:05:34 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/c-hrhybrid/1
+2025-03-05 21:05:34 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:05:34 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/c-hrhybrid/1
+2025-03-05 21:05:34 [INFO] Processing paginated URL: https://ikkatsu-satei.com/fj_cruiser/1
+2025-03-05 21:05:34 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:05:34 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
+2025-03-05 21:06:00 [INFO] 関数 scrape_urls() を開始
+2025-03-05 21:06:00 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-05 21:06:00 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-05 21:06:00 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:00 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:00 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:00 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:00 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/1.html
+2025-03-05 21:06:00 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:00 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:00 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/2.html
+2025-03-05 21:06:00 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:01 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:01 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/3.html
+2025-03-05 21:06:01 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:01 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:01 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/4.html
+2025-03-05 21:06:01 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:01 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:02 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/5.html
+2025-03-05 21:06:02 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:02 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:02 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/6.html
+2025-03-05 21:06:02 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:02 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:02 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/7.html
+2025-03-05 21:06:02 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:03 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:03 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/8.html
+2025-03-05 21:06:03 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:03 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:03 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/9.html
+2025-03-05 21:06:03 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:04 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:04 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/10.html
+2025-03-05 21:06:04 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:04 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:04 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/11.html
+2025-03-05 21:06:04 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:05 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:05 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/12.html
+2025-03-05 21:06:05 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:05 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:05 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/13.html
+2025-03-05 21:06:05 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:06 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:06 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/14.html
+2025-03-05 21:06:06 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:06 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:06 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/15.html
+2025-03-05 21:06:06 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:07 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/16.html
+2025-03-05 21:06:07 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:07 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/17.html
+2025-03-05 21:06:07 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:08 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:08 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/18.html
+2025-03-05 21:06:08 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:08 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
+2025-03-05 21:06:21 [INFO] 関数 scrape_urls() を開始
+2025-03-05 21:06:21 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-05 21:06:21 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-05 21:06:21 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:21 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:22 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:22 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:22 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/1.html
+2025-03-05 21:06:22 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:22 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:23 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/2.html
+2025-03-05 21:06:23 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:23 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:23 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/3.html
+2025-03-05 21:06:23 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:24 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:24 [INFO] Processing paginated URL: https://ikkatsu-satei.com/bB/1.html
+2025-03-05 21:06:24 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:24 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:25 [INFO] Processing paginated URL: https://ikkatsu-satei.com/bB/2.html
+2025-03-05 21:06:25 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:25 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:25 [INFO] Processing paginated URL: https://ikkatsu-satei.com/bB/3.html
+2025-03-05 21:06:25 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:26 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:26 [INFO] Processing paginated URL: https://ikkatsu-satei.com/bz4x/1.html
+2025-03-05 21:06:26 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:26 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:27 [INFO] Processing paginated URL: https://ikkatsu-satei.com/bz4x/2.html
+2025-03-05 21:06:27 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:27 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:27 [INFO] Processing paginated URL: https://ikkatsu-satei.com/bz4x/3.html
+2025-03-05 21:06:27 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:27 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:28 [INFO] Processing paginated URL: https://ikkatsu-satei.com/c-hr/1.html
+2025-03-05 21:06:28 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:28 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:28 [INFO] Processing paginated URL: https://ikkatsu-satei.com/c-hr/2.html
+2025-03-05 21:06:28 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:29 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:29 [INFO] Processing paginated URL: https://ikkatsu-satei.com/c-hr/3.html
+2025-03-05 21:06:29 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:29 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:30 [INFO] Processing paginated URL: https://ikkatsu-satei.com/c-hrhybrid/1.html
+2025-03-05 21:06:30 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:30 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:30 [INFO] Processing paginated URL: https://ikkatsu-satei.com/c-hrhybrid/2.html
+2025-03-05 21:06:30 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:31 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:06:31 [INFO] Processing paginated URL: https://ikkatsu-satei.com/c-hrhybrid/3.html
+2025-03-05 21:06:31 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:06:31 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
+2025-03-05 21:07:50 [INFO] 関数 scrape_urls() を開始
+2025-03-05 21:07:50 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-05 21:07:50 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-05 21:07:50 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:07:51 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:07:54 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:07:54 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:07:54 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/1.html
+2025-03-05 21:07:54 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:07:54 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:07:57 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/2.html
+2025-03-05 21:07:57 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:07:58 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:08:00 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/3.html
+2025-03-05 21:08:00 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:08:01 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:08:04 [INFO] Processing paginated URL: https://ikkatsu-satei.com/bB/1.html
+2025-03-05 21:08:04 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:08:04 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:08:07 [INFO] Processing paginated URL: https://ikkatsu-satei.com/bB/2.html
+2025-03-05 21:08:07 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:08:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:08:10 [INFO] Processing paginated URL: https://ikkatsu-satei.com/bB/3.html
+2025-03-05 21:08:10 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:08:10 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:08:13 [INFO] Processing paginated URL: https://ikkatsu-satei.com/bz4x/1.html
+2025-03-05 21:08:13 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:08:13 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:08:16 [INFO] Processing paginated URL: https://ikkatsu-satei.com/bz4x/2.html
+2025-03-05 21:08:16 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:08:16 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:08:19 [INFO] Processing paginated URL: https://ikkatsu-satei.com/bz4x/3.html
+2025-03-05 21:08:19 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:08:19 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:08:22 [INFO] Processing paginated URL: https://ikkatsu-satei.com/c-hr/1.html
+2025-03-05 21:08:22 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:08:22 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:08:25 [INFO] Processing paginated URL: https://ikkatsu-satei.com/c-hr/2.html
+2025-03-05 21:08:25 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:08:25 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:08:28 [INFO] Processing paginated URL: https://ikkatsu-satei.com/c-hr/3.html
+2025-03-05 21:08:28 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:08:28 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:08:31 [INFO] Processing paginated URL: https://ikkatsu-satei.com/c-hrhybrid/1.html
+2025-03-05 21:08:31 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:08:31 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:08:34 [INFO] Processing paginated URL: https://ikkatsu-satei.com/c-hrhybrid/2.html
+2025-03-05 21:08:34 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:08:34 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:08:37 [INFO] Processing paginated URL: https://ikkatsu-satei.com/c-hrhybrid/3.html
+2025-03-05 21:08:37 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:08:38 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:08:40 [INFO] Processing paginated URL: https://ikkatsu-satei.com/fj_cruiser/1.html
+2025-03-05 21:08:40 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:08:41 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:08:44 [INFO] Processing paginated URL: https://ikkatsu-satei.com/fj_cruiser/2.html
+2025-03-05 21:08:44 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:08:44 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:08:47 [INFO] Processing paginated URL: https://ikkatsu-satei.com/fj_cruiser/3.html
+2025-03-05 21:08:47 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:08:47 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:08:50 [INFO] Processing paginated URL: https://ikkatsu-satei.com/gr86/1.html
+2025-03-05 21:08:50 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:08:50 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:08:53 [INFO] Processing paginated URL: https://ikkatsu-satei.com/gr86/2.html
+2025-03-05 21:08:53 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:08:53 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:08:56 [INFO] Processing paginated URL: https://ikkatsu-satei.com/gr86/3.html
+2025-03-05 21:08:56 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:08:56 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:08:59 [INFO] Processing paginated URL: https://ikkatsu-satei.com/gr-corolla/1.html
+2025-03-05 21:08:59 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:08:59 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:09:02 [INFO] Processing paginated URL: https://ikkatsu-satei.com/gr-corolla/2.html
+2025-03-05 21:09:02 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:09:02 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:09:05 [INFO] Processing paginated URL: https://ikkatsu-satei.com/gr-corolla/3.html
+2025-03-05 21:09:05 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:09:05 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:09:08 [INFO] Processing paginated URL: https://ikkatsu-satei.com/gryaris/1.html
+2025-03-05 21:09:08 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:09:09 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:09:11 [INFO] Processing paginated URL: https://ikkatsu-satei.com/gryaris/2.html
+2025-03-05 21:09:11 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:09:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:09:15 [INFO] Processing paginated URL: https://ikkatsu-satei.com/gryaris/3.html
+2025-03-05 21:09:15 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:09:15 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:09:18 [INFO] Processing paginated URL: https://ikkatsu-satei.com/iq/1.html
+2025-03-05 21:09:18 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:09:18 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:09:21 [INFO] Processing paginated URL: https://ikkatsu-satei.com/iq/2.html
+2025-03-05 21:09:21 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:09:21 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:09:24 [INFO] Processing paginated URL: https://ikkatsu-satei.com/iq/3.html
+2025-03-05 21:09:24 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:09:24 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:09:27 [INFO] Processing paginated URL: https://ikkatsu-satei.com/mirai/1.html
+2025-03-05 21:09:27 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:09:27 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:09:30 [INFO] Processing paginated URL: https://ikkatsu-satei.com/mirai/2.html
+2025-03-05 21:09:30 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:09:30 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:09:33 [INFO] Processing paginated URL: https://ikkatsu-satei.com/mirai/3.html
+2025-03-05 21:09:33 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:09:34 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:09:36 [INFO] Processing paginated URL: https://ikkatsu-satei.com/mr2/1.html
+2025-03-05 21:09:36 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:09:37 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:09:40 [INFO] Processing paginated URL: https://ikkatsu-satei.com/mr2/2.html
+2025-03-05 21:09:40 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:09:40 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:09:43 [INFO] Processing paginated URL: https://ikkatsu-satei.com/mr2/3.html
+2025-03-05 21:09:43 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:09:43 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:09:46 [INFO] Processing paginated URL: https://ikkatsu-satei.com/mr_s/1.html
+2025-03-05 21:09:46 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:09:46 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:11:05 [INFO] 関数 scrape_urls() を開始
+2025-03-05 21:11:05 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-05 21:11:05 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-05 21:11:05 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:11:05 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:11:08 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:11:08 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:11:08 [INFO] Processing paginated URL: https://ikkatsu-satei.com/nissan_quon/1.html
+2025-03-05 21:11:08 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:11:08 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:11:11 [INFO] Processing paginated URL: https://ikkatsu-satei.com/nissan_quon/2.html
+2025-03-05 21:11:11 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:11:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:11:14 [INFO] Processing paginated URL: https://ikkatsu-satei.com/nissan_quon/3.html
+2025-03-05 21:11:14 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:11:14 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:11:17 [INFO] Processing paginated URL: https://ikkatsu-satei.com/nissan_condor/1.html
+2025-03-05 21:11:17 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:11:17 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:11:20 [INFO] Processing paginated URL: https://ikkatsu-satei.com/nissan_condor/2.html
+2025-03-05 21:11:20 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:11:20 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:11:23 [INFO] Processing paginated URL: https://ikkatsu-satei.com/nissan_condor/3.html
+2025-03-05 21:11:23 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:11:23 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:11:26 [INFO] Processing paginated URL: https://ikkatsu-satei.com/space_runner/1.html
+2025-03-05 21:11:26 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:11:26 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:11:28 [INFO] Processing paginated URL: https://ikkatsu-satei.com/space_runner/2.html
+2025-03-05 21:11:28 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:11:29 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:11:31 [INFO] Processing paginated URL: https://ikkatsu-satei.com/space_runner/3.html
+2025-03-05 21:11:31 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:11:31 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:11:34 [INFO] Processing paginated URL: https://ikkatsu-satei.com/bigthumb/1.html
+2025-03-05 21:11:34 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:11:34 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:11:37 [INFO] Processing paginated URL: https://ikkatsu-satei.com/bigthumb/2.html
+2025-03-05 21:11:37 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:11:37 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:11:40 [INFO] Processing paginated URL: https://ikkatsu-satei.com/bigthumb/3.html
+2025-03-05 21:11:40 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:11:40 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:11:43 [INFO] Processing paginated URL: https://ikkatsu-satei.com/resona/1.html
+2025-03-05 21:11:43 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:11:43 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:11:45 [INFO] Processing paginated URL: https://ikkatsu-satei.com/resona/2.html
+2025-03-05 21:11:45 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:11:46 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:11:48 [INFO] Processing paginated URL: https://ikkatsu-satei.com/resona/3.html
+2025-03-05 21:11:48 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:11:49 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:11:54 [INFO] 関数 scrape_urls() が正常に完了
+2025-03-05 21:13:10 [INFO] 関数 scrape_urls() を開始
+2025-03-05 21:13:10 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-05 21:13:10 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-05 21:13:10 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:13:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:13:15 [INFO] 関数 scrape_urls() を開始
+2025-03-05 21:13:15 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-05 21:13:15 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-05 21:13:15 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:13:15 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:13:18 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:13:18 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:13:18 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/1.html
+2025-03-05 21:13:18 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:13:18 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:13:21 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/2.html
+2025-03-05 21:13:21 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:13:22 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:13:24 [INFO] Processing paginated URL: https://ikkatsu-satei.com/hachiroku/3.html
+2025-03-05 21:13:24 [INFO] 関数 fetch_page() を開始
+2025-03-05 21:13:25 [INFO] 関数 fetch_page() が正常に完了
+2025-03-05 21:13:30 [INFO] 関数 scrape_urls() が正常に完了
