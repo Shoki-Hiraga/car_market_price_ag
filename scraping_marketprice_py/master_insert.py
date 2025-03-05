@@ -27,6 +27,7 @@ db_sources = [
 # mileage の値を調整するデータベースリスト
 data_processing_mileage = [
     "market_price_rakuten",
+    "market_price_sellcar",
 ]
 
 def fetch_data_from_db(db_name):
