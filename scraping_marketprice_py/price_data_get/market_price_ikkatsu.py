@@ -18,8 +18,8 @@ website_url = "https://ikkatsu-satei.com/popular.html"
 start_url = "https://ikkatsu-satei.com/popular.html"
 pagenation_selectors = [
     # ".SIDE-NAVI a",
-    ".SIDE-NAVI li:nth-of-type(1) a",
-    "div.SIDE-NAVI:nth-of-type(1) a",
+    ".SIDE-NAVI li:nth-of-type(4) a",
+    "div.SIDE-NAVI:nth-of-type(1) li:nth-of-type(1) a",
                             ]
 
 dataget_selectors = {
@@ -33,8 +33,8 @@ dataget_selectors = {
     "sc_url": "url"
 }
 pagenations_min = 1
-pagenations_max = 10000
-delay = random.uniform(0.5, 0.012) 
+pagenations_max = 3
+delay = random.uniform(2.5, 3.012) 
 
 # スキップ条件
 sc_skip_conditions = [
@@ -105,13 +105,14 @@ def scrape_urls():
         for url in current_urls:
             soup = fetch_page(url)
             if soup:
-                links = [urljoin(website_url, a['href']) for a in soup.select(selector) if a.get('href')]
-
+                # 楽天専用処理：URLからクエリパラメータを削除する処理を追加
+                links = [urljoin(website_url, a['href']).split('.html#DDLNS')[0] for a in soup.select(selector) if a.get('href')]
                 # 指定されたページネーションセレクタで範囲を結合
                 if idx == select_pagenation_selectors:
                     for link in links:
+                        clean_link = link.rstrip('.html')  # .html を削除
                         for page_num in range(pagenations_min, pagenations_max + 1):
-                            paginated_url = f"{link}{page_num}"
+                            paginated_url = f"{clean_link}/{page_num}.html"
                             log_info(f"Processing paginated URL: {paginated_url}")  # デバッグ用
 
                             if is_recent_url(paginated_url, TABLE_NAME):
