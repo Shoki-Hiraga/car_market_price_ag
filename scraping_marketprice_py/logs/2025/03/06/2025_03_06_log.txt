@@ -1,0 +1,964 @@
+2025-03-06 21:41:30 [INFO] 関数 scrape_urls() を開始
+2025-03-06 21:41:30 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-06 21:41:30 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-06 21:41:30 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:41:31 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:41:34 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:41:34 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:41:34 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/1.html
+2025-03-06 21:41:34 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:41:34 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:41:37 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/2.html
+2025-03-06 21:41:37 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:41:37 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:41:40 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/3.html
+2025-03-06 21:41:40 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:41:40 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:41:43 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/1.html
+2025-03-06 21:41:43 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:41:43 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:41:43 [INFO] Fetching data from: https://ikkatsu-satei.com/c-hr.html
+2025-03-06 21:41:43 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:41:44 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:41:44 [INFO] データ保存: {'maker_name': 'C-HR（トヨタ）の買取価格・査定相場｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ C-HR', 'grade_name': 'C-HR Gモードネロセーフプラス3', 'year': '2023年 (令和5年)', 'mileage': '55,958km', 'min_price': '1,237,000円', 'max_price': '1,965,000円', 'sc_url': 'https://ikkatsu-satei.com/c-hr.html'}
+2025-03-06 21:41:47 [INFO] Fetching data from: https://ikkatsu-satei.com/toyota.html
+2025-03-06 21:41:47 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:41:47 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:41:47 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota.html'}
+2025-03-06 21:41:50 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/2.html
+2025-03-06 21:41:50 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:41:50 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:41:50 [INFO] Fetching data from: https://ikkatsu-satei.com/c-hr.html
+2025-03-06 21:41:50 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:41:50 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:41:50 [INFO] データ保存: {'maker_name': 'C-HR（トヨタ）の買取価格・査定相場｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ C-HR', 'grade_name': 'C-HR Gモードネロセーフプラス3', 'year': '2023年 (令和5年)', 'mileage': '55,958km', 'min_price': '1,237,000円', 'max_price': '1,965,000円', 'sc_url': 'https://ikkatsu-satei.com/c-hr.html'}
+2025-03-06 21:41:51 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
+2025-03-06 21:52:10 [INFO] 関数 scrape_urls() を開始
+2025-03-06 21:52:10 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-06 21:52:10 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-06 21:52:10 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:52:10 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:52:13 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:52:13 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:52:13 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/1.html
+2025-03-06 21:52:13 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:52:13 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:52:16 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/2.html
+2025-03-06 21:52:16 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:52:16 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:52:19 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/3.html
+2025-03-06 21:52:19 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:52:19 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:52:22 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/1.html
+2025-03-06 21:52:22 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:52:23 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:52:23 [INFO] Fetching data from: https://ikkatsu-satei.com/c-hr.html
+2025-03-06 21:52:23 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:52:23 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:52:23 [INFO] データ保存: {'maker_name': 'C-HR（トヨタ）の買取価格・査定相場｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ C-HR', 'grade_name': 'C-HR Gモードネロセーフプラス3', 'year': '2023年 (令和5年)', 'mileage': '1万キロ未満', 'min_price': '1,237,000円', 'max_price': '1,965,000円', 'sc_url': 'https://ikkatsu-satei.com/c-hr.html'}
+2025-03-06 21:52:26 [INFO] Fetching data from: https://ikkatsu-satei.com/toyota.html
+2025-03-06 21:52:26 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:52:26 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:52:26 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota.html'}
+2025-03-06 21:52:29 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/2.html
+2025-03-06 21:52:29 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:52:29 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:52:29 [INFO] Fetching data from: https://ikkatsu-satei.com/c-hr.html
+2025-03-06 21:52:29 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:52:29 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:52:29 [INFO] データ保存: {'maker_name': 'C-HR（トヨタ）の買取価格・査定相場｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ C-HR', 'grade_name': 'C-HR Gモードネロセーフプラス3', 'year': '2023年 (令和5年)', 'mileage': '1万キロ未満', 'min_price': '1,237,000円', 'max_price': '1,965,000円', 'sc_url': 'https://ikkatsu-satei.com/c-hr.html'}
+2025-03-06 21:52:32 [INFO] Fetching data from: https://ikkatsu-satei.com/toyota.html
+2025-03-06 21:52:32 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:52:32 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:52:32 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota.html'}
+2025-03-06 21:52:35 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/3.html
+2025-03-06 21:52:35 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:52:36 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:52:36 [INFO] Fetching data from: https://ikkatsu-satei.com/c-hr.html
+2025-03-06 21:52:36 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:52:36 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:52:36 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
+2025-03-06 21:53:03 [INFO] 関数 scrape_urls() を開始
+2025-03-06 21:53:03 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-06 21:53:03 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-06 21:53:03 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:53:03 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:53:06 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:53:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:53:07 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/1.html
+2025-03-06 21:53:07 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:53:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:53:10 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/2.html
+2025-03-06 21:53:10 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:53:10 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:53:13 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/3.html
+2025-03-06 21:53:13 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:53:13 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:53:16 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/1.html
+2025-03-06 21:53:16 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:53:16 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:53:16 [INFO] Fetching data from: https://ikkatsu-satei.com/c-hr.html
+2025-03-06 21:53:16 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:53:16 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:53:16 [INFO] データ保存: {'maker_name': 'C-HR（トヨタ）の買取価格・査定相場｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ C-HR', 'grade_name': 'C-HR Gモードネロセーフプラス3', 'year': '2023年 (令和5年)', 'mileage': '1万キロ未満', 'min_price': '1,237,000円', 'max_price': '1,965,000円', 'sc_url': 'https://ikkatsu-satei.com/c-hr.html'}
+2025-03-06 21:53:19 [INFO] Fetching data from: https://ikkatsu-satei.com/toyota.html
+2025-03-06 21:53:19 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:53:20 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:53:20 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota.html'}
+2025-03-06 21:53:23 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/2.html
+2025-03-06 21:53:23 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:53:23 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:53:23 [INFO] Fetching data from: https://ikkatsu-satei.com/c-hr.html
+2025-03-06 21:53:23 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:53:23 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:53:23 [INFO] データ保存: {'maker_name': 'C-HR（トヨタ）の買取価格・査定相場｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ C-HR', 'grade_name': 'C-HR Gモードネロセーフプラス3', 'year': '2023年 (令和5年)', 'mileage': '1万キロ未満', 'min_price': '1,237,000円', 'max_price': '1,965,000円', 'sc_url': 'https://ikkatsu-satei.com/c-hr.html'}
+2025-03-06 21:53:26 [INFO] Fetching data from: https://ikkatsu-satei.com/toyota.html
+2025-03-06 21:53:26 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:53:26 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:53:26 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota.html'}
+2025-03-06 21:53:29 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/3.html
+2025-03-06 21:53:29 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:53:29 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:53:29 [INFO] Fetching data from: https://ikkatsu-satei.com/c-hr.html
+2025-03-06 21:53:29 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:53:29 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:53:29 [INFO] データ保存: {'maker_name': 'C-HR（トヨタ）の買取価格・査定相場｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ C-HR', 'grade_name': 'C-HR Gモードネロセーフプラス3', 'year': '2023年 (令和5年)', 'mileage': '1万キロ未満', 'min_price': '1,237,000円', 'max_price': '1,965,000円', 'sc_url': 'https://ikkatsu-satei.com/c-hr.html'}
+2025-03-06 21:53:32 [INFO] Fetching data from: https://ikkatsu-satei.com/toyota.html
+2025-03-06 21:53:32 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:53:32 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:53:32 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota.html'}
+2025-03-06 21:53:38 [INFO] 関数 scrape_urls() が正常に完了
+2025-03-06 21:59:31 [INFO] 関数 scrape_urls() を開始
+2025-03-06 21:59:31 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-06 21:59:31 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-06 21:59:31 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:59:31 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:59:34 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:59:34 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:59:34 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/1.html
+2025-03-06 21:59:34 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:59:35 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:59:37 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/2.html
+2025-03-06 21:59:37 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:59:38 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:59:40 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/3.html
+2025-03-06 21:59:40 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:59:41 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:59:43 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/4.html
+2025-03-06 21:59:43 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:59:44 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:59:47 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/5.html
+2025-03-06 21:59:47 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:59:47 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:59:50 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/6.html
+2025-03-06 21:59:50 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:59:50 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:59:53 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/7.html
+2025-03-06 21:59:53 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:59:53 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:59:56 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/8.html
+2025-03-06 21:59:56 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:59:56 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 21:59:59 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/9.html
+2025-03-06 21:59:59 [INFO] 関数 fetch_page() を開始
+2025-03-06 21:59:59 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:00:02 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/10.html
+2025-03-06 22:00:02 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:00:02 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:00:05 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/11.html
+2025-03-06 22:00:05 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:00:05 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:00:08 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/12.html
+2025-03-06 22:00:08 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:00:09 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:00:11 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/13.html
+2025-03-06 22:00:11 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:00:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:00:15 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/14.html
+2025-03-06 22:00:15 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:00:15 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:00:18 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/15.html
+2025-03-06 22:00:18 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:00:18 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:00:21 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/16.html
+2025-03-06 22:00:21 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:00:21 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:00:24 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/17.html
+2025-03-06 22:00:24 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:00:24 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:00:27 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/18.html
+2025-03-06 22:00:27 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:00:27 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:00:30 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/19.html
+2025-03-06 22:00:30 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:00:30 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:00:33 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/20.html
+2025-03-06 22:00:33 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:00:33 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:00:36 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/21.html
+2025-03-06 22:00:36 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:00:37 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:00:39 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/22.html
+2025-03-06 22:00:39 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:00:40 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:00:43 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/23.html
+2025-03-06 22:00:43 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:00:43 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:00:46 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/24.html
+2025-03-06 22:00:46 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:00:46 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:00:49 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/25.html
+2025-03-06 22:00:49 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:00:49 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:00:52 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/26.html
+2025-03-06 22:00:52 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:00:52 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:00:55 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/27.html
+2025-03-06 22:00:55 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:00:55 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:00:58 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/28.html
+2025-03-06 22:00:58 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:00:58 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:01:01 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/29.html
+2025-03-06 22:01:01 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:01:02 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:01:04 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/30.html
+2025-03-06 22:01:04 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:01:05 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:01:08 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/31.html
+2025-03-06 22:01:08 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:01:08 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:01:11 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/32.html
+2025-03-06 22:01:11 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:01:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:01:14 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/33.html
+2025-03-06 22:01:14 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:01:14 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:01:17 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/34.html
+2025-03-06 22:01:17 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:01:17 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:01:20 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/35.html
+2025-03-06 22:01:20 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:01:20 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:01:23 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/36.html
+2025-03-06 22:01:23 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:01:23 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:01:26 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/37.html
+2025-03-06 22:01:26 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:01:27 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:01:29 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/38.html
+2025-03-06 22:01:29 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:01:30 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:01:33 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/39.html
+2025-03-06 22:01:33 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:01:33 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:01:36 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/40.html
+2025-03-06 22:01:36 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:01:36 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:01:39 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/41.html
+2025-03-06 22:01:39 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:01:39 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:01:42 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/42.html
+2025-03-06 22:01:42 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:01:42 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:01:45 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/43.html
+2025-03-06 22:01:45 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:01:45 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:01:48 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/44.html
+2025-03-06 22:01:48 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:01:48 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:01:51 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/45.html
+2025-03-06 22:01:51 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:01:52 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:01:54 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/46.html
+2025-03-06 22:01:54 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:01:55 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:01:58 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/47.html
+2025-03-06 22:01:58 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:01:58 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:02:01 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/48.html
+2025-03-06 22:02:01 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:02:01 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:02:04 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/49.html
+2025-03-06 22:02:04 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:02:04 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:02:07 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/50.html
+2025-03-06 22:02:07 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:02:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:02:10 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/51.html
+2025-03-06 22:02:10 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:02:10 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:02:13 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/52.html
+2025-03-06 22:02:13 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:02:13 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:02:16 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/53.html
+2025-03-06 22:02:16 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:02:17 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:02:20 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/54.html
+2025-03-06 22:02:20 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:02:20 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:02:23 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/55.html
+2025-03-06 22:02:23 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:02:23 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:02:26 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/56.html
+2025-03-06 22:02:26 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:02:26 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:02:29 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/57.html
+2025-03-06 22:02:29 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:02:29 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:02:32 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/58.html
+2025-03-06 22:02:32 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:02:32 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:02:35 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/59.html
+2025-03-06 22:02:35 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:02:35 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:02:38 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/60.html
+2025-03-06 22:02:38 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:02:39 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:02:41 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/61.html
+2025-03-06 22:02:41 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:02:42 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:02:45 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/62.html
+2025-03-06 22:02:45 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:02:45 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:02:48 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/63.html
+2025-03-06 22:02:48 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:02:48 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:02:51 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/64.html
+2025-03-06 22:02:51 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:02:51 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:02:54 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/65.html
+2025-03-06 22:02:54 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:02:54 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:02:57 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/66.html
+2025-03-06 22:02:57 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:02:57 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:03:00 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/67.html
+2025-03-06 22:03:00 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:03:00 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:03:03 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/68.html
+2025-03-06 22:03:03 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:03:04 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:03:06 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/69.html
+2025-03-06 22:03:06 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:03:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:03:10 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/70.html
+2025-03-06 22:03:10 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:03:10 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:03:13 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/71.html
+2025-03-06 22:03:13 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:03:13 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:03:16 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/72.html
+2025-03-06 22:03:16 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:03:16 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:03:19 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/73.html
+2025-03-06 22:03:19 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:03:19 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:03:22 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/74.html
+2025-03-06 22:03:22 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:03:22 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:03:25 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/75.html
+2025-03-06 22:03:25 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:03:25 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:03:28 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/76.html
+2025-03-06 22:03:28 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:03:28 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:03:31 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/77.html
+2025-03-06 22:03:31 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:03:32 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:03:34 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/78.html
+2025-03-06 22:03:34 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:03:35 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:03:38 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/79.html
+2025-03-06 22:03:38 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:03:38 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:03:41 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/80.html
+2025-03-06 22:03:41 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:03:41 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:03:44 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/81.html
+2025-03-06 22:03:44 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:03:44 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:03:47 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/82.html
+2025-03-06 22:03:47 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:03:47 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:03:50 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/83.html
+2025-03-06 22:03:50 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:03:50 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:03:53 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/84.html
+2025-03-06 22:03:53 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:03:53 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:03:56 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/85.html
+2025-03-06 22:03:56 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:03:56 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:03:59 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/86.html
+2025-03-06 22:03:59 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:04:00 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:04:02 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/87.html
+2025-03-06 22:04:02 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:04:03 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:04:06 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/88.html
+2025-03-06 22:04:06 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:04:06 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:04:09 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/89.html
+2025-03-06 22:04:09 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:04:09 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:04:12 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/90.html
+2025-03-06 22:04:12 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:04:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:04:15 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/91.html
+2025-03-06 22:04:15 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:04:15 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:04:18 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/92.html
+2025-03-06 22:04:18 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:04:18 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:04:21 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/93.html
+2025-03-06 22:04:21 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:04:22 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:04:24 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/94.html
+2025-03-06 22:04:24 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:04:25 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:04:27 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/95.html
+2025-03-06 22:04:27 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:04:28 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:04:30 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/96.html
+2025-03-06 22:04:31 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:04:31 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:04:34 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/97.html
+2025-03-06 22:04:34 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:04:34 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:04:37 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/98.html
+2025-03-06 22:04:37 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:04:37 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:04:40 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/99.html
+2025-03-06 22:04:40 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:04:40 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:04:43 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/100.html
+2025-03-06 22:04:43 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:04:43 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:04:46 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/101.html
+2025-03-06 22:04:46 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:04:46 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:04:49 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/102.html
+2025-03-06 22:04:49 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:04:49 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:04:52 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/103.html
+2025-03-06 22:04:52 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:04:53 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:04:55 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/104.html
+2025-03-06 22:04:55 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:04:56 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:04:59 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/105.html
+2025-03-06 22:04:59 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:04:59 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:05:02 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/106.html
+2025-03-06 22:05:02 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:05:02 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:05:05 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/107.html
+2025-03-06 22:05:05 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:05:05 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:05:08 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/108.html
+2025-03-06 22:05:08 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:05:08 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:05:11 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/109.html
+2025-03-06 22:05:11 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:05:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:05:14 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/110.html
+2025-03-06 22:05:14 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:05:14 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:05:17 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/111.html
+2025-03-06 22:05:17 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:05:17 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:05:20 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/112.html
+2025-03-06 22:05:20 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:05:21 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:05:23 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/113.html
+2025-03-06 22:05:23 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:05:24 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:05:27 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/114.html
+2025-03-06 22:05:27 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:05:27 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:05:30 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/115.html
+2025-03-06 22:05:30 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:05:30 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:05:33 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/116.html
+2025-03-06 22:05:33 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:05:33 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:05:36 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/117.html
+2025-03-06 22:05:36 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:05:36 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:05:39 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/118.html
+2025-03-06 22:05:39 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:05:39 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:05:42 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/119.html
+2025-03-06 22:05:42 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:05:42 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:05:45 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/120.html
+2025-03-06 22:05:45 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:05:45 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:05:48 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/121.html
+2025-03-06 22:05:48 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:05:49 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:05:51 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/122.html
+2025-03-06 22:05:51 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:05:52 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:05:55 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/123.html
+2025-03-06 22:05:55 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:05:55 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:05:58 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/124.html
+2025-03-06 22:05:58 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:05:58 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:06:01 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/125.html
+2025-03-06 22:06:01 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:06:01 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:06:04 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/126.html
+2025-03-06 22:06:04 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:06:04 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:06:07 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/127.html
+2025-03-06 22:06:07 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:06:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:06:10 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/128.html
+2025-03-06 22:06:10 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:06:10 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:06:13 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/129.html
+2025-03-06 22:06:13 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:06:14 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:06:16 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/130.html
+2025-03-06 22:06:16 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:06:17 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:06:20 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/131.html
+2025-03-06 22:06:20 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:06:20 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:06:23 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/132.html
+2025-03-06 22:06:23 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:06:23 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:06:26 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/133.html
+2025-03-06 22:06:26 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:06:26 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:06:29 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/134.html
+2025-03-06 22:06:29 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:06:29 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:06:32 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/135.html
+2025-03-06 22:06:32 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:06:32 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:06:34 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
+2025-03-06 22:09:45 [INFO] 関数 scrape_urls() を開始
+2025-03-06 22:09:45 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-06 22:09:45 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-06 22:09:45 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:09:45 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:09:48 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:09:48 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:09:48 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/1.html
+2025-03-06 22:09:48 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:09:48 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:09:50 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/2.html
+2025-03-06 22:09:50 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:09:51 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:09:53 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/3.html
+2025-03-06 22:09:53 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:09:53 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:09:56 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/4.html
+2025-03-06 22:09:56 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:09:56 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:09:59 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/5.html
+2025-03-06 22:09:59 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:09:59 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:10:01 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/6.html
+2025-03-06 22:10:01 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:10:02 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:10:04 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/7.html
+2025-03-06 22:10:04 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:10:04 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:10:07 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/8.html
+2025-03-06 22:10:07 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:10:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:10:10 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/9.html
+2025-03-06 22:10:10 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:10:10 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:10:13 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/10.html
+2025-03-06 22:10:13 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:10:13 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:10:15 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/11.html
+2025-03-06 22:10:15 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:10:15 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:10:18 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/12.html
+2025-03-06 22:10:18 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:10:18 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:10:21 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/13.html
+2025-03-06 22:10:21 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:10:21 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:10:24 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/14.html
+2025-03-06 22:10:24 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:10:24 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:10:26 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/15.html
+2025-03-06 22:10:26 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:10:27 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:10:29 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/16.html
+2025-03-06 22:10:29 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:10:29 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:10:32 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/17.html
+2025-03-06 22:10:32 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:10:32 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:10:35 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/18.html
+2025-03-06 22:10:35 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:10:35 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:10:38 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/19.html
+2025-03-06 22:10:38 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:10:38 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:10:40 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/20.html
+2025-03-06 22:10:40 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:10:41 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:10:43 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/21.html
+2025-03-06 22:10:43 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:10:43 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:10:46 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/22.html
+2025-03-06 22:10:46 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:10:46 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:10:49 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/23.html
+2025-03-06 22:10:49 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:10:49 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:10:52 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/24.html
+2025-03-06 22:10:52 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:10:52 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:10:54 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/25.html
+2025-03-06 22:10:54 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:10:55 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:10:57 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/26.html
+2025-03-06 22:10:57 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:10:57 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:11:00 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/27.html
+2025-03-06 22:11:00 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:11:00 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:11:03 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/28.html
+2025-03-06 22:11:03 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:11:03 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:11:05 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/29.html
+2025-03-06 22:11:05 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:11:06 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:11:08 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/30.html
+2025-03-06 22:11:08 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:11:08 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:11:11 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/31.html
+2025-03-06 22:11:11 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:11:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:11:14 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/32.html
+2025-03-06 22:11:14 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:11:14 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:11:17 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/33.html
+2025-03-06 22:11:17 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:11:17 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:11:19 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/34.html
+2025-03-06 22:11:19 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:11:19 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:11:22 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/35.html
+2025-03-06 22:11:22 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:11:22 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:11:25 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/36.html
+2025-03-06 22:11:25 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:11:25 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:11:28 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/37.html
+2025-03-06 22:11:28 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:11:28 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:11:30 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/38.html
+2025-03-06 22:11:30 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:11:31 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:11:33 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/39.html
+2025-03-06 22:11:33 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:11:33 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:11:36 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/40.html
+2025-03-06 22:11:36 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:11:36 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:11:39 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/41.html
+2025-03-06 22:11:39 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:11:39 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:11:41 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/42.html
+2025-03-06 22:11:41 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:11:42 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:11:44 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/43.html
+2025-03-06 22:11:44 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:11:44 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:11:47 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/44.html
+2025-03-06 22:11:47 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:11:47 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:11:50 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/45.html
+2025-03-06 22:11:50 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:11:50 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:11:52 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/46.html
+2025-03-06 22:11:52 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:11:53 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:11:55 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/47.html
+2025-03-06 22:11:55 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:11:55 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:11:58 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/48.html
+2025-03-06 22:11:58 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:11:58 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:12:01 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/49.html
+2025-03-06 22:12:01 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:12:01 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:12:03 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/50.html
+2025-03-06 22:12:03 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:12:04 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:12:06 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/51.html
+2025-03-06 22:12:06 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:12:06 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:12:09 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/52.html
+2025-03-06 22:12:09 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:12:09 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:12:12 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/53.html
+2025-03-06 22:12:12 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:12:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:12:14 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/54.html
+2025-03-06 22:12:15 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:12:15 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:12:17 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/55.html
+2025-03-06 22:12:17 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:12:17 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:12:20 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/56.html
+2025-03-06 22:12:20 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:12:20 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:12:23 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/57.html
+2025-03-06 22:12:23 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:12:23 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:12:26 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/58.html
+2025-03-06 22:12:26 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:12:26 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:12:28 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/59.html
+2025-03-06 22:12:28 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:12:29 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:12:31 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/60.html
+2025-03-06 22:12:31 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:12:31 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:12:34 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/61.html
+2025-03-06 22:12:34 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:12:34 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:12:37 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/62.html
+2025-03-06 22:12:37 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:12:37 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:12:39 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/63.html
+2025-03-06 22:12:39 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:12:40 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:12:42 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/64.html
+2025-03-06 22:12:42 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:12:42 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:12:45 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/65.html
+2025-03-06 22:12:45 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:12:45 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:12:48 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/66.html
+2025-03-06 22:12:48 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:12:48 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:12:51 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/67.html
+2025-03-06 22:12:51 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:12:51 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:12:53 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/68.html
+2025-03-06 22:12:53 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:12:54 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:12:56 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/69.html
+2025-03-06 22:12:56 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:12:56 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:12:59 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/70.html
+2025-03-06 22:12:59 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:12:59 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:13:02 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/71.html
+2025-03-06 22:13:02 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:13:02 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:13:04 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/72.html
+2025-03-06 22:13:04 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:13:05 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:13:07 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/73.html
+2025-03-06 22:13:07 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:13:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:13:10 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/74.html
+2025-03-06 22:13:10 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:13:10 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:13:13 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/75.html
+2025-03-06 22:13:13 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:13:13 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:13:15 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/76.html
+2025-03-06 22:13:15 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:13:16 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:13:18 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/77.html
+2025-03-06 22:13:18 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:13:18 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:13:21 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/78.html
+2025-03-06 22:13:21 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:13:21 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:13:24 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/79.html
+2025-03-06 22:13:24 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:13:24 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:13:26 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/80.html
+2025-03-06 22:13:26 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:13:27 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:13:29 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/81.html
+2025-03-06 22:13:29 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:13:29 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:13:32 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/82.html
+2025-03-06 22:13:32 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:13:32 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:13:35 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/83.html
+2025-03-06 22:13:35 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:13:35 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:13:37 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/84.html
+2025-03-06 22:13:37 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:13:38 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:13:40 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/85.html
+2025-03-06 22:13:40 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:13:40 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:13:43 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/86.html
+2025-03-06 22:13:43 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:13:43 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:13:46 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/87.html
+2025-03-06 22:13:46 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:13:46 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:13:48 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/88.html
+2025-03-06 22:13:48 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:13:49 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:13:51 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/89.html
+2025-03-06 22:13:51 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:13:51 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:13:54 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/90.html
+2025-03-06 22:13:54 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:13:54 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:13:57 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/91.html
+2025-03-06 22:13:57 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:13:57 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:14:00 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/92.html
+2025-03-06 22:14:00 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:14:00 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:14:02 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/93.html
+2025-03-06 22:14:02 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:14:03 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:14:05 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/94.html
+2025-03-06 22:14:05 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:14:05 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:14:08 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/95.html
+2025-03-06 22:14:08 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:14:08 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:14:11 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/96.html
+2025-03-06 22:14:11 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:14:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:14:13 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/97.html
+2025-03-06 22:14:13 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:14:14 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:14:16 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/98.html
+2025-03-06 22:14:16 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:14:16 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:14:19 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/99.html
+2025-03-06 22:14:19 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:14:19 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:14:22 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/100.html
+2025-03-06 22:14:22 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:14:22 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:14:25 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/101.html
+2025-03-06 22:14:25 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:14:25 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:14:27 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/102.html
+2025-03-06 22:14:27 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:14:28 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:14:30 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/103.html
+2025-03-06 22:14:30 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:14:30 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:14:33 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/104.html
+2025-03-06 22:14:33 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:14:33 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:14:36 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/105.html
+2025-03-06 22:14:36 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:14:36 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:14:38 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/106.html
+2025-03-06 22:14:38 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:14:39 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:14:41 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/107.html
+2025-03-06 22:14:41 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:14:41 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:14:44 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/108.html
+2025-03-06 22:14:44 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:14:44 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:14:47 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/109.html
+2025-03-06 22:14:47 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:14:47 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:14:49 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/110.html
+2025-03-06 22:14:49 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:14:50 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:14:52 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/111.html
+2025-03-06 22:14:52 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:14:52 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:14:55 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/112.html
+2025-03-06 22:14:55 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:14:55 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:14:58 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/113.html
+2025-03-06 22:14:58 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:14:58 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:15:01 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/114.html
+2025-03-06 22:15:01 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:15:01 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:15:03 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/115.html
+2025-03-06 22:15:03 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:15:04 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:15:06 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/116.html
+2025-03-06 22:15:06 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:15:06 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:15:09 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/117.html
+2025-03-06 22:15:09 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:15:09 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:15:12 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/118.html
+2025-03-06 22:15:12 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:15:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:15:14 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/119.html
+2025-03-06 22:15:14 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:15:15 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:15:17 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/120.html
+2025-03-06 22:15:17 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:15:17 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:15:20 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/121.html
+2025-03-06 22:15:20 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:15:20 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:15:23 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/122.html
+2025-03-06 22:15:23 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:15:23 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:15:26 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/123.html
+2025-03-06 22:15:26 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:15:26 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:15:28 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/124.html
+2025-03-06 22:15:28 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:15:29 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:15:31 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/125.html
+2025-03-06 22:15:31 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:15:31 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:15:34 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/126.html
+2025-03-06 22:15:34 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:15:34 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:15:37 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/127.html
+2025-03-06 22:15:37 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:15:37 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:15:39 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/128.html
+2025-03-06 22:15:39 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:15:40 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:15:42 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/129.html
+2025-03-06 22:15:42 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:15:42 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:15:45 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/130.html
+2025-03-06 22:15:45 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:15:45 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:15:48 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/131.html
+2025-03-06 22:15:48 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:15:48 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:15:50 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/132.html
+2025-03-06 22:15:50 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:15:51 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:15:53 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/133.html
+2025-03-06 22:15:53 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:15:53 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:15:56 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/134.html
+2025-03-06 22:15:56 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:15:56 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:15:59 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/135.html
+2025-03-06 22:15:59 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:15:59 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:16:02 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/136.html
+2025-03-06 22:16:02 [INFO] 関数 fetch_page() を開始
+2025-03-06 22:16:02 [INFO] 関数 fetch_page() が正常に完了
+2025-03-06 22:16:03 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
