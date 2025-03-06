@@ -28,6 +28,7 @@ db_sources = [
 data_processing_mileage = [
     "market_price_rakuten",
     "market_price_sellcar",
+    "market_price_carview",
 ]
 
 def fetch_data_from_db(db_name):

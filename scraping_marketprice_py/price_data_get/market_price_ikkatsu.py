@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import time
 import random
-from funciton_app.mota_dataget_selectors_edit import process_data
+from funciton_app.ikkatsu_dataget_selectors_edit import process_data
 from db_handler import save_to_db, is_recent_url
 from logs.logger import log_decorator, log_info, log_error 
 
@@ -17,23 +17,22 @@ select_pagenation_selectors = 1
 website_url = "https://ikkatsu-satei.com/popular.html"
 start_url = "https://ikkatsu-satei.com/popular.html"
 pagenation_selectors = [
-    # ".SIDE-NAVI a",
+    ".SIDE-NAVI a",
     ".SIDE-NAVI li:nth-of-type(4) a",
-    "div.SIDE-NAVI:nth-of-type(1) li:nth-of-type(1) a",
-                            ]
+]
 
 dataget_selectors = {
-    "maker_name": "p.Maker-P",
+    "maker_name": "title",
     "model_name": "section:nth-of-type(1) h1",
     "grade_name": "section:nth-of-type(2) td:nth-of-type(4)",
     "year": "section:nth-of-type(2) td:nth-of-type(2)",
-    "mileage": "section:nth-of-type(3) td.SOUKOU",
+    "mileage": "section:nth-of-type(2) td:nth-of-type(5)",
     "min_price": "section:nth-of-type(3) td:nth-of-type(4)",
     "max_price": "section:nth-of-type(3) td:nth-of-type(3)",
     "sc_url": "url"
 }
 pagenations_min = 1
-pagenations_max = 3
+pagenations_max = 200
 delay = random.uniform(2.5, 3.012) 
 
 # スキップ条件
