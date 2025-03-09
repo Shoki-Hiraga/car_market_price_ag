@@ -8,7 +8,7 @@ from db_handler import save_to_db, is_recent_url
 from logs.logger import log_decorator, log_info, log_error 
 
 # 定義: テーブル名
-TABLE_NAME = "market_price_kurumaerabi"
+TABLE_NAME = "market_price_ikkatsu"
 
 # pagenation_selectors のどこでページネーションさせるか指定
 select_pagenation_selectors = 1
