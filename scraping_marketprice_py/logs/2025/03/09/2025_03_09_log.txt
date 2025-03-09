@@ -1,0 +1,398 @@
+2025-03-09 17:20:19 [INFO] 関数 scrape_urls() を開始
+2025-03-09 17:20:19 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-09 17:20:19 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-09 17:20:19 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:20:20 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:20:20 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:20:21 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:20:21 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/1.html
+2025-03-09 17:22:08 [INFO] 関数 scrape_urls() を開始
+2025-03-09 17:22:08 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-09 17:22:08 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-09 17:22:08 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:09 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:09 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:09 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:09 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/1.html
+2025-03-09 17:22:09 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:10 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:10 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/2.html
+2025-03-09 17:22:10 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:10 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:11 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/3.html
+2025-03-09 17:22:11 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:12 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/4.html
+2025-03-09 17:22:12 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:13 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/5.html
+2025-03-09 17:22:13 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:13 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:13 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/6.html
+2025-03-09 17:22:13 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:14 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:14 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/7.html
+2025-03-09 17:22:14 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:14 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:15 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/8.html
+2025-03-09 17:22:15 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:15 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:16 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/9.html
+2025-03-09 17:22:16 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:16 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:17 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/10.html
+2025-03-09 17:22:17 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:17 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:17 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/11.html
+2025-03-09 17:22:17 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:18 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:18 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/12.html
+2025-03-09 17:22:18 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:18 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:19 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/13.html
+2025-03-09 17:22:19 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:19 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:20 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/14.html
+2025-03-09 17:22:20 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:20 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:21 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/15.html
+2025-03-09 17:22:21 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:21 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:22 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/16.html
+2025-03-09 17:22:22 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:22 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:22 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/17.html
+2025-03-09 17:22:22 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:23 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:23 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/18.html
+2025-03-09 17:22:23 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:23 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:24 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/19.html
+2025-03-09 17:22:24 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:24 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:25 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/20.html
+2025-03-09 17:22:25 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:25 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:25 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/21.html
+2025-03-09 17:22:25 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:26 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:26 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/22.html
+2025-03-09 17:22:26 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:27 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:27 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
+2025-03-09 17:22:36 [INFO] 関数 scrape_urls() を開始
+2025-03-09 17:22:36 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-09 17:22:36 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-09 17:22:36 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:36 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:37 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:37 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:37 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/1.html
+2025-03-09 17:22:37 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:37 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:38 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/2.html
+2025-03-09 17:22:38 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:38 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:39 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/1.html
+2025-03-09 17:22:39 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:39 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:39 [INFO] Fetching data from: https://ikkatsu-satei.com/c-hr.html
+2025-03-09 17:22:39 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:39 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:39 [INFO] データ保存: {'maker_name': 'トヨタ', 'model_name': 'C-HR', 'grade_name': 'Gモードネロセーフプラス3', 'year': '2023', 'mileage': '1', 'min_price': '195', 'max_price': '195', 'sc_url': 'https://ikkatsu-satei.com/c-hr.html'}
+2025-03-09 17:22:41 [INFO] Fetching data from: https://ikkatsu-satei.com/toyota.html
+2025-03-09 17:22:41 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:41 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:41 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota.html'}
+2025-03-09 17:22:42 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/2.html
+2025-03-09 17:22:42 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:42 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:42 [INFO] Fetching data from: https://ikkatsu-satei.com/c-hr.html
+2025-03-09 17:22:42 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:42 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:42 [INFO] データ保存: {'maker_name': 'トヨタ', 'model_name': 'C-HR', 'grade_name': 'Gモードネロセーフプラス3', 'year': '2023', 'mileage': '1', 'min_price': '195', 'max_price': '195', 'sc_url': 'https://ikkatsu-satei.com/c-hr.html'}
+2025-03-09 17:22:44 [INFO] Fetching data from: https://ikkatsu-satei.com/toyota.html
+2025-03-09 17:22:44 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:44 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:44 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota.html'}
+2025-03-09 17:22:45 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:46 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:46 [INFO] Processing paginated URL: https://ikkatsu-satei.com/mr_w/1.html
+2025-03-09 17:22:46 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:46 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:47 [INFO] Processing paginated URL: https://ikkatsu-satei.com/mr_w/2.html
+2025-03-09 17:22:47 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:47 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:48 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/1.html
+2025-03-09 17:22:48 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:48 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:48 [INFO] Fetching data from: https://ikkatsu-satei.com/c-hr.html
+2025-03-09 17:22:48 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:48 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:48 [INFO] データ保存: {'maker_name': 'トヨタ', 'model_name': 'C-HR', 'grade_name': 'Gモードネロセーフプラス3', 'year': '2023', 'mileage': '1', 'min_price': '195', 'max_price': '195', 'sc_url': 'https://ikkatsu-satei.com/c-hr.html'}
+2025-03-09 17:22:50 [INFO] Fetching data from: https://ikkatsu-satei.com/toyota.html
+2025-03-09 17:22:50 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:50 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:50 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota.html'}
+2025-03-09 17:22:51 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/2.html
+2025-03-09 17:22:51 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:51 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:51 [INFO] Fetching data from: https://ikkatsu-satei.com/c-hr.html
+2025-03-09 17:22:51 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:51 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:51 [INFO] データ保存: {'maker_name': 'トヨタ', 'model_name': 'C-HR', 'grade_name': 'Gモードネロセーフプラス3', 'year': '2023', 'mileage': '1', 'min_price': '195', 'max_price': '195', 'sc_url': 'https://ikkatsu-satei.com/c-hr.html'}
+2025-03-09 17:22:53 [INFO] Fetching data from: https://ikkatsu-satei.com/toyota.html
+2025-03-09 17:22:53 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:53 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:53 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota.html'}
+2025-03-09 17:22:54 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:55 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:55 [INFO] Processing paginated URL: https://ikkatsu-satei.com/atrai_7/1.html
+2025-03-09 17:22:55 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:55 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:56 [INFO] Processing paginated URL: https://ikkatsu-satei.com/atrai_7/2.html
+2025-03-09 17:22:56 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:56 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:57 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/1.html
+2025-03-09 17:22:57 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:57 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:57 [INFO] Fetching data from: https://ikkatsu-satei.com/c-hr.html
+2025-03-09 17:22:57 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:57 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:57 [INFO] データ保存: {'maker_name': 'トヨタ', 'model_name': 'C-HR', 'grade_name': 'Gモードネロセーフプラス3', 'year': '2023', 'mileage': '1', 'min_price': '195', 'max_price': '195', 'sc_url': 'https://ikkatsu-satei.com/c-hr.html'}
+2025-03-09 17:22:59 [INFO] Fetching data from: https://ikkatsu-satei.com/toyota.html
+2025-03-09 17:22:59 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:22:59 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:22:59 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota.html'}
+2025-03-09 17:23:00 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/2.html
+2025-03-09 17:23:00 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:23:00 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:23:00 [INFO] Fetching data from: https://ikkatsu-satei.com/c-hr.html
+2025-03-09 17:23:00 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:23:00 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:23:00 [INFO] データ保存: {'maker_name': 'トヨタ', 'model_name': 'C-HR', 'grade_name': 'Gモードネロセーフプラス3', 'year': '2023', 'mileage': '1', 'min_price': '195', 'max_price': '195', 'sc_url': 'https://ikkatsu-satei.com/c-hr.html'}
+2025-03-09 17:23:02 [INFO] Fetching data from: https://ikkatsu-satei.com/toyota.html
+2025-03-09 17:23:02 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:23:02 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:23:02 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota.html'}
+2025-03-09 17:23:03 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:23:04 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:23:04 [INFO] Processing paginated URL: https://ikkatsu-satei.com/c-hr/1.html
+2025-03-09 17:23:04 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:23:04 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:23:05 [INFO] Processing paginated URL: https://ikkatsu-satei.com/c-hr/2.html
+2025-03-09 17:23:05 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:23:05 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:23:06 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/1.html
+2025-03-09 17:23:06 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:23:06 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:23:06 [INFO] Fetching data from: https://ikkatsu-satei.com/c-hr.html
+2025-03-09 17:23:06 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:23:06 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
+2025-03-09 17:32:01 [INFO] 関数 scrape_urls() を開始
+2025-03-09 17:32:01 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-09 17:32:01 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-09 17:32:01 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:32:01 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:32:01 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:32:02 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:32:02 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/1.html
+2025-03-09 17:32:02 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:32:02 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:32:02 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/2.html
+2025-03-09 17:32:02 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:32:02 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:32:02 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/3.html
+2025-03-09 17:32:02 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:32:02 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:32:02 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/4.html
+2025-03-09 17:32:02 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:32:03 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:32:03 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/5.html
+2025-03-09 17:32:03 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:32:03 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:32:03 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/6.html
+2025-03-09 17:32:03 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:32:03 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:32:03 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/7.html
+2025-03-09 17:32:03 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:32:03 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:32:04 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/8.html
+2025-03-09 17:32:04 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:32:04 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:32:04 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/9.html
+2025-03-09 17:32:04 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:32:04 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:32:04 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/10.html
+2025-03-09 17:32:04 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:32:04 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:32:04 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/11.html
+2025-03-09 17:32:04 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:32:05 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
+2025-03-09 17:32:10 [INFO] 関数 scrape_urls() を開始
+2025-03-09 17:32:10 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-09 17:32:10 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-09 17:32:10 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:32:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:32:11 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:32:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:32:11 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/1.html
+2025-03-09 17:32:11 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:32:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:32:12 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/2.html
+2025-03-09 17:32:12 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:32:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:32:12 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/3.html
+2025-03-09 17:32:12 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:32:13 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:32:13 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/1.html
+2025-03-09 17:32:13 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:32:14 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:32:14 [INFO] Fetching data from: https://ikkatsu-satei.com/c-hr.html
+2025-03-09 17:32:14 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:32:14 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:32:14 [ERROR] 関数 scrape_urls() でエラー発生: list indices must be integers or slices, not str
+2025-03-09 17:32:14 [CRITICAL] 未処理の例外発生: TypeError: list indices must be integers or slices, not str
+2025-03-09 17:36:05 [INFO] 関数 scrape_urls() を開始
+2025-03-09 17:36:05 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-09 17:36:05 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-09 17:36:05 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:05 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:06 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:06 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:06 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/1.html
+2025-03-09 17:36:06 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:06 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:06 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/1.html'}
+2025-03-09 17:36:06 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/2.html
+2025-03-09 17:36:06 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:06 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:06 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/2.html'}
+2025-03-09 17:36:06 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/3.html
+2025-03-09 17:36:06 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:06 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:06 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/3.html'}
+2025-03-09 17:36:06 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/1.html
+2025-03-09 17:36:06 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:07 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/1.html'}
+2025-03-09 17:36:07 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/2.html
+2025-03-09 17:36:07 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:07 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/2.html'}
+2025-03-09 17:36:07 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/3.html
+2025-03-09 17:36:07 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:07 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/3.html'}
+2025-03-09 17:36:07 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:07 [INFO] Processing paginated URL: https://ikkatsu-satei.com/mr_w/1.html
+2025-03-09 17:36:07 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:08 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:08 [INFO] データ保存: {'maker_name': 'スズキ', 'model_name': 'MRワゴン', 'grade_name': '10th_Anv_Ltd', 'year': '2012', 'mileage': '3', 'min_price': '169', 'max_price': '169', 'sc_url': 'https://ikkatsu-satei.com/mr_w/1.html'}
+2025-03-09 17:36:09 [INFO] Processing paginated URL: https://ikkatsu-satei.com/mr_w/2.html
+2025-03-09 17:36:09 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:10 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:10 [INFO] データ保存: {'maker_name': 'スズキ', 'model_name': 'MRワゴン', 'grade_name': 'L', 'year': '2015', 'mileage': '3', 'min_price': '219', 'max_price': '219', 'sc_url': 'https://ikkatsu-satei.com/mr_w/2.html'}
+2025-03-09 17:36:11 [INFO] Processing paginated URL: https://ikkatsu-satei.com/mr_w/3.html
+2025-03-09 17:36:11 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:11 [INFO] データ保存: {'maker_name': 'スズキ', 'model_name': 'MRワゴン', 'grade_name': 'X', 'year': '2012', 'mileage': '7', 'min_price': '105', 'max_price': '105', 'sc_url': 'https://ikkatsu-satei.com/mr_w/3.html'}
+2025-03-09 17:36:12 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/1.html
+2025-03-09 17:36:12 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:12 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/1.html'}
+2025-03-09 17:36:12 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/2.html
+2025-03-09 17:36:12 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:12 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/2.html'}
+2025-03-09 17:36:12 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/3.html
+2025-03-09 17:36:12 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:12 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/3.html'}
+2025-03-09 17:36:13 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:13 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:13 [INFO] Processing paginated URL: https://ikkatsu-satei.com/atrai_7/1.html
+2025-03-09 17:36:13 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:13 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:13 [INFO] データ保存: {'maker_name': 'ダイハツ', 'model_name': 'アトレー7', 'grade_name': 'CL_Ltdパッケ', 'year': '2001', 'mileage': '8', 'min_price': '129', 'max_price': '129', 'sc_url': 'https://ikkatsu-satei.com/atrai_7/1.html'}
+2025-03-09 17:36:15 [INFO] Processing paginated URL: https://ikkatsu-satei.com/atrai_7/2.html
+2025-03-09 17:36:15 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:15 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:15 [INFO] データ保存: {'maker_name': 'ダイハツ', 'model_name': 'アトレー7', 'grade_name': 'Xスポーティ', 'year': '2004', 'mileage': '8', 'min_price': '113', 'max_price': '113', 'sc_url': 'https://ikkatsu-satei.com/atrai_7/2.html'}
+2025-03-09 17:36:16 [INFO] Processing paginated URL: https://ikkatsu-satei.com/atrai_7/3.html
+2025-03-09 17:36:16 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:17 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:17 [INFO] データ保存: {'maker_name': 'ダイハツ', 'model_name': 'アトレー7', 'grade_name': 'Xスポーティ', 'year': '2004', 'mileage': '8', 'min_price': '113', 'max_price': '113', 'sc_url': 'https://ikkatsu-satei.com/atrai_7/3.html'}
+2025-03-09 17:36:18 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/1.html
+2025-03-09 17:36:18 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:18 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:18 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/1.html'}
+2025-03-09 17:36:18 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/2.html
+2025-03-09 17:36:18 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:19 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:19 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/2.html'}
+2025-03-09 17:36:19 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/3.html
+2025-03-09 17:36:19 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:19 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:19 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/3.html'}
+2025-03-09 17:36:19 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:19 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:19 [INFO] Processing paginated URL: https://ikkatsu-satei.com/c-hr/1.html
+2025-03-09 17:36:19 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:19 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:20 [INFO] データ保存: {'maker_name': 'トヨタ', 'model_name': 'C-HR', 'grade_name': 'Gモードネロセーフプラス3', 'year': '2023', 'mileage': '1', 'min_price': '195', 'max_price': '195', 'sc_url': 'https://ikkatsu-satei.com/c-hr/1.html'}
+2025-03-09 17:36:21 [INFO] Processing paginated URL: https://ikkatsu-satei.com/c-hr/2.html
+2025-03-09 17:36:21 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:21 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:21 [INFO] データ保存: {'maker_name': 'トヨタ', 'model_name': 'C-HR', 'grade_name': 'G-T', 'year': '2018', 'mileage': '7', 'min_price': '107', 'max_price': '107', 'sc_url': 'https://ikkatsu-satei.com/c-hr/2.html'}
+2025-03-09 17:36:22 [INFO] Processing paginated URL: https://ikkatsu-satei.com/c-hr/3.html
+2025-03-09 17:36:22 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:22 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:22 [INFO] データ保存: {'maker_name': 'トヨタ', 'model_name': 'C-HR', 'grade_name': 'G-T', 'year': '2019', 'mileage': '3', 'min_price': '170', 'max_price': '170', 'sc_url': 'https://ikkatsu-satei.com/c-hr/3.html'}
+2025-03-09 17:36:23 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/1.html
+2025-03-09 17:36:23 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:24 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:24 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/1.html'}
+2025-03-09 17:36:24 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/2.html
+2025-03-09 17:36:24 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:24 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:24 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/2.html'}
+2025-03-09 17:36:24 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/3.html
+2025-03-09 17:36:24 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:24 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:24 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/3.html'}
+2025-03-09 17:36:24 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:25 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:25 [INFO] Processing paginated URL: https://ikkatsu-satei.com/145_c/1.html
+2025-03-09 17:36:25 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:25 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:25 [INFO] Skipping: incomplete data: {'maker_name': 'ホンダ', 'model_name': '145クーペ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/145_c/1.html'}
+2025-03-09 17:36:25 [INFO] Processing paginated URL: https://ikkatsu-satei.com/145_c/2.html
+2025-03-09 17:36:25 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:25 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:25 [INFO] Skipping: incomplete data: {'maker_name': 'ホンダ', 'model_name': '145クーペ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/145_c/2.html'}
+2025-03-09 17:36:25 [INFO] Processing paginated URL: https://ikkatsu-satei.com/145_c/3.html
+2025-03-09 17:36:25 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:25 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:25 [INFO] Skipping: incomplete data: {'maker_name': 'ホンダ', 'model_name': '145クーペ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/145_c/3.html'}
+2025-03-09 17:36:25 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/1.html
+2025-03-09 17:36:25 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:26 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:26 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/1.html'}
+2025-03-09 17:36:26 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/2.html
+2025-03-09 17:36:26 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:26 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:26 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/2.html'}
+2025-03-09 17:36:26 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/3.html
+2025-03-09 17:36:26 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:26 [INFO] 関数 fetch_page() が正常に完了
+2025-03-09 17:36:26 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/3.html'}
+2025-03-09 17:36:26 [INFO] 関数 fetch_page() を開始
+2025-03-09 17:36:26 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
