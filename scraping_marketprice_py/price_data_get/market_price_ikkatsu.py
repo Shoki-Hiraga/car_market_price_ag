@@ -1,3 +1,4 @@
+# ガリバーとMOTAを組み合わせた専用処理（テーブル構造のデータを取得しつつ、ページネーションを指定する機能）
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
@@ -33,7 +34,7 @@ dataget_selectors = {
 }
 pagenations_min = 1
 pagenations_max = 200
-delay = random.uniform(2.5, 3.012) 
+delay = random.uniform(5, 12) 
 
 # スキップ条件
 sc_skip_conditions = [
@@ -84,13 +85,19 @@ def fetch_page(url):
         return None
 
 def extract_data(soup, selectors):
-    data = {}
-    for key, selector in selectors.items():
-        if selector == "url":
-            continue
-        elements = soup.select(selector)
-        data[key] = process_data(selector, elements[0].get_text(strip=True)) if elements else None
-    return data
+    data_list = []
+    elements_list = {key: soup.select(selector) for key, selector in selectors.items() if selector != "url"}
+
+    # 各データが複数取得できた場合、それぞれの行データを作成する
+    num_records = max(len(v) for v in elements_list.values() if v)  # 最も多いデータの個数を取得
+
+    for i in range(num_records):
+        data = {}
+        for key, elements in elements_list.items():
+            data[key] = process_data(selectors[key], elements[i].get_text(strip=True)) if i < len(elements) else None
+        data_list.append(data)
+
+    return data_list  # リスト形式で返す
 
 @log_decorator
 def scrape_urls():
@@ -104,9 +111,8 @@ def scrape_urls():
         for url in current_urls:
             soup = fetch_page(url)
             if soup:
-                # 楽天専用処理：URLからクエリパラメータを削除する処理を追加
-                links = [urljoin(website_url, a['href']).split('.html#DDLNS')[0] for a in soup.select(selector) if a.get('href')]
-                # 指定されたページネーションセレクタで範囲を結合
+                links = [urljoin(website_url, a['href']) for a in soup.select(selector) if a.get('href')]
+
                 if idx == select_pagenation_selectors:
                     for link in links:
                         clean_link = link.rstrip('.html')  # .html を削除
@@ -118,29 +124,28 @@ def scrape_urls():
                                 log_info(f"Skipping: recent URL: {paginated_url}")
                                 continue
 
-                            # ページを取得して、その中のリンクをさらに取得
                             paginated_soup = fetch_page(paginated_url)
                             if not paginated_soup:
                                 log_info(f"Skipping due to error or skip condition: {paginated_url}")
-                                break  # スキップ条件や404が出たら次のページネーションへ
+                                break
 
-                            # 最後のセレクタに基づいてデータ取得用のリンクを探す
-                            dataget_links = [urljoin(website_url, a['href']) for a in paginated_soup.select(pagenation_selectors[-1]) if a.get('href')]
+                            # **修正ポイント: extract_dataがリストを返す場合、最初のデータだけ取得**
+                            data = extract_data(paginated_soup, dataget_selectors)
 
-                            for dataget_link in dataget_links:
-                                log_info(f"Fetching data from: {dataget_link}")  # デバッグ用
-                                final_page = fetch_page(dataget_link)
-                                if final_page:
-                                    data = extract_data(final_page, dataget_selectors)
-                                    data["sc_url"] = dataget_link
+                            if isinstance(data, list):  # データがリストなら最初の1件を取得
+                                data = data[0] if data else None
 
-                                    if any(value is None for value in data.values()):
-                                        log_info(f"Skipping: incomplete data: {data}")
-                                        continue
+                            if data:
+                                data["sc_url"] = paginated_url  # URLを追加
 
-                                    log_info(f"データ保存: {data}")  # デバッグ用
-                                    save_to_db(data, TABLE_NAME)
-                                    time.sleep(delay)
+                                if any(value is None for value in data.values()):
+                                    log_info(f"Skipping: incomplete data: {data}")
+                                    continue
+
+                                log_info(f"データ保存: {data}")  # デバッグ用
+                                save_to_db(data, TABLE_NAME)
+                                time.sleep(delay)
+
                             time.sleep(delay)
                 else:
                     next_urls.extend(links)
