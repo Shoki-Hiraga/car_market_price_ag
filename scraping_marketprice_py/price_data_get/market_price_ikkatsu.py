@@ -27,8 +27,8 @@ dataget_selectors = {
     "grade_name": "section:nth-of-type(2) td:nth-of-type(4)",
     "year": "section:nth-of-type(2) td:nth-of-type(2)",
     "mileage": "section:nth-of-type(2) td:nth-of-type(5)",
-    "min_price": "section:nth-of-type(3) td:nth-of-type(4)",
-    "max_price": "section:nth-of-type(3) td:nth-of-type(3)",
+    "min_price": "td:nth-of-type(6)",
+    "max_price": "td:nth-of-type(6)",
     "sc_url": "url"
 }
 pagenations_min = 1

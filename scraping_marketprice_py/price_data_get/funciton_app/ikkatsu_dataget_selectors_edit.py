@@ -17,8 +17,9 @@ def process_data(selector, raw_data):
         return processed
     
     elif selector == "section:nth-of-type(2) td:nth-of-type(4)":
-        # そのまま返す（車種グレード名）
-        return raw_data
+        # 最初の半角スペースより前のテキストを削除
+        processed = re.sub(r'^\S+\s+', '', raw_data)
+        return processed
     
     elif selector == "section:nth-of-type(2) td:nth-of-type(2)":
         # 西暦4桁の数字を抽出
@@ -31,6 +32,13 @@ def process_data(selector, raw_data):
         if match:
             return match.group(1)  # 万の部分だけ取得
         return raw_data
+    
+    elif selector == "td:nth-of-type(6)":
+        # 金額から先頭3桁を取得（千円単位にする）
+        processed = re.sub(r'\D', '', raw_data)  # 数字以外を削除
+        if len(processed) >= 3:
+            return processed[:3]  # 先頭3桁を取得
+        return processed
     
     else:
         # 既存の処理（数値のみ抽出など）
