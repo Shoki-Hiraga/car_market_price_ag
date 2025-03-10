@@ -25,6 +25,12 @@
             @include('components.marketprice')
             @include('components.lead_contents')
 
+            <div class="price-summary">
+                <h3> {{ $model->model_name }}の買取統計情報 </h3>
+                <p>最小買取価格: {{ number_format($overallMinPrice) }} 万円</p>
+                <p>最大買取価格: {{ number_format($overallMaxPrice) }} 万円</p>
+                <p>平均買取 価格: {{ number_format($overallAvgPrice) }} 万円</p>
+            </div>
 
         <div class="table-container">
             <table border="1">
