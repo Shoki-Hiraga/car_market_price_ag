@@ -93,6 +93,14 @@ class ScGooModelController extends Controller
                 ];
             })->values();
 
+        // **価格の統計情報を計算**
+        $allMinPrices = $filteredMarketPricesModel->pluck('min_price')->filter();
+        $allMaxPrices = $filteredMarketPricesModel->pluck('max_price')->filter();
+
+        $overallMinPrice = $allMinPrices->min();
+        $overallMaxPrice = $allMaxPrices->max();
+        $overallAvgPrice = ($allMinPrices->avg() + $allMaxPrices->avg()) / 2;
+
         // MarketPriceMaster に存在するデータ数を表示
         $marketPriceCount = MarketPriceMaster::count();
 
@@ -102,7 +110,16 @@ class ScGooModelController extends Controller
         // **ModelContents からデータを取得**
         $modelContent = ModelContents::where('model_name_id', $id)->first();
 
-        return view('main.model_detail', compact('model', 'filteredMarketPricesModel', 'marketPriceCount', "canonicalUrl", "modelContent"));
+        return view('main.model_detail', compact(
+            'model', 
+            'filteredMarketPricesModel', 
+            'marketPriceCount', 
+            'canonicalUrl', 
+            'modelContent', 
+            'overallMinPrice', 
+            'overallMaxPrice', 
+            'overallAvgPrice'
+        ));
     }
     
     

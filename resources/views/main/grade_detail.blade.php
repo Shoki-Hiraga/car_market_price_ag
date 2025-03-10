@@ -24,6 +24,14 @@
     <br> 買取価格情報</h1>
     @include('components.marketprice')
     @include('components.lead_contents')
+    <div class="price-summary">
+        <h3>{{ $grade->grade_name }}の買取統計情報</h3>
+        <p>最小価格: {{ number_format($overallMinPrice) }} 万円 (走行距離: {{ number_format($minPriceMileage) }} km)</p>
+        <p>最大価格: {{ number_format($overallMaxPrice) }} 万円 (走行距離: {{ number_format($maxPriceMileage) }} km)</p>
+        <p>平均価格: {{ number_format($overallAvgPrice) }} 万円 (平均走行距離: {{ number_format($avgPriceMileage) }} km)</p>
+    </div>
+
+    
     <div class="table-container">
         <table border="1">
             <thead>

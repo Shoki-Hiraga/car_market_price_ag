@@ -79,6 +79,22 @@ class ScGooGradeController extends Controller
             ];
         });
 
+    // **価格の統計情報を計算**
+    $allMinPrices = $filteredMarketPricesGrade->pluck('min_price')->filter();
+    $allMaxPrices = $filteredMarketPricesGrade->pluck('max_price')->filter();
+
+    $overallMinPrice = $allMinPrices->min();
+    $overallMaxPrice = $allMaxPrices->max();
+    $overallAvgPrice = ($allMinPrices->avg() + $allMaxPrices->avg()) / 2;
+
+    // **走行距離の統計情報を取得**
+    $minPriceMileage = $filteredMarketPricesGrade->where('min_price', $overallMinPrice)->pluck('mileage')->first();
+    $maxPriceMileage = $filteredMarketPricesGrade->where('max_price', $overallMaxPrice)->pluck('mileage')->first();
+    $avgPriceMileage = $filteredMarketPricesGrade->whereBetween('min_price', [$overallMinPrice, $overallMaxPrice])
+    ->pluck('mileage')
+    ->avg();
+
+
         // MarketPriceMaster に存在するデータ数を表示
         $marketPriceCount = MarketPriceMaster::count();
  
@@ -88,7 +104,19 @@ class ScGooGradeController extends Controller
         // **ModelContents からデータを取得**
         $modelContent = ModelContents::where('model_name_id', $model_id)->first();
 
-    return view('main.grade_detail', compact('grade', 'filteredMarketPricesGrade', 'marketPriceCount', "canonicalUrl", "modelContent"));
+        return view('main.grade_detail', compact(
+            'grade', 
+            'filteredMarketPricesGrade', 
+            'marketPriceCount', 
+            'canonicalUrl', 
+            'modelContent', 
+            'overallMinPrice', 
+            'overallMaxPrice', 
+            'overallAvgPrice',
+            'minPriceMileage',
+            'maxPriceMileage',
+            'avgPriceMileage'
+        ));
     }
         
     
