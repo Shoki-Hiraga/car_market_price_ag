@@ -26,12 +26,19 @@
     @include('components.lead_contents')
     <div class="price-summary">
         <h3>{{ $grade->grade_name }}の買取統計情報</h3>
-        <p>最小価格: {{ number_format($overallMinPrice) }} 万円 (走行距離: {{ number_format($minPriceMileage) }} km)</p>
-        <p>最大価格: {{ number_format($overallMaxPrice) }} 万円 (走行距離: {{ number_format($maxPriceMileage) }} km)</p>
-        <p>平均価格: {{ number_format($overallAvgPrice) }} 万円 (平均走行距離: {{ number_format($avgPriceMileage) }} km)</p>
+<div class="price-summary">
+    @php
+        function formatMileage($mileage) {
+            return $mileage == 0 ? '1万km以下' : number_format($mileage) . '万km';
+        }
+    @endphp
+    <p>最小価格: {{ number_format($overallMinPrice) }} 万円 (走行距離: {{ formatMileage($minPriceMileage) }})</p>
+    <p>最大価格: {{ number_format($overallMaxPrice) }} 万円 (走行距離: {{ formatMileage($maxPriceMileage) }})</p>
+    <p>平均価格: {{ number_format($overallAvgPrice) }} 万円 (平均走行距離: {{ formatMileage($avgPriceMileage) }})</p>
+</div>
+
     </div>
 
-    
     <div class="table-container">
         <table border="1">
             <thead>
@@ -48,7 +55,7 @@
                 @foreach($filteredMarketPricesGrade as $marketprice)
                 <tr>
                     <td>{{ $marketprice->year }}年</td>
-                    <td>{{ number_format($marketprice->mileage) }} 万km</td>
+                    <td>{{ formatMileage($marketprice->mileage) }}</td>
                     <td>{{ number_format($marketprice->min_price) }} 万円</td>
                     <td>{{ number_format($marketprice->max_price) }} 万円</td>
                     <td>{{ $marketprice->model_number ?? 'N/A' }}</td>
