@@ -1,3 +1,4 @@
+# OLD_2025_02_02_171735_create_market_price_master_table.php とセット
 import mysql.connector
 import os
 from decimal import Decimal
@@ -65,64 +66,39 @@ def adjust_mileage(db_name, mileage):
         return mileage / 10
     return mileage
 
-def check_existing_record(cursor, row, min_price, max_price, mileage):
-    """
-    すでに同じデータが `market_price_master` に存在するか確認
-    """
-    check_query = """
-        SELECT EXISTS(
-            SELECT 1 FROM market_price_master 
-            WHERE maker_name_id = %s AND model_name_id = %s AND grade_name_id = %s
-            AND year = %s AND mileage = %s AND min_price = %s AND max_price = %s
-        )
-    """
-    cursor.execute(check_query, (
-        row['maker_name_id'], row['model_name_id'], row['grade_name_id'],
-        row['year'], mileage, min_price, max_price
-    ))
-    
-    result = cursor.fetchone()
-    return result[0] == 1  # すでに存在する場合 True を返す
-
 def insert_into_master(data, db_name):
     """
-    market_price_masterへデータを挿入（重複を防ぐ）
+    market_price_masterへデータを挿入
     """
     if not data:
         return
     
     conn = mysql.connector.connect(**DB_CONFIG)
     cursor = conn.cursor()
-
     insert_query = """
         INSERT INTO market_price_master (
             maker_name_id, model_name_id, grade_name_id, year, mileage,
             min_price, max_price, sc_url, created_at, updated_at
         ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, NOW(), NOW())
+        ON DUPLICATE KEY UPDATE
+            min_price = VALUES(min_price),
+            max_price = VALUES(max_price),
+            sc_url = VALUES(sc_url),
+            updated_at = NOW()
     """
-
+    
     for row in data:
         # min_price と max_price の調整
         min_price, max_price = adjust_prices(row)
         
-        # mileage の調整（調整後の値でチェックする）
+        # mileage の調整
         mileage = adjust_mileage(db_name, row['mileage'])
 
-        # 既存データのチェック（完全一致するデータがある場合はスキップ）
-        if check_existing_record(cursor, row, min_price, max_price, mileage):
-            print(f"【スキップ】重複データ: {row['maker_name_id']}, {row['model_name_id']}, {row['grade_name_id']}, {row['year']}, {mileage}, {min_price}, {max_price}")
-            continue  # 既に同じレコードが存在する場合は挿入しない
-
-        try:
-            # 挿入処理
-            cursor.execute(insert_query, (
-                row['maker_name_id'], row['model_name_id'], row['grade_name_id'],
-                row['year'], mileage, min_price, max_price, row['sc_url']
-            ))
-        except mysql.connector.errors.IntegrityError as e:
-            print(f"【エラー】重複データによる挿入失敗: {e}")
-            continue  # エラー発生時はスキップ
-
+        cursor.execute(insert_query, (
+            row['maker_name_id'], row['model_name_id'], row['grade_name_id'],
+            row['year'], mileage, min_price, max_price, row['sc_url']
+        ))
+    
     conn.commit()
     cursor.close()
     conn.close()
