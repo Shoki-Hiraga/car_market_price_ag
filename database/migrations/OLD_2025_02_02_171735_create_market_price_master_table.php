@@ -24,8 +24,8 @@ class CreateMarketPriceMasterTable extends Migration
             $table->timestamps();
             // ユニーク制約に短縮したインデックス名を指定
             $table->unique(
-                ['maker_name_id', 'model_name_id', 'grade_name_id', 'year', 'mileage', 'min_price', 'max_price'], 
-                'mpm_unique_price_idx'
+                ['maker_name_id', 'model_name_id', 'grade_name_id', 'year', 'mileage'], 
+                'mpm_unique_idx' // インデックス名を短縮
             );
         });
     }
