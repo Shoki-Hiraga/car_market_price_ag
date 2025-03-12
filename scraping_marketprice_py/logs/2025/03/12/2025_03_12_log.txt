@@ -1,0 +1,1122 @@
+2025-03-12 22:31:52 [INFO] 関数 scrape_urls() を開始
+2025-03-12 22:31:52 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-12 22:31:52 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-12 22:31:52 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:31:52 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:04 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:04 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:04 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/1.html
+2025-03-12 22:32:04 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:04 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:04 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/1.html'}
+2025-03-12 22:32:04 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/2.html
+2025-03-12 22:32:04 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:05 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:05 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/2.html'}
+2025-03-12 22:32:05 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/3.html
+2025-03-12 22:32:05 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:05 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:05 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/3.html'}
+2025-03-12 22:32:05 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/4.html
+2025-03-12 22:32:05 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:06 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:06 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/4.html'}
+2025-03-12 22:32:06 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/5.html
+2025-03-12 22:32:06 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:06 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:06 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/5.html'}
+2025-03-12 22:32:06 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/6.html
+2025-03-12 22:32:06 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:07 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/6.html'}
+2025-03-12 22:32:07 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/7.html
+2025-03-12 22:32:07 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:07 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/7.html'}
+2025-03-12 22:32:07 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/8.html
+2025-03-12 22:32:07 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:08 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:08 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/8.html'}
+2025-03-12 22:32:08 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/9.html
+2025-03-12 22:32:08 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:08 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:08 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/9.html'}
+2025-03-12 22:32:08 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/10.html
+2025-03-12 22:32:08 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:09 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:09 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/10.html'}
+2025-03-12 22:32:09 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/11.html
+2025-03-12 22:32:09 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:09 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:09 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/11.html'}
+2025-03-12 22:32:09 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/12.html
+2025-03-12 22:32:09 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:09 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:09 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/12.html'}
+2025-03-12 22:32:09 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/13.html
+2025-03-12 22:32:09 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:10 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:10 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/13.html'}
+2025-03-12 22:32:10 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/14.html
+2025-03-12 22:32:10 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:10 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:10 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/14.html'}
+2025-03-12 22:32:10 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/15.html
+2025-03-12 22:32:10 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:11 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/15.html'}
+2025-03-12 22:32:11 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/16.html
+2025-03-12 22:32:11 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:11 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/16.html'}
+2025-03-12 22:32:11 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/17.html
+2025-03-12 22:32:11 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:12 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/17.html'}
+2025-03-12 22:32:12 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/18.html
+2025-03-12 22:32:12 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:12 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/18.html'}
+2025-03-12 22:32:12 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/19.html
+2025-03-12 22:32:12 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:13 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:13 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/19.html'}
+2025-03-12 22:32:13 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/20.html
+2025-03-12 22:32:13 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:13 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:13 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/20.html'}
+2025-03-12 22:32:13 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/21.html
+2025-03-12 22:32:13 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:14 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:14 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/21.html'}
+2025-03-12 22:32:14 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/22.html
+2025-03-12 22:32:14 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:14 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:14 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/22.html'}
+2025-03-12 22:32:14 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/23.html
+2025-03-12 22:32:14 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:15 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:15 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/23.html'}
+2025-03-12 22:32:15 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/24.html
+2025-03-12 22:32:15 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:15 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:15 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/24.html'}
+2025-03-12 22:32:15 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/25.html
+2025-03-12 22:32:15 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:16 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:16 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/25.html'}
+2025-03-12 22:32:16 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/26.html
+2025-03-12 22:32:16 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:17 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:17 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/26.html'}
+2025-03-12 22:32:17 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/27.html
+2025-03-12 22:32:17 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:17 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:17 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/27.html'}
+2025-03-12 22:32:17 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/28.html
+2025-03-12 22:32:17 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:18 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:18 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/28.html'}
+2025-03-12 22:32:18 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/29.html
+2025-03-12 22:32:18 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:19 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:19 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/29.html'}
+2025-03-12 22:32:19 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/30.html
+2025-03-12 22:32:19 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:19 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:19 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/30.html'}
+2025-03-12 22:32:19 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/31.html
+2025-03-12 22:32:19 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:20 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:20 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/31.html'}
+2025-03-12 22:32:20 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/32.html
+2025-03-12 22:32:20 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:20 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:20 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/32.html'}
+2025-03-12 22:32:20 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/33.html
+2025-03-12 22:32:20 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:21 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:21 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/33.html'}
+2025-03-12 22:32:21 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/34.html
+2025-03-12 22:32:21 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:21 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:21 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/34.html'}
+2025-03-12 22:32:21 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/35.html
+2025-03-12 22:32:21 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:22 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:22 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/35.html'}
+2025-03-12 22:32:22 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/36.html
+2025-03-12 22:32:22 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:22 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:22 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/36.html'}
+2025-03-12 22:32:22 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/37.html
+2025-03-12 22:32:22 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:23 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:23 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/37.html'}
+2025-03-12 22:32:23 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/38.html
+2025-03-12 22:32:23 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:23 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:24 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/38.html'}
+2025-03-12 22:32:24 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/39.html
+2025-03-12 22:32:24 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:24 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:24 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/39.html'}
+2025-03-12 22:32:24 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/40.html
+2025-03-12 22:32:24 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:24 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:24 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/40.html'}
+2025-03-12 22:32:24 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/41.html
+2025-03-12 22:32:24 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:25 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:25 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/41.html'}
+2025-03-12 22:32:25 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/42.html
+2025-03-12 22:32:25 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:25 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:25 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/42.html'}
+2025-03-12 22:32:25 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/43.html
+2025-03-12 22:32:25 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:26 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:26 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/43.html'}
+2025-03-12 22:32:26 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/44.html
+2025-03-12 22:32:26 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:26 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:26 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/44.html'}
+2025-03-12 22:32:26 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/45.html
+2025-03-12 22:32:26 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:27 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:27 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/45.html'}
+2025-03-12 22:32:27 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/46.html
+2025-03-12 22:32:27 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:27 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:27 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/46.html'}
+2025-03-12 22:32:27 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/47.html
+2025-03-12 22:32:27 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:28 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:28 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/47.html'}
+2025-03-12 22:32:28 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/48.html
+2025-03-12 22:32:28 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:28 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:28 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/48.html'}
+2025-03-12 22:32:28 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/49.html
+2025-03-12 22:32:28 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:29 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:29 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/49.html'}
+2025-03-12 22:32:29 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/50.html
+2025-03-12 22:32:29 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:29 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:29 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/50.html'}
+2025-03-12 22:32:29 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/51.html
+2025-03-12 22:32:29 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:30 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:30 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/51.html'}
+2025-03-12 22:32:30 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/52.html
+2025-03-12 22:32:30 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:30 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:30 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/52.html'}
+2025-03-12 22:32:30 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/53.html
+2025-03-12 22:32:30 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:30 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:30 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/53.html'}
+2025-03-12 22:32:30 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/54.html
+2025-03-12 22:32:30 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:31 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:31 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/54.html'}
+2025-03-12 22:32:31 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/55.html
+2025-03-12 22:32:31 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:31 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:31 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/55.html'}
+2025-03-12 22:32:31 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/56.html
+2025-03-12 22:32:31 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:32 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:32 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/56.html'}
+2025-03-12 22:32:32 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/57.html
+2025-03-12 22:32:32 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:32 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:32 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/57.html'}
+2025-03-12 22:32:32 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/58.html
+2025-03-12 22:32:32 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:33 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:33 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/58.html'}
+2025-03-12 22:32:33 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/59.html
+2025-03-12 22:32:33 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:33 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:33 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/59.html'}
+2025-03-12 22:32:33 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/60.html
+2025-03-12 22:32:33 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:33 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:33 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/60.html'}
+2025-03-12 22:32:33 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/61.html
+2025-03-12 22:32:33 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:34 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:34 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/61.html'}
+2025-03-12 22:32:34 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/62.html
+2025-03-12 22:32:34 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:35 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:35 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/62.html'}
+2025-03-12 22:32:35 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/63.html
+2025-03-12 22:32:35 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:35 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:35 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/63.html'}
+2025-03-12 22:32:35 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/64.html
+2025-03-12 22:32:35 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:36 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:36 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/64.html'}
+2025-03-12 22:32:36 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/65.html
+2025-03-12 22:32:36 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:36 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:36 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/65.html'}
+2025-03-12 22:32:36 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/66.html
+2025-03-12 22:32:36 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:37 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:37 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/66.html'}
+2025-03-12 22:32:37 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/67.html
+2025-03-12 22:32:37 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:37 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:37 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/67.html'}
+2025-03-12 22:32:37 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/68.html
+2025-03-12 22:32:37 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:38 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:38 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/68.html'}
+2025-03-12 22:32:38 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/69.html
+2025-03-12 22:32:38 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:38 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:38 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/69.html'}
+2025-03-12 22:32:38 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/70.html
+2025-03-12 22:32:38 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:39 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:39 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/70.html'}
+2025-03-12 22:32:39 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/71.html
+2025-03-12 22:32:39 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:40 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:40 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/71.html'}
+2025-03-12 22:32:40 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/72.html
+2025-03-12 22:32:40 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:40 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:40 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/72.html'}
+2025-03-12 22:32:40 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/73.html
+2025-03-12 22:32:40 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:41 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:41 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/73.html'}
+2025-03-12 22:32:41 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/74.html
+2025-03-12 22:32:41 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:42 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:42 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/74.html'}
+2025-03-12 22:32:42 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/75.html
+2025-03-12 22:32:42 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:42 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:42 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/75.html'}
+2025-03-12 22:32:42 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/76.html
+2025-03-12 22:32:42 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:43 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:43 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/76.html'}
+2025-03-12 22:32:43 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/77.html
+2025-03-12 22:32:43 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:43 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:43 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/77.html'}
+2025-03-12 22:32:43 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/78.html
+2025-03-12 22:32:43 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:44 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:44 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/78.html'}
+2025-03-12 22:32:44 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/79.html
+2025-03-12 22:32:44 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:44 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:44 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/79.html'}
+2025-03-12 22:32:44 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/80.html
+2025-03-12 22:32:44 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:45 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:45 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/80.html'}
+2025-03-12 22:32:45 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/81.html
+2025-03-12 22:32:45 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:45 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:45 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/81.html'}
+2025-03-12 22:32:45 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/82.html
+2025-03-12 22:32:45 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:46 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:46 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/82.html'}
+2025-03-12 22:32:46 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/83.html
+2025-03-12 22:32:46 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:46 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:46 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/83.html'}
+2025-03-12 22:32:46 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/84.html
+2025-03-12 22:32:46 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:46 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:46 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/84.html'}
+2025-03-12 22:32:46 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/85.html
+2025-03-12 22:32:46 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:47 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:47 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/85.html'}
+2025-03-12 22:32:47 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/86.html
+2025-03-12 22:32:47 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:47 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:47 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/86.html'}
+2025-03-12 22:32:47 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/87.html
+2025-03-12 22:32:47 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:48 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:48 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/87.html'}
+2025-03-12 22:32:48 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/88.html
+2025-03-12 22:32:48 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:48 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:48 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/88.html'}
+2025-03-12 22:32:48 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/89.html
+2025-03-12 22:32:48 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:49 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:49 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/89.html'}
+2025-03-12 22:32:49 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/90.html
+2025-03-12 22:32:49 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:50 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:50 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/90.html'}
+2025-03-12 22:32:50 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/91.html
+2025-03-12 22:32:50 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:51 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:51 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/91.html'}
+2025-03-12 22:32:51 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/92.html
+2025-03-12 22:32:51 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:51 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:51 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/92.html'}
+2025-03-12 22:32:51 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/93.html
+2025-03-12 22:32:51 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:52 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:52 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/93.html'}
+2025-03-12 22:32:52 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/94.html
+2025-03-12 22:32:52 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:52 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:52 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/94.html'}
+2025-03-12 22:32:52 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/95.html
+2025-03-12 22:32:52 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:53 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:53 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/95.html'}
+2025-03-12 22:32:53 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/96.html
+2025-03-12 22:32:53 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:54 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:54 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/96.html'}
+2025-03-12 22:32:54 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/97.html
+2025-03-12 22:32:54 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:55 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:55 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/97.html'}
+2025-03-12 22:32:55 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/98.html
+2025-03-12 22:32:55 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:56 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:56 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/98.html'}
+2025-03-12 22:32:56 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/99.html
+2025-03-12 22:32:56 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:56 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:56 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/99.html'}
+2025-03-12 22:32:56 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/100.html
+2025-03-12 22:32:56 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:57 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:57 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/100.html'}
+2025-03-12 22:32:57 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/101.html
+2025-03-12 22:32:57 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:57 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:57 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/101.html'}
+2025-03-12 22:32:57 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/102.html
+2025-03-12 22:32:57 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:58 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:58 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/102.html'}
+2025-03-12 22:32:58 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/103.html
+2025-03-12 22:32:58 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:58 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:58 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/103.html'}
+2025-03-12 22:32:58 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/104.html
+2025-03-12 22:32:58 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:59 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:59 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/104.html'}
+2025-03-12 22:32:59 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/105.html
+2025-03-12 22:32:59 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:32:59 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:32:59 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/105.html'}
+2025-03-12 22:32:59 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/106.html
+2025-03-12 22:32:59 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:00 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:00 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/106.html'}
+2025-03-12 22:33:00 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/107.html
+2025-03-12 22:33:00 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:00 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:00 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/107.html'}
+2025-03-12 22:33:00 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/108.html
+2025-03-12 22:33:00 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:01 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:01 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/108.html'}
+2025-03-12 22:33:01 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/109.html
+2025-03-12 22:33:01 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:01 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:01 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/109.html'}
+2025-03-12 22:33:01 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/110.html
+2025-03-12 22:33:01 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:02 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:02 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/110.html'}
+2025-03-12 22:33:02 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/111.html
+2025-03-12 22:33:02 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:02 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:02 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/111.html'}
+2025-03-12 22:33:02 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/112.html
+2025-03-12 22:33:02 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:03 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:03 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/112.html'}
+2025-03-12 22:33:03 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/113.html
+2025-03-12 22:33:03 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:03 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:03 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/113.html'}
+2025-03-12 22:33:03 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/114.html
+2025-03-12 22:33:03 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:04 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:04 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/114.html'}
+2025-03-12 22:33:04 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/115.html
+2025-03-12 22:33:04 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:04 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:04 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/115.html'}
+2025-03-12 22:33:04 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/116.html
+2025-03-12 22:33:04 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:05 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:05 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/116.html'}
+2025-03-12 22:33:05 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/117.html
+2025-03-12 22:33:05 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:05 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:05 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/117.html'}
+2025-03-12 22:33:05 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/118.html
+2025-03-12 22:33:05 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:06 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:06 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/118.html'}
+2025-03-12 22:33:06 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/119.html
+2025-03-12 22:33:06 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:06 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:06 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/119.html'}
+2025-03-12 22:33:06 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/120.html
+2025-03-12 22:33:06 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:07 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/120.html'}
+2025-03-12 22:33:07 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/121.html
+2025-03-12 22:33:07 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:07 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/121.html'}
+2025-03-12 22:33:07 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/122.html
+2025-03-12 22:33:07 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:08 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:08 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/122.html'}
+2025-03-12 22:33:08 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/123.html
+2025-03-12 22:33:08 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:08 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:08 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/123.html'}
+2025-03-12 22:33:08 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/124.html
+2025-03-12 22:33:08 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:09 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:09 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/124.html'}
+2025-03-12 22:33:09 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/125.html
+2025-03-12 22:33:09 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:09 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:09 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/125.html'}
+2025-03-12 22:33:09 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/126.html
+2025-03-12 22:33:09 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:10 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:10 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/126.html'}
+2025-03-12 22:33:10 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/127.html
+2025-03-12 22:33:10 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:10 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:10 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/127.html'}
+2025-03-12 22:33:10 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/128.html
+2025-03-12 22:33:10 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:11 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/128.html'}
+2025-03-12 22:33:11 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/129.html
+2025-03-12 22:33:11 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:11 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/129.html'}
+2025-03-12 22:33:11 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/130.html
+2025-03-12 22:33:11 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:12 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/130.html'}
+2025-03-12 22:33:12 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/131.html
+2025-03-12 22:33:12 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:12 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/131.html'}
+2025-03-12 22:33:12 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/132.html
+2025-03-12 22:33:12 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:12 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/132.html'}
+2025-03-12 22:33:12 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/133.html
+2025-03-12 22:33:12 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:13 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:13 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/133.html'}
+2025-03-12 22:33:13 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/134.html
+2025-03-12 22:33:13 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:13 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:14 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/134.html'}
+2025-03-12 22:33:14 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/135.html
+2025-03-12 22:33:14 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:14 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:14 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/135.html'}
+2025-03-12 22:33:14 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/136.html
+2025-03-12 22:33:14 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:14 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:14 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/136.html'}
+2025-03-12 22:33:14 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/137.html
+2025-03-12 22:33:14 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:15 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:15 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/137.html'}
+2025-03-12 22:33:15 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/138.html
+2025-03-12 22:33:15 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:15 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:15 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/138.html'}
+2025-03-12 22:33:15 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/139.html
+2025-03-12 22:33:15 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:16 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:16 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/139.html'}
+2025-03-12 22:33:16 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/140.html
+2025-03-12 22:33:16 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:16 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:16 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/140.html'}
+2025-03-12 22:33:16 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/141.html
+2025-03-12 22:33:16 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:17 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:17 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/141.html'}
+2025-03-12 22:33:17 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/142.html
+2025-03-12 22:33:17 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:17 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:17 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/142.html'}
+2025-03-12 22:33:17 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/143.html
+2025-03-12 22:33:17 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:17 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:17 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/143.html'}
+2025-03-12 22:33:17 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/144.html
+2025-03-12 22:33:17 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:18 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:18 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/144.html'}
+2025-03-12 22:33:18 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/145.html
+2025-03-12 22:33:18 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:18 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:18 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/145.html'}
+2025-03-12 22:33:18 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/146.html
+2025-03-12 22:33:18 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:19 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:19 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/146.html'}
+2025-03-12 22:33:19 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/147.html
+2025-03-12 22:33:19 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:19 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:19 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/147.html'}
+2025-03-12 22:33:19 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/148.html
+2025-03-12 22:33:19 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:20 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:20 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/148.html'}
+2025-03-12 22:33:20 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/149.html
+2025-03-12 22:33:20 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:20 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:20 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/149.html'}
+2025-03-12 22:33:20 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/150.html
+2025-03-12 22:33:20 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:21 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:21 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/150.html'}
+2025-03-12 22:33:21 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/151.html
+2025-03-12 22:33:21 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:21 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:21 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/151.html'}
+2025-03-12 22:33:21 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/152.html
+2025-03-12 22:33:21 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:22 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:22 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/152.html'}
+2025-03-12 22:33:22 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/153.html
+2025-03-12 22:33:22 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:22 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:22 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/153.html'}
+2025-03-12 22:33:22 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/154.html
+2025-03-12 22:33:22 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:23 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:23 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/154.html'}
+2025-03-12 22:33:23 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/155.html
+2025-03-12 22:33:23 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:23 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:23 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/155.html'}
+2025-03-12 22:33:23 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/156.html
+2025-03-12 22:33:23 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:24 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:24 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/156.html'}
+2025-03-12 22:33:24 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/157.html
+2025-03-12 22:33:24 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:24 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:24 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/157.html'}
+2025-03-12 22:33:24 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/158.html
+2025-03-12 22:33:24 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:25 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:25 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/158.html'}
+2025-03-12 22:33:25 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/159.html
+2025-03-12 22:33:25 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:26 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:26 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/159.html'}
+2025-03-12 22:33:26 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/160.html
+2025-03-12 22:33:26 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:27 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:27 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/160.html'}
+2025-03-12 22:33:27 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/161.html
+2025-03-12 22:33:27 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:27 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:27 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/161.html'}
+2025-03-12 22:33:27 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/162.html
+2025-03-12 22:33:27 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:28 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:28 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/162.html'}
+2025-03-12 22:33:28 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/163.html
+2025-03-12 22:33:28 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:28 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:28 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/163.html'}
+2025-03-12 22:33:28 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/164.html
+2025-03-12 22:33:28 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:29 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:29 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/164.html'}
+2025-03-12 22:33:29 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/165.html
+2025-03-12 22:33:29 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:29 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:29 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/165.html'}
+2025-03-12 22:33:29 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/166.html
+2025-03-12 22:33:29 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:30 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:30 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/166.html'}
+2025-03-12 22:33:30 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/167.html
+2025-03-12 22:33:30 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:30 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:30 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/167.html'}
+2025-03-12 22:33:30 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/168.html
+2025-03-12 22:33:30 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:31 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:31 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/168.html'}
+2025-03-12 22:33:31 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/169.html
+2025-03-12 22:33:31 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:31 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:31 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/169.html'}
+2025-03-12 22:33:31 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/170.html
+2025-03-12 22:33:31 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:32 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:32 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/170.html'}
+2025-03-12 22:33:32 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/171.html
+2025-03-12 22:33:32 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:32 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:32 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/171.html'}
+2025-03-12 22:33:32 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/172.html
+2025-03-12 22:33:32 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:32 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:32 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/172.html'}
+2025-03-12 22:33:32 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/173.html
+2025-03-12 22:33:32 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:33 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:33 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/173.html'}
+2025-03-12 22:33:33 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/174.html
+2025-03-12 22:33:33 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:33 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:33 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/174.html'}
+2025-03-12 22:33:33 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/175.html
+2025-03-12 22:33:33 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:34 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:34 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/175.html'}
+2025-03-12 22:33:34 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/176.html
+2025-03-12 22:33:34 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:34 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:34 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/176.html'}
+2025-03-12 22:33:34 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/177.html
+2025-03-12 22:33:34 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:35 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:35 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/177.html'}
+2025-03-12 22:33:35 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/178.html
+2025-03-12 22:33:35 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:35 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:35 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/178.html'}
+2025-03-12 22:33:35 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/179.html
+2025-03-12 22:33:35 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:36 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:36 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/179.html'}
+2025-03-12 22:33:36 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/180.html
+2025-03-12 22:33:36 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:36 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:36 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/180.html'}
+2025-03-12 22:33:36 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/181.html
+2025-03-12 22:33:36 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:37 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:37 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/181.html'}
+2025-03-12 22:33:37 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/182.html
+2025-03-12 22:33:37 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:37 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:37 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/182.html'}
+2025-03-12 22:33:37 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/183.html
+2025-03-12 22:33:37 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:38 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:38 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/183.html'}
+2025-03-12 22:33:38 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/184.html
+2025-03-12 22:33:38 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:38 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:38 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/184.html'}
+2025-03-12 22:33:38 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/185.html
+2025-03-12 22:33:38 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:39 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:39 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/185.html'}
+2025-03-12 22:33:39 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/186.html
+2025-03-12 22:33:39 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:39 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:39 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/186.html'}
+2025-03-12 22:33:39 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/187.html
+2025-03-12 22:33:39 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:40 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:40 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/187.html'}
+2025-03-12 22:33:40 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/188.html
+2025-03-12 22:33:40 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:40 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:40 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/188.html'}
+2025-03-12 22:33:40 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/189.html
+2025-03-12 22:33:40 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:41 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:41 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/189.html'}
+2025-03-12 22:33:41 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/190.html
+2025-03-12 22:33:41 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:41 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:41 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/190.html'}
+2025-03-12 22:33:41 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/191.html
+2025-03-12 22:33:41 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:42 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:42 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/191.html'}
+2025-03-12 22:33:42 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/192.html
+2025-03-12 22:33:42 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:42 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:42 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/192.html'}
+2025-03-12 22:33:42 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/193.html
+2025-03-12 22:33:42 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:43 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:43 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/193.html'}
+2025-03-12 22:33:43 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/194.html
+2025-03-12 22:33:43 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:43 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:43 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/194.html'}
+2025-03-12 22:33:43 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/195.html
+2025-03-12 22:33:43 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:44 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:44 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/195.html'}
+2025-03-12 22:33:44 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/196.html
+2025-03-12 22:33:44 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:45 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:45 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/196.html'}
+2025-03-12 22:33:45 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/197.html
+2025-03-12 22:33:45 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:45 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:45 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/197.html'}
+2025-03-12 22:33:45 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/198.html
+2025-03-12 22:33:45 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:46 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:46 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/198.html'}
+2025-03-12 22:33:46 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/199.html
+2025-03-12 22:33:46 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:47 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:47 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/199.html'}
+2025-03-12 22:33:47 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/200.html
+2025-03-12 22:33:47 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:48 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:48 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/200.html'}
+2025-03-12 22:33:48 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/1.html
+2025-03-12 22:33:48 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:49 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:49 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/1.html'}
+2025-03-12 22:33:49 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/2.html
+2025-03-12 22:33:49 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:49 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:49 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/2.html'}
+2025-03-12 22:33:49 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/3.html
+2025-03-12 22:33:49 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:50 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:50 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/3.html'}
+2025-03-12 22:33:50 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/4.html
+2025-03-12 22:33:50 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:50 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:50 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/4.html'}
+2025-03-12 22:33:50 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/5.html
+2025-03-12 22:33:50 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:51 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:51 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/5.html'}
+2025-03-12 22:33:51 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/6.html
+2025-03-12 22:33:51 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:51 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:51 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/6.html'}
+2025-03-12 22:33:51 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/7.html
+2025-03-12 22:33:51 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:52 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:52 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/7.html'}
+2025-03-12 22:33:52 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/8.html
+2025-03-12 22:33:52 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:52 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:52 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/8.html'}
+2025-03-12 22:33:52 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/9.html
+2025-03-12 22:33:52 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:53 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:53 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/9.html'}
+2025-03-12 22:33:53 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/10.html
+2025-03-12 22:33:53 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:53 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:53 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/10.html'}
+2025-03-12 22:33:53 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/11.html
+2025-03-12 22:33:53 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:54 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:33:54 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/11.html'}
+2025-03-12 22:33:54 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/12.html
+2025-03-12 22:33:54 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:33:54 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
+2025-03-12 22:35:16 [INFO] 関数 scrape_urls() を開始
+2025-03-12 22:35:16 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-12 22:35:16 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-12 22:35:16 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:35:17 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:35:18 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:35:18 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:35:18 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska.htmlpage1
+2025-03-12 22:35:18 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:35:18 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/aska.htmlpage1
+2025-03-12 22:35:18 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:35:18 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/aska.htmlpage1
+2025-03-12 22:35:18 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota.htmlpage1
+2025-03-12 22:35:18 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:35:19 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/toyota.htmlpage1
+2025-03-12 22:35:19 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:35:19 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/toyota.htmlpage1
+2025-03-12 22:35:20 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:35:20 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:35:20 [INFO] Processing paginated URL: https://ikkatsu-satei.com/mr_w.htmlpage1
+2025-03-12 22:35:20 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:35:21 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/mr_w.htmlpage1
+2025-03-12 22:35:21 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:35:21 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/mr_w.htmlpage1
+2025-03-12 22:35:21 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota.htmlpage1
+2025-03-12 22:35:21 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:35:21 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
+2025-03-12 22:36:11 [INFO] 関数 scrape_urls() を開始
+2025-03-12 22:36:11 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-12 22:36:11 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-12 22:36:11 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:36:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:36:12 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:36:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:36:12 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska.htmltest1
+2025-03-12 22:36:12 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:36:12 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/aska.htmltest1
+2025-03-12 22:36:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:36:12 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/aska.htmltest1
+2025-03-12 22:36:12 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota.htmltest1
+2025-03-12 22:36:12 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:36:13 [ERROR] 404 Error for URL: https://ikkatsu-satei.com/toyota.htmltest1
+2025-03-12 22:36:13 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:36:13 [INFO] Skipping due to error or skip condition: https://ikkatsu-satei.com/toyota.htmltest1
+2025-03-12 22:36:13 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
+2025-03-12 22:39:16 [INFO] 関数 scrape_urls() を開始
+2025-03-12 22:39:16 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-12 22:39:16 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-12 22:39:16 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:39:16 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:39:18 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:39:18 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:39:18 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/1.html
+2025-03-12 22:39:18 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:39:18 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:39:18 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/1.html'}
+2025-03-12 22:39:19 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/2.html
+2025-03-12 22:39:19 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:39:20 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:39:20 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/2.html'}
+2025-03-12 22:39:21 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/3.html
+2025-03-12 22:39:21 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:39:21 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:39:21 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/3.html'}
+2025-03-12 22:39:22 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/4.html
+2025-03-12 22:39:22 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:39:23 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:39:23 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/4.html'}
+2025-03-12 22:39:24 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/5.html
+2025-03-12 22:39:24 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:39:24 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:39:24 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/5.html'}
+2025-03-12 22:39:25 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/6.html
+2025-03-12 22:39:25 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:39:25 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:39:25 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/6.html'}
+2025-03-12 22:39:27 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/7.html
+2025-03-12 22:39:27 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:39:27 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:39:27 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/7.html'}
+2025-03-12 22:39:28 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/8.html
+2025-03-12 22:39:28 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:39:28 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:39:28 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/8.html'}
+2025-03-12 22:39:29 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
+2025-03-12 22:40:11 [INFO] 関数 scrape_urls() を開始
+2025-03-12 22:40:11 [INFO] Starting scrape from: https://ikkatsu-satei.com/popular.html
+
+2025-03-12 22:40:11 [INFO] Initial URLs: ['https://ikkatsu-satei.com/popular.html']
+2025-03-12 22:40:11 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:12 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:12 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/1.html
+2025-03-12 22:40:12 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:12 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/1.html'}
+2025-03-12 22:40:13 [INFO] Processing paginated URL: https://ikkatsu-satei.com/aska/2.html
+2025-03-12 22:40:13 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:13 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:13 [INFO] Skipping: incomplete data: {'maker_name': 'いすゞ', 'model_name': 'アスカ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/aska/2.html'}
+2025-03-12 22:40:14 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/1.html
+2025-03-12 22:40:14 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:14 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:14 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/1.html'}
+2025-03-12 22:40:15 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/2.html
+2025-03-12 22:40:15 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:15 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:15 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/2.html'}
+2025-03-12 22:40:17 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:17 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:17 [INFO] Processing paginated URL: https://ikkatsu-satei.com/mr_w/1.html
+2025-03-12 22:40:17 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:17 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:17 [INFO] データ保存: {'maker_name': 'スズキ', 'model_name': 'MRワゴン', 'grade_name': '10th_Anv_Ltd', 'year': '2012', 'mileage': '3', 'min_price': '169', 'max_price': '169', 'sc_url': 'https://ikkatsu-satei.com/mr_w/1.html'}
+2025-03-12 22:40:20 [INFO] Processing paginated URL: https://ikkatsu-satei.com/mr_w/2.html
+2025-03-12 22:40:20 [INFO] Skipping: recent URL: https://ikkatsu-satei.com/mr_w/2.html
+2025-03-12 22:40:20 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/1.html
+2025-03-12 22:40:20 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:20 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:20 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/1.html'}
+2025-03-12 22:40:21 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/2.html
+2025-03-12 22:40:21 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:21 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:21 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/2.html'}
+2025-03-12 22:40:22 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:23 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:23 [INFO] Processing paginated URL: https://ikkatsu-satei.com/atrai_7/1.html
+2025-03-12 22:40:23 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:23 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:23 [INFO] データ保存: {'maker_name': 'ダイハツ', 'model_name': 'アトレー7', 'grade_name': 'CL_Ltdパッケ', 'year': '2001', 'mileage': '8', 'min_price': '129', 'max_price': '129', 'sc_url': 'https://ikkatsu-satei.com/atrai_7/1.html'}
+2025-03-12 22:40:26 [INFO] Processing paginated URL: https://ikkatsu-satei.com/atrai_7/2.html
+2025-03-12 22:40:26 [INFO] Skipping: recent URL: https://ikkatsu-satei.com/atrai_7/2.html
+2025-03-12 22:40:26 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/1.html
+2025-03-12 22:40:26 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:26 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:26 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/1.html'}
+2025-03-12 22:40:27 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/2.html
+2025-03-12 22:40:27 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:27 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:27 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/2.html'}
+2025-03-12 22:40:28 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:29 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:29 [INFO] Processing paginated URL: https://ikkatsu-satei.com/c-hr/1.html
+2025-03-12 22:40:29 [INFO] Skipping: recent URL: https://ikkatsu-satei.com/c-hr/1.html
+2025-03-12 22:40:29 [INFO] Processing paginated URL: https://ikkatsu-satei.com/c-hr/2.html
+2025-03-12 22:40:29 [INFO] Skipping: recent URL: https://ikkatsu-satei.com/c-hr/2.html
+2025-03-12 22:40:29 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/1.html
+2025-03-12 22:40:29 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:29 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:29 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/1.html'}
+2025-03-12 22:40:30 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/2.html
+2025-03-12 22:40:30 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:30 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:30 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/2.html'}
+2025-03-12 22:40:31 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:32 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:32 [INFO] Processing paginated URL: https://ikkatsu-satei.com/145_c/1.html
+2025-03-12 22:40:32 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:32 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:32 [INFO] Skipping: incomplete data: {'maker_name': 'ホンダ', 'model_name': '145クーペ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/145_c/1.html'}
+2025-03-12 22:40:33 [INFO] Processing paginated URL: https://ikkatsu-satei.com/145_c/2.html
+2025-03-12 22:40:33 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:33 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:33 [INFO] Skipping: incomplete data: {'maker_name': 'ホンダ', 'model_name': '145クーペ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/145_c/2.html'}
+2025-03-12 22:40:34 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/1.html
+2025-03-12 22:40:34 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:34 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:35 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/1.html'}
+2025-03-12 22:40:35 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/2.html
+2025-03-12 22:40:35 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:36 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:36 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/2.html'}
+2025-03-12 22:40:37 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:37 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:37 [INFO] Processing paginated URL: https://ikkatsu-satei.com/az_w/1.html
+2025-03-12 22:40:37 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:38 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:38 [INFO] データ保存: {'maker_name': 'マツダ', 'model_name': 'AZ-ワゴン', 'grade_name': 'XG', 'year': '2009', 'mileage': '2', 'min_price': '184', 'max_price': '184', 'sc_url': 'https://ikkatsu-satei.com/az_w/1.html'}
+2025-03-12 22:40:40 [INFO] Processing paginated URL: https://ikkatsu-satei.com/az_w/2.html
+2025-03-12 22:40:40 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:41 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:41 [INFO] データ保存: {'maker_name': 'マツダ', 'model_name': 'AZ-ワゴン', 'grade_name': 'XSスペシャル', 'year': '2011', 'mileage': '10', 'min_price': '128', 'max_price': '128', 'sc_url': 'https://ikkatsu-satei.com/az_w/2.html'}
+2025-03-12 22:40:43 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/1.html
+2025-03-12 22:40:43 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:43 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:43 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/1.html'}
+2025-03-12 22:40:44 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/2.html
+2025-03-12 22:40:44 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:44 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:44 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/2.html'}
+2025-03-12 22:40:46 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:46 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:46 [INFO] Processing paginated URL: https://ikkatsu-satei.com/galue/1.html
+2025-03-12 22:40:46 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:47 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:47 [INFO] データ保存: {'maker_name': 'ミツオカ', 'model_name': 'ガリュー', 'grade_name': 'ガリュー', 'year': '9年 ()', 'mileage': '12', 'min_price': '183', 'max_price': '183', 'sc_url': 'https://ikkatsu-satei.com/galue/1.html'}
+2025-03-12 22:40:50 [INFO] Processing paginated URL: https://ikkatsu-satei.com/galue/2.html
+2025-03-12 22:40:50 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:51 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:51 [INFO] データ保存: {'maker_name': 'ミツオカ', 'model_name': 'ガリュー', 'grade_name': 'ガリュー', 'year': '1998', 'mileage': '13', 'min_price': '191', 'max_price': '191', 'sc_url': 'https://ikkatsu-satei.com/galue/2.html'}
+2025-03-12 22:40:54 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/1.html
+2025-03-12 22:40:54 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:54 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:54 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/1.html'}
+2025-03-12 22:40:55 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/2.html
+2025-03-12 22:40:55 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:55 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:55 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/2.html'}
+2025-03-12 22:40:57 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:57 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:57 [INFO] Processing paginated URL: https://ikkatsu-satei.com/gs_f/1.html
+2025-03-12 22:40:57 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:40:58 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:40:58 [INFO] データ保存: {'maker_name': 'レクサス', 'model_name': 'GS F', 'grade_name': 'F GS_F', 'year': '2019', 'mileage': '1', 'min_price': '605', 'max_price': '605', 'sc_url': 'https://ikkatsu-satei.com/gs_f/1.html'}
+2025-03-12 22:41:02 [INFO] Processing paginated URL: https://ikkatsu-satei.com/gs_f/2.html
+2025-03-12 22:41:02 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:41:03 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:41:03 [INFO] データ保存: {'maker_name': 'レクサス', 'model_name': 'GS F', 'grade_name': 'F GS_F', 'year': '2015', 'mileage': '7', 'min_price': '346', 'max_price': '346', 'sc_url': 'https://ikkatsu-satei.com/gs_f/2.html'}
+2025-03-12 22:41:06 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/1.html
+2025-03-12 22:41:06 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:41:06 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:41:06 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/1.html'}
+2025-03-12 22:41:07 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/2.html
+2025-03-12 22:41:07 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:41:07 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:41:07 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/2.html'}
+2025-03-12 22:41:08 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:41:09 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:41:09 [INFO] Processing paginated URL: https://ikkatsu-satei.com/ek_classy/1.html
+2025-03-12 22:41:09 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:41:09 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:41:09 [INFO] Skipping: incomplete data: {'maker_name': '三菱', 'model_name': 'eKクラッシィ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/ek_classy/1.html'}
+2025-03-12 22:41:10 [INFO] Processing paginated URL: https://ikkatsu-satei.com/ek_classy/2.html
+2025-03-12 22:41:10 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:41:10 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:41:10 [INFO] Skipping: incomplete data: {'maker_name': '三菱', 'model_name': 'eKクラッシィ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/ek_classy/2.html'}
+2025-03-12 22:41:11 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/1.html
+2025-03-12 22:41:11 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:41:11 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:41:11 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/1.html'}
+2025-03-12 22:41:12 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/2.html
+2025-03-12 22:41:12 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:41:12 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:41:12 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/2.html'}
+2025-03-12 22:41:14 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:41:14 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:41:14 [INFO] Processing paginated URL: https://ikkatsu-satei.com/canter/1.html
+2025-03-12 22:41:14 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:41:14 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:41:14 [INFO] Skipping: incomplete data: {'maker_name': '三菱ふそう', 'model_name': 'キャンター', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/canter/1.html'}
+2025-03-12 22:41:15 [INFO] Processing paginated URL: https://ikkatsu-satei.com/canter/2.html
+2025-03-12 22:41:15 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:41:16 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:41:16 [INFO] Skipping: incomplete data: {'maker_name': '三菱ふそう', 'model_name': 'キャンター', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/canter/2.html'}
+2025-03-12 22:41:16 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/1.html
+2025-03-12 22:41:16 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:41:17 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:41:17 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/1.html'}
+2025-03-12 22:41:17 [INFO] Processing paginated URL: https://ikkatsu-satei.com/toyota/2.html
+2025-03-12 22:41:17 [INFO] 関数 fetch_page() を開始
+2025-03-12 22:41:18 [INFO] 関数 fetch_page() が正常に完了
+2025-03-12 22:41:18 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ買取・査定｜一括査定.com「車一括査定サイト」', 'model_name': 'トヨタ', 'grade_name': None, 'year': None, 'mileage': None, 'min_price': None, 'max_price': None, 'sc_url': 'https://ikkatsu-satei.com/toyota/2.html'}
+2025-03-12 22:41:18 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 

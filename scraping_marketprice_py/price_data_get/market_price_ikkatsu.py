@@ -1,4 +1,3 @@
-# ガリバーとMOTAを組み合わせた専用処理（テーブル構造のデータを取得しつつ、ページネーションを指定する機能）
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
@@ -10,9 +9,6 @@ from logs.logger import log_decorator, log_info, log_error
 
 # 定義: テーブル名
 TABLE_NAME = "market_price_ikkatsu"
-
-# pagenation_selectors のどこでページネーションさせるか指定
-select_pagenation_selectors = 1
 
 # Define parameters
 website_url = "https://ikkatsu-satei.com/popular.html"
@@ -85,19 +81,13 @@ def fetch_page(url):
         return None
 
 def extract_data(soup, selectors):
-    data_list = []
-    elements_list = {key: soup.select(selector) for key, selector in selectors.items() if selector != "url"}
-
-    # 各データが複数取得できた場合、それぞれの行データを作成する
-    num_records = max(len(v) for v in elements_list.values() if v)  # 最も多いデータの個数を取得
-
-    for i in range(num_records):
-        data = {}
-        for key, elements in elements_list.items():
-            data[key] = process_data(selectors[key], elements[i].get_text(strip=True)) if i < len(elements) else None
-        data_list.append(data)
-
-    return data_list  # リスト形式で返す
+    data = {}
+    for key, selector in selectors.items():
+        if selector == "url":
+            continue
+        elements = soup.select(selector)
+        data[key] = process_data(selector, elements[0].get_text(strip=True)) if elements else None
+    return data
 
 @log_decorator
 def scrape_urls():
@@ -112,8 +102,7 @@ def scrape_urls():
             soup = fetch_page(url)
             if soup:
                 links = [urljoin(website_url, a['href']) for a in soup.select(selector) if a.get('href')]
-
-                if idx == select_pagenation_selectors:
+                if idx == len(pagenation_selectors) - 1:
                     for link in links:
                         clean_link = link.rstrip('.html')  # .html を削除
                         for page_num in range(pagenations_min, pagenations_max + 1):
@@ -124,28 +113,21 @@ def scrape_urls():
                                 log_info(f"Skipping: recent URL: {paginated_url}")
                                 continue
 
-                            paginated_soup = fetch_page(paginated_url)
-                            if not paginated_soup:
+                            final_page = fetch_page(paginated_url)
+                            if not final_page:
                                 log_info(f"Skipping due to error or skip condition: {paginated_url}")
-                                break
+                                break  # スキップ条件や404が出たら次のページネーションへ
 
-                            # **修正ポイント: extract_dataがリストを返す場合、最初のデータだけ取得**
-                            data = extract_data(paginated_soup, dataget_selectors)
+                            data = extract_data(final_page, dataget_selectors)
+                            data["sc_url"] = paginated_url
 
-                            if isinstance(data, list):  # データがリストなら最初の1件を取得
-                                data = data[0] if data else None
-
-                            if data:
-                                data["sc_url"] = paginated_url  # URLを追加
-
-                                if any(value is None for value in data.values()):
-                                    log_info(f"Skipping: incomplete data: {data}")
-                                    continue
-
-                                log_info(f"データ保存: {data}")  # デバッグ用
-                                save_to_db(data, TABLE_NAME)
+                            if any(value is None for value in data.values()):
+                                log_info(f"Skipping: incomplete data: {data}")
                                 time.sleep(delay)
+                                continue
 
+                            log_info(f"データ保存: {data}")  # デバッグ用
+                            save_to_db(data, TABLE_NAME)
                             time.sleep(delay)
                 else:
                     next_urls.extend(links)
