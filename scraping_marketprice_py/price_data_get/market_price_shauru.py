@@ -8,6 +8,7 @@ from shauru_db_handler import fetch_from_db, save_market_price_to_db
 from logs.logger import log_decorator, log_info, log_error
 
 # 定義
+TABLE_NAME = "market_price_shauru"
 TABLE_NAME_MODEL = "sc_goo_model"
 TABLE_NAME_MAKER = "sc_goo_maker"
 API_URL = "https://shauru.jp/market_price_api/?maker_name={}&car_type_name={}&model_year={}&distance={}&grade={}&color={}"
@@ -39,12 +40,8 @@ def fetch_maker_model_data():
     model_list = []
     for maker_id, model_name in model_data:
         # maker_id を int に変換
-        maker_id = int(maker_id)  # ここを修正
-
-        log_info(f"🔍 maker_id の型: {maker_id} (type: {type(maker_id)})")  # デバッグ用
-        
+        maker_id = int(maker_id)         
         maker_name = maker_dict.get(maker_id, None)  # int のまま取得
-        log_info(f"🔍 チェック: maker_id={maker_id}, model_name={model_name}, 対応するメーカー名={maker_name}")  # デバッグ用
 
         if maker_name:
             model_list.append((normalize_text(maker_name), normalize_text(model_name)))
@@ -78,9 +75,9 @@ def scrape_api():
             
             if isinstance(json_data, list):
                 for data in json_data:
-                    save_market_price_to_db(data, "market_price_table")
+                    save_market_price_to_db(data, TABLE_NAME)
             else:
-                save_market_price_to_db(json_data, "market_price_table")
+                save_market_price_to_db(json_data, TABLE_NAME)
 
         except requests.exceptions.RequestException as e:
             log_error(f"Error fetching data for {maker_name} {model_name}: {e}")
