@@ -3,6 +3,7 @@ import os
 from decimal import Decimal
 from dotenv import load_dotenv
 from setting_script.setFunc import get_db_config
+import random
 
 # .envファイルのロード
 load_dotenv()
@@ -46,14 +47,19 @@ def fetch_data_from_db(db_name):
 
 def adjust_prices(row):
     """
-    min_price と max_price が同じ場合、min_price を 25% 割引し、max_price を 20% 割増する
+    min_price と max_price が同じ場合、
+    min_price を 12%~25% の間で割引し、
+    max_price を 8%~20% の間で割増する
     """
     min_price = Decimal(row['min_price'])
     max_price = Decimal(row['max_price'])
 
     if min_price == max_price:
-        min_price = min_price * Decimal('0.75')  # 25% 割引
-        max_price = max_price * Decimal('1.20')  # 20% 割増
+        discount_rate = Decimal(random.uniform(0.75, 0.88))  # 12%~25% 割引
+        increase_rate = Decimal(random.uniform(1.08, 1.20))  # 8%~20% 割増
+
+        min_price = min_price * discount_rate
+        max_price = max_price * increase_rate
 
     return min_price, max_price
 

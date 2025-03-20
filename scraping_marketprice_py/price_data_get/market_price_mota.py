@@ -28,7 +28,7 @@ dataget_selectors = {
 
 pagenations_min = 1
 pagenations_max = 100000
-delay = random.uniform(5, 12)
+delay = random.uniform(30, 60)
 
 # スキップ条件
 sc_skip_conditions = [
@@ -68,7 +68,17 @@ def extract_data(soup, selectors):
         if selector == "url":
             continue
         elements = soup.select(selector)
-        data[key] = process_data(selector, elements[0].get_text(strip=True)) if elements else None
+        text_value = elements[0].get_text(strip=True) if elements else None
+
+        if key in ["min_price", "max_price"] and text_value:
+            text_value = text_value.replace(",", "").replace("円", "").strip()
+            try:
+                data[key] = int(text_value)
+            except ValueError:
+                data[key] = None
+        else:
+            data[key] = process_data(selector, text_value) if text_value else None
+
     return data
 
 @log_decorator
