@@ -4,7 +4,13 @@ def process_data(selector, raw_data):
     """
     Process the raw data based on the selector.
     """
-    if selector == "div:nth-of-type(13) h2":
+    if "price" in selector:  # min_price や max_price の場合
+        raw_data = raw_data.replace(",", "").replace("円", "").strip()  # カンマや「円」を削除
+        try:
+            return int(raw_data)  # 数値に変換
+        except ValueError:
+            return None  # 数値変換できない場合は None を返す
+    elif selector == "div:nth-of-type(13) h2":
         # Extract year from the text
         match = re.search(r"\d{4}", raw_data)
         return match.group(0) if match else raw_data
