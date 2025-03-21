@@ -1,420 +1,108 @@
-2025-03-20 21:41:58 [INFO] 関数 scrape_urls() を開始
-2025-03-20 21:41:58 [INFO] Starting scrape from: https://autoc-one.jp/ullo/biddedCarList/
-2025-03-20 21:41:58 [INFO] Processing paginated URL: https://autoc-one.jp/ullo/biddedCarList/pa1/
-2025-03-20 21:41:58 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:41:58 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:41:58 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353429/
-2025-03-20 21:41:58 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:41:58 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:41:58 [INFO] 関数 extract_data() を開始
-2025-03-20 21:41:58 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:41:58 [INFO] Saving data: {'maker_name': 'ポルシェ', 'model_name': '911', 'grade_name': 'カレラ4', 'year': '2016', 'mileage': 7, 'min_price': '435.1', 'max_price': '1,047.4', 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353429/'}
-2025-03-20 21:42:04 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353428/
-2025-03-20 21:42:04 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:42:04 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:42:04 [INFO] 関数 extract_data() を開始
-2025-03-20 21:42:04 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:42:04 [INFO] Saving data: {'maker_name': 'スズキ', 'model_name': 'ワゴンR', 'grade_name': '660 FX', 'year': '2012', 'mileage': 13, 'min_price': '3.3', 'max_price': '26.4', 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353428/'}
-2025-03-20 21:42:16 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353427/
-2025-03-20 21:42:16 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:42:16 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:42:16 [INFO] 関数 extract_data() を開始
-2025-03-20 21:42:16 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:42:16 [INFO] Saving data: {'maker_name': 'ダイハツ', 'model_name': 'テリオスキッド', 'grade_name': '660 キスマーク', 'year': '2004', 'mileage': 'ダイハツ テリオスキッド 660 キスマーク 2004年式(平成16年式)21年落ち 20万1キロ～ 1353427の車買取 査定価格実績', 'min_price': '2.8', 'max_price': '14.4', 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353427/'}
-2025-03-20 21:42:28 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353426/
-2025-03-20 21:42:28 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:42:28 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:42:28 [INFO] 関数 extract_data() を開始
-2025-03-20 21:42:28 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:42:28 [INFO] Saving data: {'maker_name': 'ホンダ', 'model_name': 'N-BOX', 'grade_name': '660 G', 'year': '2022', 'mileage': 2, 'min_price': '77.3', 'max_price': '150.6', 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353426/'}
-2025-03-20 21:42:39 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353425/
-2025-03-20 21:42:39 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:42:39 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:42:39 [INFO] 関数 extract_data() を開始
-2025-03-20 21:42:39 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:42:39 [INFO] Saving data: {'maker_name': 'トヨタ', 'model_name': 'ブレイド', 'grade_name': '2.4 G', 'year': '2010', 'mileage': 20, 'min_price': '10.7', 'max_price': '53.3', 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353425/'}
-2025-03-20 21:42:50 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353424/
-2025-03-20 21:42:50 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:42:50 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:42:50 [INFO] 関数 extract_data() を開始
-2025-03-20 21:42:50 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:42:50 [INFO] Skipping: incomplete data: {'maker_name': None, 'model_name': 'アウトランダー', 'grade_name': '2.4 ブラック エディション 4WD', 'year': None, 'mileage': 2, 'min_price': '104.9', 'max_price': '182.6', 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353424/'}
-2025-03-20 21:42:50 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353423/
-2025-03-20 21:42:50 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:42:50 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:42:50 [INFO] 関数 extract_data() を開始
-2025-03-20 21:42:50 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:42:50 [INFO] Saving data: {'maker_name': 'ホンダ', 'model_name': 'ステップワゴン', 'grade_name': '2.0 スパーダ Z', 'year': '2012', 'mileage': 8, 'min_price': '11', 'max_price': '95.3', 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353423/'}
-2025-03-20 21:43:04 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353421/
-2025-03-20 21:43:04 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:43:04 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:43:04 [INFO] 関数 extract_data() を開始
-2025-03-20 21:43:04 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:43:04 [INFO] Saving data: {'maker_name': 'ホンダ', 'model_name': 'フィット', 'grade_name': '1.3 13G F 4WD', 'year': '2018', 'mileage': 3, 'min_price': '46.7', 'max_price': '119.2', 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353421/'}
-2025-03-20 21:43:16 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353420/
-2025-03-20 21:43:16 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:43:16 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:43:16 [INFO] 関数 extract_data() を開始
-2025-03-20 21:43:16 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:43:16 [INFO] Saving data: {'maker_name': 'トヨタ', 'model_name': 'プリウス', 'grade_name': '1.8 G', 'year': '2010', 'mileage': 12, 'min_price': '20.1', 'max_price': '33.6', 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353420/'}
-2025-03-20 21:43:23 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
-2025-03-20 21:46:02 [INFO] 関数 scrape_urls() を開始
-2025-03-20 21:46:02 [INFO] Starting scrape from: https://autoc-one.jp/ullo/biddedCarList/
-2025-03-20 21:46:02 [INFO] Processing paginated URL: https://autoc-one.jp/ullo/biddedCarList/pa1/
-2025-03-20 21:46:02 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:02 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:02 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353429/
-2025-03-20 21:46:02 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:02 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:02 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:02 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:02 [INFO] Skipping: incomplete data: {'maker_name': 'ポルシェ', 'model_name': '911', 'grade_name': 'カレラ4', 'year': '2016', 'mileage': 7, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353429/'}
-2025-03-20 21:46:02 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353428/
-2025-03-20 21:46:02 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:02 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:02 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:03 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:03 [INFO] Skipping: incomplete data: {'maker_name': 'スズキ', 'model_name': 'ワゴンR', 'grade_name': '660 FX', 'year': '2012', 'mileage': 13, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353428/'}
-2025-03-20 21:46:03 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353427/
-2025-03-20 21:46:03 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:03 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:03 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:03 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:03 [INFO] Skipping: incomplete data: {'maker_name': 'ダイハツ', 'model_name': 'テリオスキッド', 'grade_name': '660 キスマーク', 'year': '2004', 'mileage': 'ダイハツ テリオスキッド 660 キスマーク 2004年式(平成16年式)21年落ち 20万1キロ～ 1353427の車買取 査定価格実績', 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353427/'}
-2025-03-20 21:46:03 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353426/
-2025-03-20 21:46:03 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:03 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:03 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:03 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:03 [INFO] Skipping: incomplete data: {'maker_name': 'ホンダ', 'model_name': 'N-BOX', 'grade_name': '660 G', 'year': '2022', 'mileage': 2, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353426/'}
-2025-03-20 21:46:03 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353425/
-2025-03-20 21:46:03 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:03 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:03 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:03 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:03 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ', 'model_name': 'ブレイド', 'grade_name': '2.4 G', 'year': '2010', 'mileage': 20, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353425/'}
-2025-03-20 21:46:03 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353424/
-2025-03-20 21:46:03 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:03 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:03 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:03 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:03 [INFO] Skipping: incomplete data: {'maker_name': None, 'model_name': 'アウトランダー', 'grade_name': '2.4 ブラック エディション 4WD', 'year': None, 'mileage': 2, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353424/'}
-2025-03-20 21:46:03 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353423/
-2025-03-20 21:46:03 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:03 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:03 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:03 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:03 [INFO] Skipping: incomplete data: {'maker_name': 'ホンダ', 'model_name': 'ステップワゴン', 'grade_name': '2.0 スパーダ Z', 'year': '2012', 'mileage': 8, 'min_price': 11, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353423/'}
-2025-03-20 21:46:03 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353421/
-2025-03-20 21:46:03 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:04 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:04 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:04 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:04 [INFO] Skipping: incomplete data: {'maker_name': 'ホンダ', 'model_name': 'フィット', 'grade_name': '1.3 13G F 4WD', 'year': '2018', 'mileage': 3, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353421/'}
-2025-03-20 21:46:04 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353420/
-2025-03-20 21:46:04 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:04 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:04 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:04 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:04 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ', 'model_name': 'プリウス', 'grade_name': '1.8 G', 'year': '2010', 'mileage': 12, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353420/'}
-2025-03-20 21:46:04 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353419/
-2025-03-20 21:46:04 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:04 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:04 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:04 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:04 [INFO] Skipping: incomplete data: {'maker_name': 'ホンダ', 'model_name': 'N-ONE', 'grade_name': '660 ツアラー Lパッケージ', 'year': '2014', 'mileage': 13, 'min_price': None, 'max_price': 49, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353419/'}
-2025-03-20 21:46:04 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353418/
-2025-03-20 21:46:04 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:04 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:04 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:04 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:04 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ', 'model_name': 'カローラクロス', 'grade_name': '1.8 ハイブリッド Z', 'year': 'MOTAが選ばれる３つの理由', 'mileage': 1, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353418/'}
-2025-03-20 21:46:04 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353417/
-2025-03-20 21:46:04 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:04 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:04 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:04 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:04 [INFO] Skipping: incomplete data: {'maker_name': 'スズキ', 'model_name': 'ソリオ', 'grade_name': '1.2 ハイブリッド MZ', 'year': 'MOTAが選ばれる３つの理由', 'mileage': 1, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353417/'}
-2025-03-20 21:46:04 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353416/
-2025-03-20 21:46:04 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:05 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:05 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:05 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:05 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ', 'model_name': 'アルファード', 'grade_name': '3.0 V MSプレミアム・アルカンターラバージョン', 'year': '2005', 'mileage': 10, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353416/'}
-2025-03-20 21:46:05 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353415/
-2025-03-20 21:46:05 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:05 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:05 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:05 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:05 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ', 'model_name': 'シエンタ', 'grade_name': '1.5 G', 'year': '2006', 'mileage': 17, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353415/'}
-2025-03-20 21:46:05 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353414/
-2025-03-20 21:46:05 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:05 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:05 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:05 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:05 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ', 'model_name': 'RAV4 PHV', 'grade_name': '2.5 G Z E-Four 4WD', 'year': 'MOTAが選ばれる３つの理由', 'mileage': 2, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353414/'}
-2025-03-20 21:46:05 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353413/
-2025-03-20 21:46:05 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:05 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:05 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:05 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:05 [INFO] Skipping: incomplete data: {'maker_name': '日産', 'model_name': 'フーガハイブリッド', 'grade_name': '3.5 VIP', 'year': '2015', 'mileage': 14, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353413/'}
-2025-03-20 21:46:05 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353412/
-2025-03-20 21:46:05 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:05 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:05 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:06 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:06 [INFO] Skipping: incomplete data: {'maker_name': 'スバル', 'model_name': 'インプレッサ', 'grade_name': '1.5 i スペシャル', 'year': '2007', 'mileage': 12, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353412/'}
-2025-03-20 21:46:06 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353411/
-2025-03-20 21:46:06 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:06 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:06 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:06 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:06 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ', 'model_name': 'ライズ', 'grade_name': '1.0 Z 4WD', 'year': '2021', 'mileage': 5, 'min_price': 88, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353411/'}
-2025-03-20 21:46:06 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353410/
-2025-03-20 21:46:06 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:06 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:06 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:06 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:06 [INFO] Skipping: incomplete data: {'maker_name': 'ホンダ', 'model_name': 'フィットハイブリッド', 'grade_name': '1.3 ナビプレミアムセレクション', 'year': '2011', 'mileage': 7, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353410/'}
-2025-03-20 21:46:06 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353409/
-2025-03-20 21:46:06 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:06 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:06 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:06 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:06 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ', 'model_name': 'アクア', 'grade_name': '1.5 L', 'year': '2014', 'mileage': 10, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353409/'}
-2025-03-20 21:46:16 [INFO] Processing paginated URL: https://autoc-one.jp/ullo/biddedCarList/pa2/
-2025-03-20 21:46:16 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:17 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:17 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353408/
-2025-03-20 21:46:17 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:17 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:17 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:17 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:17 [INFO] Skipping: incomplete data: {'maker_name': 'マツダ', 'model_name': 'RX-8', 'grade_name': 'タイプRS', 'year': '2008', 'mileage': 11, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353408/'}
-2025-03-20 21:46:17 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353407/
-2025-03-20 21:46:17 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:17 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:17 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:17 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:17 [INFO] Skipping: incomplete data: {'maker_name': 'マツダ', 'model_name': 'RX-8', 'grade_name': 'スポーツプレステージ リミテッド タイプS', 'year': '2004', 'mileage': 8, 'min_price': None, 'max_price': 55, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353407/'}
-2025-03-20 21:46:17 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353406/
-2025-03-20 21:46:17 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:17 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:17 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:17 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:17 [INFO] Skipping: incomplete data: {'maker_name': 'レクサス', 'model_name': 'NX', 'grade_name': '250 バージョンL', 'year': 'MOTAが選ばれる３つの理由', 'mileage': 2, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353406/'}
-2025-03-20 21:46:17 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353405/
-2025-03-20 21:46:17 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:17 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:17 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:17 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:17 [INFO] Skipping: incomplete data: {'maker_name': '日産', 'model_name': 'セレナ', 'grade_name': '2.0 20G S-HYBRID', 'year': '2014', 'mileage': 13, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353405/'}
-2025-03-20 21:46:17 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353404/
-2025-03-20 21:46:17 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:18 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:18 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:18 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:18 [INFO] Skipping: incomplete data: {'maker_name': 'スズキ', 'model_name': 'アルトラパン', 'grade_name': '660 X', 'year': '2010', 'mileage': 20, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353404/'}
-2025-03-20 21:46:18 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353403/
-2025-03-20 21:46:18 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:18 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:18 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:18 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:18 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ', 'model_name': 'ヴェルファイア', 'grade_name': '3.5 Z ゴールデンアイズ', 'year': '2013', 'mileage': 8, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353403/'}
-2025-03-20 21:46:18 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353402/
-2025-03-20 21:46:18 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:18 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:18 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:18 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:18 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ', 'model_name': 'ハイエースバン', 'grade_name': '2.8 スーパーGL 50TH アニバーサリー リミテッド ロングボディ ディーゼルターボ 4WD', 'year': '2019', 'mileage': 9, 'min_price': 59, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353402/'}
-2025-03-20 21:46:18 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353401/
-2025-03-20 21:46:18 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:18 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:18 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:18 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:18 [INFO] Skipping: incomplete data: {'maker_name': 'フォード', 'model_name': 'エコスポーツ', 'grade_name': 'タイタニアム', 'year': '2016', 'mileage': 12, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353401/'}
-2025-03-20 21:46:18 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353400/
-2025-03-20 21:46:18 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:19 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:19 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:19 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:19 [INFO] Skipping: incomplete data: {'maker_name': 'ジープ', 'model_name': 'パトリオット', 'grade_name': 'リミテッド 4WD', 'year': '2012', 'mileage': 8, 'min_price': 35, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353400/'}
-2025-03-20 21:46:19 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353399/
-2025-03-20 21:46:19 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:19 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:19 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:19 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:19 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ', 'model_name': 'ランドクルーザープラド', 'grade_name': '3.0 TX ディーゼルターボ 4WD', 'year': '2000', 'mileage': 'トヨタ ランドクルーザープラド 3.0 TX ディーゼルターボ 4WD 2000年式(平成12年式)25年落ち 20万1キロ～ 1353399の車買取 査定価格実績', 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353399/'}
-2025-03-20 21:46:19 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353398/
-2025-03-20 21:46:19 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:19 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:19 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:19 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:19 [INFO] Skipping: incomplete data: {'maker_name': 'メルセデス・ベンツ', 'model_name': 'Gクラス', 'grade_name': 'G400d AMGライン ディーゼルターボ 4WD', 'year': 'MOTAが選ばれる３つの理由', 'mileage': 'メルセデス・ベンツ Gクラス G400d AMGライン ディーゼルターボ 4WD 2023年式(令和5年式)2年落ち ～5,000キロ 1353398の車買取 査定価格実績', 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353398/'}
-2025-03-20 21:46:19 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353397/
-2025-03-20 21:46:19 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:19 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:19 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:19 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:19 [INFO] Skipping: incomplete data: {'maker_name': '日産', 'model_name': 'キックス', 'grade_name': '1.2 X ツートーン インテリアエディション (e-POWER)', 'year': '2021', 'mileage': 1, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353397/'}
-2025-03-20 21:46:19 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353396/
-2025-03-20 21:46:19 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:19 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:19 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:19 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:19 [INFO] Skipping: incomplete data: {'maker_name': 'マツダ', 'model_name': 'プレマシー', 'grade_name': '2.0 20CS', 'year': '2008', 'mileage': 11, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353396/'}
-2025-03-20 21:46:19 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353395/
-2025-03-20 21:46:19 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:20 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:20 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:20 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:20 [INFO] Skipping: incomplete data: {'maker_name': 'スズキ', 'model_name': 'スペーシア', 'grade_name': '660 ハイブリッド X', 'year': 'MOTAが選ばれる３つの理由', 'mileage': 3, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353395/'}
-2025-03-20 21:46:20 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353394/
-2025-03-20 21:46:20 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:20 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:20 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:20 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:20 [INFO] Skipping: incomplete data: {'maker_name': 'マツダ', 'model_name': 'CX-8', 'grade_name': '2.2 XD プロアクティブ ディーゼルターボ 4WD', 'year': '2018', 'mileage': 7, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353394/'}
-2025-03-20 21:46:20 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353393/
-2025-03-20 21:46:20 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:20 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:20 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:20 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:20 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ', 'model_name': 'ヴォクシー', 'grade_name': '2.0 X', 'year': '2017', 'mileage': 7, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353393/'}
-2025-03-20 21:46:20 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353392/
-2025-03-20 21:46:20 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:20 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:20 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:20 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:20 [INFO] Skipping: incomplete data: {'maker_name': 'メルセデス・ベンツ', 'model_name': 'Eクラス', 'grade_name': 'E220d アバンギャルド スポーツ ディーゼルターボ', 'year': '2018', 'mileage': 5, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353392/'}
-2025-03-20 21:46:20 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353391/
-2025-03-20 21:46:20 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:20 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:20 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:20 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:20 [INFO] Skipping: incomplete data: {'maker_name': 'ホンダ', 'model_name': 'ヴェゼル', 'grade_name': '1.5 e:HEV X 4WD', 'year': 'MOTAが選ばれる３つの理由', 'mileage': 'ホンダ ヴェゼル 1.5 e:HEV X 4WD 2024年式(令和6年式)1年落ち ～5,000キロ 1353391の車買取 査定価格実績', 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353391/'}
-2025-03-20 21:46:20 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353390/
-2025-03-20 21:46:20 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:21 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:21 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:21 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:21 [INFO] Skipping: incomplete data: {'maker_name': '日産', 'model_name': 'セレナ', 'grade_name': '2.0 ハイウェイスター HDDナビ付', 'year': '2010', 'mileage': 12, 'min_price': 5, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353390/'}
-2025-03-20 21:46:21 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353389/
-2025-03-20 21:46:21 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:21 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:21 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:21 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:21 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ', 'model_name': 'ヴェルファイア', 'grade_name': '2.5 Z Gエディション', 'year': '2018', 'mileage': 4, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353389/'}
-2025-03-20 21:46:31 [INFO] Processing paginated URL: https://autoc-one.jp/ullo/biddedCarList/pa3/
-2025-03-20 21:46:31 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:32 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:32 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353388/
-2025-03-20 21:46:32 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:32 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:32 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:32 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:32 [INFO] Skipping: incomplete data: {'maker_name': 'ホンダ', 'model_name': 'ステップワゴン', 'grade_name': '1.5 スパーダ クールスピリット ホンダ センシング', 'year': '2021', 'mileage': 2, 'min_price': None, 'max_price': 255, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353388/'}
-2025-03-20 21:46:32 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353387/
-2025-03-20 21:46:32 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:32 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:32 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:32 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:32 [INFO] Skipping: incomplete data: {'maker_name': 'スズキ', 'model_name': 'ワゴンR', 'grade_name': '660 FX リミテッド', 'year': '2009', 'mileage': 13, 'min_price': None, 'max_price': 23, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353387/'}
-2025-03-20 21:46:32 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353386/
-2025-03-20 21:46:32 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:32 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:32 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:32 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:32 [INFO] Skipping: incomplete data: {'maker_name': 'マツダ', 'model_name': 'アテンザワゴン', 'grade_name': '2.2 XD ディーゼルターボ', 'year': '2013', 'mileage': 14, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353386/'}
-2025-03-20 21:46:32 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353385/
-2025-03-20 21:46:32 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:33 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:33 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:33 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:33 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ', 'model_name': 'エスティマ', 'grade_name': '2.4 アエラス', 'year': '2012', 'mileage': 11, 'min_price': 21, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353385/'}
-2025-03-20 21:46:33 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353384/
-2025-03-20 21:46:33 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:33 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:33 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:33 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:33 [INFO] Skipping: incomplete data: {'maker_name': '日産', 'model_name': 'セレナ', 'grade_name': '1.2 e-POWER XV', 'year': '2018', 'mileage': 3, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353384/'}
-2025-03-20 21:46:33 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353383/
-2025-03-20 21:46:33 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:33 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:33 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:33 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:33 [INFO] Skipping: incomplete data: {'maker_name': 'ルノー', 'model_name': 'メガーヌ', 'grade_name': 'GT', 'year': '2019', 'mileage': 5, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353383/'}
-2025-03-20 21:46:33 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353382/
-2025-03-20 21:46:33 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:33 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:33 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:33 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:33 [INFO] Skipping: incomplete data: {'maker_name': 'ホンダ', 'model_name': 'インテグラタイプR', 'grade_name': '1.8', 'year': '1998', 'mileage': 11, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353382/'}
-2025-03-20 21:46:33 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353381/
-2025-03-20 21:46:33 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:33 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:33 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:33 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:33 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ', 'model_name': '86', 'grade_name': '2.0 GT', 'year': '2012', 'mileage': 6, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353381/'}
-2025-03-20 21:46:33 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353380/
-2025-03-20 21:46:33 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:34 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:34 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:34 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:34 [INFO] Skipping: incomplete data: {'maker_name': 'ホンダ', 'model_name': 'ステップワゴン', 'grade_name': '1.5 スパーダ クールスピリット', 'year': '2015', 'mileage': 10, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353380/'}
-2025-03-20 21:46:34 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353379/
-2025-03-20 21:46:34 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:34 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:34 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:34 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:34 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ', 'model_name': 'タンク', 'grade_name': '1.0 カスタム G', 'year': '2020', 'mileage': 6, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353379/'}
-2025-03-20 21:46:34 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353378/
-2025-03-20 21:46:34 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:34 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:34 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:34 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:34 [INFO] Skipping: incomplete data: {'maker_name': '日産', 'model_name': 'セレナ', 'grade_name': '2.0 ハイウェイスター', 'year': '2020', 'mileage': 10, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353378/'}
-2025-03-20 21:46:34 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353377/
-2025-03-20 21:46:34 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:34 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:34 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:34 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:34 [INFO] Skipping: incomplete data: {'maker_name': 'ホンダ', 'model_name': 'エリシオン', 'grade_name': '2.4 G エアロ HDDナビスペシャルパッケージ 4WD', 'year': '2006', 'mileage': 17, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353377/'}
-2025-03-20 21:46:34 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353376/
-2025-03-20 21:46:34 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:34 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:34 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:34 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:34 [INFO] Skipping: incomplete data: {'maker_name': 'ホンダ', 'model_name': 'ステップワゴン', 'grade_name': '2.0 スパーダ S', 'year': '2014', 'mileage': 15, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353376/'}
-2025-03-20 21:46:34 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353375/
-2025-03-20 21:46:34 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:34 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:34 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:34 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:34 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ', 'model_name': 'ハリアー', 'grade_name': '2.0 G', 'year': 'MOTAが選ばれる３つの理由', 'mileage': 'トヨタ ハリアー 2.0 G 2024年式(令和6年式)1年落ち ～5,000キロ 1353375の車買取 査定価格実績', 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353375/'}
-2025-03-20 21:46:34 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353374/
-2025-03-20 21:46:34 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:35 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:35 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:35 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:35 [INFO] Skipping: incomplete data: {'maker_name': 'スバル', 'model_name': 'フォレスター', 'grade_name': '2.0XT アイサイト 4WD', 'year': '2013', 'mileage': 20, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353374/'}
-2025-03-20 21:46:35 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353373/
-2025-03-20 21:46:35 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:35 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:35 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:35 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:35 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ', 'model_name': 'エスティマハイブリッド', 'grade_name': '2.4 X 4WD', 'year': '2008', 'mileage': 20, 'min_price': None, 'max_price': 46, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353373/'}
-2025-03-20 21:46:35 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353372/
-2025-03-20 21:46:35 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:35 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:35 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:35 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:35 [INFO] Skipping: incomplete data: {'maker_name': '日産', 'model_name': 'セレナ', 'grade_name': '2.0 20S', 'year': '2008', 'mileage': 8, 'min_price': 2, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353372/'}
-2025-03-20 21:46:35 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353371/
-2025-03-20 21:46:35 [INFO] 関数 fetch_page() を開始
-2025-03-20 21:46:35 [INFO] 関数 fetch_page() が正常に完了
-2025-03-20 21:46:35 [INFO] 関数 extract_data() を開始
-2025-03-20 21:46:35 [INFO] 関数 extract_data() が正常に完了
-2025-03-20 21:46:35 [INFO] Saving data: {'maker_name': 'スズキ', 'model_name': 'ジムニー', 'grade_name': '660 XG 4WD', 'year': '2018', 'mileage': 5, 'min_price': 56, 'max_price': 144, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353371/'}
-2025-03-20 21:46:47 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
+2025-03-20 23:00:54 [INFO] 関数 scrape_urls() を開始
+2025-03-20 23:00:54 [INFO] Starting scrape from: https://autoc-one.jp/ullo/biddedCarList/
+2025-03-20 23:00:54 [INFO] Processing paginated URL: https://autoc-one.jp/ullo/biddedCarList/pa1/
+2025-03-20 23:00:54 [INFO] 関数 fetch_page() を開始
+2025-03-20 23:00:54 [INFO] 関数 fetch_page() が正常に完了
+2025-03-20 23:00:54 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353429/
+2025-03-20 23:00:54 [INFO] 関数 fetch_page() を開始
+2025-03-20 23:00:54 [INFO] 関数 fetch_page() が正常に完了
+2025-03-20 23:00:54 [INFO] 関数 extract_data() を開始
+2025-03-20 23:00:54 [INFO] 関数 extract_data() が正常に完了
+2025-03-20 23:00:54 [INFO] Saving data: {'maker_name': 'ポルシェ', 'model_name': '911', 'grade_name': 'カレラ4', 'year': '2016', 'mileage': 7, 'min_price': '435.1', 'max_price': '1,047.4', 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353429/'}
+2025-03-20 23:00:56 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353428/
+2025-03-20 23:00:56 [INFO] 関数 fetch_page() を開始
+2025-03-20 23:00:56 [INFO] 関数 fetch_page() が正常に完了
+2025-03-20 23:00:56 [INFO] 関数 extract_data() を開始
+2025-03-20 23:00:56 [INFO] 関数 extract_data() が正常に完了
+2025-03-20 23:00:56 [INFO] Saving data: {'maker_name': 'スズキ', 'model_name': 'ワゴンR', 'grade_name': '660 FX', 'year': '2012', 'mileage': 13, 'min_price': '3.3', 'max_price': '26.4', 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353428/'}
+2025-03-20 23:01:00 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353427/
+2025-03-20 23:01:00 [INFO] 関数 fetch_page() を開始
+2025-03-20 23:01:01 [INFO] 関数 fetch_page() が正常に完了
+2025-03-20 23:01:01 [INFO] 関数 extract_data() を開始
+2025-03-20 23:01:01 [INFO] 関数 extract_data() が正常に完了
+2025-03-20 23:01:01 [INFO] Saving data: {'maker_name': 'ダイハツ', 'model_name': 'テリオスキッド', 'grade_name': '660 キスマーク', 'year': '2004', 'mileage': 'ダイハツ テリオスキッド 660 キスマーク 2004年式(平成16年式)21年落ち 20万1キロ～ 1353427の車買取 査定価格実績', 'min_price': '2.8', 'max_price': '14.4', 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353427/'}
+2025-03-20 23:01:05 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353426/
+2025-03-20 23:01:05 [INFO] 関数 fetch_page() を開始
+2025-03-20 23:01:06 [INFO] 関数 fetch_page() が正常に完了
+2025-03-20 23:01:06 [INFO] 関数 extract_data() を開始
+2025-03-20 23:01:06 [INFO] 関数 extract_data() が正常に完了
+2025-03-20 23:01:06 [INFO] Saving data: {'maker_name': 'ホンダ', 'model_name': 'N-BOX', 'grade_name': '660 G', 'year': '2022', 'mileage': 2, 'min_price': '77.3', 'max_price': '150.6', 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353426/'}
+2025-03-20 23:01:10 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353425/
+2025-03-20 23:01:10 [INFO] 関数 fetch_page() を開始
+2025-03-20 23:01:10 [INFO] 関数 fetch_page() が正常に完了
+2025-03-20 23:01:10 [INFO] 関数 extract_data() を開始
+2025-03-20 23:01:10 [INFO] 関数 extract_data() が正常に完了
+2025-03-20 23:01:10 [INFO] Saving data: {'maker_name': 'トヨタ', 'model_name': 'ブレイド', 'grade_name': '2.4 G', 'year': '2010', 'mileage': 20, 'min_price': '10.7', 'max_price': '53.3', 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353425/'}
+2025-03-20 23:01:14 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353424/
+2025-03-20 23:01:14 [INFO] 関数 fetch_page() を開始
+2025-03-20 23:01:14 [INFO] 関数 fetch_page() が正常に完了
+2025-03-20 23:01:14 [INFO] 関数 extract_data() を開始
+2025-03-20 23:01:14 [INFO] 関数 extract_data() が正常に完了
+2025-03-20 23:01:14 [INFO] Skipping: incomplete data: {'maker_name': None, 'model_name': 'アウトランダー', 'grade_name': '2.4 ブラック エディション 4WD', 'year': None, 'mileage': 2, 'min_price': '104.9', 'max_price': '182.6', 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353424/'}
+2025-03-20 23:01:14 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353423/
+2025-03-20 23:01:14 [INFO] 関数 fetch_page() を開始
+2025-03-20 23:01:14 [INFO] 関数 fetch_page() が正常に完了
+2025-03-20 23:01:14 [INFO] 関数 extract_data() を開始
+2025-03-20 23:01:14 [INFO] 関数 extract_data() が正常に完了
+2025-03-20 23:01:14 [INFO] Saving data: {'maker_name': 'ホンダ', 'model_name': 'ステップワゴン', 'grade_name': '2.0 スパーダ Z', 'year': '2012', 'mileage': 8, 'min_price': '11', 'max_price': '95.3', 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353423/'}
+2025-03-20 23:01:19 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353421/
+2025-03-20 23:01:19 [INFO] 関数 fetch_page() を開始
+2025-03-20 23:01:19 [INFO] 関数 fetch_page() が正常に完了
+2025-03-20 23:01:19 [INFO] 関数 extract_data() を開始
+2025-03-20 23:01:19 [INFO] 関数 extract_data() が正常に完了
+2025-03-20 23:01:19 [INFO] Saving data: {'maker_name': 'ホンダ', 'model_name': 'フィット', 'grade_name': '1.3 13G F 4WD', 'year': '2018', 'mileage': 3, 'min_price': '46.7', 'max_price': '119.2', 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353421/'}
+2025-03-20 23:01:24 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353420/
+2025-03-20 23:01:24 [INFO] 関数 fetch_page() を開始
+2025-03-20 23:01:24 [INFO] 関数 fetch_page() が正常に完了
+2025-03-20 23:01:24 [INFO] 関数 extract_data() を開始
+2025-03-20 23:01:24 [INFO] 関数 extract_data() が正常に完了
+2025-03-20 23:01:24 [INFO] Saving data: {'maker_name': 'トヨタ', 'model_name': 'プリウス', 'grade_name': '1.8 G', 'year': '2010', 'mileage': 12, 'min_price': '20.1', 'max_price': '33.6', 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353420/'}
+2025-03-20 23:01:28 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353419/
+2025-03-20 23:01:28 [INFO] 関数 fetch_page() を開始
+2025-03-20 23:01:28 [INFO] 関数 fetch_page() が正常に完了
+2025-03-20 23:01:28 [INFO] 関数 extract_data() を開始
+2025-03-20 23:01:28 [INFO] 関数 extract_data() が正常に完了
+2025-03-20 23:01:28 [INFO] Saving data: {'maker_name': 'ホンダ', 'model_name': 'N-ONE', 'grade_name': '660 ツアラー Lパッケージ', 'year': '2014', 'mileage': 13, 'min_price': '13.8', 'max_price': '49', 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353419/'}
+2025-03-20 23:01:33 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353418/
+2025-03-20 23:01:33 [INFO] 関数 fetch_page() を開始
+2025-03-20 23:01:33 [INFO] 関数 fetch_page() が正常に完了
+2025-03-20 23:01:33 [INFO] 関数 extract_data() を開始
+2025-03-20 23:01:33 [INFO] 関数 extract_data() が正常に完了
+2025-03-20 23:01:33 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ', 'model_name': 'カローラクロス', 'grade_name': '1.8 ハイブリッド Z', 'year': 'MOTAが選ばれる３つの理由', 'mileage': 1, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353418/'}
+2025-03-20 23:01:33 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353417/
+2025-03-20 23:01:33 [INFO] 関数 fetch_page() を開始
+2025-03-20 23:01:33 [INFO] 関数 fetch_page() が正常に完了
+2025-03-20 23:01:33 [INFO] 関数 extract_data() を開始
+2025-03-20 23:01:33 [INFO] 関数 extract_data() が正常に完了
+2025-03-20 23:01:33 [INFO] Skipping: incomplete data: {'maker_name': 'スズキ', 'model_name': 'ソリオ', 'grade_name': '1.2 ハイブリッド MZ', 'year': 'MOTAが選ばれる３つの理由', 'mileage': 1, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353417/'}
+2025-03-20 23:01:33 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353416/
+2025-03-20 23:01:33 [INFO] 関数 fetch_page() を開始
+2025-03-20 23:01:33 [INFO] 関数 fetch_page() が正常に完了
+2025-03-20 23:01:33 [INFO] 関数 extract_data() を開始
+2025-03-20 23:01:33 [INFO] 関数 extract_data() が正常に完了
+2025-03-20 23:01:33 [INFO] Saving data: {'maker_name': 'トヨタ', 'model_name': 'アルファード', 'grade_name': '3.0 V MSプレミアム・アルカンターラバージョン', 'year': '2005', 'mileage': 10, 'min_price': '14.7', 'max_price': '48.7', 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353416/'}
+2025-03-20 23:01:37 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353415/
+2025-03-20 23:01:37 [INFO] 関数 fetch_page() を開始
+2025-03-20 23:01:37 [INFO] 関数 fetch_page() が正常に完了
+2025-03-20 23:01:37 [INFO] 関数 extract_data() を開始
+2025-03-20 23:01:37 [INFO] 関数 extract_data() が正常に完了
+2025-03-20 23:01:37 [INFO] Saving data: {'maker_name': 'トヨタ', 'model_name': 'シエンタ', 'grade_name': '1.5 G', 'year': '2006', 'mileage': 17, 'min_price': '2.8', 'max_price': '11.5', 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353415/'}
+2025-03-20 23:01:41 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353414/
+2025-03-20 23:01:41 [INFO] 関数 fetch_page() を開始
+2025-03-20 23:01:41 [INFO] 関数 fetch_page() が正常に完了
+2025-03-20 23:01:41 [INFO] 関数 extract_data() を開始
+2025-03-20 23:01:41 [INFO] 関数 extract_data() が正常に完了
+2025-03-20 23:01:41 [INFO] Skipping: incomplete data: {'maker_name': 'トヨタ', 'model_name': 'RAV4 PHV', 'grade_name': '2.5 G Z E-Four 4WD', 'year': 'MOTAが選ばれる３つの理由', 'mileage': 2, 'min_price': None, 'max_price': None, 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353414/'}
+2025-03-20 23:01:41 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353413/
+2025-03-20 23:01:41 [INFO] 関数 fetch_page() を開始
+2025-03-20 23:01:42 [INFO] 関数 fetch_page() が正常に完了
+2025-03-20 23:01:42 [INFO] 関数 extract_data() を開始
+2025-03-20 23:01:42 [INFO] 関数 extract_data() が正常に完了
+2025-03-20 23:01:42 [INFO] Saving data: {'maker_name': '日産', 'model_name': 'フーガハイブリッド', 'grade_name': '3.5 VIP', 'year': '2015', 'mileage': 14, 'min_price': '82.2', 'max_price': '138.2', 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353413/'}
+2025-03-20 23:01:45 [INFO] Fetching data from: https://autoc-one.jp/ullo/biddedCar/1353412/
+2025-03-20 23:01:45 [INFO] 関数 fetch_page() を開始
+2025-03-20 23:01:46 [INFO] 関数 fetch_page() が正常に完了
+2025-03-20 23:01:46 [INFO] 関数 extract_data() を開始
+2025-03-20 23:01:46 [INFO] 関数 extract_data() が正常に完了
+2025-03-20 23:01:46 [INFO] Saving data: {'maker_name': 'スバル', 'model_name': 'インプレッサ', 'grade_name': '1.5 i スペシャル', 'year': '2007', 'mileage': 12, 'min_price': '3.2', 'max_price': '469.5', 'sc_url': 'https://autoc-one.jp/ullo/biddedCar/1353412/'}
+2025-03-20 23:01:49 [CRITICAL] 未処理の例外発生: KeyboardInterrupt: 
