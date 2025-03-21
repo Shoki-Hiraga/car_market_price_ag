@@ -4,6 +4,9 @@ namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
+use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Http\RedirectResponse;
 
 class Handler extends ExceptionHandler
 {
@@ -27,4 +30,15 @@ class Handler extends ExceptionHandler
             //
         });
     }
+
+    public function render($request, Throwable $exception): Response|RedirectResponse
+    {
+        if ($this->isHttpException($exception) && $exception->getStatusCode() === 404) {
+            sleep(1.3);
+            return redirect()->route('maker.index'); // 'home' は適宜変更
+        }
+    
+        return parent::render($request, $exception);
+    }
+    
 }
