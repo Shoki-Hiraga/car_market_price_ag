@@ -95,6 +95,17 @@ class ScGooGradeController extends Controller
     ->avg();
 
 
+    // Mileageカテゴリ（例: 10.4 → 10）を抽出して unique に
+    $mileageCategories = $filteredMarketPricesGrade
+        ->pluck('mileage') // 万km単位で入ってる前提
+        ->map(function ($mileage) {
+            return floor($mileage);
+        })
+        ->unique()
+        ->sort()
+        ->values(); // キーを0から振り直し
+
+
         // MarketPriceMaster に存在するデータ数を表示
         $marketPriceCount = MarketPriceMaster::count();
  
@@ -115,7 +126,8 @@ class ScGooGradeController extends Controller
             'overallAvgPrice',
             'minPriceMileage',
             'maxPriceMileage',
-            'avgPriceMileage'
+            'avgPriceMileage',
+            'mileageCategories'
         ));
     }
         

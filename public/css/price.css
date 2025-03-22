@@ -85,3 +85,17 @@ th {
     border-color: #007bff;
     font-weight: bold;
 }
+
+.mileage-links ul {
+    padding-left: 1rem;
+}
+.mileage-links li {
+    margin: 5px 0;
+}
+.mileage-links a {
+    color: #007bff;
+    text-decoration: none;
+}
+.mileage-links a:hover {
+    text-decoration: underline;
+}
