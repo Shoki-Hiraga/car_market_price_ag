@@ -10,8 +10,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{{ $grade->model->maker->maker_name }} {{ $grade->model->model_name }} {{ $grade->grade_name }} {{ $mileage_category }}万km台の買取価格 | @include('components.sitename')</title>
-    <meta name="description" content="{{ $grade->model->maker->maker_name }} {{ $grade->model->model_name }} {{ $grade->grade_name }} {{ $mileage_category }}万km台の中古車査定・買取相場。買取店の実績から価格を抽出しています。 | @include('components.sitename')">
+    <title>{{ $grade->model->maker->maker_name }} {{ $grade->model->model_name }} {{ $grade->grade_name }} {{ $year }}年式の買取価格 | @include('components.sitename')</title>
+    <meta name="description" content="{{ $grade->model->maker->maker_name }} {{ $grade->model->model_name }} {{ $grade->grade_name }} の {{ $year }}年式の中古車査定・買取価格。全国の買取店の実績データをもとに算出しています。 | @include('components.sitename')">
     
     <link rel="canonical" href="{{ $canonicalUrl }}">
 
@@ -20,22 +20,24 @@
 
 <body>
     <div class="container">
-        <h1>{{ $grade->model->maker->maker_name }} {{ $grade->model->model_name }}<br>{{ $grade->grade_name }} {{ $mileage_category }}万km台の買取価格情報</h1>
+        <h1>{{ $grade->model->maker->maker_name }} {{ $grade->model->model_name }}<br>
+            {{ $grade->grade_name }} {{ $year }}年式の買取価格情報</h1>
 
         {{-- 統計情報 --}}
         <div class="price-summary">
-            <h3>{{ $grade->grade_name }}（{{ $mileage_category }}万km台）の統計情報</h3>
-            @if(!function_exists('formatMileage'))
+            <h3>{{ $grade->grade_name }}（{{ $year }}年式）の統計情報</h3>
+
+            @if (!function_exists('formatMileage'))
                 @php
                     function formatMileage($mileage) {
-                        return $mileage == 0 ? '1万km以下' : number_format($mileage, 1) . '万km';
+                        return is_null($mileage) || $mileage == 0 || $mileage < 0.1 ? '1万km以下' : number_format($mileage, 1) . '万km';
                     }
                 @endphp
             @endif
 
-            <p>最小価格: {{ number_format($overallMinPrice) }} 万円</p>
-            <p>最大価格: {{ number_format($overallMaxPrice) }} 万円</p>
-            <p>平均価格: {{ number_format($overallAvgPrice, 1) }} 万円</p>
+            <p>最小価格: {{ number_format($overallMinPrice) }} 万円 (走行距離: {{ formatMileage($minPriceMileage) }})</p>
+            <p>最大価格: {{ number_format($overallMaxPrice) }} 万円 (走行距離: {{ formatMileage($maxPriceMileage) }})</p>
+            <p>平均価格: {{ number_format($overallAvgPrice, 1) }} 万円 (平均走行距離: {{ formatMileage($avgPriceMileage) }})</p>
         </div>
 
         {{-- データテーブル --}}
@@ -66,6 +68,10 @@
             </table>
         </div>
 
+        {{-- ページネーション --}}
+        <div class="pagination">
+            {{ $filteredMarketPrices->links('pagination::bootstrap-4') }}
+        </div>
 
         {{-- その他のコンテンツ --}}
         @include('components.lead_contents')
