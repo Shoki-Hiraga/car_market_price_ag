@@ -22,6 +22,8 @@
     <div class="container">
         <h1>{{ $grade->model->maker->maker_name }} {{ $grade->model->model_name }}<br>
             {{ $grade->grade_name }} {{ $year }}年式の買取価格情報</h1>
+            @include('components.marketprice')
+            @include('components.lead_contents')
 
         {{-- 統計情報 --}}
         <div class="price-summary">
@@ -73,8 +75,6 @@
             {{ $filteredMarketPrices->links('pagination::bootstrap-4') }}
         </div>
 
-        {{-- その他のコンテンツ --}}
-        @include('components.lead_contents')
         @include('components.model_contents')
     </div>
 
