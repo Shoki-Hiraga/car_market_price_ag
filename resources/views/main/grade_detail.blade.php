@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="ja">
 @if($filteredMarketPricesGrade->count() < 4)
-<!-- if(filteredMarketPricesGrade less < 4) -->
 @include('components.noindex')
 @endif
 
 <head>
 @if($filteredMarketPricesGrade->isNotEmpty())
 @else
-<H1 style="text-align:center;">買取実績データがありません</h2>
+<h1 style="text-align:center;">買取実績データがありません</h1>
 @include('components.noindex')
 @endif
 
 <title>{{ $grade->model->maker->maker_name }} {{ $grade->model->model_name }} {{ $grade->grade_name }} の買取価格情報 | @include('components.sitename')</title>
 <meta name="description" content="{{ $grade->model->maker->maker_name }} {{ $grade->model->model_name }} {{ $grade->grade_name }} 買取相場・中古車の査定実績です。様々な中古車買取店の買取実績、査定実績を抽出し、その価格情報の平均を出しています。あなたの愛車の買取価格の参考にしてみてください。 | @include('components.sitename')">
 @include('components.header')
-<link rel="canonical" href="{{ $canonicalUrl }}">
 
+<link rel="canonical" href="{{ $canonicalUrl }}">
 </head>
+
 <body>
     <h1>{{ $grade->model->maker->maker_name }} {{ $grade->model->model_name }} <br>
     {{ $grade->grade_name }}
     <br> 買取価格情報</h1>
     @include('components.marketprice')
     @include('components.lead_contents')
+
     <div class="price-summary">
         <h3>{{ $grade->grade_name }}の買取統計情報</h3>
-<div class="price-summary">
+        @if(!function_exists('formatMileage'))
     @php
         function formatMileage($mileage) {
             return $mileage == 0 ? '1万km以下' : number_format($mileage) . '万km';
         }
     @endphp
-    <p>最小価格: {{ number_format($overallMinPrice) }} 万円 (走行距離: {{ formatMileage($minPriceMileage) }})</p>
-    <p>最大価格: {{ number_format($overallMaxPrice) }} 万円 (走行距離: {{ formatMileage($maxPriceMileage) }})</p>
-    <p>平均価格: {{ number_format($overallAvgPrice) }} 万円 (平均走行距離: {{ formatMileage($avgPriceMileage) }})</p>
-</div>
+@endif
+
+<p>最小価格: {{ number_format($overallMinPrice) }} 万円 (走行距離: {{ formatMileage($minPriceMileage) }})</p>
+<p>最大価格: {{ number_format($overallMaxPrice) }} 万円 (走行距離: {{ formatMileage($maxPriceMileage) }})</p>
+<p>平均価格: {{ number_format($overallAvgPrice) }} 万円 (平均走行距離: {{ formatMileage($avgPriceMileage) }})</p>
 
     </div>
 
@@ -65,8 +67,12 @@
             </tbody>
         </table>
     </div>
+    
+    <!-- ページネーション追加 -->
+    <div class="pagination">
+    {{ $filteredMarketPricesGrade->links('pagination::bootstrap-4') }}
+</div>
     @include('components.model_contents')
-
 </body>
 @include('components.footer')
 </html>

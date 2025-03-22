@@ -41,8 +41,8 @@ class ScGooGradeController extends Controller
             // 関連する grade, maker, model 情報を事前にロード
             ->with(['grade', 'maker', 'model'])
                     ->orderBy('year', 'desc')  // 年の降順で並べ替え
-            ->get();
-    
+                    ->paginate(50); 
+
         // 該当するデータがない場合は 404 エラーページを表示
         if ($marketPrices->isEmpty()) {
             abort(404);
@@ -55,7 +55,7 @@ class ScGooGradeController extends Controller
             ->firstOrFail(); // `firstOrFail()` で存在しない場合は 404 を自動返却
     
         // MarketPriceMaster のデータを元に詳細情報を取得
-        $filteredMarketPricesGrade = $marketPrices->map(function ($item) {
+        $filteredMarketPricesGrade = $marketPrices->through(function ($item) {
             $GradeModnumEngmod = ScGooGrade::where('model_name_id', $item->model_name_id)
                 ->where('maker_name_id', $item->maker_name_id)
                 ->where('grade_name', function ($query) use ($item) {
