@@ -12,6 +12,7 @@ use App\Models\ScGooMaker;
 use App\Models\ScGooModel;
 use App\Models\ScGooGrade;
 use App\Http\Controllers\ScGooMileageController;
+use App\Http\Controllers\ScGooYearController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,9 @@ Route::get('/model/{model_id}/grade/{grade_id}', [ScGooGradeController::class, '
 
 // 距離別
 Route::get('/model/{model_id}/grade/{grade_id}/mileage-{mileage_category}', [ScGooMileageController::class, 'show'])->name('mileage.detail');
+
+// 年式別
+Route::get('/model/{model_id}/grade/{grade_id}/year-{year}', [ScGooYearController::class, 'show'])->name('year.detail');
 
 // sitemap.xmlの動的生成
 Route::get('/sitemap.xml', function () {

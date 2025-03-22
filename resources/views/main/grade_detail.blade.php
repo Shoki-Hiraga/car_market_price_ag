@@ -59,8 +59,22 @@
         </ul>
     </div>
 @endif
-
     </div>
+
+    <h3>年式別の買取価格</h3>
+<ul>
+    @foreach ($yearCategories as $year)
+        <li>
+            <a href="{{ route('year.detail', [
+                'model_id' => $grade->model_name_id,
+                'grade_id' => $grade->id,
+                'year' => $year
+            ]) }}">
+                {{ $year }}年式の価格を見る
+            </a>
+        </li>
+    @endforeach
+</ul>
 
     <div class="table-container">
         <table border="1">

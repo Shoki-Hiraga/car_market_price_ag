@@ -35,6 +35,12 @@ class BreadcrumbHelper
                 $distance = $matches[1];
                 $name = "{$distance}万㎞台";
             }
+            // year-2020 のような形式にマッチする場合
+            if (preg_match('/^year-(\d+)$/i', $segment, $matches)) {
+                $distance = $matches[1];
+                $name = "{$distance}年式";
+            }
+
             // カスタム名があれば適用
             elseif (isset($customNames[$segment])) {
                 $name = $customNames[$segment];
