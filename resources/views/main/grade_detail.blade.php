@@ -52,7 +52,7 @@
                         'grade_id' => $grade->id,
                         'mileage_category' => $category
                     ]) }}">
-                        {{ $category }}万km 台の価格情報を見る
+                        {{ $category }}万km 台の価格情報
                     </a>
                 </li>
             @endforeach
