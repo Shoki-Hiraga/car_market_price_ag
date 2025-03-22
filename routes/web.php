@@ -11,6 +11,7 @@ use Illuminate\Http\Response;
 use App\Models\ScGooMaker;
 use App\Models\ScGooModel;
 use App\Models\ScGooGrade;
+use App\Http\Controllers\ScGooMileageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,8 @@ Route::get('/model/{id}', [ScGooModelController::class, 'show'])->name('model.de
 // グレード詳細
 Route::get('/model/{model_id}/grade/{grade_id}', [ScGooGradeController::class, 'show'])->name('grade.detail');
 
+// 距離別
+Route::get('/model/{model_id}/grade/{grade_id}/{mileage_category}', [ScGooMileageController::class, 'show'])->name('mileage.detail');
 
 // sitemap.xmlの動的生成
 Route::get('/sitemap.xml', function () {

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 @if($filteredMarketPricesGrade->count() < 4)
+<!-- filteredMarketPrices less than 4 -->
 @include('components.noindex')
 @endif
 
@@ -28,16 +29,36 @@
     <div class="price-summary">
         <h3>{{ $grade->grade_name }}の買取統計情報</h3>
         @if(!function_exists('formatMileage'))
-    @php
-        function formatMileage($mileage) {
-            return $mileage == 0 ? '1万km以下' : number_format($mileage) . '万km';
-        }
-    @endphp
-@endif
+        @php
+            function formatMileage($mileage) {
+                return $mileage == 0 ? '1万km以下' : number_format($mileage) . '万km';
+            }
+        @endphp
+        @endif
 
-<p>最小価格: {{ number_format($overallMinPrice) }} 万円 (走行距離: {{ formatMileage($minPriceMileage) }})</p>
-<p>最大価格: {{ number_format($overallMaxPrice) }} 万円 (走行距離: {{ formatMileage($maxPriceMileage) }})</p>
-<p>平均価格: {{ number_format($overallAvgPrice) }} 万円 (平均走行距離: {{ formatMileage($avgPriceMileage) }})</p>
+        <p>最小価格: {{ number_format($overallMinPrice) }} 万円 (走行距離: {{ formatMileage($minPriceMileage) }})</p>
+        <p>最大価格: {{ number_format($overallMaxPrice) }} 万円 (走行距離: {{ formatMileage($maxPriceMileage) }})</p>
+        <p>平均価格: {{ number_format($overallAvgPrice) }} 万円 (平均走行距離: {{ formatMileage($avgPriceMileage) }})</p>
+
+        <!-- Mileage Detail ページへのリンク -->
+        @if($mileageCategories->isNotEmpty())
+    <div class="mileage-links">
+        <h3>{{ $grade->grade_name }}の走行距離別 買取価格</h3>
+        <ul>
+            @foreach($mileageCategories as $category)
+                <li>
+                    <a href="{{ route('mileage.detail', [
+                        'model_id' => $grade->model_name_id,
+                        'grade_id' => $grade->id,
+                        'mileage_category' => $category
+                    ]) }}">
+                        {{ $category }}万km 台の価格情報を見る
+                    </a>
+                </li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 
     </div>
 
