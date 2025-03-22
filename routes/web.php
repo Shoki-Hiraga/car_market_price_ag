@@ -35,7 +35,7 @@ Route::get('/model/{id}', [ScGooModelController::class, 'show'])->name('model.de
 Route::get('/model/{model_id}/grade/{grade_id}', [ScGooGradeController::class, 'show'])->name('grade.detail');
 
 // 距離別
-Route::get('/model/{model_id}/grade/{grade_id}/{mileage_category}', [ScGooMileageController::class, 'show'])->name('mileage.detail');
+Route::get('/model/{model_id}/grade/{grade_id}/mileage-{mileage_category}', [ScGooMileageController::class, 'show'])->name('mileage.detail');
 
 // sitemap.xmlの動的生成
 Route::get('/sitemap.xml', function () {
