@@ -67,6 +67,10 @@
                 </tbody>
             </table>
         </div>
+    <div class="pagination">
+        {{ $filteredMarketPricesModel->links('pagination::bootstrap-4') }}
+    </div>
+
 </div>
 
 @include('components.model_contents')
