@@ -105,8 +105,8 @@
     
     <!-- ページネーション追加 -->
     <div class="pagination">
-    {{ $filteredMarketPricesGrade->links('pagination::bootstrap-4') }}
-</div>
+        {{ $filteredMarketPricesGrade->links('pagination::bootstrap-4') }}
+    </div>
     @include('components.model_contents')
 </body>
 @include('components.footer')

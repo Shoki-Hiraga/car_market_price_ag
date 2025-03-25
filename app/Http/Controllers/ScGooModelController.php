@@ -8,6 +8,8 @@ use App\Models\ScGooModel;
 use App\Models\ScGooGrade;
 use App\Models\MarketPriceMaster;
 use App\Models\ModelContents;
+use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Pagination\Paginator;
 
 class ScGooModelController extends Controller
 {
@@ -109,6 +111,18 @@ class ScGooModelController extends Controller
 
         // **ModelContents からデータを取得**
         $modelContent = ModelContents::where('model_name_id', $id)->first();
+
+        // 手動でページネーションを適用
+        $currentPage = Paginator::resolveCurrentPage();
+        $perPage = 50;
+        $pagedData = $filteredMarketPricesModel->slice(($currentPage - 1) * $perPage, $perPage)->values();
+        $filteredMarketPricesModel = new LengthAwarePaginator(
+            $pagedData,
+            $filteredMarketPricesModel->count(),
+            $perPage,
+            $currentPage,
+            ['path' => Paginator::resolveCurrentPath()]
+        );
 
         return view('main.model_detail', compact(
             'model', 
