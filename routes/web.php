@@ -109,31 +109,33 @@ Route::get('/sitemap-mileage.xml', function () {
     $xml = '<?xml version="1.0" encoding="UTF-8"?>';
     $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 
-    $grades = ScGooGrade::whereIn('id', function ($query) {
-        $query->select('grade_name_id')->from('market_price_master')->whereNotNull('mileage')->distinct();
-    })->latest()->limit(50000)->get();
+    // 必要なデータを一括取得（走行距離ありのみ）
+    $data = MarketPriceMaster::whereNotNull('mileage')
+        ->select('model_name_id', 'grade_name_id', 'mileage')
+        ->get()
+        ->groupBy(['model_name_id', 'grade_name_id']);
 
-    foreach ($grades as $grade) {
-        $mileageCategories = MarketPriceMaster::where('model_name_id', $grade->model_name_id)
-            ->where('grade_name_id', $grade->id)
-            ->pluck('mileage')
-            ->map(function ($mileage) {
-                return floor($mileage); // 万km単位
-            })
-            ->unique()
-            ->sort();
+    foreach ($data as $model_id => $grades) {
+        foreach ($grades as $grade_id => $items) {
+            // 万km単位でカテゴリ化して重複排除
+            $mileageCategories = $items->pluck('mileage')
+                ->map(fn($mileage) => floor($mileage)) // 万km単位
+                ->unique()
+                ->sort();
 
-        foreach ($mileageCategories as $category) {
-            $url = route('mileage.detail', [
-                'model_id' => $grade->model_name_id,
-                'grade_id' => $grade->id,
-                'mileage_category' => $category
-            ]);
-            $xml .= '<url>';
-            $xml .= '<loc>' . url($url) . '</loc>';
-            $xml .= '<changefreq>monthly</changefreq>';
-            $xml .= '<priority>0.4</priority>';
-            $xml .= '</url>';
+            foreach ($mileageCategories as $category) {
+                $url = route('mileage.detail', [
+                    'model_id' => $model_id,
+                    'grade_id' => $grade_id,
+                    'mileage_category' => $category
+                ]);
+
+                $xml .= '<url>';
+                $xml .= '<loc>' . url($url) . '</loc>';
+                $xml .= '<changefreq>monthly</changefreq>';
+                $xml .= '<priority>0.4</priority>';
+                $xml .= '</url>';
+            }
         }
     }
 
@@ -142,33 +144,36 @@ Route::get('/sitemap-mileage.xml', function () {
     return response($xml, 200)->header('Content-Type', 'application/xml');
 });
 
+
 // 年式専用サイトマップ
 Route::get('/sitemap-year.xml', function () {
     $xml = '<?xml version="1.0" encoding="UTF-8"?>';
     $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 
-    $grades = ScGooGrade::whereIn('id', function ($query) {
-        $query->select('grade_name_id')->from('market_price_master')->whereNotNull('year')->distinct();
-    })->latest()->limit(50000)->get();
+    // 必要なデータを一気に取得（年式ありのみ）
+    $data = MarketPriceMaster::whereNotNull('year')
+        ->select('model_name_id', 'grade_name_id', 'year')
+        ->get()
+        ->groupBy(['model_name_id', 'grade_name_id']);
 
-    foreach ($grades as $grade) {
-        $years = MarketPriceMaster::where('model_name_id', $grade->model_name_id)
-            ->where('grade_name_id', $grade->id)
-            ->pluck('year')
-            ->unique()
-            ->sort();
+    // グループ化されたデータをもとにURL生成
+    foreach ($data as $model_id => $grades) {
+        foreach ($grades as $grade_id => $items) {
+            $years = $items->pluck('year')->unique()->sort();
 
-        foreach ($years as $year) {
-            $url = route('year.detail', [
-                'model_id' => $grade->model_name_id,
-                'grade_id' => $grade->id,
-                'year' => $year
-            ]);
-            $xml .= '<url>';
-            $xml .= '<loc>' . url($url) . '</loc>';
-            $xml .= '<changefreq>monthly</changefreq>';
-            $xml .= '<priority>0.4</priority>';
-            $xml .= '</url>';
+            foreach ($years as $year) {
+                $url = route('year.detail', [
+                    'model_id' => $model_id,
+                    'grade_id' => $grade_id,
+                    'year' => $year
+                ]);
+
+                $xml .= '<url>';
+                $xml .= '<loc>' . url($url) . '</loc>';
+                $xml .= '<changefreq>monthly</changefreq>';
+                $xml .= '<priority>0.4</priority>';
+                $xml .= '</url>';
+            }
         }
     }
 
