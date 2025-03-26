@@ -6,6 +6,7 @@
     <link rel="canonical" href="{{ $canonicalUrl }}">
 </head>
 <body>
+    @include('components.body')
     <h1>@include('components.sitename')</h1>
     @include('components.marketprice')
     @include('components.lead_contents')

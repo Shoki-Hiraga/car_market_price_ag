@@ -8,6 +8,7 @@
 
 </head>
 <body>
+    @include('components.body')
     <h1>メーカー / 車種一覧</h1>
     @include('components.marketprice')
 

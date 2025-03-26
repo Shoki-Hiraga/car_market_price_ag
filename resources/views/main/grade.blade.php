@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    @include('components.body')
     <h1>グレード一覧</h1>
     <ul>
         @foreach ($sc_goo_grade as $grade)
