@@ -19,6 +19,7 @@
 </head>
 
 <body>
+    @include('components.body')
     <div class="container">
         <h1>{{ $grade->model->maker->maker_name }} {{ $grade->model->model_name }}<br>
             {{ $grade->grade_name }} {{ $year }}年式の買取価格情報</h1>

@@ -18,6 +18,7 @@
 
 </head>
 <body>
+    @include('components.body')
     <div class="main_model_detail">
         <h1>{{ $model->maker->maker_name }} {{ $model->model_name }}
             <br>

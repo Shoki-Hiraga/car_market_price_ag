@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    @include('components.body')
     <h1>{{ $grade->model->maker->maker_name }} {{ $grade->model->model_name }} <br>
     {{ $grade->grade_name }}
     <br> 買取価格情報</h1>
