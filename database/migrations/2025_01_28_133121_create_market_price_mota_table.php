@@ -21,7 +21,6 @@ return new class extends Migration
             $table->unsignedInteger('min_price')->nullable(); // 最低価格
             $table->unsignedInteger('max_price')->nullable(); // 最高価格
             $table->string('sc_url')->unique(); // スクレイピングURL
-            $table->date('date')->nullable(); 
             $table->timestamps(); // created_at, updated_at
 
             // 外部キー制約
