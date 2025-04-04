@@ -55,8 +55,8 @@ def adjust_prices(row):
     max_price = Decimal(row['max_price'])
 
     if min_price == max_price:
-        discount_rate = Decimal(random.uniform(0.75, 0.77))  # 23%~25% 割引
-        increase_rate = Decimal(random.uniform(1.18, 1.20))  # 19%~20% 割増
+        discount_rate = Decimal(random.uniform(0.75, 0.76))  # 24%~25% 割引
+        increase_rate = Decimal(random.uniform(1.19, 1.20))  # 19%~20% 割増
 
         min_price = min_price * discount_rate
         max_price = max_price * increase_rate
