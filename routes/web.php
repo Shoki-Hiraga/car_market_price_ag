@@ -14,6 +14,11 @@ use App\Models\ScGooMaker;
 use App\Models\ScGooModel;
 use App\Models\ScGooGrade;
 use App\Models\MarketPriceMaster;
+use App\Http\Controllers\Sitemap\SitemapIndexController;
+use App\Http\Controllers\Sitemap\ModelSitemapController;
+use App\Http\Controllers\Sitemap\GradeSitemapController;
+use App\Http\Controllers\Sitemap\MileageSitemapController;
+use App\Http\Controllers\Sitemap\YearSitemapController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,142 +47,12 @@ Route::get('/model/{model_id}/grade/{grade_id}/mileage-{mileage_category}', [ScG
 // 年式別
 Route::get('/model/{model_id}/grade/{grade_id}/year-{year}', [ScGooYearController::class, 'show'])->name('year.detail');
 
-// sitemap.xmlの動的生成
-Route::get('/sitemap.xml', function () {
-    $xml = '<?xml version="1.0" encoding="UTF-8"?>';
-    $xml .= '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+// サイトマップ
+// sitemap.xml（メインインデックス）
+Route::get('/sitemap.xml', [SitemapIndexController::class, 'index'])->name('sitemap.xml');
 
-    $xml .= '<sitemap><loc>' . url('/sitemap-model.xml') . '</loc></sitemap>';
-    $xml .= '<sitemap><loc>' . url('/sitemap-grade.xml') . '</loc></sitemap>';
-    $xml .= '<sitemap><loc>' . url('/sitemap-mileage.xml') . '</loc></sitemap>';
-    $xml .= '<sitemap><loc>' . url('/sitemap-year.xml') . '</loc></sitemap>';
-
-    $xml .= '</sitemapindex>';
-
-    return response($xml, 200)->header('Content-Type', 'application/xml');
-});
-
-// モデル専用サイトマップ
-Route::get('/sitemap-model.xml', function () {
-    $xml = '<?xml version="1.0" encoding="UTF-8"?>';
-    $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-
-    $models = ScGooModel::whereIn('id', function ($query) {
-        $query->select('model_name_id')->from('market_price_master')->distinct();
-    })->latest()->limit(10000)->get();
-
-    foreach ($models as $model) {
-        $xml .= '<url>';
-        $xml .= '<loc>' . url(route('model.detail', ['id' => $model->id])) . '</loc>';
-        $xml .= '<lastmod>' . $model->updated_at->toW3cString() . '</lastmod>';
-        $xml .= '<changefreq>weekly</changefreq>';
-        $xml .= '<priority>0.7</priority>';
-        $xml .= '</url>';
-    }
-
-    $xml .= '</urlset>';
-
-    return response($xml, 200)->header('Content-Type', 'application/xml');
-});
-
-
-// グレード専用サイトマップ
-Route::get('/sitemap-grade.xml', function () {
-    $xml = '<?xml version="1.0" encoding="UTF-8"?>';
-    $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-
-    $grades = ScGooGrade::whereIn('id', function ($query) {
-        $query->select('grade_name_id')->from('market_price_master')->whereNotNull('grade_name_id')->distinct();
-    })->latest()->limit(50000)->get();
-
-    foreach ($grades as $grade) {
-        $xml .= '<url>';
-        $xml .= '<loc>' . url(route('grade.detail', ['model_id' => $grade->model_name_id, 'grade_id' => $grade->id])) . '</loc>';
-        $xml .= '<lastmod>' . $grade->updated_at->toW3cString() . '</lastmod>';
-        $xml .= '<changefreq>monthly</changefreq>';
-        $xml .= '<priority>0.6</priority>';
-        $xml .= '</url>';
-    }
-
-    $xml .= '</urlset>';
-
-    return response($xml, 200)->header('Content-Type', 'application/xml');
-});
-
-// 走行距離専用サイトマップ
-Route::get('/sitemap-mileage.xml', function () {
-    $xml = '<?xml version="1.0" encoding="UTF-8"?>';
-    $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-
-    // 必要なデータを一括取得（走行距離ありのみ）
-    $data = MarketPriceMaster::whereNotNull('mileage')
-        ->select('model_name_id', 'grade_name_id', 'mileage')
-        ->get()
-        ->groupBy(['model_name_id', 'grade_name_id']);
-
-    foreach ($data as $model_id => $grades) {
-        foreach ($grades as $grade_id => $items) {
-            // 万km単位でカテゴリ化して重複排除
-            $mileageCategories = $items->pluck('mileage')
-                ->map(fn($mileage) => floor($mileage)) // 万km単位
-                ->unique()
-                ->sort();
-
-            foreach ($mileageCategories as $category) {
-                $url = route('mileage.detail', [
-                    'model_id' => $model_id,
-                    'grade_id' => $grade_id,
-                    'mileage_category' => $category
-                ]);
-
-                $xml .= '<url>';
-                $xml .= '<loc>' . url($url) . '</loc>';
-                $xml .= '<changefreq>monthly</changefreq>';
-                $xml .= '<priority>0.4</priority>';
-                $xml .= '</url>';
-            }
-        }
-    }
-
-    $xml .= '</urlset>';
-
-    return response($xml, 200)->header('Content-Type', 'application/xml');
-});
-
-
-// 年式専用サイトマップ
-Route::get('/sitemap-year.xml', function () {
-    $xml = '<?xml version="1.0" encoding="UTF-8"?>';
-    $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-
-    // 必要なデータを一気に取得（年式ありのみ）
-    $data = MarketPriceMaster::whereNotNull('year')
-        ->select('model_name_id', 'grade_name_id', 'year')
-        ->get()
-        ->groupBy(['model_name_id', 'grade_name_id']);
-
-    // グループ化されたデータをもとにURL生成
-    foreach ($data as $model_id => $grades) {
-        foreach ($grades as $grade_id => $items) {
-            $years = $items->pluck('year')->unique()->sort();
-
-            foreach ($years as $year) {
-                $url = route('year.detail', [
-                    'model_id' => $model_id,
-                    'grade_id' => $grade_id,
-                    'year' => $year
-                ]);
-
-                $xml .= '<url>';
-                $xml .= '<loc>' . url($url) . '</loc>';
-                $xml .= '<changefreq>monthly</changefreq>';
-                $xml .= '<priority>0.4</priority>';
-                $xml .= '</url>';
-            }
-        }
-    }
-
-    $xml .= '</urlset>';
-
-    return response($xml, 200)->header('Content-Type', 'application/xml');
-});
+// sitemap/以下に各タイプ
+Route::get('/sitemap-model/{page?}', [ModelSitemapController::class, 'index'])->name('sitemap.model');
+Route::get('/sitemap-grade/{page?}', [GradeSitemapController::class, 'index'])->name('sitemap.grade');
+Route::get('/sitemap-mileage/{page?}', [MileageSitemapController::class, 'index'])->name('sitemap.mileage');
+Route::get('/sitemap-year/{page?}', [YearSitemapController::class, 'index'])->name('sitemap.year');
