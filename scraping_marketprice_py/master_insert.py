@@ -50,13 +50,16 @@ def adjust_prices(row):
     min_price と max_price が同じ場合、
     min_price を 12%~25% の間で割引し、
     max_price を 8%~20% の間で割増する
+    このランダム処理は、Decimal(random.uniform(の時に有効
     """
     min_price = Decimal(row['min_price'])
     max_price = Decimal(row['max_price'])
 
     if min_price == max_price:
-        discount_rate = Decimal(random.uniform(0.75, 0.76))  # 24%~25% 割引
-        increase_rate = Decimal(random.uniform(1.19, 1.20))  # 19%~20% 割増
+        discount_rate = Decimal(0.75)  # 25% 割引
+        increase_rate = Decimal(1.20)  # 20% 割増        
+        # discount_rate = Decimal(random.uniform(0.75, 0.76))  # 24%~25% 割引
+        # increase_rate = Decimal(random.uniform(1.19, 1.20))  # 19%~20% 割増
 
         min_price = min_price * discount_rate
         max_price = max_price * increase_rate
