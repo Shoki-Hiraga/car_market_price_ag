@@ -7,7 +7,7 @@ from logs.logger import log_decorator, log_info, log_error
 
 client = anthropic.Anthropic(api_key=claude_api_key)
 @log_decorator
-def get_claude_response(maker_name, model_name, prompt="500文字~2000文字で収まるように歴代モデルをHTMLで解説してください。その際、適宜 h3見出しを使用し、 class名は model_contents としてください。", model_version="claude-3-5-sonnet-latest"):
+def get_claude_response(maker_name, model_name, prompt="500文字~2000文字で収まるように歴代モデルをHTMLで解説してください。その際、適宜 h3見出しを使用し、 class名は model_contents としてください。このテキストはDBへの保存に使用するため、headerやstyleなどのHTMLコーディングは不要です。", model_version="claude-3-5-sonnet-latest"):
     """
     Claude API にリクエストを送信し、応答を取得する。
 
