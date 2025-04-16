@@ -2,7 +2,7 @@
 <html lang="ja">
 
 @if($filteredMarketPrices->count() < 10)
-<!-- filteredMarketPrices less than 4 -->
+<!-- filteredMarketPrices less than 10 -->
 @include('components.noindex')
 @endif
 
