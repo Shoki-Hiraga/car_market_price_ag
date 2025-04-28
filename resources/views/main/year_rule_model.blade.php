@@ -19,6 +19,6 @@
 @endforeach
 </ul>
 
-@include('components.footer')
+@include('components.year_rule_maker_list')
 </body>
 </html>
