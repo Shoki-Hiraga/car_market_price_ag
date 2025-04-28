@@ -47,14 +47,14 @@ Route::get('/model/{model_id}/grade/{grade_id}/mileage-{mileage_category}', [ScG
 Route::get('/model/{model_id}/grade/{grade_id}/year-{year}', [ScGooYearController::class, 'show'])->name('year.detail');
 
 // 25年ページ
-// 年式経過ルール
-Route::get('/year-rule', [YearRuleController::class, 'index']);
 // メーカー一覧
-Route::get('/year-rule/maker', [YearRuleMakerController::class, 'index'])->name('year_rule.maker');
+Route::get('/year-rule', [YearRuleMakerController::class, 'index'])->name('year_rule.maker');
 // 車種一覧（メーカーID必須）
-Route::get('/year-rule/maker/{maker_name_id}', [YearRuleModelController::class, 'index'])->name('year_rule.model');
+Route::get('/year-rule/y-maker/{maker_name_id}', [YearRuleModelController::class, 'index'])->name('year_rule.model');
 // グレード一覧（モデルID必須）
-Route::get('/year-rule/model/{model_name_id}', [YearRuleGradeController::class, 'index'])->name('year_rule.grade');
+Route::get('/year-rule/y-maker/{maker_name_id}/y-model/{model_name_id}', [YearRuleGradeController::class, 'index'])->name('year_rule.grade');
+// 年式経過all
+Route::get('/year-rule-all', [YearRuleController::class, 'index']);
 
 
 // サイトマップ
