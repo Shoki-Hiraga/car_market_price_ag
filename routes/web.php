@@ -7,6 +7,7 @@ use App\Http\Controllers\ScGooGradeController;
 use App\Http\Controllers\MpmMakerModelController;
 use App\Http\Controllers\ScGooMileageController;
 use App\Http\Controllers\ScGooYearController;
+use App\Http\Controllers\YearRuleController;
 
 // sitemap用
 use Illuminate\Http\Response;
@@ -31,21 +32,19 @@ use App\Http\Controllers\Sitemap\YearSitemapController;
 
 // ホーム
 Route::get('/', [MpmMakerModelController::class, 'index'])->name('maker.index');
-
 // モデル一覧
 Route::get('/model', [ScGooModelController::class, 'index'])->name('model.index');
-
 // モデル詳細
 Route::get('/model/{id}', [ScGooModelController::class, 'show'])->name('model.detail');
-
 // グレード詳細
 Route::get('/model/{model_id}/grade/{grade_id}', [ScGooGradeController::class, 'show'])->name('grade.detail');
-
 // 距離別
 Route::get('/model/{model_id}/grade/{grade_id}/mileage-{mileage_category}', [ScGooMileageController::class, 'show'])->name('mileage.detail');
-
 // 年式別
 Route::get('/model/{model_id}/grade/{grade_id}/year-{year}', [ScGooYearController::class, 'show'])->name('year.detail');
+// 年式経過ルール
+Route::get('/year-rule', [YearRuleController::class, 'index']);
+
 
 // サイトマップ
 // sitemap.xml（メインインデックス）
