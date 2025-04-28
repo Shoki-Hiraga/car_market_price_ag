@@ -12,7 +12,7 @@
 <ul>
 @foreach($modelData as $model)
     <li>
-        <a href="{{ route('year_rule.grade', ['model_name_id' => $model->id]) }}">
+            <a href="{{ route('year_rule.grade', ['maker_name_id' => $model->maker_name_id, 'model_name_id' => $model->id]) }}">
             {{ $model->model_name }}
         </a>
     </li>
