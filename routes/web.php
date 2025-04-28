@@ -8,6 +8,9 @@ use App\Http\Controllers\MpmMakerModelController;
 use App\Http\Controllers\ScGooMileageController;
 use App\Http\Controllers\ScGooYearController;
 use App\Http\Controllers\YearRuleController;
+use App\Http\Controllers\YearRuleMakerController;
+use App\Http\Controllers\YearRuleModelController;
+use App\Http\Controllers\YearRuleGradeController;
 
 // sitemap用
 use Illuminate\Http\Response;
@@ -42,8 +45,16 @@ Route::get('/model/{model_id}/grade/{grade_id}', [ScGooGradeController::class, '
 Route::get('/model/{model_id}/grade/{grade_id}/mileage-{mileage_category}', [ScGooMileageController::class, 'show'])->name('mileage.detail');
 // 年式別
 Route::get('/model/{model_id}/grade/{grade_id}/year-{year}', [ScGooYearController::class, 'show'])->name('year.detail');
+
+// 25年ページ
 // 年式経過ルール
 Route::get('/year-rule', [YearRuleController::class, 'index']);
+// メーカー一覧
+Route::get('/year-rule/maker', [YearRuleMakerController::class, 'index'])->name('year_rule.maker');
+// 車種一覧（メーカーID必須）
+Route::get('/year-rule/maker/{maker_name_id}', [YearRuleModelController::class, 'index'])->name('year_rule.model');
+// グレード一覧（モデルID必須）
+Route::get('/year-rule/model/{model_name_id}', [YearRuleGradeController::class, 'index'])->name('year_rule.grade');
 
 
 // サイトマップ
