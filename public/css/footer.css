@@ -5,6 +5,9 @@ footer {
     margin-top: 50px;
     padding: 50px;
     background-color: #fff;
+    flex-direction: column; 
+    align-items: center;
+    background-color: #dae9ff; 
 }
 
 footer ul {
@@ -14,9 +17,14 @@ footer ul {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px; /* 要素間の間隔を調整 */
+    margin-top: 10px;
 }
 
 footer ul li {
     display: inline-block;
     margin: 10px 10px;
+}
+
+span.footer-notice {
+    font-size: 11px;
 }
