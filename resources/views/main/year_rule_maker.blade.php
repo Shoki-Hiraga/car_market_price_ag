@@ -9,16 +9,7 @@
 
 <h1>25年ルール対象 メーカー一覧</h1>
 
-<ul>
-@foreach($makerData as $maker)
-    <li>
-        <a href="{{ route('year_rule.model', ['maker_name_id' => $maker->id]) }}">
-            {{ $maker->maker_name }}
-        </a>
-    </li>
-@endforeach
-</ul>
-
-@include('components.footer')
+@include('components.year_rule_maker_list')
+@include('components.year_rule_maker_list')
 </body>
 </html>

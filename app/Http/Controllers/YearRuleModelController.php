@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ScGooGrade;
+use App\Models\YearGrade;
 use Illuminate\Support\Facades\DB;
 
 class YearRuleModelController extends Controller
@@ -12,7 +12,7 @@ class YearRuleModelController extends Controller
         $currentYear = date('Y');
         $targetYears = [$currentYear - 25, $currentYear - 24, $currentYear - 23];
 
-        $models = ScGooGrade::select('model_name_id')
+        $models = YearGrade::select('model_name_id')
             ->where('maker_name_id', $maker_name_id)
             ->whereIn('year', $targetYears)
             ->groupBy('model_name_id')
