@@ -39,7 +39,10 @@ class AppServiceProvider extends ServiceProvider
             $view->with('model_contents', $model_contents);
         });
 
-        View::composer('components.year_rule_maker_list', function ($view) {
+        View::composer(
+            ['components.year_rule_maker_list', 'main.index'],
+            function ($view) {
+        
             $currentYear = date('Y');
             $targetYears = [$currentYear - 25, $currentYear - 24, $currentYear - 23];
     
@@ -51,7 +54,7 @@ class AppServiceProvider extends ServiceProvider
     
             $makerData = DB::table('sc_goo_maker')
                 ->whereIn('id', $makers)
-                ->orderBy('maker_name')
+                ->orderBy('id')
                 ->get();
     
             $view->with('makerData', $makerData);

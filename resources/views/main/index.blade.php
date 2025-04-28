@@ -46,6 +46,19 @@
         <br>
         絶対正しいとお約束は出来ませんが、当Webサイトは査定へ促すWebサイトでは無いので、何も利益はありません。よって管理人である私に売上は入りませんので先入観を捨てて、怪しい業者に騙されないようご自身の愛車の査定価格を調べてみてください！
     </p>
+    <h2>25年ルール対象車一覧</h2>
+    @include('components.year_rule_ex')
+
+    <ul>
+    @foreach($makerData as $maker)
+    <li class="makerlist">
+        <a href="{{ route('year_rule.model', ['maker_name_id' => $maker->id]) }}">
+            {{ $maker->maker_name }}
+        </a>
+    </li>
+    @endforeach
+    </ul>
+
 </body>
 @include('components.footer')
 </html>

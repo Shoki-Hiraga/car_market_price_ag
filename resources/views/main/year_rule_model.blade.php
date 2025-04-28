@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <title>25年ルール対象 車種一覧 | @include('components.sitename')</title>
+    <title>@include('components.year_text') 車種一覧 | @include('components.sitename')</title>
     @include('components.header')
 </head>
 <body>
@@ -19,6 +19,6 @@
 @endforeach
 </ul>
 
-@include('components.year_rule_maker_list')
+@include('components.footer')
 </body>
 </html>
