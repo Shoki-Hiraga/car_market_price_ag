@@ -10,7 +10,7 @@
 <body>
 @include('components.body')
 
-<h1>25年ルール対象 車種一覧</h1>
+<h1>25年ルール対象 車種一覧 <br> {{ $maker->maker_name ?? 'メーカー名なし' }}</h1>
 @include('components.year_text')
 
 <ul>
