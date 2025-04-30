@@ -18,6 +18,7 @@ class BreadcrumbHelper
         $customNames = [
             'model' => 'メーカー / 車種一覧', // "model" を "車種一覧" に変更
             'year-rule' => '25年ルール対象 メーカー一覧',
+            'year-rule-all' => '25年ルール対象全一覧'
         ];
 
         $modelName = null;
