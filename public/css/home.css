@@ -1,3 +1,14 @@
+@keyframes breathing {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.06);
+      opacity: 0.95;
+    }
+  }
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -143,8 +154,11 @@ li.makerlist, li.modellist, li.gradelist {
 }
 
 .highlight {
-    background-color: #ffeaa7;
+    color: #ffffff;
+    background-color: #0084ff;
     font-weight: bold;
+    animation: breathing 3.0s ease-in-out infinite;
+
 }
 
 .ex_strong {
