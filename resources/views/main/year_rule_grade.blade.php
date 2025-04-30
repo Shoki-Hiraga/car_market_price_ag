@@ -21,7 +21,24 @@
 <body>
 @include('components.body')
 
-<h1>25年ルール対象車両一覧（{{ implode(', ', $targetYears) }}年式）</h1>
+
+<h1>25年ルール対象車両一覧<br>
+    （{{ implode(', ', $targetYears) }}年式）</h1>
+
+@php
+    $currentYear = date('Y');
+    $highlightYear = $currentYear - 25;
+@endphp
+
+<div class="year-drop-wrapper">
+    <div class="year-drop-grid">
+        @foreach ($targetYears as $year)
+            <div class="year-drop-item {{ $year == $highlightYear ? 'highlight' : '' }}">
+                {{ $year }} [{{ $currentYear - $year }}年落ち]
+            </div>
+        @endforeach
+    </div>
+</div>
 
 @if($grades->isEmpty())
     <p style="text-align: center;">対象となる車両が見つかりませんでした。</p>
@@ -37,11 +54,16 @@
                     <th>エンジン型式</th>
                     <th>年式</th>
                     <th>月</th>
+                    <th>経過年</th>
                     <th>リンク</th>
                 </tr>
             </thead>
+
             <tbody>
                 @foreach($grades as $grade)
+                @php
+                    $keika = date('Y') - $grade->year;
+                @endphp
                     <tr>
                         <td>{{ $grade->maker->maker_name ?? 'N/A' }}</td>
                         <td>{{ $grade->model->model_name ?? 'N/A' }}</td>
@@ -50,6 +72,9 @@
                         <td>{{ $grade->engine_model ?? 'N/A' }}</td>
                         <td>{{ $grade->year }}年</td>
                         <td>{{ $grade->month ? $grade->month . '月' : '-' }}</td>
+                        <td class="{{ (date('Y') - $grade->year) == 25 ? 'highlight' : '' }}">
+                            [{{ date('Y') - $grade->year }}年] 落ち
+                        </td>
                         <td>
                             @if($grade->sc_url)
                                 <a href="{{ $grade->sc_url }}" target="_blank" rel="noopener noreferrer">詳細</a>

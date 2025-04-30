@@ -117,3 +117,31 @@ li.makerlist, li.modellist, li.gradelist {
     width: 350px; /* 任意の幅 */
     height: auto; /* アスペクト比を維持 */
 }
+
+.year-drop-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px; /* 必要に応じて調整、画面中央にしたい場合は height: 100vh; */
+}
+
+.year-drop-grid {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
+    gap: 10px;
+}
+
+.year-drop-item {
+    width: calc(50% - 5px); /* gapの半分を引いて調整 */
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.highlight {
+    background-color: #ffeaa7;
+    font-weight: bold;
+}
