@@ -34,7 +34,7 @@
     <div class="year-drop-grid">
         @foreach ($targetYears as $year)
             <div class="year-drop-item {{ $year == $highlightYear ? 'highlight' : '' }}">
-                {{ $year }} [{{ $currentYear - $year }}年落ち]
+                {{ $year }}年式 [{{ $currentYear - $year }}年落ち]
             </div>
         @endforeach
     </div>
