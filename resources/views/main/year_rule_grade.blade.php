@@ -7,7 +7,7 @@
 
 <head>
 @if($grades->isNotEmpty())
-    <title>25年ルール対象車両一覧 | @include('components.sitename')</title>
+    <title>25年ルール対象車両一覧 {{ $maker->maker_name ?? 'メーカー不明' }} / {{ $model->model_name ?? 'モデル不明' }} | @include('components.sitename')</title>
     <meta name="description" content="25年ルール対象車（{{ implode(', ', $targetYears) }}年式）を一覧で紹介します。車を売却する際にいつから値上がりするのかの指標にご参照ください。 | @include('components.sitename')">
     <link rel="canonical" href="{{ url()->current() }}">
 @else
@@ -24,6 +24,8 @@
 
 
 <h1>25年ルール対象車両一覧<br>
+    {{ $maker->maker_name ?? 'メーカー不明' }} / {{ $model->model_name ?? 'モデル不明' }}
+    <br>
     （{{ implode(', ', $targetYears) }}年式）</h1>
     @include('components.year_text')
 
