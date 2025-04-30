@@ -1,5 +1,5 @@
-<h2>@include('components.year_text')メーカー一覧</h2>
-<span class="footer-notice">アメリカ25年ルール対象車3年前まで探します。</span>
+<h2>メーカー一覧</h2>
+@include('components.year_text')
 
 <ul>
 @foreach($makerData as $maker)
