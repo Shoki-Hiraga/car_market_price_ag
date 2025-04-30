@@ -54,7 +54,7 @@ Route::get('/year-rule/y-maker/{maker_name_id}', [YearRuleModelController::class
 // グレード一覧（モデルID必須）
 Route::get('/year-rule/y-maker/{maker_name_id}/y-model/{model_name_id}', [YearRuleGradeController::class, 'index'])->name('year_rule.grade');
 // 年式経過all
-Route::get('/year-rule-all', [YearRuleController::class, 'index']);
+Route::get('/year-rule-all', [YearRuleController::class, 'index'])->name('year_rule.index');
 
 
 // サイトマップ

@@ -59,6 +59,7 @@
     </li>
     @endforeach
     </ul>
+    <a href="{{ route('year_rule.index')}}">全ての車種一覧</a>
 
 </body>
 @include('components.footer')
