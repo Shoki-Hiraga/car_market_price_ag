@@ -10,7 +10,7 @@ class YearRuleModelController extends Controller
     public function index($maker_name_id)
     {
         $currentYear = date('Y');
-        $targetYears = [$currentYear - 25, $currentYear - 24, $currentYear - 23];
+        $targetYears = [$currentYear - 26, $currentYear - 25, $currentYear - 24, $currentYear - 23];
 
         $models = YearGrade::select('model_name_id')
             ->where('maker_name_id', $maker_name_id)
