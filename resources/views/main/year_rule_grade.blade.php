@@ -24,6 +24,7 @@
 
 <h1>25年ルール対象車両一覧<br>
     （{{ implode(', ', $targetYears) }}年式）</h1>
+    @include('components.year_text')
 
 @php
     $currentYear = date('Y');
