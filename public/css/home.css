@@ -145,3 +145,10 @@ li.makerlist, li.modellist, li.gradelist {
     background-color: #ffeaa7;
     font-weight: bold;
 }
+
+.ex_strong {
+    color: #ff0000;
+}
+.year_supplement{
+    font-size: 11px;
+}

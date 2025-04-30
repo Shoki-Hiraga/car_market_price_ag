@@ -8,7 +8,7 @@
 <head>
 @if($grades->isNotEmpty())
     <title>25年ルール対象車両一覧 | @include('components.sitename')</title>
-    <meta name="description" content="25年ルール対象車（{{ implode(', ', $targetYears) }}年式）を一覧で紹介します。旧車・ネオクラシックカーを探している方必見です。 | @include('components.sitename')">
+    <meta name="description" content="25年ルール対象車（{{ implode(', ', $targetYears) }}年式）を一覧で紹介します。車を売却する際にいつから値上がりするのかの指標にご参照ください。 | @include('components.sitename')">
     <link rel="canonical" href="{{ url()->current() }}">
 @else
     <h1 style="text-align:center;">対象車両データがありません</h1>
@@ -55,7 +55,7 @@
                     <th>年式</th>
                     <th>月</th>
                     <th>経過年</th>
-                    <th>リンク</th>
+                    <th>参照元Gooデータ</th>
                 </tr>
             </thead>
 
@@ -77,7 +77,7 @@
                         </td>
                         <td>
                             @if($grade->sc_url)
-                                <a href="{{ $grade->sc_url }}" target="_blank" rel="noopener noreferrer">詳細</a>
+                                <a href="{{ $grade->sc_url }}" target="_blank" rel="noopener noreferrer">{{ $grade->grade_name }}</a>
                             @else
                                 -
                             @endif
