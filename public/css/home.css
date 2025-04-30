@@ -123,6 +123,7 @@ li.makerlist, li.modellist, li.gradelist {
     justify-content: center;
     align-items: center;
     min-height: 50px; /* 必要に応じて調整、画面中央にしたい場合は height: 100vh; */
+    margin-top: 20px;
 }
 
 .year-drop-grid {
