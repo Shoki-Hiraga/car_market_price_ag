@@ -3,6 +3,9 @@
 <head>
     <title>@include('components.year_text') 車種一覧 | @include('components.sitename')</title>
     @include('components.header')
+
+<link rel="canonical" href="{{ url()->current() }}">
+
 </head>
 <body>
 @include('components.body')
