@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <title>@include('components.year_text') 車種一覧 | @include('components.sitename')</title>
+    <title>車種一覧 | @include('components.sitename')</title>
     @include('components.header')
 
 <link rel="canonical" href="{{ url()->current() }}">
