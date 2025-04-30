@@ -16,6 +16,7 @@
 @endif
 
 @include('components.header')
+
 </head>
 
 <body>
