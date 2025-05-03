@@ -3,7 +3,9 @@
 <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 <link rel="stylesheet" href="{{ asset('css/price.css') }}">
 <link rel="shortcut icon" href="{{ asset('/332favicon.jpg') }}">
-@include('components.breadcrumb')
+    @include('components.gronavi')
+
+    @include('components.breadcrumb')
 
 
 <!-- Google Tag Manager -->
