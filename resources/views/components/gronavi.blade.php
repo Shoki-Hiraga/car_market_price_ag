@@ -16,10 +16,8 @@
 </details>
 
 <details class="gnav-accordion">
-    <summary class="gnav-title">25年経過メーカー一覧</summary>
+    <summary class="gnav-title">25年経過メーカー一覧 @include('components.year_text')</summary>
     <div class="gnav-list">
-        <h3>25年経過メーカー一覧</h3>
-        @include('components.year_text')
         <ul>
             @foreach($makerData as $maker)
                 <li>
