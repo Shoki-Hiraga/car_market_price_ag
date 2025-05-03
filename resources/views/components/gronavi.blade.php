@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="{{ asset('css/gronavi.css') }}">
-
 <details class="gnav-accordion">
     <summary class="gnav-title">メーカー一覧</summary>
     <div class="gnav-list">
