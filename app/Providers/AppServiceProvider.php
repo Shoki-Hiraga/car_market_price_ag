@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         // components.footer が呼び出されたときのみデータを取得する
-        View::composer('components.footer', function ($view) {
+        View::composer(['components.footer', 'components.gronavi'], function ($view) {
             $sc_goo_maker = MpmMakerModel::orderBy('maker_name_id')->pluck('mpm_maker_name')->unique();
 
             $view->with('sc_goo_maker', $sc_goo_maker);
@@ -40,26 +40,27 @@ class AppServiceProvider extends ServiceProvider
         });
 
         View::composer(
-            ['components.year_rule_maker_list', 'main.index'],
+            ['components.year_rule_maker_list', 'main.index', 'components.gronavi'],
             function ($view) {
         
-            $currentYear = date('Y');
-            $targetYears = [$currentYear - 25, $currentYear - 24, $currentYear - 23];
-    
-            $makers = YearGrade::select('maker_name_id')
-                ->whereIn('year', $targetYears)
-                ->groupBy('maker_name_id')
-                ->pluck('maker_name_id')
-                ->toArray();
-    
-            $makerData = DB::table('sc_goo_maker')
-                ->whereIn('id', $makers)
-                ->orderBy('id')
-                ->get();
-    
-            $view->with('makerData', $makerData);
-        });
-    
+                $currentYear = date('Y');
+                $targetYears = [$currentYear - 25, $currentYear - 24, $currentYear - 23];
+        
+                $makers = YearGrade::select('maker_name_id')
+                    ->whereIn('year', $targetYears)
+                    ->groupBy('maker_name_id')
+                    ->pluck('maker_name_id')
+                    ->toArray();
+        
+                $makerData = DB::table('sc_goo_maker')
+                    ->whereIn('id', $makers)
+                    ->orderBy('id')
+                    ->get();
+        
+                $view->with('makerData', $makerData);
+            }
+        );
+            
         // View::composer('components.model_contents', function ($view) {
         //     $modelContent = ModelContents::with(['maker', 'model'])->first(); // 例: 1件目を取得
         //     $view->with('modelContent', $modelContent ?? null);
