@@ -1,4 +1,4 @@
-<h2>メーカー一覧</h2>
+<h2>25年経過メーカー一覧</h2>
 @include('components.year_text')
 
 <ul>

@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 
 <footer>
-    <h2>相場メーカー一覧</h2>
+    <h2>買取相場メーカー一覧</h2>
     <span class="footer-notice">中古車買取相場の探します。</span>
         <div class="price-footer">
             <ul>
