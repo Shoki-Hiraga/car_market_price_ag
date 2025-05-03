@@ -1,1 +1,1 @@
-<span class="year_supplement">厳密には23年~26年落ちデータを表示しています</span>
+<p class="year_supplement">厳密には23年~26年落ちデータを表示しています</p>

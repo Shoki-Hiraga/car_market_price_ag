@@ -31,17 +31,20 @@
   .gnav-list {
     margin-top: 0.5em;
     padding: 0.5em 0;
+    display: flex;
+    justify-content: center; /* 中央寄せ */
   }
   
   /* メーカー一覧リンク・共通ボタンスタイル */
   .gnav-list ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;               /* 中央寄せ */
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center;      /* 中央寄せ */
     gap: 1rem;
+    max-width: 1000px;            /* 最大幅を制限 */
   }
   
   .gnav-list li {
@@ -50,15 +53,24 @@
     text-align: center;
   }
   
+  .gnav-year_supplement {
+    display: block;              /* spanをブロック要素化 */
+    text-align: center;          /* テキスト中央寄せ */
+    margin-bottom: 0.5em;
+    color: #555;
+    font-size: 14px;
+  }  
+
+  /* PC表示（768px以上） */
   @media (min-width: 768px) {
     .gnav-list li {
-      flex: 1 1 100%;
-      max-width: 500px;
+      flex: 1 1 45%;
+      max-width: 300px;
     }
   }
   
   /* 共通リンクスタイル（職歴・メーカーなど） */
-  .gnav-list a{
+  .gnav-list a {
     display: block;
     padding: 10px;
     margin: 0 auto;
