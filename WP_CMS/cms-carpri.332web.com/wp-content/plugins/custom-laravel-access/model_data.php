@@ -25,8 +25,8 @@ add_action('admin_enqueue_scripts', function ($hook) {
 
 add_action('admin_menu', function () {
     add_menu_page(
-        'sc_goo_model',
-        'sc_goo_model',
+        'sc_goo_model管理',
+        'sc_goo_model管理',
         'manage_options',
         'laravel-model-management',
         'laravel_model_management_page',
