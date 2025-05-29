@@ -14,9 +14,9 @@
 
     <!-- ナビゲーション：各メーカーに対してメーカーIDを使用 -->
     <nav>
-        <ul>
+        <ul class="makerlist-nav">
             @foreach($groupedMarketPriceModels as $makerName => $models) 
-                <li>
+                <li class="makerlist">
                     <a href="#{{ $models->first()->maker->id }}">
                         {{ $makerName }} の買取相場
                     </a>
@@ -27,21 +27,20 @@
 
     <!-- 各メーカーごとの車種一覧セクション -->
     @foreach($groupedMarketPriceModels as $makerName => $models)
-        <section id="{{ $models->first()->maker->id }}">
-            <h2>
-                {{ $makerName }} の買取相場
-            </h2>
-            <ul>
-                @foreach($models as $marketPriceModel) 
-                    <li class="modellist">
-                        <a href="{{ route('model.detail', ['id' => $marketPriceModel->model_name_id]) }}">
-                            {{ optional($marketPriceModel->model)->model_name }}
-                        </a>
-                    </li>
-                @endforeach
-            </ul>
-        </section>
+    <section id="{{ $models->first()->maker->id }}">
+        <h2>{{ $makerName }} の買取相場</h2>
+        <ul class="modellist-grid">
+            @foreach($models as $marketPriceModel) 
+                <li class="modellist">
+                    <a href="{{ route('model.detail', ['id' => $marketPriceModel->model_name_id]) }}">
+                        {{ optional($marketPriceModel->model)->model_name }}
+                    </a>
+                </li>
+            @endforeach
+        </ul>
+    </section>
     @endforeach
+
 
 </body>
 @include('components.footer')

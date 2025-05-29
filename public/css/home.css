@@ -118,12 +118,6 @@ li.makerlist, li.modellist, li.gradelist {
 
 }
 
-@media screen and (max-width: 600px) {
-    .model_contents {
-        background-color: #f4f8ff;
-    }    
-}
-
 .top-banner-image {
     width: 350px; /* 任意の幅 */
     height: auto; /* アスペクト比を維持 */
@@ -155,7 +149,7 @@ li.makerlist, li.modellist, li.gradelist {
 
 .highlight {
     color: #ffffff;
-    background-color: #0084ff;
+    background-color: #dae9ff;
     font-weight: bold;
     animation: breathing 3.0s ease-in-out infinite;
 
@@ -166,4 +160,29 @@ li.makerlist, li.modellist, li.gradelist {
 }
 .year_supplement{
     font-size: 11px;
+}
+
+ul.modellist-grid {
+    list-style-type: none;
+    padding: 20px;
+    margin: 0 auto;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 600px;
+}
+
+@media screen and (max-width: 600px) {
+    .model_contents {
+        background-color: #f4f8ff;
+    }    
+    ul.modellist-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }    
+}
+
+@media screen and (max-width: 380px) {
+    ul.modellist-grid {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
 }
