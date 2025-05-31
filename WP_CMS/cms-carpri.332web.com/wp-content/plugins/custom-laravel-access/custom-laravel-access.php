@@ -11,10 +11,10 @@ require_once plugin_dir_path(__FILE__) . 'grade_data.php';
 
 add_action('wp_ajax_get_models_by_maker', 'get_models_by_maker');
 function get_models_by_maker() {
-    require_once plugin_dir_path(__FILE__) . 'models/ScGooModel.php';
+    require_once plugin_dir_path(__FILE__) . 'models/WP_ScGooModel.php';
 
     $maker_id = intval($_POST['maker_id']);
-    $models = ScGooModel::findByMaker($maker_id);
+    $models = WP_ScGooModel::findByMaker($maker_id);
 
     wp_send_json($models);
 

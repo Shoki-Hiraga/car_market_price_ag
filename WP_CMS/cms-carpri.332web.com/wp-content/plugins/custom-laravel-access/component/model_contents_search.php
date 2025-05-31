@@ -1,15 +1,15 @@
 <?php
 
-require_once plugin_dir_path(__DIR__) . 'models/ScGooMaker.php';
-require_once plugin_dir_path(__DIR__) . 'models/ScGooModel.php';
+require_once plugin_dir_path(__DIR__) . 'models/WP_ScGooMaker.php';
+require_once plugin_dir_path(__DIR__) . 'models/WP_ScGooModel.php';
 
 global $laravel_db;
 
 // メーカーとモデルのデータ取得
-$makers = ScGooMaker::all($laravel_db);
+$makers = WP_ScGooMaker::all($laravel_db);
 $selected_maker = isset($_GET['maker_name_id']) ? intval($_GET['maker_name_id']) : 0;
 $selected_model = isset($_GET['model_name_id']) ? intval($_GET['model_name_id']) : 0;
-$models = $selected_maker ? ScGooModel::getByMakerId($laravel_db, $selected_maker) : [];
+$models = $selected_maker ? WP_ScGooModel::getByMakerId($laravel_db, $selected_maker) : [];
 
 echo '<div class="wrap">';
 echo '<h2>検索フィルター</h2>';

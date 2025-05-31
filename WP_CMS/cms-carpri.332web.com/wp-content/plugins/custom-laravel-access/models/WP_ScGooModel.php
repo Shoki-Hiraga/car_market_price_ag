@@ -1,6 +1,6 @@
 <?php
 
-class ScGooModel
+class WP_ScGooModel
 {
     public static function getByMakerId($db, $maker_id)
     {

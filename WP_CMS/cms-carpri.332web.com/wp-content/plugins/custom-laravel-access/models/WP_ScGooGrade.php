@@ -1,6 +1,6 @@
 <?php
 
-class ScGooGrade
+class WP_ScGooGrade
 {
     public static function all($db)
     {

@@ -1,7 +1,7 @@
 <?php
 
 require_once plugin_dir_path(__FILE__) . 'laravel-db-connection.php';
-require_once plugin_dir_path(__FILE__) . 'models/ScGooMaker.php';
+require_once plugin_dir_path(__FILE__) . 'models/WP_ScGooMaker.php';
 
 add_action('admin_enqueue_scripts', function($hook) {
     if ($hook !== 'toplevel_page_laravel-maker-management') {
