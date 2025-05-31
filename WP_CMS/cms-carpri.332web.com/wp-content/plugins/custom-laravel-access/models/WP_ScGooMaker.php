@@ -1,6 +1,6 @@
 <?php
 
-class ScGooMaker
+class WP_ScGooMaker
 {
     // 一覧取得
     public static function all($db)

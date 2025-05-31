@@ -1,8 +1,8 @@
 <?php
 
 require_once plugin_dir_path(__FILE__) . 'laravel-db-connection.php';
-require_once plugin_dir_path(__FILE__) . 'models/ScGooMaker.php';
-require_once plugin_dir_path(__FILE__) . 'models/ScGooModel.php';
+require_once plugin_dir_path(__FILE__) . 'models/WP_ScGooMaker.php';
+require_once plugin_dir_path(__FILE__) . 'models/WP_ScGooModel.php';
 
 add_action('admin_enqueue_scripts', function($hook) {
     if ($hook !== 'toplevel_page_laravel-model-contents') {
@@ -79,8 +79,8 @@ function laravel_model_contents_page() {
     $selected_maker = isset($_GET['maker_name_id']) ? intval($_GET['maker_name_id']) : '';
     $selected_model = isset($_GET['model_name_id']) ? intval($_GET['model_name_id']) : '';
 
-    $makers = ScGooMaker::all($laravel_db);
-    $models = $selected_maker ? ScGooModel::getByMakerId($laravel_db, $selected_maker) : [];
+    $makers = WP_ScGooMaker::all($laravel_db);
+    $models = $selected_maker ? WP_ScGooModel::getByMakerId($laravel_db, $selected_maker) : [];
 
     echo '<div class="wrap">';
     echo '<h2>検索フィルター</h2>';

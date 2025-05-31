@@ -1,8 +1,8 @@
 <?php
 
 require_once plugin_dir_path(__FILE__) . 'laravel-db-connection.php';
-require_once plugin_dir_path(__FILE__) . 'models/ScGooMaker.php';
-require_once plugin_dir_path(__FILE__) . 'models/ScGooModel.php';
+require_once plugin_dir_path(__FILE__) . 'models/WP_ScGooMaker.php';
+require_once plugin_dir_path(__FILE__) . 'models/WP_ScGooModel.php';
 
 add_action('admin_enqueue_scripts', function ($hook) {
     if ($hook !== 'toplevel_page_laravel-model-management') return;
@@ -80,8 +80,8 @@ function laravel_model_management_page()
     // 検索条件
     $selected_maker = isset($_GET['maker_name_id']) ? intval($_GET['maker_name_id']) : '';
     $selected_model = isset($_GET['model_id']) ? intval($_GET['model_id']) : '';
-    $makers = ScGooMaker::all($laravel_db);
-    $models = $selected_maker ? ScGooModel::getByMakerId($laravel_db, $selected_maker) : [];
+    $makers = WP_ScGooMaker::all($laravel_db);
+    $models = $selected_maker ? WP_ScGooModel::getByMakerId($laravel_db, $selected_maker) : [];
 
     // WHERE句
     $where = [];
