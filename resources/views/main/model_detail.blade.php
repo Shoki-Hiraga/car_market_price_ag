@@ -33,7 +33,6 @@
                 <p>平均買取 価格: {{ number_format($overallAvgPrice) }} 万円</p>
             </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>            
         <!-- グラフの表示エリア -->
         <div style="width: 80%; max-width: 800px; margin: 40px auto;">
             <h3>年式と最高価格の推移</h3>
@@ -43,7 +42,7 @@
             <h3>年式と最低価格の推移</h3>
             <canvas id="minPriceChart" height="100"></canvas>
         </div>
-        @include('components.model_detail_chart')
+        @include('components.chart')
 
         <div class="table-container">
             <table border="1">
