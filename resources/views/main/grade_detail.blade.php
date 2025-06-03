@@ -85,7 +85,7 @@
     <h3>年式と最低価格の推移</h3>
     <canvas id="minPriceChart" width="800" height="300"></canvas>
 </div>
-@include('components.grade_detail_chart')
+@include('components.chart')
 
     <div class="table-container">
         <table border="1">
