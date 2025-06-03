@@ -121,6 +121,19 @@ class ScGooGradeController extends Controller
         // **ModelContents からデータを取得**
         $modelContent = ModelContents::where('model_name_id', $model_id)->first();
 
+        // グラフ用の年式×価格データ（年式ごとの最小・最大価格）
+        $chartData = $filteredMarketPricesGrade
+            ->groupBy('year')
+            ->map(function ($group) {
+                return [
+                    'year' => $group->first()->year,
+                    'min_price' => $group->min('min_price'),
+                    'max_price' => $group->max('max_price'),
+                ];
+            })
+            ->sortBy('year')
+            ->values();
+
         return view('main.grade_detail', compact(
             'grade', 
             'filteredMarketPricesGrade', 
@@ -134,7 +147,8 @@ class ScGooGradeController extends Controller
             'maxPriceMileage',
             'avgPriceMileage',
             'mileageCategories',
-            'yearCategories'
+            'yearCategories',
+            'chartData'
         ));
     }
         

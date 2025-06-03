@@ -77,6 +77,16 @@
     @endforeach
 </ul>
 
+<div style="width: 100%; max-width: 800px; margin: 40px auto;">
+    <h3>年式と最高価格の推移</h3>
+    <canvas id="maxPriceChart" width="800" height="300"></canvas>
+</div>
+<div style="width: 100%; max-width: 800px; margin: 40px auto;">
+    <h3>年式と最低価格の推移</h3>
+    <canvas id="minPriceChart" width="800" height="300"></canvas>
+</div>
+@include('components.grade_detail_chart')
+
     <div class="table-container">
         <table border="1">
             <thead>
