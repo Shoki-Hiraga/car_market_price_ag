@@ -8,7 +8,7 @@
 <head>
 @if($filteredMarketPricesModel->isNotEmpty())
 @else
-<H1 style="text-align:center;">買取実績データがありません</h2>
+<H1 style="text-align:center;">買取実績データがありません</h1>
 @include('components.noindex')
 @endif
 <title>{{ $model->maker->maker_name }} {{ $model->model_name }} 買取相場・中古車の査定実績 | @include('components.sitename')</title>
@@ -31,6 +31,17 @@
                 <p>最小買取価格: {{ number_format($overallMinPrice) }} 万円</p>
                 <p>最大買取価格: {{ number_format($overallMaxPrice) }} 万円</p>
                 <p>平均買取 価格: {{ number_format($overallAvgPrice) }} 万円</p>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+            <!-- グラフの表示エリア -->
+            <div style="width: 80%; max-width: 800px; margin: 40px auto;">
+                <h3>年式と最高価格の推移</h3>
+                <canvas id="maxPriceChart" height="100"></canvas>
+            </div>
+            <div style="width: 80%; max-width: 800px; margin: 40px auto;">
+                <h3>年式と最低価格の推移</h3>
+                <canvas id="minPriceChart" height="100"></canvas>
             </div>
 
         <div class="table-container">
@@ -73,6 +84,43 @@
     </div>
 
 </div>
+
+<script>
+    const chartData = @json($chartData);
+
+    const sortedYears = chartData.map(item => item.year);
+    const maxPrices = chartData.map(item => item.max_price);
+    const minPrices = chartData.map(item => item.min_price);
+
+    const chartConfig = (label, data, borderColor) => ({
+        type: 'line',
+        data: {
+            labels: sortedYears,
+            datasets: [{
+                label: label,
+                data: data,
+                borderColor: borderColor,
+                fill: false,
+                tension: 0.2,
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: false,
+                    title: { display: true, text: '価格 (万円)' }
+                },
+                x: {
+                    title: { display: true, text: '年式' }
+                }
+            }
+        }
+    });
+
+    new Chart(document.getElementById('maxPriceChart'), chartConfig('最高価格', maxPrices, 'blue'));
+    new Chart(document.getElementById('minPriceChart'), chartConfig('最低価格', minPrices, 'red'));
+</script>
 
 @include('components.model_contents')
 

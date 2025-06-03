@@ -124,6 +124,19 @@ class ScGooModelController extends Controller
             ['path' => Paginator::resolveCurrentPath()]
         );
 
+        // chart.js 用のデータを整形（年式ごとの min/max）
+        $chartData = $marketPricesMaster
+            ->groupBy('year')
+            ->map(function ($group) {
+                return [
+                    'year' => $group->first()->year,
+                    'min_price' => $group->min('min_price'),
+                    'max_price' => $group->max('max_price'),
+                ];
+            })
+            ->sortBy('year')
+            ->values(); // 年式順に整列
+
         return view('main.model_detail', compact(
             'model', 
             'filteredMarketPricesModel', 
@@ -132,7 +145,8 @@ class ScGooModelController extends Controller
             'modelContent', 
             'overallMinPrice', 
             'overallMaxPrice', 
-            'overallAvgPrice'
+            'overallAvgPrice',
+            "chartData"
         ));
     }
     
