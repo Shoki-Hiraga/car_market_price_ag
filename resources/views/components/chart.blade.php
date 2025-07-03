@@ -1,6 +1,3 @@
-<canvas id="minPriceChart"></canvas>
-<canvas id="maxPriceChart"></canvas>
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 
