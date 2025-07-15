@@ -1,4 +1,9 @@
 User-agent: *
-Disallow:
+Disallow: */year-rule/*
 
 Sitemap: https://carprice-info.332web.com/sitemap.xml
+Sitemap: https://carprice-info.332web.com/sitemap-model/1
+Sitemap: https://carprice-info.332web.com/sitemap-grade/1
+Sitemap: https://carprice-info.332web.com/sitemap-mileage/1
+Sitemap: https://carprice-info.332web.com/sitemap-mileage/2
+Sitemap: https://carprice-info.332web.com/sitemap-year/1
