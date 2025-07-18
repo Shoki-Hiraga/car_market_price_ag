@@ -6,7 +6,9 @@
 </head>
 <body>
     @include('components.body')
+
     <h1>{{ $makerName }} の車種一覧</h1>
+    @include('components.marketprice')
 
     <ul class="modellist-grid">
         @foreach($makerModels as $item)

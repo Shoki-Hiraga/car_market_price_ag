@@ -174,7 +174,10 @@ class ScGooModelController extends Controller
 
         $makerName = optional($makerModels->first()->maker)->maker_name;
 
-        return view('main.maker_model_list', compact('makerModels', 'makerName'));
+        // MarketPriceMaster に存在するデータ数を表示
+        $marketPriceCount = MarketPriceMaster::count();
+
+        return view('main.maker_model_list', compact('makerModels', 'makerName' ,'marketPriceCount'));
     }
     
 }
