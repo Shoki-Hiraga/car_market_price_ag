@@ -16,6 +16,33 @@
 @include('components.header')
 <link rel="canonical" href="{{ $canonicalUrl }}">
 
+
+@if ($filteredMarketPricesModel->count() >= 4)
+    @php
+        $productStructuredData = [
+            '@context' => 'https://schema.org',
+            '@type' => 'Product',
+            'name' => $model->maker->maker_name . ' ' . $model->model_name,
+            'brand' => [
+                '@type' => 'Brand',
+                'name' => $model->maker->maker_name,
+            ],
+            'model' => $model->model_name,
+            'description' => $model->maker->maker_name . ' ' . $model->model_name . ' の買取相場・中古車の査定実績情報',
+            'offers' => [
+                '@type' => 'AggregateOffer',
+                'lowPrice' => $overallMinPrice * 10000,
+                'highPrice' => $overallMaxPrice * 10000,
+                'priceCurrency' => 'JPY',
+            ],
+        ];
+    @endphp
+
+    <script type="application/ld+json">
+    {!! json_encode($productStructuredData, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
+    </script>
+@endif
+
 </head>
 <body>
     @include('components.body')

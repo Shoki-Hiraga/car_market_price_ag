@@ -6,6 +6,26 @@
 @include('components.header')
 <link rel="canonical" href="{{ $canonicalUrl }}">
 
+
+<script type="application/ld+json">
+@json([
+  '@context' => 'https://schema.org',
+  '@type' => 'ItemList',
+  'name' => 'メーカー / 車種一覧',
+  'itemListElement' => collect($groupedMarketPriceModels)->flatMap(function ($models) {
+      return $models->map(function ($marketPriceModel, $index) {
+          return [
+              '@type' => 'ListItem',
+              'position' => $index + 1,
+              'url' => route('model.detail', ['id' => $marketPriceModel->model_name_id]),
+              'name' => optional($marketPriceModel->model)->model_name,
+          ];
+      });
+  })->values()
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT)
+</script>
+
+
 </head>
 <body>
     @include('components.body')

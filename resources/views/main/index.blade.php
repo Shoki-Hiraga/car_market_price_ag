@@ -4,6 +4,31 @@
     <title>TOP メーカー一覧 | @include('components.sitename')</title>
     @include('components.header')
     <link rel="canonical" href="{{ $canonicalUrl }}">
+
+
+@php
+    $itemList = collect($sc_goo_makers)->map(function ($maker, $index) {
+        return [
+            '@type' => 'ListItem',
+            'position' => $index + 1,
+            'url' => route('maker.models', ['maker_id' => $maker->maker_name_id]),
+            'name' => $maker->mpm_maker_name,
+        ];
+    })->values();
+
+    $structuredData = [
+        '@context' => 'https://schema.org',
+        '@type' => 'ItemList',
+        'name' => '中古車メーカー一覧',
+        'itemListElement' => $itemList,
+    ];
+@endphp
+
+<script type="application/ld+json">
+{!! json_encode($structuredData, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
+</script>
+
+
 </head>
 <body>
     @include('components.body')
