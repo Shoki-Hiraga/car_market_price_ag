@@ -97,7 +97,14 @@ class BreadcrumbHelper
             }
 
             // 5. /year-rule/y-maker/{maker_id}/y-model/{model_id}
-            elseif ($segments[0] === 'year-rule' && $segments[1] === 'y-maker' && $segments[3] === 'y-model' && $index === 4 && is_numeric($segment)) {
+            elseif (
+                isset($segments[0], $segments[1], $segments[2], $segments[3], $segments[4]) &&
+                $segments[0] === 'year-rule' &&
+                $segments[1] === 'y-maker' &&
+                $segments[3] === 'y-model' &&
+                $index === 4 &&
+                is_numeric($segment)
+            ) {
                 $model = ScGooModel::with('maker')->find($segment);
                 if ($model) {
                     $makerName = $model->maker->maker_name;
@@ -107,7 +114,6 @@ class BreadcrumbHelper
                     $name = "不明なモデル";
                 }
             }
-
             // 6. mileage-10 / year-2020 等
             elseif (preg_match('/^mileage-(\d+)$/i', $segment, $matches)) {
                 $name = "{$matches[1]}万㎞台";

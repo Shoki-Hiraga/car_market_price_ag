@@ -16,6 +16,35 @@
     <link rel="canonical" href="{{ $canonicalUrl }}">
 
     @include('components.header')
+
+
+@if ($filteredMarketPrices->count() >= 10)
+    @php
+        $productStructuredData = [
+            '@context' => 'https://schema.org',
+            '@type' => 'Product',
+            'name' => $grade->model->maker->maker_name . ' ' . $grade->model->model_name . ' ' . $grade->grade_name . '（' . $year . '年式）',
+            'brand' => [
+                '@type' => 'Brand',
+                'name' => $grade->model->maker->maker_name,
+            ],
+            'model' => $grade->model->model_name,
+            'description' => $grade->model->maker->maker_name . ' ' . $grade->model->model_name . ' ' . $grade->grade_name . ' の ' . $year . '年式における中古車査定・買取価格情報。全国の買取店の実績をもとにした統計です。',
+            'offers' => [
+                '@type' => 'AggregateOffer',
+                'lowPrice' => $overallMinPrice * 10000,
+                'highPrice' => $overallMaxPrice * 10000,
+                'priceCurrency' => 'JPY',
+            ],
+        ];
+    @endphp
+
+    <script type="application/ld+json">
+    {!! json_encode($productStructuredData, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
+    </script>
+@endif
+
+
 </head>
 
 <body>

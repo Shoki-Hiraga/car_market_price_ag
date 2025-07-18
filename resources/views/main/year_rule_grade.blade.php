@@ -17,6 +17,32 @@
 
 @include('components.header')
 
+
+@if ($grades->count() >= 4)
+    @php
+        $structuredData = [
+            '@context' => 'https://schema.org',
+            '@type' => 'ItemList',
+            'name' => '25年ルール対象車両一覧 - ' . ($maker->maker_name ?? 'メーカー不明') . ' / ' . ($model->model_name ?? 'モデル不明'),
+            'itemListElement' => $grades->values()->map(function ($grade, $index) {
+                return [
+                    '@type' => 'ListItem',
+                    'position' => $index + 1,
+                    'name' => $grade->maker->maker_name . ' ' .
+                              $grade->model->model_name . ' ' .
+                              $grade->grade_name . '（' . $grade->year . '年式）',
+                    'url' => $grade->sc_url ?? url()->current(),
+                ];
+            })->values(),
+        ];
+    @endphp
+
+    <script type="application/ld+json">
+    {!! json_encode($structuredData, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
+    </script>
+@endif
+
+
 </head>
 
 <body>
