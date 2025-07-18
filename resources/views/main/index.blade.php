@@ -16,7 +16,7 @@
         @foreach ($sc_goo_makers as $maker)
             <li class="makerlist">
                 <!-- メーカーの maker_name_id をアンカーリンクとして使用 -->
-                <a href="{{ route('model.index') }}#{{ $maker->maker_name_id }}">
+                <a href="{{ route('maker.models', ['maker_id' => $maker->maker_name_id]) }}">
                     {{ $maker->mpm_maker_name }}
                 </a>
             </li>

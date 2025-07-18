@@ -4,8 +4,8 @@
         <ul>
             @foreach ($sc_goo_maker as $maker)
                 <li>
-                    <a href="{{ route('model.index') }}#{{ $loop->iteration }}">
-                        {{ $maker }}
+                    <a href="{{ route('maker.models', ['maker_id' => $maker->maker_name_id]) }}">
+                        {{ $maker->mpm_maker_name }}
                     </a>
                 </li>
             @endforeach

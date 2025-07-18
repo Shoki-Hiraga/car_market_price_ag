@@ -150,5 +150,31 @@ class ScGooModelController extends Controller
         ));
     }
     
+    public function makerModels($maker_id)
+    {
+        $existingMarketPriceModels = MarketPriceMaster::where('maker_name_id', $maker_id)
+            ->whereHas('grade', function ($query) {
+                $query->whereColumn('model_name_id', 'market_price_master.model_name_id');
+            })
+            ->whereHas('maker', function ($query) use ($maker_id) {
+                $query->where('id', $maker_id);
+            })
+            ->with(['maker', 'model'])
+            ->orderBy('id', 'asc')
+            ->get()
+            ->unique('model_name_id');
+
+        if ($existingMarketPriceModels->isEmpty()) {
+            abort(404);
+        }
+
+        // モデル名順に並び替え
+        $makerModels = $existingMarketPriceModels
+            ->sortBy(fn($item) => optional($item->model)->model_name, SORT_NATURAL);
+
+        $makerName = optional($makerModels->first()->maker)->maker_name;
+
+        return view('main.maker_model_list', compact('makerModels', 'makerName'));
+    }
     
 }
