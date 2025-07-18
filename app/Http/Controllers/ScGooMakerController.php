@@ -10,18 +10,21 @@ class ScGooMakerController extends Controller
 {
     public function index()
     {
-        // MarketPriceMaster に存在するメーカーを取得（重複を排除）
-        $sc_goo_maker = MarketPriceMaster::with('maker')
+        // MarketPriceMaster に存在するメーカーを取得（重複排除、必要項目のみ）
+        $sc_goo_makers = MarketPriceMaster::with('maker')
             ->get()
-            ->unique('maker_name_id') // maker_name_id ごとに一意にする
-            ->pluck('maker'); // maker情報のみを取得
+            ->unique('maker_name_id')
+            ->map(function ($item) {
+                return (object)[
+                    'maker_name_id' => optional($item->maker)->maker_name_id,
+                    'mpm_maker_name' => optional($item->maker)->mpm_maker_name,
+                ];
+            });
 
-        // MarketPriceMaster に存在するデータ数を表示
         $marketPriceCount = MarketPriceMaster::count();
-
-        // 正規URLを生成
         $canonicalUrl = route('maker.index');
 
-        return view('main.index', compact('sc_goo_maker', 'marketPriceCount', 'canonicalUrl'));
+        return view('main.index', compact('sc_goo_makers', 'marketPriceCount', 'canonicalUrl'));
     }
+
 }

@@ -27,16 +27,22 @@ class AppServiceProvider extends ServiceProvider
     {
         // components.footer が呼び出されたときのみデータを取得する
         View::composer(['components.footer', 'components.gronavi'], function ($view) {
-            $sc_goo_maker = MpmMakerModel::orderBy('maker_name_id')->pluck('mpm_maker_name')->unique();
+            $sc_goo_maker = MpmMakerModel::select('maker_name_id', 'mpm_maker_name')
+                ->orderBy('maker_name_id')
+                ->distinct('maker_name_id')
+                ->get();
 
             $view->with('sc_goo_maker', $sc_goo_maker);
         });
 
         // components.model_contents が呼び出されたときのみデータを取得する
-        View::composer('components.model_contents', function ($view) {
-            $model_contents = ModelContents::with(['maker', 'model'])->get();
+        View::composer(['components.footer', 'components.gronavi'], function ($view) {
+            $sc_goo_maker = MpmMakerModel::select('maker_name_id', 'mpm_maker_name')
+                ->orderBy('maker_name_id')
+                ->distinct('maker_name_id')
+                ->get();
 
-            $view->with('model_contents', $model_contents);
+            $view->with('sc_goo_maker', $sc_goo_maker);
         });
 
         View::composer(

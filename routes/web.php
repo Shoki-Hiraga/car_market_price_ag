@@ -36,7 +36,7 @@ use App\Http\Controllers\Sitemap\YearSitemapController;
 // ホーム
 Route::get('/', [MpmMakerModelController::class, 'index'])->name('maker.index');
 // モデル一覧
-Route::get('/model', [ScGooModelController::class, 'index'])->name('model.index');
+Route::get('/maker', [ScGooModelController::class, 'index'])->name('model.index');
 // モデル詳細
 Route::get('/model/{id}', [ScGooModelController::class, 'show'])->name('model.detail');
 // グレード詳細
@@ -45,6 +45,9 @@ Route::get('/model/{model_id}/grade/{grade_id}', [ScGooGradeController::class, '
 Route::get('/model/{model_id}/grade/{grade_id}/mileage-{mileage_category}', [ScGooMileageController::class, 'show'])->name('mileage.detail');
 // 年式別
 Route::get('/model/{model_id}/grade/{grade_id}/year-{year}', [ScGooYearController::class, 'show'])->name('year.detail');
+// メーカーごとのモデル一覧ページ
+Route::get('/maker/{maker_id}', [ScGooModelController::class, 'makerModels'])->name('maker.models');
+
 
 // 25年ページ
 // メーカー一覧
