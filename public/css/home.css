@@ -148,7 +148,7 @@ li.makerlist, li.modellist, li.gradelist {
 }
 
 .highlight {
-    color: #ffffff;
+    color: #000000;
     background-color: #dae9ff;
     font-weight: bold;
     animation: breathing 3.0s ease-in-out infinite;
