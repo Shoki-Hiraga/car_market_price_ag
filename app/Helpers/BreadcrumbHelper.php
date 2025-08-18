@@ -20,7 +20,7 @@ class BreadcrumbHelper
         // カスタム表示名
         $customNames = [
             'maker' => 'メーカー / 車種一覧',
-            'year-rule' => '25年ルール対象 メーカー一覧',
+            'year-rule' => '25年ルール メーカー一覧',
             'year-rule-all' => '25年ルール対象全一覧',
         ];
 
@@ -83,6 +83,11 @@ class BreadcrumbHelper
                 } else {
                     $name = "不明なグレード";
                 }
+            }
+
+            // 4-0. /year-rule トップページ
+            elseif ($segments[0] === 'year-rule' && $index === 0) {
+                $name = $customNames['year-rule']; // 「25年ルール対象 メーカー一覧」
             }
 
             // 4. /year-rule/y-maker/{maker_id}
